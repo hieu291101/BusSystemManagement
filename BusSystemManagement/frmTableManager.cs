@@ -16,5 +16,16 @@ namespace BusSystemManagement
         {
             InitializeComponent();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            tbBusLineName.Text = "";
+            nudFrequency.Value = 0;
+            nudStartTime.Value = 0;
+            nudEndTime.Value = 0;
+            tbStartLocation.Text = "";
+            tbEndLocation.Text = "";
+            tbBusLineDetail.Text = "";
+        }
     }
 }
