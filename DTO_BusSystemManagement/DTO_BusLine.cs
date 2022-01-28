@@ -8,39 +8,40 @@ namespace DTO_BusSystemManagement
 {
     class DTO_BusLine
     {
-        private int _BusLine_ID;
-        private string _BusLine_TenChuyenXe;
-        private int _BusLine_GioDatDau;
-        private int _BusLine_GioKetThuc;
-        private string _BusLine_DiemDau;
-        private string _BusLine_DiemCuoi;
-        private string _BusLine_ChiTietTram;
-        private int _BusLine_TanSuat;
-
-        public int BusLine_ID { get => _BusLine_ID; set => _BusLine_ID = value; }
-        public string BusLine_TenChuyenXe { get => _BusLine_TenChuyenXe; set => _BusLine_TenChuyenXe = value; }
-        public int BusLine_GioDatDau { get => _BusLine_GioDatDau; set => _BusLine_GioDatDau = value; }
-        public int BusLine_GioKetThuc { get => _BusLine_GioKetThuc; set => _BusLine_GioKetThuc = value; }
-        public string BusLine_DiemDau { get => _BusLine_DiemDau; set => _BusLine_DiemDau = value; }
-        public string BusLine_DiemCuoi { get => _BusLine_DiemCuoi; set => _BusLine_DiemCuoi = value; }
-        public string BusLine_ChiTietTram { get => _BusLine_ChiTietTram; set => _BusLine_ChiTietTram = value; }
-        public int BusLine_TanSuat { get => _BusLine_TanSuat; set => _BusLine_TanSuat = value; }
+        private int _BUSLINE_ID;
+        private string _BUSLINE_NAME;
+        private int _BUSLINE_STARTTIME;
+        private int _BUSLINE_ENDTIME;
+        private string _BUSLINE_STARTLOCATION;
+        private string _BUSLINE_ENDLOCATION;
+        private string _BUSLINE_BUSSTOPDETAIL;
+        private int _BUSLINE_FREQUENCY;
 
         public DTO_BusLine()
         {
 
         }
-        public DTO_BusLine(int busLine_ID, string busLine_TenChuyenXe, int busLine_GioDatDau, int busLine_GioKetThuc, 
-            string busLine_DiemDau, string busLine_DiemCuoi, string busLine_ChiTietTram, int busLine_TanSuat)
+        public DTO_BusLine(int bUSLINE_ID, string bUSLINE_NAME, int bUSLINE_STARTTIME,
+            int bUSLINE_ENDTIME, string bUSLINE_STARTLOCATION,
+            string bUSLINE_ENDLOCATION, string bUSLINE_BUSSTOPDETAIL, int bUSLINE_FREQUENCY)
         {
-            BusLine_ID = busLine_ID;
-            BusLine_TenChuyenXe = busLine_TenChuyenXe;
-            BusLine_GioDatDau = busLine_GioDatDau;
-            BusLine_GioKetThuc = busLine_GioKetThuc;
-            BusLine_DiemDau = busLine_DiemDau;
-            BusLine_DiemCuoi = busLine_DiemCuoi;
-            BusLine_ChiTietTram = busLine_ChiTietTram;
-            BusLine_TanSuat = busLine_TanSuat;
+            _BUSLINE_ID = bUSLINE_ID;
+            _BUSLINE_NAME = bUSLINE_NAME;
+            _BUSLINE_STARTTIME = bUSLINE_STARTTIME;
+            _BUSLINE_ENDTIME = bUSLINE_ENDTIME;
+            _BUSLINE_STARTLOCATION = bUSLINE_STARTLOCATION;
+            _BUSLINE_ENDLOCATION = bUSLINE_ENDLOCATION;
+            _BUSLINE_BUSSTOPDETAIL = bUSLINE_BUSSTOPDETAIL;
+            _BUSLINE_FREQUENCY = bUSLINE_FREQUENCY;
         }
+
+        public int BUSLINE_ID { get => _BUSLINE_ID; set => _BUSLINE_ID = value; }
+        public string BUSLINE_NAME { get => _BUSLINE_NAME; set => _BUSLINE_NAME = value; }
+        public int BUSLINE_STARTTIME { get => _BUSLINE_STARTTIME; set => _BUSLINE_STARTTIME = value; }
+        public int BUSLINE_ENDTIME { get => _BUSLINE_ENDTIME; set => _BUSLINE_ENDTIME = value; }
+        public string BUSLINE_STARTLOCATION { get => _BUSLINE_STARTLOCATION; set => _BUSLINE_STARTLOCATION = value; }
+        public string BUSLINE_ENDLOCATION { get => _BUSLINE_ENDLOCATION; set => _BUSLINE_ENDLOCATION = value; }
+        public string BUSLINE_BUSSTOPDETAIL { get => _BUSLINE_BUSSTOPDETAIL; set => _BUSLINE_BUSSTOPDETAIL = value; }
+        public int BUSLINE_FREQUENCY { get => _BUSLINE_FREQUENCY; set => _BUSLINE_FREQUENCY = value; }
     }
 }

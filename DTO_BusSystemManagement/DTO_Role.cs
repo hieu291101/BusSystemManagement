@@ -8,20 +8,21 @@ namespace DTO_BusSystemManagement
 {
     class DTO_Role
     {
-        private int _Role_UserID;
-        private string Role;
+        private int _ROLE_USERID;
+        private string _ROLE_ROLE;
 
         public DTO_Role()
         {
 
         }
-        public DTO_Role(int role_UserID, string role)
+
+        public DTO_Role(int rOLE_USERID, string rOLE_ROLE)
         {
-            _Role_UserID = role_UserID;
-            Role = role;
+            _ROLE_USERID = rOLE_USERID;
+            _ROLE_ROLE = rOLE_ROLE;
         }
 
-        public int Role_UserID { get => _Role_UserID; set => _Role_UserID = value; }
-        public string Role1 { get => Role; set => Role = value; }
+        public int ROLE_USERID { get => _ROLE_USERID; set => _ROLE_USERID = value; }
+        public string ROLE_ROLE { get => _ROLE_ROLE; set => _ROLE_ROLE = value; }
     }
 }
