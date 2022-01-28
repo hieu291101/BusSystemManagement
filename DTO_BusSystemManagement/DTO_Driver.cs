@@ -16,7 +16,7 @@ namespace DTO_BusSystemManagement
         private string _Driver_DienThoai;
         private string _Driver_CMND;
         private DateTime _Driver_NgayBatDau;
-        private string _Driver_ThamNien;
+        private int _Driver_ThamNien;
         private DTO_License_Enum _Driver_LoaiBang;
 
         public int Driver_ID { get => _Driver_ID; set => _Driver_ID = value; }
@@ -26,7 +26,7 @@ namespace DTO_BusSystemManagement
         public string Driver_DienThoai { get => _Driver_DienThoai; set => _Driver_DienThoai = value; }
         public string Driver_CMND { get => _Driver_CMND; set => _Driver_CMND = value; }
         public DateTime Driver_NgayBatDau { get => _Driver_NgayBatDau; set => _Driver_NgayBatDau = value; }
-        public string Driver_ThamNien { get => _Driver_ThamNien; set => _Driver_ThamNien = value; }
+        public int Driver_ThamNien { get => _Driver_ThamNien; set => _Driver_ThamNien = value; }
         internal DTO_Gender_Enum Driver_GioiTinh { get => _Driver_GioiTinh; set => _Driver_GioiTinh = value; }
         internal DTO_License_Enum Driver_LoaiBang { get => _Driver_LoaiBang; set => _Driver_LoaiBang = value; }
 
@@ -35,7 +35,7 @@ namespace DTO_BusSystemManagement
 
         }
         public DTO_Driver(int driver_ID, string driver_Hoten, string driver_NgaySinh, DTO_Gender_Enum driver_GioiTinh,
-            string driver_DiaChi, string driver_DienThoai, string driver_CMND, DateTime driver_NgayBatDau, string driver_ThamNien, 
+            string driver_DiaChi, string driver_DienThoai, string driver_CMND, DateTime driver_NgayBatDau, int driver_ThamNien, 
             DTO_License_Enum driver_LoaiBang)
         {
             Driver_ID = driver_ID;

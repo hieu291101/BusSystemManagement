@@ -13,13 +13,13 @@ namespace DTO_BusSystemManagement
         private string _Bus_HangSanXuat;
         private int _Bus_NamSanXuat;
         private int _Bus_SoGhe;
-        private string _Bus_ChuKyBaoHanh;
+        private int _Bus_ChuKyBaoHanh;
 
         public DTO_Bus()
         {
 
         }
-        public DTO_Bus(int bus_ID, string bus_BienKiemSoat, string bus_HangSanXuat, int bus_NamSanXuat, int bus_SoGhe, string bus_ChuKyBaoHanh)
+        public DTO_Bus(int bus_ID, string bus_BienKiemSoat, string bus_HangSanXuat, int bus_NamSanXuat, int bus_SoGhe, int bus_ChuKyBaoHanh)
         {
             _Bus_ID = bus_ID;
             _Bus_BienKiemSoat = bus_BienKiemSoat;
@@ -34,6 +34,6 @@ namespace DTO_BusSystemManagement
         public string Bus_HangSanXuat { get => _Bus_HangSanXuat; set => _Bus_HangSanXuat = value; }
         public int Bus_NamSanXuat { get => _Bus_NamSanXuat; set => _Bus_NamSanXuat = value; }
         public int Bus_SoGhe { get => _Bus_SoGhe; set => _Bus_SoGhe = value; }
-        public string Bus_ChuKyBaoHanh { get => _Bus_ChuKyBaoHanh; set => _Bus_ChuKyBaoHanh = value; }
+        public int Bus_ChuKyBaoHanh { get => _Bus_ChuKyBaoHanh; set => _Bus_ChuKyBaoHanh = value; }
     }
 }
