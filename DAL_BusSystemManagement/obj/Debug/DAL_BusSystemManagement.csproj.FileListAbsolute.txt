@@ -1,0 +1,9 @@
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.pdb
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csproj.CopyComplete
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.dll
+C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.pdb
