@@ -68,7 +68,7 @@
             this.tabPageAsDriver = new System.Windows.Forms.TabPage();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.nudExperience = new System.Windows.Forms.NumericUpDown();
+            this.nudExperienceAsDriver = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.dtpStartDay = new System.Windows.Forms.DateTimePicker();
@@ -77,13 +77,13 @@
             this.btnUpdateAsDriver = new System.Windows.Forms.Button();
             this.btnDeleteAsDriver = new System.Windows.Forms.Button();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.tbCmnd = new System.Windows.Forms.TextBox();
+            this.tbIdCardAsDriver = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbPhoneAsDriver = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
-            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.tbAddressAsDriver = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel31 = new System.Windows.Forms.Panel();
             this.cbGender = new System.Windows.Forms.ComboBox();
@@ -96,7 +96,7 @@
             this.tbAsDriverName = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvAsDriver = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cbAsDriver = new System.Windows.Forms.ComboBox();
             this.tbSearchAsDriver = new System.Windows.Forms.TextBox();
@@ -107,6 +107,7 @@
             this.btnUpdateBus = new System.Windows.Forms.Button();
             this.btnDeleteBus = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.nudCycle = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.nudChair = new System.Windows.Forms.NumericUpDown();
@@ -193,7 +194,6 @@
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nudCycle = new System.Windows.Forms.NumericUpDown();
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -212,7 +212,7 @@
             this.tabPageAsDriver.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExperience)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExperienceAsDriver)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -221,11 +221,12 @@
             this.panel32.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsDriver)).BeginInit();
             this.panel5.SuspendLayout();
             this.tabPageBus.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCycle)).BeginInit();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudChair)).BeginInit();
             this.panel22.SuspendLayout();
@@ -261,7 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel43.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCycle)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDriver
@@ -375,7 +375,7 @@
             this.btnUpdateDriver.Name = "btnUpdateDriver";
             this.btnUpdateDriver.Size = new System.Drawing.Size(232, 56);
             this.btnUpdateDriver.TabIndex = 10;
-            this.btnUpdateDriver.Text = "Lưu";
+            this.btnUpdateDriver.Text = "Cập nhật";
             this.btnUpdateDriver.UseVisualStyleBackColor = true;
             // 
             // btnDeleteDriver
@@ -634,19 +634,24 @@
             // 
             // panel19
             // 
-            this.panel19.Controls.Add(this.nudExperience);
+            this.panel19.Controls.Add(this.nudExperienceAsDriver);
             this.panel19.Controls.Add(this.label12);
             this.panel19.Location = new System.Drawing.Point(360, 132);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(354, 37);
             this.panel19.TabIndex = 4;
             // 
-            // nudExperience
+            // nudExperienceAsDriver
             // 
-            this.nudExperience.Location = new System.Drawing.Point(113, 8);
-            this.nudExperience.Name = "nudExperience";
-            this.nudExperience.Size = new System.Drawing.Size(120, 22);
-            this.nudExperience.TabIndex = 4;
+            this.nudExperienceAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.nudExperienceAsDriver.Maximum = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.nudExperienceAsDriver.Name = "nudExperienceAsDriver";
+            this.nudExperienceAsDriver.Size = new System.Drawing.Size(120, 22);
+            this.nudExperienceAsDriver.TabIndex = 4;
             // 
             // label12
             // 
@@ -690,6 +695,7 @@
             this.btnResetAsDriver.TabIndex = 11;
             this.btnResetAsDriver.Text = "Nhập lại";
             this.btnResetAsDriver.UseVisualStyleBackColor = true;
+            this.btnResetAsDriver.Click += new System.EventHandler(this.btnResetAsDriver_Click);
             // 
             // btnUpdateAsDriver
             // 
@@ -697,8 +703,9 @@
             this.btnUpdateAsDriver.Name = "btnUpdateAsDriver";
             this.btnUpdateAsDriver.Size = new System.Drawing.Size(232, 56);
             this.btnUpdateAsDriver.TabIndex = 10;
-            this.btnUpdateAsDriver.Text = "Lưu";
+            this.btnUpdateAsDriver.Text = "Cập nhật";
             this.btnUpdateAsDriver.UseVisualStyleBackColor = true;
+            this.btnUpdateAsDriver.Click += new System.EventHandler(this.btnUpdateAsDriver_Click);
             // 
             // btnDeleteAsDriver
             // 
@@ -708,22 +715,23 @@
             this.btnDeleteAsDriver.TabIndex = 9;
             this.btnDeleteAsDriver.Text = "Xóa";
             this.btnDeleteAsDriver.UseVisualStyleBackColor = true;
+            this.btnDeleteAsDriver.Click += new System.EventHandler(this.btnDeleteAsDriver_Click);
             // 
             // panel28
             // 
-            this.panel28.Controls.Add(this.tbCmnd);
+            this.panel28.Controls.Add(this.tbIdCardAsDriver);
             this.panel28.Controls.Add(this.label20);
             this.panel28.Location = new System.Drawing.Point(360, 89);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(354, 37);
             this.panel28.TabIndex = 3;
             // 
-            // tbCmnd
+            // tbIdCardAsDriver
             // 
-            this.tbCmnd.Location = new System.Drawing.Point(113, 8);
-            this.tbCmnd.Name = "tbCmnd";
-            this.tbCmnd.Size = new System.Drawing.Size(238, 22);
-            this.tbCmnd.TabIndex = 1;
+            this.tbIdCardAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbIdCardAsDriver.Name = "tbIdCardAsDriver";
+            this.tbIdCardAsDriver.Size = new System.Drawing.Size(238, 22);
+            this.tbIdCardAsDriver.TabIndex = 1;
             // 
             // label20
             // 
@@ -736,20 +744,20 @@
             // 
             // panel29
             // 
-            this.panel29.Controls.Add(this.tbPhone);
+            this.panel29.Controls.Add(this.tbPhoneAsDriver);
             this.panel29.Controls.Add(this.label21);
             this.panel29.Location = new System.Drawing.Point(3, 89);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(354, 37);
             this.panel29.TabIndex = 2;
             // 
-            // tbPhone
+            // tbPhoneAsDriver
             // 
-            this.tbPhone.Location = new System.Drawing.Point(113, 8);
-            this.tbPhone.MaxLength = 12;
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(238, 22);
-            this.tbPhone.TabIndex = 1;
+            this.tbPhoneAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbPhoneAsDriver.MaxLength = 12;
+            this.tbPhoneAsDriver.Name = "tbPhoneAsDriver";
+            this.tbPhoneAsDriver.Size = new System.Drawing.Size(238, 22);
+            this.tbPhoneAsDriver.TabIndex = 1;
             // 
             // label21
             // 
@@ -762,19 +770,19 @@
             // 
             // panel30
             // 
-            this.panel30.Controls.Add(this.tbAddress);
+            this.panel30.Controls.Add(this.tbAddressAsDriver);
             this.panel30.Controls.Add(this.label22);
             this.panel30.Location = new System.Drawing.Point(360, 46);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(354, 37);
             this.panel30.TabIndex = 4;
             // 
-            // tbAddress
+            // tbAddressAsDriver
             // 
-            this.tbAddress.Location = new System.Drawing.Point(113, 8);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(238, 22);
-            this.tbAddress.TabIndex = 2;
+            this.tbAddressAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbAddressAsDriver.Name = "tbAddressAsDriver";
+            this.tbAddressAsDriver.Size = new System.Drawing.Size(238, 22);
+            this.tbAddressAsDriver.TabIndex = 2;
             // 
             // label22
             // 
@@ -797,6 +805,10 @@
             // cbGender
             // 
             this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nu",
+            "Khac"});
             this.cbGender.Location = new System.Drawing.Point(113, 8);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(121, 24);
@@ -846,6 +858,7 @@
             this.btnAddAsDriver.TabIndex = 8;
             this.btnAddAsDriver.Text = "Thêm";
             this.btnAddAsDriver.UseVisualStyleBackColor = true;
+            this.btnAddAsDriver.Click += new System.EventHandler(this.btnAddAsDriver_Click);
             // 
             // panel33
             // 
@@ -874,19 +887,19 @@
             // 
             // panel25
             // 
-            this.panel25.Controls.Add(this.dataGridView3);
+            this.panel25.Controls.Add(this.dgvAsDriver);
             this.panel25.Location = new System.Drawing.Point(3, 57);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(955, 334);
             this.panel25.TabIndex = 6;
             // 
-            // dataGridView3
+            // dgvAsDriver
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(949, 328);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvAsDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsDriver.Location = new System.Drawing.Point(3, 3);
+            this.dgvAsDriver.Name = "dgvAsDriver";
+            this.dgvAsDriver.Size = new System.Drawing.Size(949, 328);
+            this.dgvAsDriver.TabIndex = 0;
             // 
             // panel5
             // 
@@ -965,7 +978,7 @@
             this.btnUpdateBus.Name = "btnUpdateBus";
             this.btnUpdateBus.Size = new System.Drawing.Size(232, 56);
             this.btnUpdateBus.TabIndex = 10;
-            this.btnUpdateBus.Text = "Lưu";
+            this.btnUpdateBus.Text = "Cập nhật";
             this.btnUpdateBus.UseVisualStyleBackColor = true;
             // 
             // btnDeleteBus
@@ -985,6 +998,18 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(354, 37);
             this.panel20.TabIndex = 2;
+            // 
+            // nudCycle
+            // 
+            this.nudCycle.Location = new System.Drawing.Point(124, 9);
+            this.nudCycle.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudCycle.Name = "nudCycle";
+            this.nudCycle.Size = new System.Drawing.Size(120, 22);
+            this.nudCycle.TabIndex = 4;
             // 
             // label14
             // 
@@ -1221,7 +1246,7 @@
             this.btnUpdateBusLine.Name = "btnUpdateBusLine";
             this.btnUpdateBusLine.Size = new System.Drawing.Size(232, 56);
             this.btnUpdateBusLine.TabIndex = 10;
-            this.btnUpdateBusLine.Text = "Lưu";
+            this.btnUpdateBusLine.Text = "Cập nhật";
             this.btnUpdateBusLine.UseVisualStyleBackColor = true;
             // 
             // btnDeleteBusLine
@@ -1535,7 +1560,7 @@
             this.btnUpdateBusRide.Name = "btnUpdateBusRide";
             this.btnUpdateBusRide.Size = new System.Drawing.Size(232, 56);
             this.btnUpdateBusRide.TabIndex = 10;
-            this.btnUpdateBusRide.Text = "Lưu";
+            this.btnUpdateBusRide.Text = "Cập nhật";
             this.btnUpdateBusRide.UseVisualStyleBackColor = true;
             // 
             // btnDeleteBusRide
@@ -1769,18 +1794,6 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
-            // nudCycle
-            // 
-            this.nudCycle.Location = new System.Drawing.Point(124, 9);
-            this.nudCycle.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.nudCycle.Name = "nudCycle";
-            this.nudCycle.Size = new System.Drawing.Size(120, 22);
-            this.nudCycle.TabIndex = 4;
-            // 
             // frmTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1791,6 +1804,7 @@
             this.Name = "frmTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Chương trình quản lý các chuyến xe buýt";
+            this.Load += new System.EventHandler(this.frmTableManager_Load);
             this.tcDriver.ResumeLayout(false);
             this.tabPageDriver.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
@@ -1819,7 +1833,7 @@
             this.panel26.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExperience)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExperienceAsDriver)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel28.ResumeLayout(false);
@@ -1835,13 +1849,14 @@
             this.panel33.ResumeLayout(false);
             this.panel33.PerformLayout();
             this.panel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsDriver)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tabPageBus.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCycle)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudChair)).EndInit();
@@ -1897,7 +1912,6 @@
             this.panel43.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCycle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1988,10 +2002,10 @@
         private System.Windows.Forms.Button btnUpdateAsDriver;
         private System.Windows.Forms.Button btnDeleteAsDriver;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.TextBox tbCmnd;
+        private System.Windows.Forms.TextBox tbIdCardAsDriver;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.TextBox tbPhoneAsDriver;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label22;
@@ -2004,7 +2018,7 @@
         private System.Windows.Forms.TextBox tbAsDriverName;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvAsDriver;
         private System.Windows.Forms.TextBox tbManufacturer;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Button btnResetBusRide;
@@ -2029,13 +2043,13 @@
         private System.Windows.Forms.TextBox tbSearchBusRide;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.NumericUpDown nudExperience;
+        private System.Windows.Forms.NumericUpDown nudExperienceAsDriver;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.DateTimePicker dtpStartDay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpDayOfBirth;
-        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.TextBox tbAddressAsDriver;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel35;

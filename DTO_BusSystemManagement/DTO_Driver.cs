@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    class DTO_Driver
+    public class DTO_Driver
     {
         private int _DRIVER_ID;
         private string _DRIVER_NAME;

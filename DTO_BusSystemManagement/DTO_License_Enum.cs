@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    enum DTO_License_Enum
+    public enum DTO_License_Enum
     {
         B2,
         C,

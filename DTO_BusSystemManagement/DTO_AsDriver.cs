@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    class DTO_AsDriver
+    public class DTO_AsDriver
     {
         private int _ASDRIVER_ID;
         private string _ASDRIVER_NAME;
-        private string _ASDRIVER_DAYOFBIRTH;
+        private DateTime _ASDRIVER_DAYOFBIRTH;
         private DTO_Gender_Enum _ASDRIVER_GENDER;
         private string _ASDRIVER_ADDRESS;
         private string _ASDRIVER_PHONENUMBER;
         private string _ASDRIVER_IDCARD;
         private DateTime _ASDRIVER_STARTDATE;
-        private string _ASDRIVER_EXPERIENCE;
+        private int _ASDRIVER_EXPERIENCE;
 
         public DTO_AsDriver()
         {
 
         }
-        public DTO_AsDriver(int aSDRIVER_ID, string aSDRIVER_NAME, string aSDRIVER_DAYOFBIRTH,
+        public DTO_AsDriver(int aSDRIVER_ID, string aSDRIVER_NAME, DateTime aSDRIVER_DAYOFBIRTH,
             DTO_Gender_Enum aSDRIVER_GENDER, string aSDRIVER_ADDRESS, string aSDRIVER_PHONENUMBER,
-            string aSDRIVER_IDCARD, DateTime aSDRIVER_STARTDATE, string aSDRIVER_EXPERIENCE)
+            string aSDRIVER_IDCARD, DateTime aSDRIVER_STARTDATE, int aSDRIVER_EXPERIENCE)
         {
             _ASDRIVER_ID = aSDRIVER_ID;
             _ASDRIVER_NAME = aSDRIVER_NAME;
@@ -39,12 +39,12 @@ namespace DTO_BusSystemManagement
 
         public int ASDRIVER_ID { get => _ASDRIVER_ID; set => _ASDRIVER_ID = value; }
         public string ASDRIVER_NAME { get => _ASDRIVER_NAME; set => _ASDRIVER_NAME = value; }
-        public string ASDRIVER_DAYOFBIRTH { get => _ASDRIVER_DAYOFBIRTH; set => _ASDRIVER_DAYOFBIRTH = value; }
+        public DateTime ASDRIVER_DAYOFBIRTH { get => _ASDRIVER_DAYOFBIRTH; set => _ASDRIVER_DAYOFBIRTH = value; }
         public string ASDRIVER_ADDRESS { get => _ASDRIVER_ADDRESS; set => _ASDRIVER_ADDRESS = value; }
         public string ASDRIVER_PHONENUMBER { get => _ASDRIVER_PHONENUMBER; set => _ASDRIVER_PHONENUMBER = value; }
         public string ASDRIVER_IDCARD { get => _ASDRIVER_IDCARD; set => _ASDRIVER_IDCARD = value; }
         public DateTime ASDRIVER_STARTDATE { get => _ASDRIVER_STARTDATE; set => _ASDRIVER_STARTDATE = value; }
-        public string ASDRIVER_EXPERIENCE { get => _ASDRIVER_EXPERIENCE; set => _ASDRIVER_EXPERIENCE = value; }
-        internal DTO_Gender_Enum ASDRIVER_GENDER { get => _ASDRIVER_GENDER; set => _ASDRIVER_GENDER = value; }
+        public int ASDRIVER_EXPERIENCE { get => _ASDRIVER_EXPERIENCE; set => _ASDRIVER_EXPERIENCE = value; }
+        public DTO_Gender_Enum ASDRIVER_GENDER { get => _ASDRIVER_GENDER; set => _ASDRIVER_GENDER = value; }
     }
 }

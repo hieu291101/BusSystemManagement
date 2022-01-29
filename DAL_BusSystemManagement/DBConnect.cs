@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL_BusSystemManagement
 {
-    class DBConnect
+    public class DBConnect
     {
         protected MySqlConnection _conn = new MySqlConnection("Server=localhost;Database=bussystemmanagement;Uid=root;Pwd=tinhyeulathe1");
     }
