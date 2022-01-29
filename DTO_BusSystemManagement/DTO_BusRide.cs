@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    class DTO_BusRide
+    public class DTO_BusRide
     {
         private int _BUSRIDE_BUSLINEID;
         private int _BUSRIDE_BUSID;

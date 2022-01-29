@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    class DTO_Role
+    public class DTO_Role
     {
         private int _ROLE_USERID;
         private string _ROLE_ROLE;

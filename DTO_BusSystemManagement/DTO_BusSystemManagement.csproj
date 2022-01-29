@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO_Admin.cs" />
+    <Compile Include="DTO_getEnum.cs" />
+    <Compile Include="DTO_User.cs" />
     <Compile Include="DTO_Bus.cs" />
     <Compile Include="DTO_AsDriver.cs" />
     <Compile Include="DTO_BusLine.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="DTO_Driver.cs" />
     <Compile Include="DTO_Gender_Enum.cs" />
     <Compile Include="DTO_License_Enum.cs" />
+    <Compile Include="DTO_Role.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>

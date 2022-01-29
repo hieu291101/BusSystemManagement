@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    class DTO_User
+    public class DTO_User
     {
         private int _USER_ID;
         private string _USER_USERNAME;
