@@ -9,3 +9,14 @@ C:\Users\PC\source\repos\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\B
 C:\Users\PC\source\repos\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.CopyComplete
 C:\Users\PC\source\repos\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.dll
 C:\Users\PC\source\repos\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.pdb

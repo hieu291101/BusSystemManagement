@@ -7,3 +7,12 @@ C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\D
 C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csproj.CopyComplete
 C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.dll
 C:\Users\PC\source\repos\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DAL_BusSystemManagement\obj\Debug\DAL_BusSystemManagement.pdb

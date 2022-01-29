@@ -30,3 +30,19 @@ D:\CSharp\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagem
 D:\CSharp\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.CopyComplete
 D:\CSharp\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.exe
 D:\CSharp\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\BusSystemManagement.exe.config
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\BusSystemManagement.exe
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\BUS_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.frmLogin.resources
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.frmTableManager.resources
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.exe
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.pdb
