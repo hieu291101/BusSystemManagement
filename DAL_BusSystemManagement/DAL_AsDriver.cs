@@ -72,9 +72,15 @@ namespace DAL_BusSystemManagement
 
                 // Query string
                 string SQL = string.Format("UPDATE as_driver SET asdriver_name = '{0}', day_of_birth = '{1}', gender = '{2}', address = '{3}', phone_number = '{4}', idcard = '{5}', start_date = '{6}', experience = {7} WHERE idas_driver = {8}",
-                                           asd.ASDRIVER_NAME, dayOfBirth, asd.ASDRIVER_GENDER, asd.ASDRIVER_ADDRESS,
-                                           asd.ASDRIVER_PHONENUMBER, asd.ASDRIVER_IDCARD, startDate,
-                                           asd.ASDRIVER_EXPERIENCE, asd.ASDRIVER_ID);
+                                           asd.ASDRIVER_NAME, 
+                                           dayOfBirth, 
+                                           asd.ASDRIVER_GENDER, 
+                                           asd.ASDRIVER_ADDRESS,
+                                           asd.ASDRIVER_PHONENUMBER, 
+                                           asd.ASDRIVER_IDCARD, 
+                                           startDate,
+                                           asd.ASDRIVER_EXPERIENCE, 
+                                           asd.ASDRIVER_ID);
 
                 // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
                 MySqlCommand cmd = new MySqlCommand(SQL, _conn);
