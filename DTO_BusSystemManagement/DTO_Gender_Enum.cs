@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    enum DTO_Gender_Enum
+    public enum DTO_Gender_Enum
     {
         NAM,
         NU,

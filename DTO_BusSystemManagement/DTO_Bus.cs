@@ -6,34 +6,34 @@ using System.Threading.Tasks;
 
 namespace DTO_BusSystemManagement
 {
-    class DTO_Bus
+    public class DTO_Bus
     {
-        private int _Bus_ID;
-        private string _Bus_BienKiemSoat;
-        private string _Bus_HangSanXuat;
-        private int _Bus_NamSanXuat;
-        private int _Bus_SoGhe;
-        private string _Bus_ChuKyBaoHanh;
+        private int _BUS_ID;
+        private string _BUS_LICENSEPLATE;
+        private string _BUS_MANUFACTURER;
+        private int _BUS_YEAROFMANUFACTURE;
+        private int _BUS_SEATS;
+        private int _BUS_CUREPERIOD;
 
         public DTO_Bus()
         {
 
         }
-        public DTO_Bus(int bus_ID, string bus_BienKiemSoat, string bus_HangSanXuat, int bus_NamSanXuat, int bus_SoGhe, string bus_ChuKyBaoHanh)
+        public DTO_Bus(int bUS_ID, string bUS_LICENSEPLATE, string bUS_MANUFACTURER, int bUS_YEAROFMANUFACTURE, int bUS_SEATS, int bUS_CUREPERIOD)
         {
-            _Bus_ID = bus_ID;
-            _Bus_BienKiemSoat = bus_BienKiemSoat;
-            _Bus_HangSanXuat = bus_HangSanXuat;
-            _Bus_NamSanXuat = bus_NamSanXuat;
-            _Bus_SoGhe = bus_SoGhe;
-            _Bus_ChuKyBaoHanh = bus_ChuKyBaoHanh;
+            _BUS_ID = bUS_ID;
+            _BUS_LICENSEPLATE = bUS_LICENSEPLATE;
+            _BUS_MANUFACTURER = bUS_MANUFACTURER;
+            _BUS_YEAROFMANUFACTURE = bUS_YEAROFMANUFACTURE;
+            _BUS_SEATS = bUS_SEATS;
+            _BUS_CUREPERIOD = bUS_CUREPERIOD;
         }
 
-        public int Bus_ID { get => _Bus_ID; set => _Bus_ID = value; }
-        public string Bus_BienKiemSoat { get => _Bus_BienKiemSoat; set => _Bus_BienKiemSoat = value; }
-        public string Bus_HangSanXuat { get => _Bus_HangSanXuat; set => _Bus_HangSanXuat = value; }
-        public int Bus_NamSanXuat { get => _Bus_NamSanXuat; set => _Bus_NamSanXuat = value; }
-        public int Bus_SoGhe { get => _Bus_SoGhe; set => _Bus_SoGhe = value; }
-        public string Bus_ChuKyBaoHanh { get => _Bus_ChuKyBaoHanh; set => _Bus_ChuKyBaoHanh = value; }
+        public int BUS_ID { get => _BUS_ID; set => _BUS_ID = value; }
+        public string BUS_LICENSEPLATE { get => _BUS_LICENSEPLATE; set => _BUS_LICENSEPLATE = value; }
+        public string BUS_MANUFACTURER { get => _BUS_MANUFACTURER; set => _BUS_MANUFACTURER = value; }
+        public int BUS_YEAROFMANUFACTURE { get => _BUS_YEAROFMANUFACTURE; set => _BUS_YEAROFMANUFACTURE = value; }
+        public int BUS_SEATS { get => _BUS_SEATS; set => _BUS_SEATS = value; }
+        public int BUS_CUREPERIOD { get => _BUS_CUREPERIOD; set => _BUS_CUREPERIOD = value; }
     }
 }
