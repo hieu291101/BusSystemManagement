@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_AsDriver.cs" />
+    <Compile Include="DAL_Driver.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>

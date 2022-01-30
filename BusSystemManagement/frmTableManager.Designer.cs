@@ -31,6 +31,10 @@
             this.tcDriver = new System.Windows.Forms.TabControl();
             this.tabPageDriver = new System.Windows.Forms.TabPage();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.btnAddMdriver = new System.Windows.Forms.Button();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.cbLicense = new System.Windows.Forms.ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
             this.nudExperienceDriver = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
@@ -41,7 +45,7 @@
             this.btnUpdateDriver = new System.Windows.Forms.Button();
             this.btnDeleteDriver = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.tbCmndDriver = new System.Windows.Forms.TextBox();
+            this.tbIdCardDriver = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
             this.tbPhoneDriver = new System.Windows.Forms.TextBox();
@@ -55,12 +59,11 @@
             this.panel41 = new System.Windows.Forms.Panel();
             this.dtpDayOfBirthDriver = new System.Windows.Forms.DateTimePicker();
             this.label31 = new System.Windows.Forms.Label();
-            this.btnAddDriver = new System.Windows.Forms.Button();
             this.panel42 = new System.Windows.Forms.Panel();
             this.tbDriverName = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvDriver = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cbDriver = new System.Windows.Forms.ComboBox();
             this.tbSearchDriver = new System.Windows.Forms.TextBox();
@@ -197,6 +200,7 @@
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
+            this.panel46.SuspendLayout();
             this.panel35.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudExperienceDriver)).BeginInit();
             this.panel36.SuspendLayout();
@@ -207,7 +211,7 @@
             this.panel41.SuspendLayout();
             this.panel42.SuspendLayout();
             this.panel34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).BeginInit();
             this.panel6.SuspendLayout();
             this.tabPageAsDriver.SuspendLayout();
             this.panel26.SuspendLayout();
@@ -293,6 +297,8 @@
             // 
             // panel27
             // 
+            this.panel27.Controls.Add(this.btnAddMdriver);
+            this.panel27.Controls.Add(this.panel46);
             this.panel27.Controls.Add(this.panel35);
             this.panel27.Controls.Add(this.panel36);
             this.panel27.Controls.Add(this.btnResetDriver);
@@ -303,12 +309,47 @@
             this.panel27.Controls.Add(this.panel39);
             this.panel27.Controls.Add(this.panel40);
             this.panel27.Controls.Add(this.panel41);
-            this.panel27.Controls.Add(this.btnAddDriver);
             this.panel27.Controls.Add(this.panel42);
             this.panel27.Location = new System.Drawing.Point(3, 394);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(955, 271);
             this.panel27.TabIndex = 8;
+            // 
+            // btnAddMdriver
+            // 
+            this.btnAddMdriver.Location = new System.Drawing.Point(717, 3);
+            this.btnAddMdriver.Name = "btnAddMdriver";
+            this.btnAddMdriver.Size = new System.Drawing.Size(232, 56);
+            this.btnAddMdriver.TabIndex = 9;
+            this.btnAddMdriver.Text = "Thêm";
+            this.btnAddMdriver.UseVisualStyleBackColor = true;
+            this.btnAddMdriver.Click += new System.EventHandler(this.btnAddMdriver_Click);
+            // 
+            // panel46
+            // 
+            this.panel46.Controls.Add(this.cbLicense);
+            this.panel46.Controls.Add(this.label34);
+            this.panel46.Location = new System.Drawing.Point(3, 175);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(354, 37);
+            this.panel46.TabIndex = 3;
+            // 
+            // cbLicense
+            // 
+            this.cbLicense.FormattingEnabled = true;
+            this.cbLicense.Location = new System.Drawing.Point(113, 8);
+            this.cbLicense.Name = "cbLicense";
+            this.cbLicense.Size = new System.Drawing.Size(121, 24);
+            this.cbLicense.TabIndex = 1;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(12, 11);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(55, 16);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Bằng lái";
             // 
             // panel35
             // 
@@ -368,6 +409,7 @@
             this.btnResetDriver.TabIndex = 11;
             this.btnResetDriver.Text = "Nhập lại";
             this.btnResetDriver.UseVisualStyleBackColor = true;
+            this.btnResetDriver.Click += new System.EventHandler(this.btnResetDriver_Click);
             // 
             // btnUpdateDriver
             // 
@@ -377,6 +419,7 @@
             this.btnUpdateDriver.TabIndex = 10;
             this.btnUpdateDriver.Text = "Cập nhật";
             this.btnUpdateDriver.UseVisualStyleBackColor = true;
+            this.btnUpdateDriver.Click += new System.EventHandler(this.btnUpdateDriver_Click);
             // 
             // btnDeleteDriver
             // 
@@ -386,22 +429,23 @@
             this.btnDeleteDriver.TabIndex = 9;
             this.btnDeleteDriver.Text = "Xóa";
             this.btnDeleteDriver.UseVisualStyleBackColor = true;
+            this.btnDeleteDriver.Click += new System.EventHandler(this.btnDeleteDriver_Click);
             // 
             // panel37
             // 
-            this.panel37.Controls.Add(this.tbCmndDriver);
+            this.panel37.Controls.Add(this.tbIdCardDriver);
             this.panel37.Controls.Add(this.label27);
             this.panel37.Location = new System.Drawing.Point(360, 89);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(354, 37);
             this.panel37.TabIndex = 3;
             // 
-            // tbCmndDriver
+            // tbIdCardDriver
             // 
-            this.tbCmndDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbCmndDriver.Name = "tbCmndDriver";
-            this.tbCmndDriver.Size = new System.Drawing.Size(238, 22);
-            this.tbCmndDriver.TabIndex = 1;
+            this.tbIdCardDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbIdCardDriver.Name = "tbIdCardDriver";
+            this.tbIdCardDriver.Size = new System.Drawing.Size(238, 22);
+            this.tbIdCardDriver.TabIndex = 1;
             // 
             // label27
             // 
@@ -516,15 +560,6 @@
             this.label31.TabIndex = 0;
             this.label31.Text = "Ngày sinh";
             // 
-            // btnAddDriver
-            // 
-            this.btnAddDriver.Location = new System.Drawing.Point(717, 3);
-            this.btnAddDriver.Name = "btnAddDriver";
-            this.btnAddDriver.Size = new System.Drawing.Size(232, 56);
-            this.btnAddDriver.TabIndex = 8;
-            this.btnAddDriver.Text = "Thêm";
-            this.btnAddDriver.UseVisualStyleBackColor = true;
-            // 
             // panel42
             // 
             this.panel42.Controls.Add(this.tbDriverName);
@@ -552,19 +587,19 @@
             // 
             // panel34
             // 
-            this.panel34.Controls.Add(this.dataGridView4);
+            this.panel34.Controls.Add(this.dgvDriver);
             this.panel34.Location = new System.Drawing.Point(3, 57);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(955, 334);
             this.panel34.TabIndex = 7;
             // 
-            // dataGridView4
+            // dgvDriver
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(949, 328);
-            this.dataGridView4.TabIndex = 0;
+            this.dgvDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDriver.Location = new System.Drawing.Point(3, 3);
+            this.dgvDriver.Name = "dgvDriver";
+            this.dgvDriver.Size = new System.Drawing.Size(949, 328);
+            this.dgvDriver.TabIndex = 0;
             // 
             // panel6
             // 
@@ -1808,6 +1843,8 @@
             this.tcDriver.ResumeLayout(false);
             this.tabPageDriver.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
+            this.panel46.ResumeLayout(false);
+            this.panel46.PerformLayout();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudExperienceDriver)).EndInit();
@@ -1826,7 +1863,7 @@
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
             this.panel34.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.tabPageAsDriver.ResumeLayout(false);
@@ -1996,7 +2033,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvDriver;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Button btnResetAsDriver;
         private System.Windows.Forms.Button btnUpdateAsDriver;
@@ -2062,7 +2099,7 @@
         private System.Windows.Forms.Button btnUpdateDriver;
         private System.Windows.Forms.Button btnDeleteDriver;
         private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.TextBox tbCmndDriver;
+        private System.Windows.Forms.TextBox tbIdCardDriver;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.TextBox tbPhoneDriver;
@@ -2076,7 +2113,6 @@
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.DateTimePicker dtpDayOfBirthDriver;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button btnAddDriver;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.TextBox tbDriverName;
         private System.Windows.Forms.Label label32;
@@ -2085,5 +2121,9 @@
         private System.Windows.Forms.TextBox tbAsDriverID;
         private System.Windows.Forms.TextBox tbDriverID;
         private System.Windows.Forms.NumericUpDown nudCycle;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.ComboBox cbLicense;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button btnAddMdriver;
     }
 }
