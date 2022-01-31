@@ -159,7 +159,7 @@
             this.tbBusLineName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBusLine = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbBusLine = new System.Windows.Forms.ComboBox();
@@ -171,23 +171,19 @@
             this.btnUpdateBusRide = new System.Windows.Forms.Button();
             this.btnDeleteBusRide = new System.Windows.Forms.Button();
             this.panel48 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartTimeBusRide = new System.Windows.Forms.DateTimePicker();
             this.label36 = new System.Windows.Forms.Label();
             this.panel49 = new System.Windows.Forms.Panel();
-            this.tbBusID = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel50 = new System.Windows.Forms.Panel();
-            this.tbAsDriverID = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.panel51 = new System.Windows.Forms.Panel();
-            this.tbDriverID = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.btnAddBusRide = new System.Windows.Forms.Button();
             this.panel52 = new System.Windows.Forms.Panel();
-            this.tbBusLineID = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dgvBusRide = new System.Windows.Forms.DataGridView();
             this.panel43 = new System.Windows.Forms.Panel();
             this.cbBusRide = new System.Windows.Forms.ComboBox();
             this.tbSearchBusRide = new System.Windows.Forms.TextBox();
@@ -197,6 +193,10 @@
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nudBusLineID = new System.Windows.Forms.NumericUpDown();
+            this.nudAsDriverID = new System.Windows.Forms.NumericUpDown();
+            this.nudDriverID = new System.Windows.Forms.NumericUpDown();
+            this.nudBusID = new System.Windows.Forms.NumericUpDown();
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -253,7 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudFrequency)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusLine)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabPageBusRide.SuspendLayout();
             this.panel45.SuspendLayout();
@@ -263,9 +263,13 @@
             this.panel51.SuspendLayout();
             this.panel52.SuspendLayout();
             this.panel44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).BeginInit();
             this.panel43.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBusLineID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAsDriverID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDriverID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBusID)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDriver
@@ -1273,7 +1277,7 @@
             this.btnResetBusLine.TabIndex = 11;
             this.btnResetBusLine.Text = "Nhập lại";
             this.btnResetBusLine.UseVisualStyleBackColor = true;
-            this.btnResetBusLine.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnResetBusLine.Click += new System.EventHandler(this.btnResetBusLine_Click);
             // 
             // btnUpdateBusLine
             // 
@@ -1283,6 +1287,7 @@
             this.btnUpdateBusLine.TabIndex = 10;
             this.btnUpdateBusLine.Text = "Cập nhật";
             this.btnUpdateBusLine.UseVisualStyleBackColor = true;
+            this.btnUpdateBusLine.Click += new System.EventHandler(this.btnUpdateBusLine_Click);
             // 
             // btnDeleteBusLine
             // 
@@ -1292,6 +1297,7 @@
             this.btnDeleteBusLine.TabIndex = 9;
             this.btnDeleteBusLine.Text = "Xóa";
             this.btnDeleteBusLine.UseVisualStyleBackColor = true;
+            this.btnDeleteBusLine.Click += new System.EventHandler(this.btnDeleteBusLine_Click);
             // 
             // panel15
             // 
@@ -1468,6 +1474,7 @@
             this.btnAddBusLine.TabIndex = 8;
             this.btnAddBusLine.Text = "Thêm";
             this.btnAddBusLine.UseVisualStyleBackColor = true;
+            this.btnAddBusLine.Click += new System.EventHandler(this.btnAddBusLine_Click);
             // 
             // panel10
             // 
@@ -1496,19 +1503,19 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.dataGridView1);
+            this.panel8.Controls.Add(this.dgvBusLine);
             this.panel8.Location = new System.Drawing.Point(3, 57);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(955, 334);
             this.panel8.TabIndex = 4;
             // 
-            // dataGridView1
+            // dgvBusLine
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(949, 328);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvBusLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBusLine.Location = new System.Drawing.Point(3, 3);
+            this.dgvBusLine.Name = "dgvBusLine";
+            this.dgvBusLine.Size = new System.Drawing.Size(949, 328);
+            this.dgvBusLine.TabIndex = 0;
             // 
             // panel7
             // 
@@ -1588,6 +1595,7 @@
             this.btnResetBusRide.TabIndex = 11;
             this.btnResetBusRide.Text = "Nhập lại";
             this.btnResetBusRide.UseVisualStyleBackColor = true;
+            this.btnResetBusRide.Click += new System.EventHandler(this.btnResetBusRide_Click);
             // 
             // btnUpdateBusRide
             // 
@@ -1597,6 +1605,7 @@
             this.btnUpdateBusRide.TabIndex = 10;
             this.btnUpdateBusRide.Text = "Cập nhật";
             this.btnUpdateBusRide.UseVisualStyleBackColor = true;
+            this.btnUpdateBusRide.Click += new System.EventHandler(this.btnUpdateBusRide_Click);
             // 
             // btnDeleteBusRide
             // 
@@ -1606,22 +1615,23 @@
             this.btnDeleteBusRide.TabIndex = 9;
             this.btnDeleteBusRide.Text = "Xóa";
             this.btnDeleteBusRide.UseVisualStyleBackColor = true;
+            this.btnDeleteBusRide.Click += new System.EventHandler(this.btnDeleteBusRide_Click);
             // 
             // panel48
             // 
-            this.panel48.Controls.Add(this.dateTimePicker1);
+            this.panel48.Controls.Add(this.dtpStartTimeBusRide);
             this.panel48.Controls.Add(this.label36);
             this.panel48.Location = new System.Drawing.Point(3, 89);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(354, 37);
             this.panel48.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtpStartTimeBusRide
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 6);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dtpStartTimeBusRide.Location = new System.Drawing.Point(113, 6);
+            this.dtpStartTimeBusRide.Name = "dtpStartTimeBusRide";
+            this.dtpStartTimeBusRide.Size = new System.Drawing.Size(200, 22);
+            this.dtpStartTimeBusRide.TabIndex = 13;
             // 
             // label36
             // 
@@ -1634,19 +1644,12 @@
             // 
             // panel49
             // 
-            this.panel49.Controls.Add(this.tbBusID);
+            this.panel49.Controls.Add(this.nudBusID);
             this.panel49.Controls.Add(this.label37);
             this.panel49.Location = new System.Drawing.Point(360, 46);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(354, 37);
             this.panel49.TabIndex = 4;
-            // 
-            // tbBusID
-            // 
-            this.tbBusID.Location = new System.Drawing.Point(113, 8);
-            this.tbBusID.Name = "tbBusID";
-            this.tbBusID.Size = new System.Drawing.Size(238, 22);
-            this.tbBusID.TabIndex = 3;
             // 
             // label37
             // 
@@ -1659,19 +1662,12 @@
             // 
             // panel50
             // 
-            this.panel50.Controls.Add(this.tbAsDriverID);
+            this.panel50.Controls.Add(this.nudAsDriverID);
             this.panel50.Controls.Add(this.label38);
             this.panel50.Location = new System.Drawing.Point(3, 46);
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(354, 37);
             this.panel50.TabIndex = 2;
-            // 
-            // tbAsDriverID
-            // 
-            this.tbAsDriverID.Location = new System.Drawing.Point(113, 8);
-            this.tbAsDriverID.Name = "tbAsDriverID";
-            this.tbAsDriverID.Size = new System.Drawing.Size(238, 22);
-            this.tbAsDriverID.TabIndex = 2;
             // 
             // label38
             // 
@@ -1684,19 +1680,12 @@
             // 
             // panel51
             // 
-            this.panel51.Controls.Add(this.tbDriverID);
+            this.panel51.Controls.Add(this.nudDriverID);
             this.panel51.Controls.Add(this.label39);
             this.panel51.Location = new System.Drawing.Point(360, 3);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(354, 37);
             this.panel51.TabIndex = 2;
-            // 
-            // tbDriverID
-            // 
-            this.tbDriverID.Location = new System.Drawing.Point(113, 8);
-            this.tbDriverID.Name = "tbDriverID";
-            this.tbDriverID.Size = new System.Drawing.Size(238, 22);
-            this.tbDriverID.TabIndex = 2;
             // 
             // label39
             // 
@@ -1715,22 +1704,16 @@
             this.btnAddBusRide.TabIndex = 8;
             this.btnAddBusRide.Text = "Thêm";
             this.btnAddBusRide.UseVisualStyleBackColor = true;
+            this.btnAddBusRide.Click += new System.EventHandler(this.btnAddBusRide_Click);
             // 
             // panel52
             // 
-            this.panel52.Controls.Add(this.tbBusLineID);
+            this.panel52.Controls.Add(this.nudBusLineID);
             this.panel52.Controls.Add(this.label40);
             this.panel52.Location = new System.Drawing.Point(3, 3);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(354, 37);
             this.panel52.TabIndex = 1;
-            // 
-            // tbBusLineID
-            // 
-            this.tbBusLineID.Location = new System.Drawing.Point(113, 8);
-            this.tbBusLineID.Name = "tbBusLineID";
-            this.tbBusLineID.Size = new System.Drawing.Size(238, 22);
-            this.tbBusLineID.TabIndex = 1;
             // 
             // label40
             // 
@@ -1743,19 +1726,19 @@
             // 
             // panel44
             // 
-            this.panel44.Controls.Add(this.dataGridView5);
+            this.panel44.Controls.Add(this.dgvBusRide);
             this.panel44.Location = new System.Drawing.Point(3, 57);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(955, 334);
             this.panel44.TabIndex = 5;
             // 
-            // dataGridView5
+            // dgvBusRide
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(949, 328);
-            this.dataGridView5.TabIndex = 0;
+            this.dgvBusRide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBusRide.Location = new System.Drawing.Point(3, 3);
+            this.dgvBusRide.Name = "dgvBusRide";
+            this.dgvBusRide.Size = new System.Drawing.Size(949, 328);
+            this.dgvBusRide.TabIndex = 0;
             // 
             // panel43
             // 
@@ -1828,6 +1811,54 @@
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            // 
+            // nudBusLineID
+            // 
+            this.nudBusLineID.Location = new System.Drawing.Point(113, 8);
+            this.nudBusLineID.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudBusLineID.Name = "nudBusLineID";
+            this.nudBusLineID.Size = new System.Drawing.Size(120, 22);
+            this.nudBusLineID.TabIndex = 12;
+            // 
+            // nudAsDriverID
+            // 
+            this.nudAsDriverID.Location = new System.Drawing.Point(113, 8);
+            this.nudAsDriverID.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudAsDriverID.Name = "nudAsDriverID";
+            this.nudAsDriverID.Size = new System.Drawing.Size(120, 22);
+            this.nudAsDriverID.TabIndex = 13;
+            // 
+            // nudDriverID
+            // 
+            this.nudDriverID.Location = new System.Drawing.Point(113, 8);
+            this.nudDriverID.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudDriverID.Name = "nudDriverID";
+            this.nudDriverID.Size = new System.Drawing.Size(120, 22);
+            this.nudDriverID.TabIndex = 13;
+            // 
+            // nudBusID
+            // 
+            this.nudBusID.Location = new System.Drawing.Point(113, 8);
+            this.nudBusID.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudBusID.Name = "nudBusID";
+            this.nudBusID.Size = new System.Drawing.Size(120, 22);
+            this.nudBusID.TabIndex = 14;
             // 
             // frmTableManager
             // 
@@ -1928,7 +1959,7 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusLine)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPageBusRide.ResumeLayout(false);
@@ -1944,11 +1975,15 @@
             this.panel52.ResumeLayout(false);
             this.panel52.PerformLayout();
             this.panel44.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).EndInit();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBusLineID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAsDriverID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDriverID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBusID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1985,7 +2020,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox tbBusLineName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBusLine;
         private System.Windows.Forms.NumericUpDown nudStartTime;
         private System.Windows.Forms.Button btnAddBusLine;
         private System.Windows.Forms.Panel panel15;
@@ -2071,10 +2106,9 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button btnAddBusRide;
         private System.Windows.Forms.Panel panel52;
-        private System.Windows.Forms.TextBox tbBusLineID;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dgvBusRide;
         private System.Windows.Forms.Panel panel43;
         private System.Windows.Forms.ComboBox cbBusRide;
         private System.Windows.Forms.TextBox tbSearchBusRide;
@@ -2116,14 +2150,15 @@
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.TextBox tbDriverName;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox tbBusID;
-        private System.Windows.Forms.TextBox tbAsDriverID;
-        private System.Windows.Forms.TextBox tbDriverID;
+        private System.Windows.Forms.DateTimePicker dtpStartTimeBusRide;
         private System.Windows.Forms.NumericUpDown nudCycle;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.ComboBox cbLicense;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button btnAddMdriver;
+        private System.Windows.Forms.NumericUpDown nudAsDriverID;
+        private System.Windows.Forms.NumericUpDown nudDriverID;
+        private System.Windows.Forms.NumericUpDown nudBusLineID;
+        private System.Windows.Forms.NumericUpDown nudBusID;
     }
 }
