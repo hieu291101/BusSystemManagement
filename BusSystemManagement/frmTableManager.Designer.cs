@@ -1497,11 +1497,14 @@
             // 
             // cbBusLine
             // 
+            this.cbBusLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusLine.FormattingEnabled = true;
             this.cbBusLine.Location = new System.Drawing.Point(275, 10);
             this.cbBusLine.Name = "cbBusLine";
             this.cbBusLine.Size = new System.Drawing.Size(121, 24);
+            this.cbBusLine.Sorted = true;
             this.cbBusLine.TabIndex = 2;
+            this.cbBusLine.SelectedIndexChanged += new System.EventHandler(this.cbBusLine_SelectedIndexChanged);
             // 
             // tbSearchBusLine
             // 
@@ -1509,6 +1512,7 @@
             this.tbSearchBusLine.Name = "tbSearchBusLine";
             this.tbSearchBusLine.Size = new System.Drawing.Size(189, 22);
             this.tbSearchBusLine.TabIndex = 1;
+            this.tbSearchBusLine.TextChanged += new System.EventHandler(this.tbSearchBusLine_TextChanged);
             // 
             // label2
             // 

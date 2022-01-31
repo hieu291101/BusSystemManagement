@@ -34,12 +34,19 @@ namespace BusSystemManagement
             // form load for Bus Line
             dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
             setHeaderBusLine(dgvBusLine);
+            string[] cbBusLineList = {
+                "Tên tuyến xe", 
+                "Điểm bắt đầu", 
+                "Điểm kết thúc", 
+                "Giờ bắt đầu", 
+                "Giờ kết thúc",
+                "Chi tiết trạm"
+            };
+            cbBusLine.Items.AddRange(cbBusLineList);
+            cbBusLine.SelectedIndex = 5;
         }
 
-
-
-        //**************************************************************************
-        //----------  Driver  ---------------------------------
+        #region Driver
         private static void setHeaderAsDriver(DataGridView dgvAsDriver)
         {
             dgvAsDriver.Columns[0].HeaderText = "Mã phụ xe";
@@ -163,13 +170,10 @@ namespace BusSystemManagement
             dtpStartDay.Value = DateTime.Now;
             nudExperienceAsDriver.Value = 0;
         }
-        //**************************************************************************
-        //--XXX------------------Driver---------------XXX-------
+        #endregion
 
 
-
-        //**************************************************************************
-        //----------  BusLine  ---------------------------------
+        #region Bus Line
         private static void setHeaderBusLine(DataGridView dtvBusLine)
         {
             dtvBusLine.Columns[0].HeaderText = "Mã chuyến xe";
@@ -291,8 +295,48 @@ namespace BusSystemManagement
             tbBusLineDetail.Text = "";
         }
 
+        private void tbSearchBusLine_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchBusLine.Text;
+            if ( kw == "")
+                dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+            else
+            {
+                switch (cbBusLine.SelectedItem.ToString()) 
+                {
+                    case "Tên tuyến xe":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByBusLineName(kw);
+                        break;
+                    case "Điểm bắt đầu":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByStartLocation(kw);
+                        break;
+                    case "Điểm kết thúc":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByEndLocation(kw);
+                        break;
+                    case "Giờ bắt đầu":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByStartTime(kw);
+                        break;
+                    case "Giờ kết thúc":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByEndTime(kw);
+                        break;
+                    case "Chi tiết trạm":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByBusStopDetail(kw);
+                        break;
+                    default:
+                        dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+                        break;
+                }
+            }
+        }
 
-        //--XXX------------------BusLine---------------XXX-------
-        //**************************************************************************
+        private void cbBusLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchBusLine.Text = "";
+            dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+        }
+
+        #endregion
+
+
     }
 }

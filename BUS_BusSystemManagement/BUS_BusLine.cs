@@ -12,6 +12,7 @@ namespace BUS_BusSystemManagement
     public class BUS_BusLine
     {
         DAL_BusLine dalBusLine = new DAL_BusLine();
+
         public DataTable GetBusLine()
         {
             return dalBusLine.GetBusLine();
@@ -30,6 +31,36 @@ namespace BUS_BusSystemManagement
         public bool DeleteBusLine(int BUSLINE_ID)
         {
             return dalBusLine.DeleteBusLine(BUSLINE_ID);
+        }
+
+        public DataTable FindBusLineByBusLineName(string kw)
+        {
+            return dalBusLine.FindBusLineByBusLineName(kw);
+        }
+
+        public DataTable FindBusLineByStartLocation(string kw)
+        {
+            return dalBusLine.FindBusLineByStartLocation(kw);
+        }
+
+        public DataTable FindBusLineByEndLocation(string kw)
+        {
+            return dalBusLine.FindBusLineByEndLocation(kw);
+        }
+
+        public DataTable FindBusLineByBusStopDetail(string kw)
+        {
+            return dalBusLine.FindBusLineByBusStopDetail(kw);
+        }
+
+        public DataTable FindBusLineByStartTime(string kw)
+        {
+            return dalBusLine.FindBusLineByStartTime(kw);
+        }
+
+        public DataTable FindBusLineByEndTime(string kw)
+        {
+            return dalBusLine.FindBusLineByEndTime(kw);
         }
     }
 }
