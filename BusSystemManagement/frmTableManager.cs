@@ -31,6 +31,13 @@ namespace BusSystemManagement
             setHeaderAsDriver(dgvAsDriver);
         }
 
+        //Đóng chương trình
+        private void frmTableManager_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
 
 
         //**************************************************************************
@@ -58,7 +65,7 @@ namespace BusSystemManagement
                 // Lấy row hiện tại
                 DataGridViewRow row = dgvAsDriver.SelectedRows[0];
                 int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
-              
+
                 // Xóa
                 if (BUS_AsDriver.DeleteAsDriver(ID))
                 {
@@ -95,7 +102,8 @@ namespace BusSystemManagement
                 }
                 else
                 {
-                    MessageBox.Show("Thêm không thành công"); ;
+                    MessageBox.Show("Thêm không thành công");
+                    ;
                 }
             }
             else
@@ -164,6 +172,25 @@ namespace BusSystemManagement
             dtpStartDay.Value = DateTime.Now;
             nudExperienceAsDriver.Value = 0;
         }
+
+        //Nhấn chọn thông tin cá nhân => giao diện chỉnh sửa người dùng
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Nhấn chọn đăng xuất => quay về giao diện đăng nhập
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin=new frmLogin();
+            this.Hide();
+            frmLogin.ShowDialog();
+        }
+
+
+
+
+
         //**************************************************************************
         //--XXX------------------Driver---------------XXX-------
     }
