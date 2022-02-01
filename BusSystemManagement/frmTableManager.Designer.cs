@@ -123,7 +123,7 @@
             this.tbLicensePlate = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvBus = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cbBus = new System.Windows.Forms.ComboBox();
             this.tbSearchBus = new System.Windows.Forms.TextBox();
@@ -234,7 +234,7 @@
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBus)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabPageBusLine.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -1037,7 +1037,7 @@
             this.panel16.Location = new System.Drawing.Point(4, 485);
             this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1273, 334);
+            this.panel16.Size = new System.Drawing.Size(1273, 313);
             this.panel16.TabIndex = 6;
             // 
             // btnResetBus
@@ -1049,6 +1049,7 @@
             this.btnResetBus.TabIndex = 11;
             this.btnResetBus.Text = "Nhập lại";
             this.btnResetBus.UseVisualStyleBackColor = true;
+            this.btnResetBus.Click += new System.EventHandler(this.btnResetBus_Click);
             // 
             // btnUpdateBus
             // 
@@ -1059,6 +1060,7 @@
             this.btnUpdateBus.TabIndex = 10;
             this.btnUpdateBus.Text = "Cập nhật";
             this.btnUpdateBus.UseVisualStyleBackColor = true;
+            this.btnUpdateBus.Click += new System.EventHandler(this.btnUpdateBus_Click);
             // 
             // btnDeleteBus
             // 
@@ -1069,6 +1071,7 @@
             this.btnDeleteBus.TabIndex = 9;
             this.btnDeleteBus.Text = "Xóa";
             this.btnDeleteBus.UseVisualStyleBackColor = true;
+            this.btnDeleteBus.Click += new System.EventHandler(this.btnDeleteBus_Click);
             // 
             // panel20
             // 
@@ -1216,6 +1219,7 @@
             this.btnAddBus.TabIndex = 8;
             this.btnAddBus.Text = "Thêm";
             this.btnAddBus.UseVisualStyleBackColor = true;
+            this.btnAddBus.Click += new System.EventHandler(this.btnAddBus_Click);
             // 
             // panel24
             // 
@@ -1247,22 +1251,22 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Controls.Add(this.dgvBus);
             this.panel2.Location = new System.Drawing.Point(4, 70);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1273, 411);
             this.panel2.TabIndex = 5;
             // 
-            // dataGridView2
+            // dgvBus
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1265, 404);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvBus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBus.Location = new System.Drawing.Point(4, 4);
+            this.dgvBus.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBus.Name = "dgvBus";
+            this.dgvBus.RowHeadersWidth = 51;
+            this.dgvBus.Size = new System.Drawing.Size(1265, 404);
+            this.dgvBus.TabIndex = 0;
             // 
             // panel4
             // 
@@ -1970,7 +1974,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 855);
+            this.ClientSize = new System.Drawing.Size(1324, 871);
             this.Controls.Add(this.tcDriver);
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -2041,7 +2045,7 @@
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBus)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabPageBusLine.ResumeLayout(false);
@@ -2167,7 +2171,7 @@
         private System.Windows.Forms.TextBox tbLicensePlate;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvBus;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Panel panel26;

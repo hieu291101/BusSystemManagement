@@ -15,14 +15,14 @@ namespace DTO_BusSystemManagement
         private int _BUSRIDE_ID;
         private DateTime _BUSRIDE_STARTTIME;
 
-        public DTO_BusRide(int BUSRIDE_BUSLINEID, int BUSRIDE_BUSID, int BUSRIDE_DRIVERID,
-            int bUSRIDE_ASDRIVERID, int bUSRIDE_ID, DateTime bUSRIDE_STARTTIME)
+        public DTO_BusRide(int bUSRIDE_ID, int bUSRIDE_BUSLINEID, int bUSRIDE_BUSID, int bUSRIDE_DRIVERID,
+            int bUSRIDE_ASDRIVERID,  DateTime bUSRIDE_STARTTIME)
         {
-            _BUSRIDE_BUSLINEID = BUSRIDE_BUSLINEID;
-            _BUSRIDE_BUSID = BUSRIDE_BUSID;
-            _BUSRIDE_DRIVERID = BUSRIDE_DRIVERID;
-            _BUSRIDE_ASDRIVERID = bUSRIDE_ASDRIVERID;
             _BUSRIDE_ID = bUSRIDE_ID;
+            _BUSRIDE_BUSLINEID = bUSRIDE_BUSLINEID;
+            _BUSRIDE_BUSID = bUSRIDE_BUSID;
+            _BUSRIDE_DRIVERID = bUSRIDE_DRIVERID;
+            _BUSRIDE_ASDRIVERID = bUSRIDE_ASDRIVERID;
             _BUSRIDE_STARTTIME = bUSRIDE_STARTTIME;
         }
 

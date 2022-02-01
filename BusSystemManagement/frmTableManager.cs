@@ -16,6 +16,7 @@ namespace BusSystemManagement
     {
         BUS_AsDriver BUS_AsDriver = new BUS_AsDriver();
         BUS_BusRide BUS_BusRide = new BUS_BusRide();
+        BUS_Bus BUS_Bus = new BUS_Bus();
         public frmTableManager()
         {
             InitializeComponent();
@@ -34,6 +35,10 @@ namespace BusSystemManagement
             // form load for Bus Ride
             dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
             setHeaderBusDriver(dgvBusRide);
+
+            //form load for Bus
+            dgvBus.DataSource = BUS_Bus.GetBus();
+            setHeaderBus(dgvBus);
         }
 
 
@@ -89,8 +94,9 @@ namespace BusSystemManagement
             {
 
                 // Tạo DTO
-                DTO_AsDriver ad = new DTO_AsDriver(0, tbAsDriverName.Text, dtpDayOfBirth.Value, DTO_getEnum.GetGenderEnum(cbGender.Text), tbAddressAsDriver.Text,
-                    tbPhoneAsDriver.Text, tbIdCardAsDriver.Text, dtpStartDay.Value, Decimal.ToInt32(nudExperienceAsDriver.Value)); // Vì ID tự tăng nên để ID số gì cũng dc
+                DTO_AsDriver ad = new DTO_AsDriver(0, tbAsDriverName.Text, dtpDayOfBirth.Value, DTO_getEnum.GetGenderEnum(cbGender.Text), 
+                    tbAddressAsDriver.Text, tbPhoneAsDriver.Text, tbIdCardAsDriver.Text, 
+                    dtpStartDay.Value, Decimal.ToInt32(nudExperienceAsDriver.Value)); // Vì ID tự tăng nên để ID số gì cũng dc
 
                 // Thêm
                 if (BUS_AsDriver.AddAsDriver(ad))
@@ -187,7 +193,7 @@ namespace BusSystemManagement
             {
 
                 //create dto
-                DTO_BusRide add = new DTO_BusRide(tbBusLineID.Text, tbBusID.Text, tbDriverID.Text, tbAsDriverID.Text, 0,dtpStartDay.Value);
+                DTO_BusRide add = new DTO_BusRide(0, tbBusLineID.Text, tbBusID.Text, tbDriverID.Text, tbAsDriverID.Text,dtpStartTime.Value);
 
                 //add
                 if (BUS_BusRide.AddBusRide(add))
@@ -248,7 +254,7 @@ namespace BusSystemManagement
                 {
 
                     //create dto
-                    DTO_BusRide add = new DTO_BusRide(tbBusLineID.Text, tbBusID.Text, tbDriverID.Text, tbAsDriverID.Text, 0,dtpStartDay.Value);
+                    DTO_BusRide add = new DTO_BusRide(tbBusLineID.Text, tbBusID.Text, tbDriverID.Text, tbAsDriverID.Text, 0, dtpStartDay.Value);
 
                     //add
                     if (BUS_BusRide.AddBusRide(add))
@@ -270,6 +276,114 @@ namespace BusSystemManagement
             {
                 MessageBox.Show("Hãy chọn thành viên muốn sửa");
             }
+        }
+
+
+        private static void setHeaderBus(DataGridView dgvBus)
+        {
+            dgvBus.Columns[0].HeaderText = "Mã xe";
+            dgvBus.Columns[1].HeaderText = "Biển kiểm soát";
+            dgvBus.Columns[2].HeaderText = "Năm sản xuất";
+            dgvBus.Columns[3].HeaderText = "Chu kỳ bảo hành";
+            dgvBus.Columns[4].HeaderText = "Hãng sản xuất";
+            dgvBus.Columns[5].HeaderText = "Số ghế";
+        }
+
+        private void btnAddBus_Click(object sender, EventArgs e)
+        {
+            if(tbLicensePlate.Text != "" && nudMyear.Value != -1 && nudCycle.Value != -1 && tbManufacturer.Text != "" && nudChair.Value != -1)
+            {
+                //tao DTO
+                DTO_Bus adds = new DTO_Bus(0, tbLicensePlate.Text, tbManufacturer.Text, Decimal.ToInt32(nudMyear.Value), Decimal.ToInt32(nudCycle.Value), 
+                     Decimal.ToInt32(nudChair.Value));
+
+                //Them
+                if(BUS_Bus.AddBus(adds))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvBus.DataSource = BUS_Bus.GetBus(); //refresh
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nhập đầy đủ thông tin");
+            }
+        }
+
+        private void btnDeleteBus_Click(object sender, EventArgs e)
+        {
+            if (dgvBus.SelectedRows.Count > 0)
+            {
+
+                // Lấy row hiện tại
+                DataGridViewRow rows = dgvBus.SelectedRows[0];
+                int IDs = Convert.ToInt16(rows.Cells[0].Value.ToString());
+
+                // Xóa
+                if (BUS_Bus.DeleteBus(IDs))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dgvBus.DataSource = BUS_Bus.GetBus(); // refresh 
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn xe muốn xoá");
+            }
+        }
+
+        private void btnUpdateBus_Click(object sender, EventArgs e)
+        {
+            if(dgvBus.SelectedRows.Count > 0)
+            {
+                if(tbLicensePlate.Text != "" && nudMyear.Value != -1 && nudCycle.Value != -1 && tbManufacturer.Text != "" && nudChair.Value != -1)
+                {
+                    //Lay row hien tai
+                    DataGridViewRow rows = dgvBus.SelectedRows[0];
+                    int IDs = Convert.ToInt16(rows.Cells[0].Value.ToString());
+
+                    //tao DTO
+                    DTO_Bus adds = new DTO_Bus(0, tbLicensePlate.Text, tbManufacturer.Text, Decimal.ToInt32(nudMyear.Value), Decimal.ToInt32(nudCycle.Value),
+                            Decimal.ToInt32(nudChair.Value));
+
+                    //Sua
+                    if (BUS_Bus.UpdateBus(adds))
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        dgvBus.DataSource = BUS_Bus.GetBus(); //refresh
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa đổi không thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thông tin xe muốn thay đổi");
+            }
+        }
+
+        private void btnResetBus_Click(object sender, EventArgs e)
+        {
+            tbLicensePlate.Text = "";
+            tbManufacturer.Text = "";
+            nudChair.Value = 0;
+            nudCycle.Value = 0;
+            nudMyear.Value = 0;
         }
 
         //**************************************************************************

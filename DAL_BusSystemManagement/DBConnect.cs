@@ -10,6 +10,6 @@ namespace DAL_BusSystemManagement
 {
     public class DBConnect
     {
-        protected MySqlConnection _conn = new MySqlConnection("Server=localhost; Database=bussystemmanagement; Uid=root; Pwd=Dieuphuong0723");
+        protected MySqlConnection _conn = new MySqlConnection("Server=localhost:3306; Database=bussystemmanagement; Uid=root; Pwd=Dieuphuong0723");
     }
 }
