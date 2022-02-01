@@ -56,3 +56,46 @@ D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\System.Buffers.xml
 D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Compression.LZ4.xml
 D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Hash.xxHash.xml
 D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\System.Numerics.Vectors.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BusSystemManagement.exe.config
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BusSystemManagement.exe
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\MySql.Data.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\Google.Protobuf.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\ZstdNet.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BouncyCastle.Crypto.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\Ubiety.Dns.Core.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Memory.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Buffers.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Compression.LZ4.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Hash.xxHash.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Numerics.Vectors.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BUS_BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll.config
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\DAL_BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll.config
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\MySql.Data.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\Google.Protobuf.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\Google.Protobuf.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Compression.LZ4.Streams.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Memory.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Buffers.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Compression.LZ4.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Hash.xxHash.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\bin\Debug\System.Numerics.Vectors.xml
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.AssemblyReference.cache
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.frmLogin.resources
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.frmTableManager.resources
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.Properties.Resources.resources
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.GenerateResource.cache
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.CoreCompileInputs.cache
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\GUI_BusSystemManagement.csproj.CopyComplete
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.exe
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.frmUser.resources

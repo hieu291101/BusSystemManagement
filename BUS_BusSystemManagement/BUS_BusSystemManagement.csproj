@@ -46,6 +46,7 @@
     <Compile Include="BUS_BusLine.cs" />
     <Compile Include="BUS_BusRide.cs" />
     <Compile Include="BUS_Driver.cs" />
+    <Compile Include="BUS_User.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>

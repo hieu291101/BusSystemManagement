@@ -89,6 +89,7 @@
     <Compile Include="DAL_BusLine.cs" />
     <Compile Include="DAL_BusRide.cs" />
     <Compile Include="DAL_Driver.cs" />
+    <Compile Include="DAL_User.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>

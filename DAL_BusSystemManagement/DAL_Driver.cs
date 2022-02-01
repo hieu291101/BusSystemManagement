@@ -19,6 +19,32 @@ namespace DAL_BusSystemManagement
             return dtDriver;
         }
 
+        public DataTable GetDrivers(string keyword, int factor)
+        {
+            string sql="SELECT * FROM driver WHERE";
+            switch (factor)
+            {
+                case 0: sql = string.Format(sql + " driver_name like '%{0}%'", keyword);
+                    break;
+                case 1:
+                    sql = string.Format(sql + " address like '%{0}%'", keyword);
+                    break;
+                case 2:
+                    sql = string.Format(sql + " phone_number like '%{0}%'", keyword);
+                    break;
+                case 3:
+                    sql = string.Format(sql + " idcard like '%{0}%'", keyword);
+                    break;
+                case 4:
+                    sql = string.Format(sql + " experience like '%{0}%'", keyword);
+                    break;
+            }
+            MySqlDataAdapter msda = new MySqlDataAdapter(sql, _conn);
+            DataTable dtDriver = new DataTable();
+            msda.Fill(dtDriver);
+            return dtDriver;
+        }
+
         public bool AddDriver(DTO_Driver ad)
         {
             try

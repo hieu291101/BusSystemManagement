@@ -10,3 +10,9 @@ D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemMan
 D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.CoreCompileInputs.cache
 D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.dll
 D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.AssemblyReference.cache
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.CoreCompileInputs.cache
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.dll
+E:\DOCUMENT\TAI-LIEU-CNTT-KHOA-19\203\LẬP TRÌNH GIAO DIỆN\ĐỀ TÀI GIỮA KỲ\New folder\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.pdb

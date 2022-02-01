@@ -31,5 +31,12 @@ namespace BUS_BusSystemManagement
         {
             return dalDriver.DeleteDriver(DRIVER_ID);
         }
+
+        public DataTable GetDrivers(string keyword, int factor)
+        {
+            return dalDriver.GetDrivers(keyword, factor);
+        }
+
+        
     }
 }
