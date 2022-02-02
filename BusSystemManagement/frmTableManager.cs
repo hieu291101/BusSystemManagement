@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace BusSystemManagement
     {
         BUS_AsDriver BUS_AsDriver = new BUS_AsDriver();
         BUS_Driver BUS_Driver = new BUS_Driver();
+        BUS_Bus BUS_Bus = new BUS_Bus();
         BUS_BusLine BUS_BusLine = new BUS_BusLine();
         BUS_BusRide BUS_BusRide = new BUS_BusRide();
 
@@ -26,6 +28,7 @@ namespace BusSystemManagement
 
         private void frmTableManager_Load(object sender, EventArgs e)
         {
+            // load form for Driver, As_Driver
             List<string> listGender = new List<string> { "Nam", "Nu", "Khac" };
             List<string> listLicense = new List<string> { "B2", "C", "D", "E", "F" };
             cbGender.DataSource = listGender;
@@ -38,6 +41,12 @@ namespace BusSystemManagement
             cbLicense.SelectedIndex = 0;
             cbLicense.SelectedIndex = 0;
 
+            // load form for Bus Ride
+            cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
+            cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
+            cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
+            cbBusBR.DataSource = BUS_Bus.GetListBusId();
+
             // form load for As Driver
             dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
             setHeaderAsDriver(dgvAsDriver);
@@ -46,14 +55,36 @@ namespace BusSystemManagement
             dgvDriver.DataSource = BUS_Driver.GetDriver();
             setHeaderDriver(dgvDriver);
 
+            //form load for Bus
+            dgvBus.DataSource = BUS_Bus.GetBus();
+            setHeaderBus(dgvBus);
+
             // form load for Bus Line
             dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
             setHeaderBusLine(dgvBusLine);
+            string[] cbBusLineList = {
+                "Tên tuyến xe",
+                "Điểm bắt đầu",
+                "Điểm kết thúc",
+                "Giờ bắt đầu",
+                "Giờ kết thúc",
+                "Chi tiết trạm"
+            };
+            cbBusLine.Items.AddRange(cbBusLineList);
+            cbBusLine.SelectedIndex = 5;
 
             // form load for Bus Ride
             dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
-            dgvBusRide.Columns[0].Visible = false;
+            dgvBusRide.Columns[1].Visible = false;
+            dgvBusRide.Columns[3].Visible = false;
+            dgvBusRide.Columns[5].Visible = false;
+            dgvBusRide.Columns[7].Visible = false;
             setHeaderBusDriver(dgvBusRide);
+        }
+
+        private void frmTableManager_LoadBusRide()
+        {
+
         }
 
 
@@ -89,6 +120,8 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Xóa thành công");
                     dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver(); // refresh datagridview
+                    cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
+                    cbAsDriverBR.Text = BUS_AsDriver.GetListAsDriverId()[0];
                 }
                 else
                 {
@@ -117,6 +150,8 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Thêm thành công");
                     dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver(); // refresh datagridview
+                    cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
+                    cbAsDriverBR.Text = BUS_AsDriver.GetListAsDriverId()[0];
                 }
                 else
                 {
@@ -150,6 +185,10 @@ namespace BusSystemManagement
                     {
                         MessageBox.Show("Sửa thành công");
                         dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver(); // refresh datagridview
+                        cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
+                        cbAsDriverBR.Text = BUS_AsDriver.GetListAsDriverId()[0];
+                        cbAsDriverBR.Text = BUS_AsDriver.GetListAsDriverId() == null ? BUS_AsDriver.GetListAsDriverId()[0] : "";
+                        tbAsDriverBR.Text = BUS_AsDriver.GetListAsDriverId() == null ? BUS_AsDriver.GetAsDriverById(int.Parse(cbAsDriverBR.Text)) : "";
                     }
                     else
                     {
@@ -225,6 +264,8 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Xóa thành công");
                     dgvDriver.DataSource = BUS_Driver.GetDriver(); // refresh datagridview
+                    cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
+                    cbDriverBR.Text = BUS_Driver.GetListDriverId()[0];
                 }
                 else
                 {
@@ -261,6 +302,10 @@ namespace BusSystemManagement
                     {
                         MessageBox.Show("Sửa thành công");
                         dgvDriver.DataSource = BUS_Driver.GetDriver(); // refresh datagridview
+                        cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
+                        cbDriverBR.Text = BUS_Driver.GetListDriverId()[0];
+                        cbDriverBR.Text = BUS_Driver.GetListDriverId() == null ? BUS_Driver.GetListDriverId()[0] : "";
+                        tbDriverBR.Text = BUS_Driver.GetListDriverId() == null ? BUS_Driver.GetDriverById(int.Parse(cbDriverBR.Text)) : "";
                     }
                     else
                     {
@@ -305,6 +350,7 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Thêm thành công");
                     dgvDriver.DataSource = BUS_Driver.GetDriver(); // refresh datagridview
+                    cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
                 }
                 else
                 {
@@ -319,6 +365,125 @@ namespace BusSystemManagement
 
         //**************************************************************************
         //--XXX------------------Driver---------------XXX-------
+
+
+        //**************************************************************************
+        //----------  Bus  ---------------------------------
+        private static void setHeaderBus(DataGridView dgvBus)
+        {
+            dgvBus.Columns[0].HeaderText = "Mã xe";
+            dgvBus.Columns[1].HeaderText = "Biển kiểm soát";
+            dgvBus.Columns[3].HeaderText = "Năm sản xuất";
+            dgvBus.Columns[5].HeaderText = "Chu kỳ bảo hành";
+            dgvBus.Columns[2].HeaderText = "Hãng sản xuất";
+            dgvBus.Columns[4].HeaderText = "Số ghế";
+        }
+
+        private void btnAddBus_Click(object sender, EventArgs e)
+        {
+            if (tbLicensePlate.Text != "" && nudMyear.Value != -1 && nudCycle.Value != -1 && tbManufacturer.Text != "" && nudChair.Value != -1)
+            {
+                //tao DTO
+                DTO_Bus adds = new DTO_Bus(0, tbLicensePlate.Text, tbManufacturer.Text, Decimal.ToInt32(nudMyear.Value),
+                     Decimal.ToInt32(nudChair.Value), Decimal.ToInt32(nudCycle.Value));
+
+                //Them
+                if (BUS_Bus.AddBus(adds))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvBus.DataSource = BUS_Bus.GetBus(); //refresh
+                    cbBusBR.DataSource = BUS_Bus.GetListBusId();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nhập đầy đủ thông tin");
+            }
+        }
+
+        private void btnDeleteBus_Click(object sender, EventArgs e)
+        {
+            if (dgvBus.SelectedRows.Count > 0)
+            {
+
+                // Lấy row hiện tại
+                DataGridViewRow rows = dgvBus.SelectedRows[0];
+                int IDs = Convert.ToInt16(rows.Cells[0].Value.ToString());
+
+                // Xóa
+                if (BUS_Bus.DeleteBus(IDs))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dgvBus.DataSource = BUS_Bus.GetBus(); // refresh 
+                    cbBusBR.DataSource = BUS_Bus.GetListBusId();
+                    cbBusBR.Text = BUS_Bus.GetListBusId() == null ? BUS_Bus.GetListBusId()[0] : "";
+                    tbBusBR.Text = BUS_Bus.GetListBusId() == null ? BUS_Bus.GetBusById(int.Parse(cbBusBR.Text)) : "" ;
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn xe muốn xoá");
+            }
+        }
+
+        private void btnUpdateBus_Click(object sender, EventArgs e)
+        {
+            if (dgvBus.SelectedRows.Count > 0)
+            {
+                if (tbLicensePlate.Text != "" && nudMyear.Value != -1 && nudCycle.Value != -1 && tbManufacturer.Text != "" && nudChair.Value != -1)
+                {
+                    //Lay row hien tai
+                    DataGridViewRow rows = dgvBus.SelectedRows[0];
+                    int IDs = Convert.ToInt16(rows.Cells[0].Value.ToString());
+
+                    //tao DTO
+                    DTO_Bus adds = new DTO_Bus(IDs, tbLicensePlate.Text, tbManufacturer.Text, Decimal.ToInt32(nudMyear.Value),
+                                                Decimal.ToInt32(nudChair.Value), Decimal.ToInt32(nudCycle.Value));
+
+                    //Sua
+                    if (BUS_Bus.UpdateBus(adds))
+                    {
+                        MessageBox.Show("Sửa đổi thành công");
+                        dgvBus.DataSource = BUS_Bus.GetBus(); //refresh
+                        cbBusBR.DataSource = BUS_Bus.GetListBusId();
+                        cbBusBR.Text = BUS_Bus.GetListBusId()[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa đổi không thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thông tin xe muốn thay đổi");
+            }
+        }
+
+        private void btnResetBus_Click(object sender, EventArgs e)
+        {
+            tbLicensePlate.Text = "";
+            tbManufacturer.Text = "";
+            nudChair.Value = 0;
+            nudCycle.Value = 0;
+            nudMyear.Value = 0;
+        }
+
+        //**************************************************************************
+        //--XXX------------------Bus---------------XXX-------
 
         //**************************************************************************
         //----------  BusLine  ---------------------------------
@@ -352,6 +517,8 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
                     dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+                    cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
+                    cbBusLineBR.Text = BUS_BusLine.GetListBusLineId()[0];
                 }
                 else
                 {
@@ -379,6 +546,8 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK);
                     dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+                    cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
+                    cbBusLineBR.Text = BUS_BusLine.GetListBusLineId()[0];
                 }
                 else
                 {
@@ -415,6 +584,10 @@ namespace BusSystemManagement
                     {
                         MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK);
                         dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+                        cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
+                        cbBusLineBR.Text = BUS_BusLine.GetListBusLineId()[0];
+                        cbBusLineBR.Text = BUS_BusLine.GetListBusLineId() == null ? BUS_BusLine.GetListBusLineId()[0] : "";
+                        tbBusLineBR.Text = BUS_BusLine.GetListBusLineId() == null ? BUS_BusLine.GetBusLineById(int.Parse(cbBusLineBR.Text)) : "";
                     }
                     else
                     {
@@ -443,6 +616,45 @@ namespace BusSystemManagement
             tbBusLineDetail.Text = "";
         }
 
+        private void tbSearchBusLine_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchBusLine.Text;
+            if (kw == "")
+                dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+            else
+            {
+                switch (cbBusLine.SelectedItem.ToString())
+                {
+                    case "Tên tuyến xe":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByBusLineName(kw);
+                        break;
+                    case "Điểm bắt đầu":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByStartLocation(kw);
+                        break;
+                    case "Điểm kết thúc":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByEndLocation(kw);
+                        break;
+                    case "Giờ bắt đầu":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByStartTime(kw);
+                        break;
+                    case "Giờ kết thúc":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByEndTime(kw);
+                        break;
+                    case "Chi tiết trạm":
+                        dgvBusLine.DataSource = BUS_BusLine.FindBusLineByBusStopDetail(kw);
+                        break;
+                    default:
+                        dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+                        break;
+                }
+            }
+        }
+
+        private void cbBusLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchBusLine.Text = "";
+            dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+        }
 
         //--XXX------------------BusLine---------------XXX-------
         //**************************************************************************
@@ -453,19 +665,19 @@ namespace BusSystemManagement
         private static void setHeaderBusDriver(DataGridView dgvBusRide)
         {
             dgvBusRide.Columns[0].HeaderText = "Mã chuyến xe";
-            dgvBusRide.Columns[1].HeaderText = "Mã tuyến xe";
-            dgvBusRide.Columns[2].HeaderText = "Mã phụ xe";
-            dgvBusRide.Columns[3].HeaderText = "Mã tài xế";
-            dgvBusRide.Columns[4].HeaderText = "Mã xe";
-            dgvBusRide.Columns[5].HeaderText = "Thời điểm";
+            dgvBusRide.Columns[2].HeaderText = "Tên tuyến xe";
+            dgvBusRide.Columns[4].HeaderText = "Tên tài xế";
+            dgvBusRide.Columns[6].HeaderText = "Tên phụ xe";
+            dgvBusRide.Columns[8].HeaderText = "Biển kiểm soát";
+            dgvBusRide.Columns[9].HeaderText = "Thời điểm";
         }
         private void btnAddBusRide_Click(object sender, EventArgs e)
         {
-            if (nudBusLineID.Value != -1 && nudAsDriverID.Value != -1 && nudDriverID.Value != -1 && nudBusID.Value != -1 && dtpStartTimeBusRide.Value != null)
+            if (cbBusLineBR.Text != "" && cbAsDriverBR.Text != "" && cbDriverBR.Text != "" && cbBusBR.Text != "" && dtpStartTimeBusRide.Value != null)
             {
 
                 //create dto
-                DTO_BusRide add = new DTO_BusRide(Decimal.ToInt32(nudBusLineID.Value), Decimal.ToInt32(nudAsDriverID.Value), Decimal.ToInt32(nudDriverID.Value), Decimal.ToInt32(nudBusID.Value), 0, dtpStartTimeBusRide.Value);
+                DTO_BusRide add = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), int.Parse(cbAsDriverBR.Text), 0, dtpStartTimeBusRide.Value);
 
                 //add
                 if (BUS_BusRide.AddBusRide(add))
@@ -486,15 +698,22 @@ namespace BusSystemManagement
 
         private void btnResetBusRide_Click(object sender, EventArgs e)
         {
-            nudBusLineID.Value = 0;
-            nudAsDriverID.Value = 0;
-            nudDriverID.Value = 0;
-            nudBusID.Value = 0;
+            cbBusLineBR.SelectedIndex = 0;
+            cbAsDriverBR.SelectedIndex = 0;
+            cbDriverBR.SelectedIndex = 0;
+            cbBusBR.SelectedIndex = 0;
             dtpStartTimeBusRide.Value = DateTime.Now;
         }
 
         private void btnDeleteBusRide_Click(object sender, EventArgs e)
         {
+            if(dgvBusRide.SelectedRows[0].Cells[0].Value == null)
+            {
+                MessageBox.Show("Không có dữ liệu");
+                return;
+            }
+                
+
             if (dgvBusRide.SelectedRows.Count > 0)
             {
                 //Lay row hien tai
@@ -522,12 +741,13 @@ namespace BusSystemManagement
         {
             if (dgvBusRide.SelectedRows.Count > 0)
             {
-                if (nudBusLineID.Value != -1 && nudAsDriverID.Value != -1 && nudDriverID.Value != -1 && nudBusID.Value != -1 && dtpStartTimeBusRide.Value != null)
+                if (cbBusLineBR.Text != "" && cbAsDriverBR.Text != "" && cbDriverBR.Text != "" && cbBusBR.Text != "" && dtpStartTimeBusRide.Value != null)
                 {
                     DataGridViewRow row = dgvBusRide.SelectedRows[0];
-                    int ID = Convert.ToInt16(row.Cells[4].Value.ToString());
+                    int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
+                   
                     //create dto
-                    DTO_BusRide br = new DTO_BusRide(Decimal.ToInt32(nudBusLineID.Value), Decimal.ToInt32(nudAsDriverID.Value), Decimal.ToInt32(nudDriverID.Value), Decimal.ToInt32(nudBusID.Value), ID, dtpStartTimeBusRide.Value);
+                    DTO_BusRide br = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), int.Parse(cbAsDriverBR.Text), ID, dtpStartTimeBusRide.Value);
 
                     //update
                     if (BUS_BusRide.UpdateBusRide(br))
@@ -547,11 +767,34 @@ namespace BusSystemManagement
             }
             else
             {
-                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+                MessageBox.Show("Hãy chọn chuyến xe muốn sửa");
             }
+        }
+
+        private void cbBusLineBR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbBusLineBR.Text = BUS_BusLine.GetBusLineById(int.Parse(cbBusLineBR.Text));
+        }
+
+        private void cbDriverBR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbDriverBR.Text = BUS_Driver.GetDriverById(int.Parse(cbDriverBR.Text));
+        }
+
+        private void cbAsDriverBR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbAsDriverBR.Text = BUS_AsDriver.GetAsDriverById(int.Parse(cbAsDriverBR.Text));
+        }
+
+        private void cbBusBR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbBusBR.Text = BUS_Bus.GetBusById(int.Parse(cbBusBR.Text));
         }
 
         //**************************************************************************
         //--XXX------------------Bus Ride---------------XXX-------
+
+
+
     }
 }

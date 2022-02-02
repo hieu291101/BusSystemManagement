@@ -13,7 +13,9 @@ namespace DAL_BusSystemManagement
     {
         public DataTable GetBusDriver()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM busride", _conn);
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idbusride, busride.idbusline, busline.busline_name, busride.iddriver, driver.driver_name, busride.idas_driver, as_driver.asdriver_name, busride.idbus, bus.license_plate, busride.start_time " +
+                "FROM busride, bus, as_driver, driver, busline " +
+                "WHERE busride.idbusline = busline.idbusline and busride.idbus = bus.idbus and busride.idas_driver = as_driver.idas_driver and busride.iddriver = driver.iddriver", _conn);
             DataTable dtBusRide = new DataTable();
             msda.Fill(dtBusRide);
             return dtBusRide;
@@ -27,11 +29,11 @@ namespace DAL_BusSystemManagement
                 _conn.Open();
                 string startTime = busr.BUSRIDE_STARTTIME.ToString("yyyy-MM-dd H:mm:ss");
                 //
-                string SQL = string.Format("INSERT INTO busride(buslineid, busid, mdriverid, asdriverid, starttime) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')",
+                string SQL = string.Format("INSERT INTO busride(idbusline, iddriver, idas_driver, idbus, start_time) VALUES ({0}, {1}, {2}, {3}, '{4}')",
                     busr.BUSRIDE_BUSLINEID,
-                    busr.BUSRIDE_BUSID,
                     busr.BUSRIDE_MDRIVERID,
                     busr.BUSRIDE_ASDRIVERID,
+                    busr.BUSRIDE_BUSID,
                     startTime);
 
                 MySqlCommand cmd = new MySqlCommand(SQL, _conn);
@@ -61,11 +63,11 @@ namespace DAL_BusSystemManagement
                 _conn.Open();
                 string startTime = busr.BUSRIDE_STARTTIME.ToString("yyyy-MM-dd H:mm:ss");
                 //
-                string SQL = string.Format("UPDATE busride SET buslineid = '{0}', busid = '{1}', mdriverid = '{2}', asdriverid = '{3}', starttime = '{4}' WHERE idbusride = {5})",
+                string SQL = string.Format("UPDATE busride SET idbusline = {0}, iddriver = {1}, idas_driver = {2}, idbus = {3}, start_time = '{4}' WHERE idbusride = {5}",
                                             busr.BUSRIDE_BUSLINEID,
-                                            busr.BUSRIDE_BUSID,
                                             busr.BUSRIDE_MDRIVERID,
                                             busr.BUSRIDE_ASDRIVERID,
+                                            busr.BUSRIDE_BUSID,
                                             startTime,
                                             busr.BUSRIDE_ID);
 

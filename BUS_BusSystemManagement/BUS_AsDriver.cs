@@ -17,6 +17,15 @@ namespace BUS_BusSystemManagement
             return dalAsDriver.GetAsDriver();
         }
 
+        public string GetAsDriverById(int id)
+        {
+            return dalAsDriver.GetAsDriverById(id);
+        }
+
+        public List<string> GetListAsDriverId()
+        {
+            return dalAsDriver.GetListAsDriverId();
+        }
         public bool AddAsDriver(DTO_AsDriver asd)
         {
             return dalAsDriver.AddAsDriver(asd);

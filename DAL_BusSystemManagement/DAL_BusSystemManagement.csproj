@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_AsDriver.cs" />
+    <Compile Include="DAL_Bus.cs" />
     <Compile Include="DAL_BusLine.cs" />
     <Compile Include="DAL_BusRide.cs" />
     <Compile Include="DAL_Driver.cs" />

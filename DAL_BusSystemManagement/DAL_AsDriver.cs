@@ -19,6 +19,33 @@ namespace DAL_BusSystemManagement
             return dtAsDriver;
         }
 
+        public string GetAsDriverById(int id)
+        {
+            string SQL = string.Format("SELECT asdriver_name FROM as_driver WHERE idas_driver = {0}", id);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtAsDriver.Rows)
+            {
+                list.Add(row["asdriver_name"].ToString());
+            }
+            return list[0];
+        }
+
+        public List<string> GetListAsDriverId()
+        {
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idas_driver FROM as_driver", _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtAsDriver.Rows)
+            {
+                list.Add(row["idas_driver"].ToString());
+            }
+            return list;
+        }
+
         public bool AddAsDriver(DTO_AsDriver asd)
         {
             try
