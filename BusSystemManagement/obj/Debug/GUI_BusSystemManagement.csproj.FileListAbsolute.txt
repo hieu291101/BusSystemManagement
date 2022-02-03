@@ -56,3 +56,6 @@ D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\System.Buffers.xml
 D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Compression.LZ4.xml
 D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\K4os.Hash.xxHash.xml
 D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\System.Numerics.Vectors.xml
+D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\itextsharp.dll
+D:\CSharp\BusSystemManagement\BusSystemManagement\bin\Debug\itextsharp.xml
+D:\CSharp\BusSystemManagement\BusSystemManagement\obj\Debug\BusSystemManagement.frmUser.resources

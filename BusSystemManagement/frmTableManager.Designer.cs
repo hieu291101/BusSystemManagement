@@ -1,4 +1,7 @@
-﻿namespace BusSystemManagement
+﻿using System;
+using System.Windows.Forms;
+
+namespace BusSystemManagement
 {
     partial class frmTableManager
     {
@@ -28,8 +31,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tcDriver = new System.Windows.Forms.TabControl();
             this.tabPageDriver = new System.Windows.Forms.TabPage();
+            this.btnExportPdfDriver = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
             this.btnAddMdriver = new System.Windows.Forms.Button();
             this.panel46 = new System.Windows.Forms.Panel();
@@ -69,6 +76,7 @@
             this.tbSearchDriver = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPageAsDriver = new System.Windows.Forms.TabPage();
+            this.btnExportPdfAsDriver = new System.Windows.Forms.Button();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.nudExperienceAsDriver = new System.Windows.Forms.NumericUpDown();
@@ -105,6 +113,7 @@
             this.tbSearchAsDriver = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPageBus = new System.Windows.Forms.TabPage();
+            this.btnExportPdfBus = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.btnResetBus = new System.Windows.Forms.Button();
             this.btnUpdateBus = new System.Windows.Forms.Button();
@@ -132,6 +141,7 @@
             this.tbSearchBus = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPageBusLine = new System.Windows.Forms.TabPage();
+            this.btnExportPdfBusLine = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnResetBusLine = new System.Windows.Forms.Button();
             this.btnUpdateBusLine = new System.Windows.Forms.Button();
@@ -166,6 +176,7 @@
             this.tbSearchBusLine = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPageBusRide = new System.Windows.Forms.TabPage();
+            this.btnExportPdfBusRide = new System.Windows.Forms.Button();
             this.panel45 = new System.Windows.Forms.Panel();
             this.btnResetBusRide = new System.Windows.Forms.Button();
             this.btnUpdateBusRide = new System.Windows.Forms.Button();
@@ -174,13 +185,20 @@
             this.dtpStartTimeBusRide = new System.Windows.Forms.DateTimePicker();
             this.label36 = new System.Windows.Forms.Label();
             this.panel49 = new System.Windows.Forms.Panel();
+            this.tbBusBR = new System.Windows.Forms.TextBox();
+            this.cbBusBR = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.panel50 = new System.Windows.Forms.Panel();
+            this.tbAsDriverBR = new System.Windows.Forms.TextBox();
+            this.cbAsDriverBR = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.panel51 = new System.Windows.Forms.Panel();
+            this.tbDriverBR = new System.Windows.Forms.TextBox();
+            this.cbDriverBR = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.btnAddBusRide = new System.Windows.Forms.Button();
             this.panel52 = new System.Windows.Forms.Panel();
+            this.tbBusLineBR = new System.Windows.Forms.TextBox();
             this.cbBusLineBR = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
             this.panel44 = new System.Windows.Forms.Panel();
@@ -190,17 +208,43 @@
             this.tbSearchBusRide = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabPageTicket = new System.Windows.Forms.TabPage();
+            this.btnExportPdfTicket = new System.Windows.Forms.Button();
+            this.panel55 = new System.Windows.Forms.Panel();
+            this.btResetTicket = new System.Windows.Forms.Button();
+            this.btnUpdateTicket = new System.Windows.Forms.Button();
+            this.btnDeleteTicket = new System.Windows.Forms.Button();
+            this.panel56 = new System.Windows.Forms.Panel();
+            this.dtpTicket = new System.Windows.Forms.DateTimePicker();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel57 = new System.Windows.Forms.Panel();
+            this.tbTicketAsDriverName = new System.Windows.Forms.TextBox();
+            this.cbTicketAsDriverId = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel59 = new System.Windows.Forms.Panel();
+            this.nudTicket = new System.Windows.Forms.NumericUpDown();
+            this.label44 = new System.Windows.Forms.Label();
+            this.btnAddTicket = new System.Windows.Forms.Button();
+            this.panel61 = new System.Windows.Forms.Panel();
+            this.dgvTicket = new System.Windows.Forms.DataGridView();
+            this.panel62 = new System.Windows.Forms.Panel();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.tabPageStat = new System.Windows.Forms.TabPage();
+            this.btnExportPdfStat = new System.Windows.Forms.Button();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.cbStatChart = new System.Windows.Forms.ComboBox();
+            this.btnStatChart = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel53 = new System.Windows.Forms.Panel();
+            this.chartStatTicket = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.dgvStat = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbBusLineBR = new System.Windows.Forms.TextBox();
-            this.cbDriverBR = new System.Windows.Forms.ComboBox();
-            this.tbDriverBR = new System.Windows.Forms.TextBox();
-            this.tbAsDriverBR = new System.Windows.Forms.TextBox();
-            this.cbAsDriverBR = new System.Windows.Forms.ComboBox();
-            this.tbBusBR = new System.Windows.Forms.TextBox();
-            this.cbBusBR = new System.Windows.Forms.ComboBox();
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -269,6 +313,21 @@
             this.panel44.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).BeginInit();
             this.panel43.SuspendLayout();
+            this.tabPageTicket.SuspendLayout();
+            this.panel55.SuspendLayout();
+            this.panel56.SuspendLayout();
+            this.panel57.SuspendLayout();
+            this.panel59.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTicket)).BeginInit();
+            this.panel61.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).BeginInit();
+            this.panel62.SuspendLayout();
+            this.tabPageStat.SuspendLayout();
+            this.panel54.SuspendLayout();
+            this.panel53.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).BeginInit();
+            this.panel47.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -279,6 +338,8 @@
             this.tcDriver.Controls.Add(this.tabPageBus);
             this.tcDriver.Controls.Add(this.tabPageBusLine);
             this.tcDriver.Controls.Add(this.tabPageBusRide);
+            this.tcDriver.Controls.Add(this.tabPageTicket);
+            this.tcDriver.Controls.Add(this.tabPageStat);
             this.tcDriver.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcDriver.Location = new System.Drawing.Point(12, 27);
             this.tcDriver.Name = "tcDriver";
@@ -288,6 +349,7 @@
             // 
             // tabPageDriver
             // 
+            this.tabPageDriver.Controls.Add(this.btnExportPdfDriver);
             this.tabPageDriver.Controls.Add(this.panel27);
             this.tabPageDriver.Controls.Add(this.panel34);
             this.tabPageDriver.Controls.Add(this.panel6);
@@ -298,6 +360,16 @@
             this.tabPageDriver.TabIndex = 0;
             this.tabPageDriver.Text = "Tài xế";
             this.tabPageDriver.UseVisualStyleBackColor = true;
+            // 
+            // btnExportPdfDriver
+            // 
+            this.btnExportPdfDriver.Location = new System.Drawing.Point(6, 16);
+            this.btnExportPdfDriver.Name = "btnExportPdfDriver";
+            this.btnExportPdfDriver.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfDriver.TabIndex = 10;
+            this.btnExportPdfDriver.Text = "EXPORT TO PDF";
+            this.btnExportPdfDriver.UseVisualStyleBackColor = true;
+            this.btnExportPdfDriver.Click += new System.EventHandler(this.btnExportPdfDriver_Click);
             // 
             // panel27
             // 
@@ -599,6 +671,7 @@
             // 
             // dgvDriver
             // 
+            this.dgvDriver.AllowUserToAddRows = false;
             this.dgvDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDriver.Location = new System.Drawing.Point(3, 3);
             this.dgvDriver.Name = "dgvDriver";
@@ -641,6 +714,7 @@
             // 
             // tabPageAsDriver
             // 
+            this.tabPageAsDriver.Controls.Add(this.btnExportPdfAsDriver);
             this.tabPageAsDriver.Controls.Add(this.panel26);
             this.tabPageAsDriver.Controls.Add(this.panel25);
             this.tabPageAsDriver.Controls.Add(this.panel5);
@@ -651,6 +725,16 @@
             this.tabPageAsDriver.TabIndex = 1;
             this.tabPageAsDriver.Text = "Phụ xe";
             this.tabPageAsDriver.UseVisualStyleBackColor = true;
+            // 
+            // btnExportPdfAsDriver
+            // 
+            this.btnExportPdfAsDriver.Location = new System.Drawing.Point(6, 16);
+            this.btnExportPdfAsDriver.Name = "btnExportPdfAsDriver";
+            this.btnExportPdfAsDriver.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfAsDriver.TabIndex = 11;
+            this.btnExportPdfAsDriver.Text = "EXPORT TO PDF";
+            this.btnExportPdfAsDriver.UseVisualStyleBackColor = true;
+            this.btnExportPdfAsDriver.Click += new System.EventHandler(this.btnExportPdfAsDriver_Click);
             // 
             // panel26
             // 
@@ -934,6 +1018,7 @@
             // 
             // dgvAsDriver
             // 
+            this.dgvAsDriver.AllowUserToAddRows = false;
             this.dgvAsDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsDriver.Location = new System.Drawing.Point(3, 3);
             this.dgvAsDriver.Name = "dgvAsDriver";
@@ -977,6 +1062,7 @@
             // tabPageBus
             // 
             this.tabPageBus.BackColor = System.Drawing.Color.Transparent;
+            this.tabPageBus.Controls.Add(this.btnExportPdfBus);
             this.tabPageBus.Controls.Add(this.panel16);
             this.tabPageBus.Controls.Add(this.panel2);
             this.tabPageBus.Controls.Add(this.panel4);
@@ -985,6 +1071,16 @@
             this.tabPageBus.Size = new System.Drawing.Size(961, 668);
             this.tabPageBus.TabIndex = 2;
             this.tabPageBus.Text = "Xe buýt";
+            // 
+            // btnExportPdfBus
+            // 
+            this.btnExportPdfBus.Location = new System.Drawing.Point(6, 16);
+            this.btnExportPdfBus.Name = "btnExportPdfBus";
+            this.btnExportPdfBus.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfBus.TabIndex = 12;
+            this.btnExportPdfBus.Text = "EXPORT TO PDF";
+            this.btnExportPdfBus.UseVisualStyleBackColor = true;
+            this.btnExportPdfBus.Click += new System.EventHandler(this.btnExportPdfBus_Click);
             // 
             // panel16
             // 
@@ -1202,6 +1298,7 @@
             // 
             // dgvBus
             // 
+            this.dgvBus.AllowUserToAddRows = false;
             this.dgvBus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBus.Location = new System.Drawing.Point(3, 3);
             this.dgvBus.Name = "dgvBus";
@@ -1244,6 +1341,7 @@
             // 
             // tabPageBusLine
             // 
+            this.tabPageBusLine.Controls.Add(this.btnExportPdfBusLine);
             this.tabPageBusLine.Controls.Add(this.panel9);
             this.tabPageBusLine.Controls.Add(this.panel8);
             this.tabPageBusLine.Controls.Add(this.panel7);
@@ -1254,6 +1352,16 @@
             this.tabPageBusLine.TabIndex = 3;
             this.tabPageBusLine.Text = "Tuyến xe";
             this.tabPageBusLine.UseVisualStyleBackColor = true;
+            // 
+            // btnExportPdfBusLine
+            // 
+            this.btnExportPdfBusLine.Location = new System.Drawing.Point(6, 16);
+            this.btnExportPdfBusLine.Name = "btnExportPdfBusLine";
+            this.btnExportPdfBusLine.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfBusLine.TabIndex = 13;
+            this.btnExportPdfBusLine.Text = "EXPORT TO PDF";
+            this.btnExportPdfBusLine.UseVisualStyleBackColor = true;
+            this.btnExportPdfBusLine.Click += new System.EventHandler(this.btnExportPdfBusLine_Click);
             // 
             // panel9
             // 
@@ -1515,6 +1623,7 @@
             // 
             // dgvBusLine
             // 
+            this.dgvBusLine.AllowUserToAddRows = false;
             this.dgvBusLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBusLine.Location = new System.Drawing.Point(3, 3);
             this.dgvBusLine.Name = "dgvBusLine";
@@ -1566,6 +1675,7 @@
             // 
             // tabPageBusRide
             // 
+            this.tabPageBusRide.Controls.Add(this.btnExportPdfBusRide);
             this.tabPageBusRide.Controls.Add(this.panel45);
             this.tabPageBusRide.Controls.Add(this.panel44);
             this.tabPageBusRide.Controls.Add(this.panel43);
@@ -1576,6 +1686,16 @@
             this.tabPageBusRide.TabIndex = 4;
             this.tabPageBusRide.Text = "Chuyến xe";
             this.tabPageBusRide.UseVisualStyleBackColor = true;
+            // 
+            // btnExportPdfBusRide
+            // 
+            this.btnExportPdfBusRide.Location = new System.Drawing.Point(6, 16);
+            this.btnExportPdfBusRide.Name = "btnExportPdfBusRide";
+            this.btnExportPdfBusRide.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfBusRide.TabIndex = 14;
+            this.btnExportPdfBusRide.Text = "EXPORT TO PDF";
+            this.btnExportPdfBusRide.UseVisualStyleBackColor = true;
+            this.btnExportPdfBusRide.Click += new System.EventHandler(this.btnExportPdfBusRide_Click);
             // 
             // panel45
             // 
@@ -1658,6 +1778,23 @@
             this.panel49.Size = new System.Drawing.Size(354, 37);
             this.panel49.TabIndex = 4;
             // 
+            // tbBusBR
+            // 
+            this.tbBusBR.Location = new System.Drawing.Point(204, 7);
+            this.tbBusBR.Name = "tbBusBR";
+            this.tbBusBR.ReadOnly = true;
+            this.tbBusBR.Size = new System.Drawing.Size(147, 22);
+            this.tbBusBR.TabIndex = 17;
+            // 
+            // cbBusBR
+            // 
+            this.cbBusBR.FormattingEnabled = true;
+            this.cbBusBR.Location = new System.Drawing.Point(113, 6);
+            this.cbBusBR.Name = "cbBusBR";
+            this.cbBusBR.Size = new System.Drawing.Size(85, 24);
+            this.cbBusBR.TabIndex = 16;
+            this.cbBusBR.SelectedIndexChanged += new System.EventHandler(this.cbBusBR_SelectedIndexChanged);
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
@@ -1677,6 +1814,23 @@
             this.panel50.Size = new System.Drawing.Size(354, 37);
             this.panel50.TabIndex = 2;
             // 
+            // tbAsDriverBR
+            // 
+            this.tbAsDriverBR.Location = new System.Drawing.Point(204, 8);
+            this.tbAsDriverBR.Name = "tbAsDriverBR";
+            this.tbAsDriverBR.ReadOnly = true;
+            this.tbAsDriverBR.Size = new System.Drawing.Size(147, 22);
+            this.tbAsDriverBR.TabIndex = 15;
+            // 
+            // cbAsDriverBR
+            // 
+            this.cbAsDriverBR.FormattingEnabled = true;
+            this.cbAsDriverBR.Location = new System.Drawing.Point(113, 7);
+            this.cbAsDriverBR.Name = "cbAsDriverBR";
+            this.cbAsDriverBR.Size = new System.Drawing.Size(85, 24);
+            this.cbAsDriverBR.TabIndex = 14;
+            this.cbAsDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbAsDriverBR_SelectedIndexChanged);
+            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -1695,6 +1849,23 @@
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(354, 37);
             this.panel51.TabIndex = 2;
+            // 
+            // tbDriverBR
+            // 
+            this.tbDriverBR.Location = new System.Drawing.Point(204, 8);
+            this.tbDriverBR.Name = "tbDriverBR";
+            this.tbDriverBR.ReadOnly = true;
+            this.tbDriverBR.Size = new System.Drawing.Size(147, 22);
+            this.tbDriverBR.TabIndex = 14;
+            // 
+            // cbDriverBR
+            // 
+            this.cbDriverBR.FormattingEnabled = true;
+            this.cbDriverBR.Location = new System.Drawing.Point(113, 7);
+            this.cbDriverBR.Name = "cbDriverBR";
+            this.cbDriverBR.Size = new System.Drawing.Size(85, 24);
+            this.cbDriverBR.TabIndex = 14;
+            this.cbDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbDriverBR_SelectedIndexChanged);
             // 
             // label39
             // 
@@ -1725,6 +1896,14 @@
             this.panel52.Size = new System.Drawing.Size(354, 37);
             this.panel52.TabIndex = 1;
             // 
+            // tbBusLineBR
+            // 
+            this.tbBusLineBR.Location = new System.Drawing.Point(204, 8);
+            this.tbBusLineBR.Name = "tbBusLineBR";
+            this.tbBusLineBR.ReadOnly = true;
+            this.tbBusLineBR.Size = new System.Drawing.Size(147, 22);
+            this.tbBusLineBR.TabIndex = 13;
+            // 
             // cbBusLineBR
             // 
             this.cbBusLineBR.FormattingEnabled = true;
@@ -1753,6 +1932,7 @@
             // 
             // dgvBusRide
             // 
+            this.dgvBusRide.AllowUserToAddRows = false;
             this.dgvBusRide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBusRide.Location = new System.Drawing.Point(3, 3);
             this.dgvBusRide.Name = "dgvBusRide";
@@ -1800,6 +1980,326 @@
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 0;
             // 
+            // tabPageTicket
+            // 
+            this.tabPageTicket.Controls.Add(this.btnExportPdfTicket);
+            this.tabPageTicket.Controls.Add(this.panel55);
+            this.tabPageTicket.Controls.Add(this.panel61);
+            this.tabPageTicket.Controls.Add(this.panel62);
+            this.tabPageTicket.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTicket.Name = "tabPageTicket";
+            this.tabPageTicket.Size = new System.Drawing.Size(961, 668);
+            this.tabPageTicket.TabIndex = 6;
+            this.tabPageTicket.Text = "Vé xe";
+            this.tabPageTicket.UseVisualStyleBackColor = true;
+            // 
+            // btnExportPdfTicket
+            // 
+            this.btnExportPdfTicket.Location = new System.Drawing.Point(6, 16);
+            this.btnExportPdfTicket.Name = "btnExportPdfTicket";
+            this.btnExportPdfTicket.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfTicket.TabIndex = 18;
+            this.btnExportPdfTicket.Text = "EXPORT TO PDF";
+            this.btnExportPdfTicket.UseVisualStyleBackColor = true;
+            this.btnExportPdfTicket.Click += new System.EventHandler(this.btnExportPdfTicket_Click);
+            // 
+            // panel55
+            // 
+            this.panel55.Controls.Add(this.btResetTicket);
+            this.panel55.Controls.Add(this.btnUpdateTicket);
+            this.panel55.Controls.Add(this.btnDeleteTicket);
+            this.panel55.Controls.Add(this.panel56);
+            this.panel55.Controls.Add(this.panel57);
+            this.panel55.Controls.Add(this.panel59);
+            this.panel55.Controls.Add(this.btnAddTicket);
+            this.panel55.Location = new System.Drawing.Point(3, 394);
+            this.panel55.Name = "panel55";
+            this.panel55.Size = new System.Drawing.Size(955, 271);
+            this.panel55.TabIndex = 17;
+            // 
+            // btResetTicket
+            // 
+            this.btResetTicket.Location = new System.Drawing.Point(717, 189);
+            this.btResetTicket.Name = "btResetTicket";
+            this.btResetTicket.Size = new System.Drawing.Size(232, 56);
+            this.btResetTicket.TabIndex = 11;
+            this.btResetTicket.Text = "Nhập lại";
+            this.btResetTicket.UseVisualStyleBackColor = true;
+            this.btResetTicket.Click += new System.EventHandler(this.btResetTicket_Click);
+            // 
+            // btnUpdateTicket
+            // 
+            this.btnUpdateTicket.Location = new System.Drawing.Point(717, 127);
+            this.btnUpdateTicket.Name = "btnUpdateTicket";
+            this.btnUpdateTicket.Size = new System.Drawing.Size(232, 56);
+            this.btnUpdateTicket.TabIndex = 10;
+            this.btnUpdateTicket.Text = "Cập nhật";
+            this.btnUpdateTicket.UseVisualStyleBackColor = true;
+            this.btnUpdateTicket.Click += new System.EventHandler(this.btnUpdateTicket_Click);
+            // 
+            // btnDeleteTicket
+            // 
+            this.btnDeleteTicket.Location = new System.Drawing.Point(717, 65);
+            this.btnDeleteTicket.Name = "btnDeleteTicket";
+            this.btnDeleteTicket.Size = new System.Drawing.Size(232, 56);
+            this.btnDeleteTicket.TabIndex = 9;
+            this.btnDeleteTicket.Text = "Xóa";
+            this.btnDeleteTicket.UseVisualStyleBackColor = true;
+            this.btnDeleteTicket.Click += new System.EventHandler(this.btnDeleteTicket_Click);
+            // 
+            // panel56
+            // 
+            this.panel56.Controls.Add(this.dtpTicket);
+            this.panel56.Controls.Add(this.label41);
+            this.panel56.Location = new System.Drawing.Point(3, 3);
+            this.panel56.Name = "panel56";
+            this.panel56.Size = new System.Drawing.Size(354, 37);
+            this.panel56.TabIndex = 2;
+            // 
+            // dtpTicket
+            // 
+            this.dtpTicket.Location = new System.Drawing.Point(113, 6);
+            this.dtpTicket.Name = "dtpTicket";
+            this.dtpTicket.Size = new System.Drawing.Size(200, 22);
+            this.dtpTicket.TabIndex = 13;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(12, 11);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(66, 16);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Thời điểm";
+            // 
+            // panel57
+            // 
+            this.panel57.Controls.Add(this.tbTicketAsDriverName);
+            this.panel57.Controls.Add(this.cbTicketAsDriverId);
+            this.panel57.Controls.Add(this.label42);
+            this.panel57.Location = new System.Drawing.Point(360, 46);
+            this.panel57.Name = "panel57";
+            this.panel57.Size = new System.Drawing.Size(354, 37);
+            this.panel57.TabIndex = 4;
+            // 
+            // tbTicketAsDriverName
+            // 
+            this.tbTicketAsDriverName.Location = new System.Drawing.Point(204, 7);
+            this.tbTicketAsDriverName.Name = "tbTicketAsDriverName";
+            this.tbTicketAsDriverName.ReadOnly = true;
+            this.tbTicketAsDriverName.Size = new System.Drawing.Size(147, 22);
+            this.tbTicketAsDriverName.TabIndex = 17;
+            // 
+            // cbTicketAsDriverId
+            // 
+            this.cbTicketAsDriverId.FormattingEnabled = true;
+            this.cbTicketAsDriverId.Location = new System.Drawing.Point(113, 6);
+            this.cbTicketAsDriverId.Name = "cbTicketAsDriverId";
+            this.cbTicketAsDriverId.Size = new System.Drawing.Size(85, 24);
+            this.cbTicketAsDriverId.TabIndex = 16;
+            this.cbTicketAsDriverId.SelectedIndexChanged += new System.EventHandler(this.cbTicketAsDriverId_SelectedIndexChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(12, 11);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(69, 16);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "Mã phụ xe";
+            // 
+            // panel59
+            // 
+            this.panel59.Controls.Add(this.nudTicket);
+            this.panel59.Controls.Add(this.label44);
+            this.panel59.Location = new System.Drawing.Point(360, 3);
+            this.panel59.Name = "panel59";
+            this.panel59.Size = new System.Drawing.Size(354, 37);
+            this.panel59.TabIndex = 2;
+            // 
+            // nudTicket
+            // 
+            this.nudTicket.Location = new System.Drawing.Point(113, 9);
+            this.nudTicket.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudTicket.Name = "nudTicket";
+            this.nudTicket.Size = new System.Drawing.Size(120, 22);
+            this.nudTicket.TabIndex = 15;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(12, 11);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(44, 16);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "Giá vé";
+            // 
+            // btnAddTicket
+            // 
+            this.btnAddTicket.Location = new System.Drawing.Point(717, 3);
+            this.btnAddTicket.Name = "btnAddTicket";
+            this.btnAddTicket.Size = new System.Drawing.Size(232, 56);
+            this.btnAddTicket.TabIndex = 8;
+            this.btnAddTicket.Text = "Thêm";
+            this.btnAddTicket.UseVisualStyleBackColor = true;
+            this.btnAddTicket.Click += new System.EventHandler(this.btnAddTicket_Click);
+            // 
+            // panel61
+            // 
+            this.panel61.Controls.Add(this.dgvTicket);
+            this.panel61.Location = new System.Drawing.Point(3, 57);
+            this.panel61.Name = "panel61";
+            this.panel61.Size = new System.Drawing.Size(955, 334);
+            this.panel61.TabIndex = 16;
+            // 
+            // dgvTicket
+            // 
+            this.dgvTicket.AllowUserToAddRows = false;
+            this.dgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTicket.Location = new System.Drawing.Point(3, 3);
+            this.dgvTicket.Name = "dgvTicket";
+            this.dgvTicket.Size = new System.Drawing.Size(949, 328);
+            this.dgvTicket.TabIndex = 0;
+            // 
+            // panel62
+            // 
+            this.panel62.Controls.Add(this.comboBox5);
+            this.panel62.Controls.Add(this.textBox5);
+            this.panel62.Controls.Add(this.label46);
+            this.panel62.Location = new System.Drawing.Point(551, 3);
+            this.panel62.Name = "panel62";
+            this.panel62.Size = new System.Drawing.Size(407, 48);
+            this.panel62.TabIndex = 15;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(275, 10);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 24);
+            this.comboBox5.TabIndex = 2;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(70, 10);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(189, 22);
+            this.textBox5.TabIndex = 1;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(3, 13);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(61, 16);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "Tìm kiếm";
+            // 
+            // tabPageStat
+            // 
+            this.tabPageStat.Controls.Add(this.btnExportPdfStat);
+            this.tabPageStat.Controls.Add(this.panel54);
+            this.tabPageStat.Controls.Add(this.panel53);
+            this.tabPageStat.Controls.Add(this.panel47);
+            this.tabPageStat.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStat.Name = "tabPageStat";
+            this.tabPageStat.Size = new System.Drawing.Size(961, 668);
+            this.tabPageStat.TabIndex = 5;
+            this.tabPageStat.Text = "Thống kê";
+            this.tabPageStat.UseVisualStyleBackColor = true;
+            // 
+            // btnExportPdfStat
+            // 
+            this.btnExportPdfStat.Location = new System.Drawing.Point(6, 20);
+            this.btnExportPdfStat.Name = "btnExportPdfStat";
+            this.btnExportPdfStat.Size = new System.Drawing.Size(129, 35);
+            this.btnExportPdfStat.TabIndex = 15;
+            this.btnExportPdfStat.Text = "EXPORT TO PDF";
+            this.btnExportPdfStat.UseVisualStyleBackColor = true;
+            this.btnExportPdfStat.Click += new System.EventHandler(this.btnExportPdfStat_Click);
+            // 
+            // panel54
+            // 
+            this.panel54.Controls.Add(this.cbStatChart);
+            this.panel54.Controls.Add(this.btnStatChart);
+            this.panel54.Controls.Add(this.label35);
+            this.panel54.Location = new System.Drawing.Point(464, 152);
+            this.panel54.Name = "panel54";
+            this.panel54.Size = new System.Drawing.Size(491, 48);
+            this.panel54.TabIndex = 4;
+            // 
+            // cbStatChart
+            // 
+            this.cbStatChart.FormattingEnabled = true;
+            this.cbStatChart.Location = new System.Drawing.Point(170, 10);
+            this.cbStatChart.Name = "cbStatChart";
+            this.cbStatChart.Size = new System.Drawing.Size(121, 24);
+            this.cbStatChart.TabIndex = 4;
+            // 
+            // btnStatChart
+            // 
+            this.btnStatChart.Location = new System.Drawing.Point(386, 4);
+            this.btnStatChart.Name = "btnStatChart";
+            this.btnStatChart.Size = new System.Drawing.Size(102, 35);
+            this.btnStatChart.TabIndex = 2;
+            this.btnStatChart.Text = "THỐNG KÊ";
+            this.btnStatChart.UseVisualStyleBackColor = true;
+            this.btnStatChart.Click += new System.EventHandler(this.btnStatChart_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(0, 13);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(164, 16);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Biểu đồ theo năm (hiện có)";
+            // 
+            // panel53
+            // 
+            this.panel53.Controls.Add(this.chartStatTicket);
+            this.panel53.Location = new System.Drawing.Point(464, 206);
+            this.panel53.Name = "panel53";
+            this.panel53.Size = new System.Drawing.Size(494, 459);
+            this.panel53.TabIndex = 1;
+            // 
+            // chartStatTicket
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartStatTicket.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartStatTicket.Legends.Add(legend1);
+            this.chartStatTicket.Location = new System.Drawing.Point(3, 37);
+            this.chartStatTicket.Name = "chartStatTicket";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Revenue";
+            this.chartStatTicket.Series.Add(series1);
+            this.chartStatTicket.Size = new System.Drawing.Size(488, 419);
+            this.chartStatTicket.TabIndex = 0;
+            this.chartStatTicket.Text = "chart1";
+            // 
+            // panel47
+            // 
+            this.panel47.Controls.Add(this.dgvStat);
+            this.panel47.Location = new System.Drawing.Point(3, 73);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(455, 592);
+            this.panel47.TabIndex = 0;
+            // 
+            // dgvStat
+            // 
+            this.dgvStat.AllowUserToAddRows = false;
+            this.dgvStat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStat.Location = new System.Drawing.Point(3, 3);
+            this.dgvStat.Name = "dgvStat";
+            this.dgvStat.Size = new System.Drawing.Size(449, 656);
+            this.dgvStat.TabIndex = 0;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1824,71 +2324,14 @@
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
             this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
+            this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            // 
-            // tbBusLineBR
-            // 
-            this.tbBusLineBR.Location = new System.Drawing.Point(204, 8);
-            this.tbBusLineBR.Name = "tbBusLineBR";
-            this.tbBusLineBR.ReadOnly = true;
-            this.tbBusLineBR.Size = new System.Drawing.Size(147, 22);
-            this.tbBusLineBR.TabIndex = 13;
-            // 
-            // cbDriverBR
-            // 
-            this.cbDriverBR.FormattingEnabled = true;
-            this.cbDriverBR.Location = new System.Drawing.Point(113, 7);
-            this.cbDriverBR.Name = "cbDriverBR";
-            this.cbDriverBR.Size = new System.Drawing.Size(85, 24);
-            this.cbDriverBR.TabIndex = 14;
-            this.cbDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbDriverBR_SelectedIndexChanged);
-            // 
-            // tbDriverBR
-            // 
-            this.tbDriverBR.Location = new System.Drawing.Point(204, 8);
-            this.tbDriverBR.Name = "tbDriverBR";
-            this.tbDriverBR.ReadOnly = true;
-            this.tbDriverBR.Size = new System.Drawing.Size(147, 22);
-            this.tbDriverBR.TabIndex = 14;
-            // 
-            // tbAsDriverBR
-            // 
-            this.tbAsDriverBR.Location = new System.Drawing.Point(204, 8);
-            this.tbAsDriverBR.Name = "tbAsDriverBR";
-            this.tbAsDriverBR.ReadOnly = true;
-            this.tbAsDriverBR.Size = new System.Drawing.Size(147, 22);
-            this.tbAsDriverBR.TabIndex = 15;
-            // 
-            // cbAsDriverBR
-            // 
-            this.cbAsDriverBR.FormattingEnabled = true;
-            this.cbAsDriverBR.Location = new System.Drawing.Point(113, 7);
-            this.cbAsDriverBR.Name = "cbAsDriverBR";
-            this.cbAsDriverBR.Size = new System.Drawing.Size(85, 24);
-            this.cbAsDriverBR.TabIndex = 14;
-            this.cbAsDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbAsDriverBR_SelectedIndexChanged);
-            // 
-            // tbBusBR
-            // 
-            this.tbBusBR.Location = new System.Drawing.Point(204, 7);
-            this.tbBusBR.Name = "tbBusBR";
-            this.tbBusBR.ReadOnly = true;
-            this.tbBusBR.Size = new System.Drawing.Size(147, 22);
-            this.tbBusBR.TabIndex = 17;
-            // 
-            // cbBusBR
-            // 
-            this.cbBusBR.FormattingEnabled = true;
-            this.cbBusBR.Location = new System.Drawing.Point(113, 6);
-            this.cbBusBR.Name = "cbBusBR";
-            this.cbBusBR.Size = new System.Drawing.Size(85, 24);
-            this.cbBusBR.TabIndex = 16;
-            this.cbBusBR.SelectedIndexChanged += new System.EventHandler(this.cbBusBR_SelectedIndexChanged);
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // frmTableManager
             // 
@@ -2008,6 +2451,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).EndInit();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
+            this.tabPageTicket.ResumeLayout(false);
+            this.panel55.ResumeLayout(false);
+            this.panel56.ResumeLayout(false);
+            this.panel56.PerformLayout();
+            this.panel57.ResumeLayout(false);
+            this.panel57.PerformLayout();
+            this.panel59.ResumeLayout(false);
+            this.panel59.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTicket)).EndInit();
+            this.panel61.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).EndInit();
+            this.panel62.ResumeLayout(false);
+            this.panel62.PerformLayout();
+            this.tabPageStat.ResumeLayout(false);
+            this.panel54.ResumeLayout(false);
+            this.panel54.PerformLayout();
+            this.panel53.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).EndInit();
+            this.panel47.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2190,5 +2653,43 @@
         private System.Windows.Forms.ComboBox cbAsDriverBR;
         private System.Windows.Forms.TextBox tbDriverBR;
         private System.Windows.Forms.ComboBox cbDriverBR;
+        private System.Windows.Forms.Button btnExportPdfDriver;
+        private Button btnExportPdfAsDriver;
+        private Button btnExportPdfBus;
+        private Button btnExportPdfBusLine;
+        private Button btnExportPdfBusRide;
+        private TabPage tabPageStat;
+        private Panel panel53;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartStatTicket;
+        private Panel panel47;
+        private DataGridView dgvStat;
+        private Panel panel54;
+        private Label label35;
+        private Button btnStatChart;
+        private ComboBox cbStatChart;
+        private Button btnExportPdfStat;
+        private TabPage tabPageTicket;
+        private Button btnExportPdfTicket;
+        private Panel panel55;
+        private Button btResetTicket;
+        private Button btnUpdateTicket;
+        private Button btnDeleteTicket;
+        private Panel panel56;
+        private DateTimePicker dtpTicket;
+        private Label label41;
+        private Panel panel57;
+        private TextBox tbTicketAsDriverName;
+        private ComboBox cbTicketAsDriverId;
+        private Label label42;
+        private Panel panel59;
+        private NumericUpDown nudTicket;
+        private Label label44;
+        private Button btnAddTicket;
+        private Panel panel61;
+        private DataGridView dgvTicket;
+        private Panel panel62;
+        private ComboBox comboBox5;
+        private TextBox textBox5;
+        private Label label46;
     }
 }

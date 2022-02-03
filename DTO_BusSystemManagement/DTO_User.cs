@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,15 @@ namespace DTO_BusSystemManagement
             _USER_PASSWORD = uSER_PASSWORD;
             _USER_EMAIL = uSER_EMAIL;
             _USER_CREATEDDATE = uSER_CREATEDDATE;
+        }
+
+        public DTO_User(DataRow row)
+        {
+            _USER_ID = (int)row["iduser"];
+            USER_USERNAME = row["username"].ToString();
+            USER_EMAIL = row["email"].ToString();
+            USER_PASSWORD = row["password"].ToString();
+            USER_CREATEDDATE = (DateTime)row["created_date"];
         }
 
         public int USER_ID { get => _USER_ID; set => _USER_ID = value; }

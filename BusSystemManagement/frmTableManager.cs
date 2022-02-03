@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using BUS_BusSystemManagement;
 using DTO_BusSystemManagement;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace BusSystemManagement
 {
@@ -20,10 +25,32 @@ namespace BusSystemManagement
         BUS_Bus BUS_Bus = new BUS_Bus();
         BUS_BusLine BUS_BusLine = new BUS_BusLine();
         BUS_BusRide BUS_BusRide = new BUS_BusRide();
+        BUS_Ticket BUS_Ticket = new BUS_Ticket();
+        private static DTO_User account;
 
         public frmTableManager()
         {
             InitializeComponent();
+        }
+
+        public frmTableManager(DTO_User user) : this()
+        {
+            account = user;
+            adminToolStripMenuItem.Text = account.USER_USERNAME;
+        }
+
+        //Nhấn chọn đăng xuất => quay về giao diện đăng nhập
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //Nhấn chọn thông tin cá nhân => giao diện chỉnh sửa người dùng
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUser frmUser = new frmUser(account);
+            this.Hide();
+            frmUser.ShowDialog();
         }
 
         private void frmTableManager_Load(object sender, EventArgs e)
@@ -80,13 +107,35 @@ namespace BusSystemManagement
             dgvBusRide.Columns[5].Visible = false;
             dgvBusRide.Columns[7].Visible = false;
             setHeaderBusDriver(dgvBusRide);
+
+            // form load for Ticket
+            dgvTicket.DataSource = BUS_Ticket.GetTicket();
+            setHeaderTicket(dgvTicket);
+            cbTicketAsDriverId.DataSource = BUS_AsDriver.GetListAsDriverId();
+
+            // form load for Stat
+            dgvStat.DataSource = BUS_Ticket.GetTicketStat();
+            setHeaderStat(dgvStat);
+            cbStatChart.DataSource = BUS_Ticket.GetListYear();
+
+            // draw stat
+            fillChart(DateTime.Now.Year);
         }
 
-        private void frmTableManager_LoadBusRide()
+        private void fillChart(int year)
         {
+            //AddXY value in chart1 in series named as Salary  
+            List<DTO_Stat> lst = new List<DTO_Stat>();
+            lst = BUS_Ticket.GetTicketStatForMonth(year);
+            chartStatTicket.Titles.Clear();
 
+            for(int i = 1; i <= lst.Count; i++)
+            {
+                chartStatTicket.Series["Revenue"].Points.AddXY(lst[i - 1].STAT_DATE.Month, lst[i - 1].STAT_REVENUE);
+            }
+
+            chartStatTicket.Titles.Add("Biểu đồ doanh thu trong năm " + year);
         }
-
 
 
         //**************************************************************************
@@ -228,6 +277,12 @@ namespace BusSystemManagement
             dtpStartDay.Value = DateTime.Now;
             nudExperienceAsDriver.Value = 0;
         }
+
+
+        private void btnExportPdfAsDriver_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvAsDriver, "BANG DU LIEU PHU XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
         //**************************************************************************
         //--XXX------------------AsDriver---------------XXX-------
 
@@ -363,6 +418,12 @@ namespace BusSystemManagement
             }
         }
 
+
+        private void btnExportPdfDriver_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvDriver, "BANG DU LIEU TAI XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
+
         //**************************************************************************
         //--XXX------------------Driver---------------XXX-------
 
@@ -482,6 +543,10 @@ namespace BusSystemManagement
             nudMyear.Value = 0;
         }
 
+        private void btnExportPdfBus_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvBus, "BANG DU LIEU XE BUYT", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
         //**************************************************************************
         //--XXX------------------Bus---------------XXX-------
 
@@ -656,6 +721,11 @@ namespace BusSystemManagement
             dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
         }
 
+        private void btnExportPdfBusLine_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvBusLine, "BANG DU LIEU TUYEN XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
+
         //--XXX------------------BusLine---------------XXX-------
         //**************************************************************************
 
@@ -791,10 +861,273 @@ namespace BusSystemManagement
             tbBusBR.Text = BUS_Bus.GetBusById(int.Parse(cbBusBR.Text));
         }
 
+        private void btnExportPdfBusRide_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvBusRide, "BANG DU LIEU CHUYEN XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
+
         //**************************************************************************
         //--XXX------------------Bus Ride---------------XXX-------
 
+        //**************************************************************************
+        //----------  Ticket  ---------------------------------
+        private static void setHeaderTicket(DataGridView dgvTicket)
+        {
+            dgvTicket.Columns[0].HeaderText = "Mã vé";
+            dgvTicket.Columns[1].HeaderText = "Ngày";
+            dgvTicket.Columns[2].HeaderText = "Giá vé";
+            dgvTicket.Columns[3].HeaderText = "Mã phụ xe";
+            dgvTicket.Columns[4].HeaderText = "Tên phụ xe";
+        }
+
+        private void btnAddTicket_Click(object sender, EventArgs e)
+        {
+            if (dtpTicket.Value != null && nudTicket.Value != -1 && cbTicketAsDriverId.Text != "")
+            {
+
+                //create dto
+                DTO_Ticket add = new DTO_Ticket(0, dtpTicket.Value, nudTicket.Value, int.Parse(cbTicketAsDriverId.Text));
+
+                //add
+                if (BUS_Ticket.AddTicket(add))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvTicket.DataSource = BUS_Ticket.GetTicket(); //refresh
+                    dgvStat.DataSource = BUS_Ticket.GetTicketStat();
+                    cbStatChart.DataSource = BUS_Ticket.GetListYear();
+                    fillChart(DateTime.Now.Year);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xin hãy nhập đầy đủ");
+            }
+        }
+
+        private void btnDeleteTicket_Click(object sender, EventArgs e)
+        {
+            if (dgvTicket.SelectedRows[0].Cells[0].Value == null)
+            {
+                MessageBox.Show("Không có dữ liệu");
+                return;
+            }
 
 
+            if (dgvTicket.SelectedRows.Count > 0)
+            {
+                //Lay row hien tai
+                DataGridViewRow rows = dgvTicket.SelectedRows[0];
+                int id = Convert.ToInt16(rows.Cells[0].Value.ToString());
+
+                //Xoa
+                if (BUS_Ticket.DeleteTicket(id))
+                {
+                    MessageBox.Show("Xoá thành công");
+                    dgvTicket.DataSource = BUS_Ticket.GetTicket(); //refresh
+                    dgvStat.DataSource = BUS_Ticket.GetTicketStat();
+                    cbStatChart.DataSource = BUS_Ticket.GetListYear();
+                    fillChart(DateTime.Now.Year);
+                }
+                else
+                {
+                    MessageBox.Show("Xoá không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn chuyến xe muốn xoá");
+            }
+        }
+
+        private void btnUpdateTicket_Click(object sender, EventArgs e)
+        {
+            if (dgvTicket.SelectedRows.Count > 0)
+            {
+                if (dtpTicket.Value != null && nudTicket.Value != -1 && cbTicketAsDriverId.Text != "")
+                {
+                    DataGridViewRow row = dgvTicket.SelectedRows[0];
+                    int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
+
+                    //create dto
+                    DTO_Ticket t = new DTO_Ticket(ID, dtpTicket.Value, nudTicket.Value, int.Parse(cbTicketAsDriverId.Text));
+
+                    //update
+                    if (BUS_Ticket.UpdateTicket(t))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        dgvTicket.DataSource = BUS_Ticket.GetTicket(); //refresh
+                        dgvStat.DataSource = BUS_Ticket.GetTicketStat();
+                        cbStatChart.DataSource = BUS_Ticket.GetListYear();
+                        fillChart(DateTime.Now.Year);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa không thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn chuyến xe muốn sửa");
+            }
+        }
+
+        private void btResetTicket_Click(object sender, EventArgs e)
+        {
+            dtpTicket.Value = DateTime.Now;
+            nudTicket.Value = 0;
+            cbTicketAsDriverId.SelectedIndex = 0;
+        }
+
+        private void cbTicketAsDriverId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbTicketAsDriverName.Text = BUS_AsDriver.GetAsDriverById(int.Parse(cbTicketAsDriverId.Text));
+        }
+
+        private void btnExportPdfTicket_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvStat, "BANG DU LIEU VE XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
+
+        //**************************************************************************
+        //--XXX------------------Ticket---------------XXX-------
+
+        //**************************************************************************
+        //----------  Stat  ---------------------------------
+        private static void setHeaderStat(DataGridView dgvStat)
+        {
+            dgvStat.Columns[0].HeaderText = "Ngày";
+            dgvStat.Columns[1].HeaderText = "Số lượng";
+            dgvStat.Columns[2].HeaderText = "Doanh thu";
+            dgvStat.Columns[3].HeaderText = "Phụ xe";
+        }
+
+        private void btnStatChart_Click(object sender, EventArgs e)
+        {
+            foreach (var series in chartStatTicket.Series)
+            {
+                series.Points.Clear();
+            }
+            fillChart(int.Parse(cbStatChart.Text));
+        }
+
+        private void btnExportPdfStat_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dgvStat, "BANG THONG KE DOANH THU VE THEO NGAY", DateTime.Now.Date.ToString("MM/dd/yyyy"));
+        }
+
+        //**************************************************************************
+        //--XXX------------------Stat---------------XXX-------
+        public void ExportToPdf(DataGridView dgv, string title, string subtitle)
+        {
+            if (dgv.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Output.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("Không thể ghi dữ liệu tới ổ đĩa. Mô tả lỗi:" + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.EMBEDDED);
+                            PdfPTable pdfTable = new PdfPTable(dgv.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+                            foreach (DataGridViewColumn column in dgv.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(convertToUnSign(column.HeaderText), text));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in dgv.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(new Phrase(convertToUnSign(cell.Value.ToString()), text));
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                            {
+                                float marginLeft = 72;
+                                float marginRight = 36;
+                                float marginTop = 60;
+                                float marginBottom = 50;
+
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.AddTitle("Driver");
+                                
+
+
+                                iTextSharp.text.Font fontHeader_1 = FontFactory.GetFont(BaseFont.TIMES_ROMAN, 30, iTextSharp.text.Font.BOLD, new iTextSharp.text.BaseColor(0, 0, 0));
+                                iTextSharp.text.Font fontHeader_2 = FontFactory.GetFont(BaseFont.TIMES_ROMAN, 15, iTextSharp.text.Font.BOLD, new iTextSharp.text.BaseColor(125, 125, 125));
+
+                                PdfContentByte cb = writer.DirectContent;
+                                cb.MoveTo(marginLeft, marginTop);
+                                cb.LineTo(500, marginTop);
+                                cb.Stroke();
+
+                                Paragraph paraHeader_1 = new Paragraph(title, fontHeader_1);
+                                paraHeader_1.Alignment = Element.ALIGN_CENTER;
+                                paraHeader_1.SpacingAfter = 0f;
+                                pdfDoc.Add(paraHeader_1);
+
+                                Paragraph paraHeader_2 = new Paragraph(subtitle, fontHeader_2);
+                                paraHeader_2.Alignment = Element.ALIGN_CENTER;
+                                paraHeader_2.SpacingAfter = 10f;
+                                pdfDoc.Add(paraHeader_2);
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Dữ liệu Export thành công!!!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Mô tả lỗi :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có bản ghi nào được Export!!!", "Thông báo");
+            }
+        }
+        public static string convertToUnSign(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
     }
 }
