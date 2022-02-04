@@ -77,14 +77,44 @@ namespace BusSystemManagement
             // form load for As Driver
             dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
             setHeaderAsDriver(dgvAsDriver);
+            string[] cbAsDriverList = {
+                "Họ và tên",
+                "Giới tính",
+                "Địa chỉ",
+                "Số điện thoại",
+                "CMND",
+                "Thâm niên"
+            };
+            cbAsDriver.Items.AddRange(cbAsDriverList);
+            cbAsDriver.SelectedIndex = 0;
 
             // form load for Driver
             dgvDriver.DataSource = BUS_Driver.GetDriver();
             setHeaderDriver(dgvDriver);
+            string[] cbDriverList = {
+                "Họ và tên",
+                "Giới tính",
+                "Địa chỉ",
+                "Số điện thoại",
+                "CMND",
+                "Thâm niên",
+                "Bằng lái"
+            };
+            cbDriver.Items.AddRange(cbDriverList);
+            cbDriver.SelectedIndex = 0;
 
             //form load for Bus
             dgvBus.DataSource = BUS_Bus.GetBus();
             setHeaderBus(dgvBus);
+            string[] cbBusList = {
+                "Biển kiểm soát",
+                "Hãng sản xuất",
+                "Năm sản xuất",
+                "Số ghế",
+                "Chu kỳ bảo hành"
+            };
+            cbBus.Items.AddRange(cbBusList);
+            cbBus.SelectedIndex = 1;
 
             // form load for Bus Line
             dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
@@ -107,6 +137,14 @@ namespace BusSystemManagement
             dgvBusRide.Columns[5].Visible = false;
             dgvBusRide.Columns[7].Visible = false;
             setHeaderBusDriver(dgvBusRide);
+            string[] cbBusRideList = {
+                "Tên tuyến xe",
+                "Tên tài xế",
+                "Tên phụ xe",
+                "Biển kiểm soát"
+            };
+            cbBusRide.Items.AddRange(cbBusRideList);
+            cbBusRide.SelectedIndex = 0;
 
             // form load for Ticket
             dgvTicket.DataSource = BUS_Ticket.GetTicket();
@@ -278,6 +316,45 @@ namespace BusSystemManagement
             nudExperienceAsDriver.Value = 0;
         }
 
+        private void tbSearchAsDriver_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchAsDriver.Text;
+            if (kw == "")
+                dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
+            else
+            {
+                switch (cbAsDriver.SelectedItem.ToString())
+                {
+                    case "Họ và tên":
+                        dgvAsDriver.DataSource = BUS_AsDriver.FindAsDriverByName(kw);
+                        break;
+                    case "Giới tính":
+                        dgvAsDriver.DataSource = BUS_AsDriver.FindAsDriverByGender(kw);
+                        break;
+                    case "Địa chỉ":
+                        dgvAsDriver.DataSource = BUS_AsDriver.FindAsDriverByAddress(kw);
+                        break;
+                    case "Số điện thoại":
+                        dgvAsDriver.DataSource = BUS_AsDriver.FindAsDriverByPhoneNumber(kw);
+                        break;
+                    case "CMND":
+                        dgvAsDriver.DataSource = BUS_AsDriver.FindAsDriverByIdCard(kw);
+                        break;
+                    case "Thâm niên":
+                        dgvAsDriver.DataSource = BUS_AsDriver.FindAsDriverByExperienceYear(kw);
+                        break;
+                    default:
+                        dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
+                        break;
+                }
+            }
+        }
+
+        private void cbAsDriver_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchAsDriver.Text = "";
+            dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
+        }
 
         private void btnExportPdfAsDriver_Click(object sender, EventArgs e)
         {
@@ -418,6 +495,48 @@ namespace BusSystemManagement
             }
         }
 
+        private void tbSearchDriver_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchDriver.Text;
+            if (kw == "")
+                dgvDriver.DataSource = BUS_Driver.GetDriver();
+            else
+            {
+                switch (cbDriver.SelectedItem.ToString())
+                {
+                    case "Họ và tên":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByName(kw);
+                        break;
+                    case "Giới tính":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByGender(kw);
+                        break;
+                    case "Địa chỉ":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByAddress(kw);
+                        break;
+                    case "Số điện thoại":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByPhoneNumber(kw);
+                        break;
+                    case "CMND":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByIdCard(kw);
+                        break;
+                    case "Thâm niên":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByExperienceYear(kw);
+                        break;
+                    case "Bằng lái":
+                        dgvDriver.DataSource = BUS_Driver.FindDriverByDriverLicense(kw);
+                        break;
+                    default:
+                        dgvDriver.DataSource = BUS_Driver.GetDriver();
+                        break;
+                }
+            }
+        }
+
+        private void cbDriver_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchDriver.Text = "";
+            dgvDriver.DataSource = BUS_Driver.GetDriver();
+        }
 
         private void btnExportPdfDriver_Click(object sender, EventArgs e)
         {
@@ -541,6 +660,43 @@ namespace BusSystemManagement
             nudChair.Value = 0;
             nudCycle.Value = 0;
             nudMyear.Value = 0;
+        }
+
+        private void tbSearchBus_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchBus.Text;
+            if (kw == "")
+                dgvBus.DataSource = BUS_Bus.GetBus();
+            else
+            {
+                switch (cbBus.SelectedItem.ToString())
+                {
+                    case "Biển kiểm soát":
+                        dgvBus.DataSource = BUS_Bus.FindBusByLicensePlate(kw);
+                        break;
+                    case "Hãng sản xuất":
+                        dgvBus.DataSource = BUS_Bus.FindBusByManufacturer(kw);
+                        break;
+                    case "Năm sản xuất":
+                        dgvBus.DataSource = BUS_Bus.FindBusByYearOfManufacture(kw);
+                        break;
+                    case "Số ghế":
+                        dgvBus.DataSource = BUS_Bus.FindBusBySeats(kw);
+                        break;
+                    case "Chu kỳ bảo hành":
+                        dgvBus.DataSource = BUS_Bus.FindBusByCurePeriod(kw);
+                        break;
+                    default:
+                        dgvBus.DataSource = BUS_Bus.GetBus();
+                        break;
+                }
+            }
+        }
+
+        private void cbBus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchBus.Text = "";
+            dgvBus.DataSource = BUS_Bus.GetBus();
         }
 
         private void btnExportPdfBus_Click(object sender, EventArgs e)
@@ -859,6 +1015,40 @@ namespace BusSystemManagement
         private void cbBusBR_SelectedIndexChanged(object sender, EventArgs e)
         {
             tbBusBR.Text = BUS_Bus.GetBusById(int.Parse(cbBusBR.Text));
+        }
+
+        private void tbSearchBusRide_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchBusRide.Text;
+            if (kw == "")
+                dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
+            else
+            {
+                switch (cbBusRide.SelectedItem.ToString())
+                {
+                    case "Tên tuyến xe":
+                        dgvBusRide.DataSource = BUS_BusRide.FindBusRideByBusLineName(kw);
+                        break;
+                    case "Tên tài xế":
+                        dgvBusRide.DataSource = BUS_BusRide.FindBusRideByDriverName(kw);
+                        break;
+                    case "Tên Phụ xe":
+                        dgvBusRide.DataSource = BUS_BusRide.FindBusRideByAsDriverName(kw);
+                        break;
+                    case "Biển kiểm soát":
+                        dgvBusRide.DataSource = BUS_BusRide.FindBusRideByLicensePlate(kw);
+                        break;
+                    default:
+                        dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
+                        break;
+                }
+            }
+        }
+
+        private void cbBusRide_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchBusRide.Text = "";
+            dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
         }
 
         private void btnExportPdfBusRide_Click(object sender, EventArgs e)

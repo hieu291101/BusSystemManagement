@@ -41,5 +41,40 @@ namespace BUS_BusSystemManagement
         {
             return dalDriver.DeleteDriver(DRIVER_ID);
         }
+
+        public DataTable FindDriverByName(string kw)
+        {
+            return dalDriver.FindDriverByName(kw);
+        }
+
+        public DataTable FindDriverByGender(string kw)
+        {
+            return dalDriver.FindDriverByGender(kw);
+        }
+
+        public DataTable FindDriverByAddress(string kw)
+        {
+            return dalDriver.FindDriverByAddress(kw);
+        }
+
+        public DataTable FindDriverByPhoneNumber(string kw)
+        {
+            return dalDriver.FindDriverByPhoneNumber(kw);
+        }
+
+        public DataTable FindDriverByIdCard(string kw)
+        {
+            return dalDriver.FindDriverByIdCard(kw);
+        }
+
+        public DataTable FindDriverByExperienceYear(string kw)
+        {
+            return dalDriver.FindDriverByExperienceYear(kw);
+        }
+
+        public DataTable FindDriverByDriverLicense(string kw)
+        {
+            return dalDriver.FindDriverByDriverLicense(kw);
+        }
     }
 }

@@ -146,5 +146,50 @@ namespace DAL_BusSystemManagement
 
             return false;
         }
+
+        public DataTable FindBusByLicensePlate(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE license_plate LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusByManufacturer(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE manufacturer LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusByYearOfManufacture(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE year_of_manufacture = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusBySeats(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE seats = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusByCurePeriod(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE cure_period = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
     }
 }

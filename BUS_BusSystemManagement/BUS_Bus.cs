@@ -42,5 +42,30 @@ namespace BUS_BusSystemManagement
         {
             return dalBus.UpdateBus(bus);
         }
+
+        public DataTable FindBusByLicensePlate(string kw)
+        {
+            return dalBus.FindBusByLicensePlate(kw);
+        }
+
+        public DataTable FindBusByManufacturer(string kw)
+        {
+            return dalBus.FindBusByManufacturer(kw);
+        }
+
+        public DataTable FindBusByYearOfManufacture(string kw)
+        {
+            return dalBus.FindBusByYearOfManufacture(kw);
+        }
+
+        public DataTable FindBusBySeats(string kw)
+        {
+            return dalBus.FindBusBySeats(kw);
+        }
+
+        public DataTable FindBusByCurePeriod(string kw)
+        {
+            return dalBus.FindBusByCurePeriod(kw);
+        }
     }
 }

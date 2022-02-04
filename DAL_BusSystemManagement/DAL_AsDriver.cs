@@ -155,5 +155,59 @@ namespace DAL_BusSystemManagement
 
             return false;
         }
+
+        public DataTable FindAsDriverByName(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE asdriver_name LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByGender(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE gender LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByAddress(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE address LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByPhoneNumber(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE phone_number LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByIdCard(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idcard LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByExperienceYear(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE experience = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
     }
 }
