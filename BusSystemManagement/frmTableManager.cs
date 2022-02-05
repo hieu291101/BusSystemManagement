@@ -426,11 +426,11 @@ namespace BusSystemManagement
                     // Tạo DTo
 
                     // Tạo DTo
-                    DTO_Driver ad = new DTO_Driver(ID, tbDriverName.Text, dtpDayOfBirthDriver.Value, DTO_getEnum.GetGenderEnum(cbGenderDriver.Text), tbAddressDriver.Text,
-                        tbPhoneDriver.Text, tbIdCardDriver.Text, dtpStartDayDriver.Value, Decimal.ToInt32(nudExperienceDriver.Value), DTO_getEnum.GetLicenseEnum(cbLicense.Text)); // Vì ID tự tăng nên để ID số gì cũng dc
-
+                    DTO_AsDriver ad = new DTO_AsDriver(ID, tbDriverName.Text, dtpDayOfBirthDriver.Value, DTO_getEnum.GetGenderEnum(cbGenderDriver.Text), tbAddressDriver.Text,
+                        tbPhoneDriver.Text, tbIdCardDriver.Text, dtpStartDayDriver.Value, Decimal.ToInt32(nudExperienceDriver.Value)); // Vì ID tự tăng nên để ID số gì cũng dc
+                    DTO_Driver d = new DTO_Driver(ID, DTO_getEnum.GetLicenseEnum(cbLicense.Text));
                     // Sửa
-                    if (BUS_Driver.UpdateDriver(ad))
+                    if (BUS_Driver.UpdateDriver(ad, d))
                     {
                         MessageBox.Show("Sửa thành công");
                         dgvDriver.DataSource = BUS_Driver.GetDriver(); // refresh datagridview
@@ -474,11 +474,12 @@ namespace BusSystemManagement
                    tbIdCardDriver.Text != "" && dtpStartDayDriver.Value != null && nudExperienceDriver.Value != -1 && cbLicense.Text != "")
             {
                 // Tạo DTo
-                DTO_Driver ad = new DTO_Driver(0, tbDriverName.Text, dtpDayOfBirthDriver.Value, DTO_getEnum.GetGenderEnum(cbGenderDriver.Text), tbAddressDriver.Text,
-                    tbPhoneDriver.Text, tbIdCardDriver.Text, dtpStartDayDriver.Value, Decimal.ToInt32(nudExperienceDriver.Value), DTO_getEnum.GetLicenseEnum(cbLicense.Text)); // Vì ID tự tăng nên để ID số gì cũng dc
+                DTO_AsDriver ad = new DTO_AsDriver(0, tbDriverName.Text, dtpDayOfBirthDriver.Value, DTO_getEnum.GetGenderEnum(cbGenderDriver.Text), tbAddressDriver.Text,
+                        tbPhoneDriver.Text, tbIdCardDriver.Text, dtpStartDayDriver.Value, Decimal.ToInt32(nudExperienceDriver.Value)); // Vì ID tự tăng nên để ID số gì cũng dc
+                DTO_Driver d = new DTO_Driver(0, DTO_getEnum.GetLicenseEnum(cbLicense.Text));
 
                 // Thêm
-                if (BUS_Driver.AddDriver(ad))
+                if (BUS_Driver.AddDriver(ad, d))
                 {
                     MessageBox.Show("Thêm thành công");
                     dgvDriver.DataSource = BUS_Driver.GetDriver(); // refresh datagridview
@@ -892,10 +893,10 @@ namespace BusSystemManagement
         {
             dgvBusRide.Columns[0].HeaderText = "Mã chuyến xe";
             dgvBusRide.Columns[2].HeaderText = "Tên tuyến xe";
-            dgvBusRide.Columns[4].HeaderText = "Tên tài xế";
-            dgvBusRide.Columns[6].HeaderText = "Tên phụ xe";
-            dgvBusRide.Columns[8].HeaderText = "Biển kiểm soát";
-            dgvBusRide.Columns[9].HeaderText = "Thời điểm";
+            dgvBusRide.Columns[4].HeaderText = "Họ và tên";
+            dgvBusRide.Columns[6].HeaderText = "Biển kiểm soát";
+            dgvBusRide.Columns[7].HeaderText = "Thời điểm";
+            dgvBusRide.Columns[8].HeaderText = "Loại";
         }
         private void btnAddBusRide_Click(object sender, EventArgs e)
         {
@@ -903,9 +904,10 @@ namespace BusSystemManagement
             {
 
                 //create dto
-                DTO_BusRide add = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), int.Parse(cbAsDriverBR.Text), 0, dtpStartTimeBusRide.Value);
+                //DTO_BusRide add = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), int.Parse(cbAsDriverBR.Text), 0, dtpStartTimeBusRide.Value);
 
                 //add
+                /*
                 if (BUS_BusRide.AddBusRide(add))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -915,6 +917,7 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Thêm không thành công");
                 }
+                */
             }
             else
             {
@@ -967,6 +970,7 @@ namespace BusSystemManagement
         {
             if (dgvBusRide.SelectedRows.Count > 0)
             {
+                /*
                 if (cbBusLineBR.Text != "" && cbAsDriverBR.Text != "" && cbDriverBR.Text != "" && cbBusBR.Text != "" && dtpStartTimeBusRide.Value != null)
                 {
                     DataGridViewRow row = dgvBusRide.SelectedRows[0];
@@ -990,6 +994,7 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Xin hãy nhập đầy đủ");
                 }
+                */
             }
             else
             {
@@ -1207,6 +1212,23 @@ namespace BusSystemManagement
                 series.Points.Clear();
             }
             fillChart(int.Parse(cbStatChart.Text));
+        }
+
+        private void btnDatStat_Click(object sender, EventArgs e)
+        {
+            dgvStat.DataSource = BUS_Ticket.GetTicketStatSearch(Convert.ToDateTime(dtpStartDayStat.Value.Date).ToString("yyyy/MM/dd"), Convert.ToDateTime(dtpEndDayStat.Value.Date).ToString("yyyy/MM/dd"));
+        }
+
+        private void btnSumary_Click(object sender, EventArgs e)
+        {
+            dtpStartDayStat.Value = DateTime.Now;
+            dtpEndDayStat.Value = DateTime.Now;
+            dgvStat.DataSource = BUS_Ticket.GetTicketStat();
+            foreach (var series in chartStatTicket.Series)
+            {
+                series.Points.Clear();
+            }
+            fillChart(DateTime.Now.Year);
         }
 
         private void btnExportPdfStat_Click(object sender, EventArgs e)

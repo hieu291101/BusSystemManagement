@@ -20,6 +20,10 @@ namespace BUS_BusSystemManagement
         {
             return dalTicket.GetTicketStat();
         }
+        public DataTable GetTicketStatSearch(string start, string end)
+        {
+            return dalTicket.GetTicketStatSearch(start, end);
+        }
 
         public List<string> GetListYear()
         {

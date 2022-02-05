@@ -31,6 +31,18 @@ namespace DAL_BusSystemManagement
             return dtTicket;
         }
 
+        public DataTable GetTicketStatSearch(string start, string end)
+        {
+            string SQL = string.Format("SELECT Date_Format(date,'%d/%m/%Y'), count(idticket), sum(price), asdriver_name " +
+                "FROM ticket, as_driver " +
+                "WHERE ticket.idas_driver = as_driver.idas_driver and date between'{0}' and '{1}' " +
+                "GROUP BY year(date), month(date), day(date)", start, end);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtTicket = new DataTable();
+            msda.Fill(dtTicket);
+            return dtTicket;
+        }
+
         public List<string> GetListYear()
         {
             MySqlDataAdapter msda = new MySqlDataAdapter("SELECT distinct Date_Format(date,'%Y') FROM ticket ", _conn);
@@ -161,6 +173,53 @@ namespace DAL_BusSystemManagement
             }
 
             return false;
+        }
+        public DataTable FindTickerByIdTicket(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT idticket, date, price, ticket.idas_driver, as_driver.asdriver_name " +
+                "FROM ticket, as_driver " +
+                "WHERE ticket.idas_driver = as_driver.idas_driver and idticket LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtTicket = new DataTable();
+            msda.Fill(dtTicket);
+            return dtTicket;
+        }
+
+        public DataTable FindTickerByPrice(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT idticket, date, price, ticket.idas_driver, as_driver.asdriver_name " +
+                "FROM ticket, as_driver " +
+                "WHERE ticket.idas_driver = as_driver.idas_driver and price LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtTicket = new DataTable();
+            msda.Fill(dtTicket);
+            return dtTicket;
+        }
+
+        public DataTable FindTickerByIdAsDriver(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT idticket, date, price, ticket.idas_driver, as_driver.asdriver_name " +
+                "FROM ticket, as_driver " +
+                "WHERE ticket.idas_driver = as_driver.idas_driver and ticket.idas_driver LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtTicket = new DataTable();
+            msda.Fill(dtTicket);
+            return dtTicket;
+        }
+
+        public DataTable FindTickerByAsDriverName(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT idticket, date, price, ticket.idas_driver, as_driver.asdriver_name " +
+                "FROM ticket, as_driver " +
+                "WHERE ticket.idas_driver = as_driver.idas_driver and as_driver.asdriver_name LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtTicket = new DataTable();
+            msda.Fill(dtTicket);
+            return dtTicket;
         }
     }
 }

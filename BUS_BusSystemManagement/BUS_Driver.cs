@@ -27,14 +27,14 @@ namespace BUS_BusSystemManagement
             return dalDriver.GetListDriverId();
         }
 
-        public bool AddDriver(DTO_Driver ad)
+        public bool AddDriver(DTO_AsDriver ad, DTO_Driver d)
         {
-            return dalDriver.AddDriver(ad);
+            return dalDriver.AddDriver(ad, d);
         }
 
-        public bool UpdateDriver(DTO_Driver ad)
+        public bool UpdateDriver(DTO_AsDriver ad, DTO_Driver d)
         {
-            return dalDriver.UpdateDriver(ad);
+            return dalDriver.UpdateDriver(ad, d);
         }
 
         public bool DeleteDriver(int DRIVER_ID)

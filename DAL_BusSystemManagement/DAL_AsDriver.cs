@@ -13,7 +13,7 @@ namespace DAL_BusSystemManagement
     {
         public DataTable GetAsDriver()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM as_driver", _conn);
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver)", _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
             return dtAsDriver;
@@ -35,7 +35,7 @@ namespace DAL_BusSystemManagement
 
         public List<string> GetListAsDriverId()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idas_driver FROM as_driver", _conn);
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idas_driver FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver)", _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
             List<string> list = new List<string>();

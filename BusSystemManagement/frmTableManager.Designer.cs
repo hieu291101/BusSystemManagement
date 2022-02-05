@@ -31,9 +31,9 @@ namespace BusSystemManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tcDriver = new System.Windows.Forms.TabControl();
             this.tabPageDriver = new System.Windows.Forms.TabPage();
             this.btnExportPdfDriver = new System.Windows.Forms.Button();
@@ -254,6 +254,7 @@ namespace BusSystemManagement
             this.label47 = new System.Windows.Forms.Label();
             this.btnDatStat = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
+            this.btnSumary = new System.Windows.Forms.Button();
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -2220,6 +2221,7 @@ namespace BusSystemManagement
             // 
             // tabPageStat
             // 
+            this.tabPageStat.Controls.Add(this.btnSumary);
             this.tabPageStat.Controls.Add(this.btnDatStat);
             this.tabPageStat.Controls.Add(this.panel60);
             this.tabPageStat.Controls.Add(this.panel58);
@@ -2292,16 +2294,16 @@ namespace BusSystemManagement
             // 
             // chartStatTicket
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chartStatTicket.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chartStatTicket.Legends.Add(legend9);
+            chartArea2.Name = "ChartArea1";
+            this.chartStatTicket.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartStatTicket.Legends.Add(legend2);
             this.chartStatTicket.Location = new System.Drawing.Point(3, 140);
             this.chartStatTicket.Name = "chartStatTicket";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Revenue";
-            this.chartStatTicket.Series.Add(series9);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Revenue";
+            this.chartStatTicket.Series.Add(series2);
             this.chartStatTicket.Size = new System.Drawing.Size(488, 419);
             this.chartStatTicket.TabIndex = 0;
             this.chartStatTicket.Text = "chart1";
@@ -2373,7 +2375,7 @@ namespace BusSystemManagement
             this.dtpStartDayStat.Location = new System.Drawing.Point(113, 6);
             this.dtpStartDayStat.Name = "dtpStartDayStat";
             this.dtpStartDayStat.Size = new System.Drawing.Size(200, 22);
-            this.dtpStartDayStat.TabIndex = 13;
+            this.dtpStartDayStat.TabIndex = 1;
             // 
             // label43
             // 
@@ -2398,7 +2400,7 @@ namespace BusSystemManagement
             this.dtpEndDayStat.Location = new System.Drawing.Point(113, 6);
             this.dtpEndDayStat.Name = "dtpEndDayStat";
             this.dtpEndDayStat.Size = new System.Drawing.Size(200, 22);
-            this.dtpEndDayStat.TabIndex = 13;
+            this.dtpEndDayStat.TabIndex = 2;
             // 
             // label45
             // 
@@ -2424,9 +2426,10 @@ namespace BusSystemManagement
             this.btnDatStat.Location = new System.Drawing.Point(648, 12);
             this.btnDatStat.Name = "btnDatStat";
             this.btnDatStat.Size = new System.Drawing.Size(99, 22);
-            this.btnDatStat.TabIndex = 18;
+            this.btnDatStat.TabIndex = 3;
             this.btnDatStat.Text = "Xem kết quả";
             this.btnDatStat.UseVisualStyleBackColor = true;
+            this.btnDatStat.Click += new System.EventHandler(this.btnDatStat_Click);
             // 
             // label48
             // 
@@ -2437,6 +2440,16 @@ namespace BusSystemManagement
             this.label48.Size = new System.Drawing.Size(254, 24);
             this.label48.TabIndex = 17;
             this.label48.Text = "Doanh thu bán vé tháng";
+            // 
+            // btnSumary
+            // 
+            this.btnSumary.Location = new System.Drawing.Point(753, 12);
+            this.btnSumary.Name = "btnSumary";
+            this.btnSumary.Size = new System.Drawing.Size(99, 22);
+            this.btnSumary.TabIndex = 18;
+            this.btnSumary.Text = "Reset";
+            this.btnSumary.UseVisualStyleBackColor = true;
+            this.btnSumary.Click += new System.EventHandler(this.btnSumary_Click);
             // 
             // frmTableManager
             // 
@@ -2811,5 +2824,6 @@ namespace BusSystemManagement
         private Label label47;
         private Button btnDatStat;
         private Label label48;
+        private Button btnSumary;
     }
 }
