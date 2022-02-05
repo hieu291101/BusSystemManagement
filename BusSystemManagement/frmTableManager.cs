@@ -135,7 +135,7 @@ namespace BusSystemManagement
             dgvBusRide.Columns[1].Visible = false;
             dgvBusRide.Columns[3].Visible = false;
             dgvBusRide.Columns[5].Visible = false;
-            dgvBusRide.Columns[7].Visible = false;
+ 
             setHeaderBusDriver(dgvBusRide);
             string[] cbBusRideList = {
                 "Tên tuyến xe",
@@ -904,11 +904,11 @@ namespace BusSystemManagement
             {
 
                 //create dto
-                //DTO_BusRide add = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), int.Parse(cbAsDriverBR.Text), 0, dtpStartTimeBusRide.Value);
+                DTO_BusRide add = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), 0, dtpStartTimeBusRide.Value, "Tài xế");
+                DTO_BusRide add1 = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbAsDriverBR.Text), 0, dtpStartTimeBusRide.Value, "Phụ xe");
 
                 //add
-                /*
-                if (BUS_BusRide.AddBusRide(add))
+                if (BUS_BusRide.AddBusRide(add) && BUS_BusRide.AddBusRide(add1))
                 {
                     MessageBox.Show("Thêm thành công");
                     dgvBusRide.DataSource = BUS_BusRide.GetBusRide(); //refresh
@@ -917,7 +917,6 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Thêm không thành công");
                 }
-                */
             }
             else
             {
@@ -947,10 +946,15 @@ namespace BusSystemManagement
             {
                 //Lay row hien tai
                 DataGridViewRow rows = dgvBusRide.SelectedRows[0];
-                int id = Convert.ToInt16(rows.Cells[0].Value.ToString());
+                int ID = Convert.ToInt16(rows.Cells[0].Value.ToString());
+                int ID1 = ID;
+                if (rows.Cells[8].Value.ToString() == "Tài xế")
+                    ID1 += 1;
+                else
+                    ID -= 1;
 
                 //Xoa
-                if (BUS_BusRide.DeleteBusRide(id))
+                if (BUS_BusRide.DeleteBusRide(ID) && BUS_BusRide.DeleteBusRide(ID1))
                 {
                     MessageBox.Show("Xoá thành công");
                     dgvBusRide.DataSource = BUS_BusRide.GetBusRide(); //refresh
@@ -970,17 +974,22 @@ namespace BusSystemManagement
         {
             if (dgvBusRide.SelectedRows.Count > 0)
             {
-                /*
                 if (cbBusLineBR.Text != "" && cbAsDriverBR.Text != "" && cbDriverBR.Text != "" && cbBusBR.Text != "" && dtpStartTimeBusRide.Value != null)
                 {
                     DataGridViewRow row = dgvBusRide.SelectedRows[0];
                     int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
-                   
+                    int ID1 = ID;
+                    if (row.Cells[8].Value.ToString() == "Tài xế")
+                        ID1 += 1;
+                    else
+                        ID -= 1;
+
                     //create dto
-                    DTO_BusRide br = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), int.Parse(cbAsDriverBR.Text), ID, dtpStartTimeBusRide.Value);
+                    DTO_BusRide br = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbDriverBR.Text), ID, dtpStartTimeBusRide.Value, "Tài xế");
+                    DTO_BusRide br1 = new DTO_BusRide(int.Parse(cbBusLineBR.Text), int.Parse(cbBusBR.Text), int.Parse(cbAsDriverBR.Text), ID1, dtpStartTimeBusRide.Value, "Phụ xe");
 
                     //update
-                    if (BUS_BusRide.UpdateBusRide(br))
+                    if (BUS_BusRide.UpdateBusRide(br) && BUS_BusRide.UpdateBusRide(br1))
                     {
                         MessageBox.Show("Sửa thành công");
                         dgvBusRide.DataSource = BUS_BusRide.GetBusRide(); //refresh
@@ -994,7 +1003,6 @@ namespace BusSystemManagement
                 {
                     MessageBox.Show("Xin hãy nhập đầy đủ");
                 }
-                */
             }
             else
             {

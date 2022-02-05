@@ -29,11 +29,12 @@ namespace DAL_BusSystemManagement
                 _conn.Open();
                 string startTime = busr.BUSRIDE_STARTTIME.ToString("yyyy-MM-dd H:mm:ss");
                 //
-                string SQL = string.Format("INSERT INTO busride(idbusline, iddriver, idbus, start_time) VALUES ({0}, {1}, {2}, '{3}')",
-                    busr.BUSRIDE_BUSLINEID,
+                string SQL = string.Format("INSERT INTO busride( iddriver, idbus, idbusline, start_time, type) VALUES ({0}, {1}, {2}, '{3}', '{4}')",
                     busr.BUSRIDE_DRIVERID,
                     busr.BUSRIDE_BUSID,
-                    startTime);
+                    busr.BUSRIDE_BUSLINEID,
+                    startTime,
+                    busr.BUSRIDE_TYPE);
 
                 MySqlCommand cmd = new MySqlCommand(SQL, _conn);
                 if(cmd.ExecuteNonQuery() > 0)
