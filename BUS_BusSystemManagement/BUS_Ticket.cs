@@ -49,5 +49,25 @@ namespace BUS_BusSystemManagement
         {
             return dalTicket.DeleteTicket(TICKET_ID);
         }
+
+        public DataTable FindTickerByIdTicket(string kw)
+        {
+            return dalTicket.FindTickerByIdTicket(kw);
+        }
+
+        public DataTable FindTickerByPrice(string kw)
+        {
+            return dalTicket.FindTickerByPrice(kw);
+        }
+
+        public DataTable FindTickerByIdAsDriver(string kw)
+        {
+            return dalTicket.FindTickerByIdAsDriver(kw);
+        }
+
+        public DataTable FindTickerByAsDriverName(string kw)
+        {
+            return dalTicket.FindTickerByAsDriverName(kw);
+        }
     }
 }

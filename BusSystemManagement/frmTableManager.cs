@@ -139,8 +139,8 @@ namespace BusSystemManagement
             setHeaderBusDriver(dgvBusRide);
             string[] cbBusRideList = {
                 "Tên tuyến xe",
-                "Tên tài xế",
-                "Tên phụ xe",
+                "Họ và tên",
+                "Loại",
                 "Biển kiểm soát"
             };
             cbBusRide.Items.AddRange(cbBusRideList);
@@ -150,6 +150,14 @@ namespace BusSystemManagement
             dgvTicket.DataSource = BUS_Ticket.GetTicket();
             setHeaderTicket(dgvTicket);
             cbTicketAsDriverId.DataSource = BUS_AsDriver.GetListAsDriverId();
+            string[] cbTicketList = {
+                "Mã vé xe",
+                "Giá vé",
+                "Mã phụ xe",
+                "Tên phụ xe"
+            };
+            cbTicket.Items.AddRange(cbTicketList);
+            cbTicket.SelectedIndex = 0;
 
             // form load for Stat
             dgvStat.DataSource = BUS_Ticket.GetTicketStat();
@@ -1042,11 +1050,11 @@ namespace BusSystemManagement
                     case "Tên tuyến xe":
                         dgvBusRide.DataSource = BUS_BusRide.FindBusRideByBusLineName(kw);
                         break;
-                    case "Tên tài xế":
-                        dgvBusRide.DataSource = BUS_BusRide.FindBusRideByDriverName(kw);
-                        break;
-                    case "Tên Phụ xe":
+                    case "Họ và tên":
                         dgvBusRide.DataSource = BUS_BusRide.FindBusRideByAsDriverName(kw);
+                        break;
+                    case "Loại":
+                        dgvBusRide.DataSource = BUS_BusRide.FindBusRideByAsDriverType(kw);
                         break;
                     case "Biển kiểm soát":
                         dgvBusRide.DataSource = BUS_BusRide.FindBusRideByLicensePlate(kw);
@@ -1195,6 +1203,39 @@ namespace BusSystemManagement
             tbTicketAsDriverName.Text = BUS_AsDriver.GetAsDriverById(int.Parse(cbTicketAsDriverId.Text));
         }
 
+        private void tbSearchTicket_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchTicket.Text;
+            if (kw == "")
+                dgvTicket.DataSource = BUS_Ticket.GetTicket();
+            else
+            {
+                switch (cbTicket.SelectedItem.ToString())
+                {
+                    case "Mã vé xe":
+                        dgvTicket.DataSource = BUS_Ticket.FindTickerByIdTicket(kw);
+                        break;
+                    case "Giá vé":
+                        dgvTicket.DataSource = BUS_Ticket.FindTickerByPrice(kw);
+                        break;
+                    case "Mã phụ xe":
+                        dgvTicket.DataSource = BUS_Ticket.FindTickerByIdAsDriver(kw);
+                        break;
+                    case "Tên phụ xe":
+                        dgvTicket.DataSource = BUS_Ticket.FindTickerByAsDriverName(kw);
+                        break;
+                    default:
+                        dgvTicket.DataSource = BUS_Ticket.GetTicket();
+                        break;
+                }
+            }
+        }
+
+        private void cbTicket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchTicket.Text = "";
+            dgvTicket.DataSource = BUS_Ticket.GetTicket();
+        }
         private void btnExportPdfTicket_Click(object sender, EventArgs e)
         {
             ExportToPdf(dgvStat, "BANG DU LIEU VE XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));

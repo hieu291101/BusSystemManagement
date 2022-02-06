@@ -172,7 +172,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByName(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE driver_name LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and asdriver_name LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -181,7 +182,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByGender(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE gender LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and gender LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -190,7 +192,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByAddress(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE address LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and address LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -199,7 +202,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByPhoneNumber(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE phone_number LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and phone_number LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -208,7 +212,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByIdCard(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE idcard LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and idcard LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -217,7 +222,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByExperienceYear(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE experience = {0}", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and experience = {0}", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -226,7 +232,8 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindDriverByDriverLicense(string kw)
         {
-            string SQL = string.Format("SELECT * FROM driver WHERE driver_license LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+                "FROM as_driver, driver WHERE idas_driver = iddriver and driver_license LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);

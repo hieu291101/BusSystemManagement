@@ -158,7 +158,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByName(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE asdriver_name LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and asdriver_name LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
@@ -167,7 +167,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByGender(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE gender LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and gender LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
@@ -176,7 +176,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByAddress(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE address LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and address LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
@@ -185,7 +185,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByPhoneNumber(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE phone_number LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and phone_number LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
@@ -194,7 +194,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByIdCard(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE idcard LIKE N\'%{0}%\'", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and idcard LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
@@ -203,7 +203,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByExperienceYear(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE experience = {0}", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and experience = {0}", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);

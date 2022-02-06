@@ -37,11 +37,6 @@ namespace BUS_BusSystemManagement
             return dalBusRide.FindBusRideByBusLineName(kw);
         }
 
-        public DataTable FindBusRideByDriverName(string kw)
-        {
-            return dalBusRide.FindBusRideByDriverName(kw);
-        }
-
         public DataTable FindBusRideByAsDriverName(string kw)
         {
             return dalBusRide.FindBusRideByAsDriverName(kw);
@@ -50,6 +45,11 @@ namespace BUS_BusSystemManagement
         public DataTable FindBusRideByLicensePlate(string kw)
         {
             return dalBusRide.FindBusRideByLicensePlate(kw);
+        }
+
+        public DataTable FindBusRideByAsDriverType(string kw)
+        {
+            return dalBusRide.FindBusRideByAsDriverType(kw);
         }
     }
 }
