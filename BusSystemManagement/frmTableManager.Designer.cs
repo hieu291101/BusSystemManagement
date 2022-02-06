@@ -31,9 +31,9 @@ namespace BusSystemManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tcDriver = new System.Windows.Forms.TabControl();
             this.tabPageDriver = new System.Windows.Forms.TabPage();
             this.btnExportPdfDriver = new System.Windows.Forms.Button();
@@ -251,6 +251,31 @@ namespace BusSystemManagement
             this.label47 = new System.Windows.Forms.Label();
             this.dgvStat = new System.Windows.Forms.DataGridView();
             this.btnExportPdfStat = new System.Windows.Forms.Button();
+            this.tabUser = new System.Windows.Forms.TabPage();
+            this.panel69 = new System.Windows.Forms.Panel();
+            this.dtpUserCreateTime = new System.Windows.Forms.DateTimePicker();
+            this.label55 = new System.Windows.Forms.Label();
+            this.panel68 = new System.Windows.Forms.Panel();
+            this.cbUserRole = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.btnUserReset = new System.Windows.Forms.Button();
+            this.btnUserUpdate = new System.Windows.Forms.Button();
+            this.btnUserDelete = new System.Windows.Forms.Button();
+            this.btnUserAdd = new System.Windows.Forms.Button();
+            this.panel66 = new System.Windows.Forms.Panel();
+            this.tbUserEmail = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.panel65 = new System.Windows.Forms.Panel();
+            this.tbUserPassword = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.panel64 = new System.Windows.Forms.Panel();
+            this.tbUserUsername = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.panel63 = new System.Windows.Forms.Panel();
+            this.cbUser = new System.Windows.Forms.ComboBox();
+            this.tbSearchUser = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -340,6 +365,14 @@ namespace BusSystemManagement
             this.panel54.SuspendLayout();
             this.panel47.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).BeginInit();
+            this.tabUser.SuspendLayout();
+            this.panel69.SuspendLayout();
+            this.panel68.SuspendLayout();
+            this.panel66.SuspendLayout();
+            this.panel65.SuspendLayout();
+            this.panel64.SuspendLayout();
+            this.panel63.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -352,6 +385,7 @@ namespace BusSystemManagement
             this.tcDriver.Controls.Add(this.tabPageBusRide);
             this.tcDriver.Controls.Add(this.tabPageTicket);
             this.tcDriver.Controls.Add(this.tabPageStat);
+            this.tcDriver.Controls.Add(this.tabUser);
             this.tcDriver.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcDriver.Location = new System.Drawing.Point(12, 27);
             this.tcDriver.Name = "tcDriver";
@@ -1957,7 +1991,7 @@ namespace BusSystemManagement
             this.dgvBusRide.AllowUserToAddRows = false;
             this.dgvBusRide.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBusRide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBusRide.Location = new System.Drawing.Point(3, 3);
+            this.dgvBusRide.Location = new System.Drawing.Point(3, 0);
             this.dgvBusRide.Name = "dgvBusRide";
             this.dgvBusRide.Size = new System.Drawing.Size(949, 328);
             this.dgvBusRide.TabIndex = 0;
@@ -2186,7 +2220,7 @@ namespace BusSystemManagement
             this.dgvTicket.AllowUserToAddRows = false;
             this.dgvTicket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTicket.Location = new System.Drawing.Point(3, 3);
+            this.dgvTicket.Location = new System.Drawing.Point(-3, 6);
             this.dgvTicket.Name = "dgvTicket";
             this.dgvTicket.Size = new System.Drawing.Size(949, 328);
             this.dgvTicket.TabIndex = 0;
@@ -2335,16 +2369,16 @@ namespace BusSystemManagement
             // 
             // chartStatTicket
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartStatTicket.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartStatTicket.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chartStatTicket.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartStatTicket.Legends.Add(legend2);
             this.chartStatTicket.Location = new System.Drawing.Point(3, 140);
             this.chartStatTicket.Name = "chartStatTicket";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Revenue";
-            this.chartStatTicket.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Revenue";
+            this.chartStatTicket.Series.Add(series2);
             this.chartStatTicket.Size = new System.Drawing.Size(488, 419);
             this.chartStatTicket.TabIndex = 0;
             this.chartStatTicket.Text = "chart1";
@@ -2426,6 +2460,238 @@ namespace BusSystemManagement
             this.btnExportPdfStat.Text = "EXPORT TO PDF";
             this.btnExportPdfStat.UseVisualStyleBackColor = true;
             this.btnExportPdfStat.Click += new System.EventHandler(this.btnExportPdfStat_Click);
+            // 
+            // tabUser
+            // 
+            this.tabUser.Controls.Add(this.panel69);
+            this.tabUser.Controls.Add(this.panel68);
+            this.tabUser.Controls.Add(this.btnUserReset);
+            this.tabUser.Controls.Add(this.btnUserUpdate);
+            this.tabUser.Controls.Add(this.btnUserDelete);
+            this.tabUser.Controls.Add(this.btnUserAdd);
+            this.tabUser.Controls.Add(this.panel66);
+            this.tabUser.Controls.Add(this.panel65);
+            this.tabUser.Controls.Add(this.panel64);
+            this.tabUser.Controls.Add(this.panel63);
+            this.tabUser.Controls.Add(this.dgvUser);
+            this.tabUser.Location = new System.Drawing.Point(4, 25);
+            this.tabUser.Name = "tabUser";
+            this.tabUser.Size = new System.Drawing.Size(961, 668);
+            this.tabUser.TabIndex = 7;
+            this.tabUser.Text = "Nhân sự";
+            this.tabUser.UseVisualStyleBackColor = true;
+            // 
+            // panel69
+            // 
+            this.panel69.Controls.Add(this.dtpUserCreateTime);
+            this.panel69.Controls.Add(this.label55);
+            this.panel69.Location = new System.Drawing.Point(366, 443);
+            this.panel69.Name = "panel69";
+            this.panel69.Size = new System.Drawing.Size(354, 37);
+            this.panel69.TabIndex = 17;
+            // 
+            // dtpUserCreateTime
+            // 
+            this.dtpUserCreateTime.Location = new System.Drawing.Point(113, 6);
+            this.dtpUserCreateTime.Name = "dtpUserCreateTime";
+            this.dtpUserCreateTime.Size = new System.Drawing.Size(200, 22);
+            this.dtpUserCreateTime.TabIndex = 13;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(12, 11);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(62, 16);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "Thời gian";
+            // 
+            // panel68
+            // 
+            this.panel68.Controls.Add(this.cbUserRole);
+            this.panel68.Controls.Add(this.label54);
+            this.panel68.Location = new System.Drawing.Point(3, 486);
+            this.panel68.Name = "panel68";
+            this.panel68.Size = new System.Drawing.Size(354, 37);
+            this.panel68.TabIndex = 16;
+            // 
+            // cbUserRole
+            // 
+            this.cbUserRole.FormattingEnabled = true;
+            this.cbUserRole.Location = new System.Drawing.Point(113, 8);
+            this.cbUserRole.Name = "cbUserRole";
+            this.cbUserRole.Size = new System.Drawing.Size(121, 24);
+            this.cbUserRole.TabIndex = 1;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(12, 11);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(45, 16);
+            this.label54.TabIndex = 0;
+            this.label54.Text = "Vai trò";
+            // 
+            // btnUserReset
+            // 
+            this.btnUserReset.Location = new System.Drawing.Point(726, 578);
+            this.btnUserReset.Name = "btnUserReset";
+            this.btnUserReset.Size = new System.Drawing.Size(232, 56);
+            this.btnUserReset.TabIndex = 15;
+            this.btnUserReset.Text = "Nhập lại";
+            this.btnUserReset.UseVisualStyleBackColor = true;
+            this.btnUserReset.Click += new System.EventHandler(this.btnUserReset_Click);
+            // 
+            // btnUserUpdate
+            // 
+            this.btnUserUpdate.Location = new System.Drawing.Point(726, 516);
+            this.btnUserUpdate.Name = "btnUserUpdate";
+            this.btnUserUpdate.Size = new System.Drawing.Size(232, 56);
+            this.btnUserUpdate.TabIndex = 14;
+            this.btnUserUpdate.Text = "Cập nhật";
+            this.btnUserUpdate.UseVisualStyleBackColor = true;
+            this.btnUserUpdate.Click += new System.EventHandler(this.btnUserUpdate_Click);
+            // 
+            // btnUserDelete
+            // 
+            this.btnUserDelete.Location = new System.Drawing.Point(726, 454);
+            this.btnUserDelete.Name = "btnUserDelete";
+            this.btnUserDelete.Size = new System.Drawing.Size(232, 56);
+            this.btnUserDelete.TabIndex = 13;
+            this.btnUserDelete.Text = "Xóa";
+            this.btnUserDelete.UseVisualStyleBackColor = true;
+            this.btnUserDelete.Click += new System.EventHandler(this.btnUserDelete_Click);
+            // 
+            // btnUserAdd
+            // 
+            this.btnUserAdd.Location = new System.Drawing.Point(726, 392);
+            this.btnUserAdd.Name = "btnUserAdd";
+            this.btnUserAdd.Size = new System.Drawing.Size(232, 56);
+            this.btnUserAdd.TabIndex = 12;
+            this.btnUserAdd.Text = "Thêm";
+            this.btnUserAdd.UseVisualStyleBackColor = true;
+            this.btnUserAdd.Click += new System.EventHandler(this.btnUserAdd_Click);
+            // 
+            // panel66
+            // 
+            this.panel66.Controls.Add(this.tbUserEmail);
+            this.panel66.Controls.Add(this.label52);
+            this.panel66.Location = new System.Drawing.Point(366, 400);
+            this.panel66.Name = "panel66";
+            this.panel66.Size = new System.Drawing.Size(354, 37);
+            this.panel66.TabIndex = 5;
+            // 
+            // tbUserEmail
+            // 
+            this.tbUserEmail.Location = new System.Drawing.Point(113, 8);
+            this.tbUserEmail.Name = "tbUserEmail";
+            this.tbUserEmail.Size = new System.Drawing.Size(238, 22);
+            this.tbUserEmail.TabIndex = 1;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(12, 11);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(41, 16);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "Email";
+            // 
+            // panel65
+            // 
+            this.panel65.Controls.Add(this.tbUserPassword);
+            this.panel65.Controls.Add(this.label51);
+            this.panel65.Location = new System.Drawing.Point(3, 443);
+            this.panel65.Name = "panel65";
+            this.panel65.Size = new System.Drawing.Size(354, 37);
+            this.panel65.TabIndex = 5;
+            // 
+            // tbUserPassword
+            // 
+            this.tbUserPassword.Location = new System.Drawing.Point(113, 8);
+            this.tbUserPassword.Name = "tbUserPassword";
+            this.tbUserPassword.Size = new System.Drawing.Size(238, 22);
+            this.tbUserPassword.TabIndex = 1;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(12, 11);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(62, 16);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "Mật khẩu";
+            // 
+            // panel64
+            // 
+            this.panel64.Controls.Add(this.tbUserUsername);
+            this.panel64.Controls.Add(this.label50);
+            this.panel64.Location = new System.Drawing.Point(3, 400);
+            this.panel64.Name = "panel64";
+            this.panel64.Size = new System.Drawing.Size(354, 37);
+            this.panel64.TabIndex = 5;
+            // 
+            // tbUserUsername
+            // 
+            this.tbUserUsername.Location = new System.Drawing.Point(113, 8);
+            this.tbUserUsername.Name = "tbUserUsername";
+            this.tbUserUsername.Size = new System.Drawing.Size(238, 22);
+            this.tbUserUsername.TabIndex = 1;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(12, 11);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(64, 16);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Tài khoản";
+            // 
+            // panel63
+            // 
+            this.panel63.Controls.Add(this.cbUser);
+            this.panel63.Controls.Add(this.tbSearchUser);
+            this.panel63.Controls.Add(this.label49);
+            this.panel63.Location = new System.Drawing.Point(551, 4);
+            this.panel63.Name = "panel63";
+            this.panel63.Size = new System.Drawing.Size(407, 48);
+            this.panel63.TabIndex = 4;
+            // 
+            // cbUser
+            // 
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Location = new System.Drawing.Point(275, 10);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(121, 24);
+            this.cbUser.TabIndex = 2;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
+            // tbSearchUser
+            // 
+            this.tbSearchUser.Location = new System.Drawing.Point(70, 10);
+            this.tbSearchUser.Name = "tbSearchUser";
+            this.tbSearchUser.Size = new System.Drawing.Size(189, 22);
+            this.tbSearchUser.TabIndex = 1;
+            this.tbSearchUser.TextChanged += new System.EventHandler(this.tbSearchUser_TextChanged);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(3, 13);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(61, 16);
+            this.label49.TabIndex = 0;
+            this.label49.Text = "Tìm kiếm";
+            // 
+            // dgvUser
+            // 
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Location = new System.Drawing.Point(0, 58);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.Size = new System.Drawing.Size(958, 328);
+            this.dgvUser.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -2604,6 +2870,20 @@ namespace BusSystemManagement
             this.panel47.ResumeLayout(false);
             this.panel47.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).EndInit();
+            this.tabUser.ResumeLayout(false);
+            this.panel69.ResumeLayout(false);
+            this.panel69.PerformLayout();
+            this.panel68.ResumeLayout(false);
+            this.panel68.PerformLayout();
+            this.panel66.ResumeLayout(false);
+            this.panel66.PerformLayout();
+            this.panel65.ResumeLayout(false);
+            this.panel65.PerformLayout();
+            this.panel64.ResumeLayout(false);
+            this.panel64.PerformLayout();
+            this.panel63.ResumeLayout(false);
+            this.panel63.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2834,5 +3114,30 @@ namespace BusSystemManagement
         private Button btnDatStat;
         private Label label48;
         private Button btnSumary;
+        private TabPage tabUser;
+        private Panel panel69;
+        private DateTimePicker dtpUserCreateTime;
+        private Label label55;
+        private Panel panel68;
+        private ComboBox cbUserRole;
+        private Label label54;
+        private Button btnUserReset;
+        private Button btnUserUpdate;
+        private Button btnUserDelete;
+        private Button btnUserAdd;
+        private Panel panel66;
+        private TextBox tbUserEmail;
+        private Label label52;
+        private Panel panel65;
+        private TextBox tbUserPassword;
+        private Label label51;
+        private Panel panel64;
+        private TextBox tbUserUsername;
+        private Label label50;
+        private Panel panel63;
+        private ComboBox cbUser;
+        private TextBox tbSearchUser;
+        private Label label49;
+        private DataGridView dgvUser;
     }
 }

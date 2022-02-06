@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 
 namespace BUS_BusSystemManagement
 {
-    public class BUS_User
+    public class BUS_User: DBConnect
     {
-        DAL_User dAL_User= new DAL_User();
+        DAL_User dAL_User = new DAL_User();
 
         public DataTable GetUsers()
         {
             return dAL_User.GetUsers();
         }
+
         public DTO_User GetUser(string username)
         {
 				return dAL_User.GetUserByUsername(username);
@@ -27,9 +28,14 @@ namespace BUS_BusSystemManagement
             return dAL_User.CheckLogin(username, password);
         }
 
-        public bool AddUser(DTO_User user)
+        public bool AddUser(DTO_User user, DTO_Role role)
         {
-            return dAL_User.AddUser(user);
+            return dAL_User.AddUser(user, role);
+        }
+
+        public bool UpdateUser(DTO_User user, DTO_Role role)
+        {
+            return dAL_User.UpdateUser(user, role);
         }
 
         public bool UpdateUser(DTO_User user)
@@ -40,6 +46,21 @@ namespace BUS_BusSystemManagement
         public bool DeleteUser(int iduser)
         {
             return dAL_User.DeleteUser(iduser);
+        }
+
+        public DataTable FindUserByUsername(string kw)
+        {
+            return dAL_User.FindUserByUsername(kw);
+        }
+
+        public DataTable FindUserByEmail(string kw)
+        {
+            return dAL_User.FindUserByEmail(kw);
+        }
+
+        public DataTable FindUserByRole(string kw)
+        {
+            return dAL_User.FindUserByRole(kw);
         }
 
     }

@@ -13,7 +13,8 @@ namespace DAL_BusSystemManagement
     {
         public DataTable GetDriver()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
+            MySqlDataAdapter msda = new MySqlDataAdapter(
+                "SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
                 "FROM as_driver, driver WHERE idas_driver = iddriver", _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);
@@ -57,7 +58,8 @@ namespace DAL_BusSystemManagement
                 string startDate = ad.ASDRIVER_STARTDATE.ToString("yyyy-MM-dd H:mm:ss");
 
                 // Query string - vì mình để TV_ID là identity (giá trị tự tăng dần) nên ko cần fải insert ID
-                string SQL = string.Format("INSERT INTO as_driver(asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7})",
+                string SQL = string.Format("INSERT INTO as_driver(asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience) " +
+                                            "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7})",
                                            ad.ASDRIVER_NAME,
                                            dayOfBirth,
                                            ad.ASDRIVER_GENDER,
@@ -135,7 +137,6 @@ namespace DAL_BusSystemManagement
 
             return false;
         }
-
 
         public bool DeleteDriver(int DRIVER_ID)
         {

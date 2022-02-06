@@ -26,6 +26,7 @@ namespace BusSystemManagement
         BUS_BusLine     BUS_BusLine     =  new BUS_BusLine();
         BUS_BusRide     BUS_BusRide     =  new BUS_BusRide();
         BUS_Ticket      BUS_Ticket      =  new BUS_Ticket();
+        BUS_User        BUS_User        =  new BUS_User();
         private static DTO_User account;
 
         public frmTableManager()
@@ -58,21 +59,27 @@ namespace BusSystemManagement
             // load form for Driver, As_Driver
             List<string> listGender = new List<string> { "Nam", "Nu", "Khac" };
             List<string> listLicense = new List<string> { "B2", "C", "D", "E", "F" };
+            List<string> listRole = new List<string> { "admin", "Nhan Vien" };
+
             cbGender.DataSource = listGender;
-            cbGenderDriver.DataSource = listGender;
             cbGender.SelectedIndex = 2;
+
+            cbGenderDriver.DataSource = listGender;
             cbGenderDriver.SelectedIndex = 2;
 
             cbLicense.DataSource = listLicense;
-            cbLicense.DataSource = listLicense;
             cbLicense.SelectedIndex = 0;
-            cbLicense.SelectedIndex = 0;
+
+            cbUserRole.DataSource = listRole;
+            cbUserRole.SelectedIndex = 1;
+
 
             // load form for Bus Ride
             cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
             cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
             cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
             cbBusBR.DataSource = BUS_Bus.GetListBusId();
+
 
             // form load for As Driver
             dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
@@ -87,6 +94,7 @@ namespace BusSystemManagement
             };
             cbAsDriver.Items.AddRange(cbAsDriverList);
             cbAsDriver.SelectedIndex = 0;
+
 
             // form load for Driver
             dgvDriver.DataSource = BUS_Driver.GetDriver();
@@ -103,6 +111,7 @@ namespace BusSystemManagement
             cbDriver.Items.AddRange(cbDriverList);
             cbDriver.SelectedIndex = 0;
 
+
             //form load for Bus
             dgvBus.DataSource = BUS_Bus.GetBus();
             setHeaderBus(dgvBus);
@@ -115,6 +124,7 @@ namespace BusSystemManagement
             };
             cbBus.Items.AddRange(cbBusList);
             cbBus.SelectedIndex = 1;
+
 
             // form load for Bus Line
             dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
@@ -129,6 +139,7 @@ namespace BusSystemManagement
             };
             cbBusLine.Items.AddRange(cbBusLineList);
             cbBusLine.SelectedIndex = 5;
+
 
             // form load for Bus Ride
             dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
@@ -145,6 +156,7 @@ namespace BusSystemManagement
             cbBusRide.Items.AddRange(cbBusRideList);
             cbBusRide.SelectedIndex = 0;
 
+
             // form load for Ticket
             dgvTicket.DataSource = BUS_Ticket.GetTicket();
             setHeaderTicket(dgvTicket);
@@ -158,10 +170,23 @@ namespace BusSystemManagement
             cbTicket.Items.AddRange(cbTicketList);
             cbTicket.SelectedIndex = 0;
 
+
             // form load for Stat
             dgvStat.DataSource = BUS_Ticket.GetTicketStat();
             setHeaderStat(dgvStat);
             cbStatChart.DataSource = BUS_Ticket.GetListYear();
+
+
+            // form load for User
+            dgvUser.DataSource = BUS_User.GetUsers();
+            setHeaderUser(dgvUser);
+            string[] cbUserList = {
+                "Username",
+                "Email",
+                "Vai trò"
+            };
+            cbUser.Items.AddRange(cbUserList);
+            cbUser.SelectedIndex = 0;
 
             // draw stat
             fillChart(DateTime.Now.Year);
@@ -183,8 +208,7 @@ namespace BusSystemManagement
         }
 
 
-        //**************************************************************************
-        //---------- AsDriver  ---------------------------------
+        #region AsDriver
         private static void setHeaderAsDriver(DataGridView dgvAsDriver)
         {
             dgvAsDriver.Columns[0].HeaderText = "Mã phụ xe";
@@ -367,12 +391,10 @@ namespace BusSystemManagement
         {
             ExportToPdf(dgvAsDriver, "BANG DU LIEU PHU XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
         }
-        //**************************************************************************
-        //--XXX------------------AsDriver---------------XXX-------
+        #endregion
 
 
-        //**************************************************************************
-        //----------  Driver  ---------------------------------
+        #region Driver
         private static void setHeaderDriver(DataGridView dgvDriver)
         {
             dgvDriver.Columns[0].HeaderText = "Mã tài xế";
@@ -550,12 +572,10 @@ namespace BusSystemManagement
             ExportToPdf(dgvDriver, "BANG DU LIEU TAI XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
         }
 
-        //**************************************************************************
-        //--XXX------------------Driver---------------XXX-------
+        #endregion
 
 
-        //**************************************************************************
-        //----------  Bus  ---------------------------------
+        #region Bus
         private static void setHeaderBus(DataGridView dgvBus)
         {
             dgvBus.Columns[0].HeaderText = "Mã xe";
@@ -710,11 +730,10 @@ namespace BusSystemManagement
         {
             ExportToPdf(dgvBus, "BANG DU LIEU XE BUYT", DateTime.Now.Date.ToString("MM/dd/yyyy"));
         }
-        //**************************************************************************
-        //--XXX------------------Bus---------------XXX-------
 
-        //**************************************************************************
-        //----------  BusLine  ---------------------------------
+        #endregion
+
+        #region BusLine
         private static void setHeaderBusLine(DataGridView dtvBusLine)
         {
             dtvBusLine.Columns[0].HeaderText = "Mã chuyến xe";
@@ -889,12 +908,10 @@ namespace BusSystemManagement
             ExportToPdf(dgvBusLine, "BANG DU LIEU TUYEN XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
         }
 
-        //--XXX------------------BusLine---------------XXX-------
-        //**************************************************************************
+        #endregion
 
 
-        //**************************************************************************
-        //----------  Bus Ride  ---------------------------------
+        #region BusRide
         private static void setHeaderBusDriver(DataGridView dgvBusRide)
         {
             dgvBusRide.Columns[0].HeaderText = "Mã chuyến xe";
@@ -904,6 +921,7 @@ namespace BusSystemManagement
             dgvBusRide.Columns[7].HeaderText = "Thời điểm";
             dgvBusRide.Columns[8].HeaderText = "Loại";
         }
+
         private void btnAddBusRide_Click(object sender, EventArgs e)
         {
             if (cbBusLineBR.Text != "" && cbAsDriverBR.Text != "" && cbDriverBR.Text != "" && cbBusBR.Text != "" && dtpStartTimeBusRide.Value != null)
@@ -1075,11 +1093,10 @@ namespace BusSystemManagement
             ExportToPdf(dgvBusRide, "BANG DU LIEU CHUYEN XE", DateTime.Now.Date.ToString("MM/dd/yyyy"));
         }
 
-        //**************************************************************************
-        //--XXX------------------Bus Ride---------------XXX-------
+        #endregion
 
-        //**************************************************************************
-        //----------  Ticket  ---------------------------------
+
+        #region Ticket
         private static void setHeaderTicket(DataGridView dgvTicket)
         {
             dgvTicket.Columns[0].HeaderText = "Mã vé";
@@ -1240,11 +1257,10 @@ namespace BusSystemManagement
             dgvTicket.DataSource = BUS_Ticket.GetTicket();
         }
 
-        //**************************************************************************
-        //--XXX------------------Ticket---------------XXX-------
+        #endregion
 
-        //**************************************************************************
-        //----------  Stat  ---------------------------------
+
+        #region Stat
         private static void setHeaderStat(DataGridView dgvStat)
         {
             dgvStat.Columns[0].HeaderText = "Ngày";
@@ -1285,8 +1301,152 @@ namespace BusSystemManagement
             ExportToPdf(dgvStat, "BANG THONG KE DOANH THU VE THEO NGAY", DateTime.Now.Date.ToString("MM/dd/yyyy"));
         }
 
-        //**************************************************************************
-        //--XXX------------------Stat---------------XXX-------
+        #endregion
+
+
+        #region User
+        private static void setHeaderUser(DataGridView dgvDriver)
+        {
+            dgvDriver.Columns[0].HeaderText = "Mã tài khoản";
+            dgvDriver.Columns[1].HeaderText = "Tên tài khoản";
+            dgvDriver.Columns[2].HeaderText = "Mật khẩu";
+            dgvDriver.Columns[3].HeaderText = "Email";
+            dgvDriver.Columns[4].HeaderText = "Ngày tạo tài khoản";
+            dgvDriver.Columns[5].HeaderText = "Vai trò";
+        }
+
+        private void btnUserAdd_Click(object sender, EventArgs e)
+        {
+            if (tbUserUsername.Text != "" && tbUserPassword.Text != "" && tbUserEmail.Text != "" && cbUserRole.Text != "" && dtpUserCreateTime.Value != null)
+            {
+                // Tạo DTO
+                DTO_User user = new DTO_User(0, tbUserUsername.Text, tbUserPassword.Text, tbUserEmail.Text, dtpUserCreateTime.Value);
+                DTO_Role role = new DTO_Role(0, cbUserRole.Text);
+
+                // Thêm
+                if (BUS_User.AddUser(user, role))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvUser.DataSource = BUS_User.GetUsers(); // refresh datagridview
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công"); ;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xin hãy nhập đầy đủ");
+            }
+        }
+
+        private void btnUserDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvUser.SelectedRows.Count > 0)
+            {
+
+                // Lấy row hiện tại
+                DataGridViewRow row = dgvUser.SelectedRows[0];
+                int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
+
+                // Xóa
+                if (BUS_User.DeleteUser(ID))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dgvUser.DataSource = BUS_User.GetUsers(); // refresh datagridview
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn xóa");
+            }
+        }
+
+        private void btnUserUpdate_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu có chọn table rồi
+            if (dgvUser.SelectedRows.Count > 0)
+            {
+                if (tbUserUsername.Text != "" && tbUserPassword.Text != "" && tbUserEmail.Text != "" && cbUserRole.Text != "" && dtpUserCreateTime.Value != null)
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dgvUser.SelectedRows[0];
+                    int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
+
+                    // Tạo DTO
+                    DTO_User user = new DTO_User(ID, tbUserUsername.Text, tbUserPassword.Text, tbUserEmail.Text, dtpUserCreateTime.Value);
+                    DTO_Role role = new DTO_Role(ID, cbUserRole.Text);
+
+                    // Sửa
+                    if (BUS_User.UpdateUser(user, role))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        dgvUser.DataSource = BUS_User.GetUsers(); // refresh datagridview
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+            }
+        }
+
+        private void btnUserReset_Click(object sender, EventArgs e)
+        {
+            tbUserUsername.Text = "";
+            tbUserPassword.Text = "";
+            tbUserEmail.Text = "";
+            dtpUserCreateTime.Value = DateTime.Now;
+            cbUserRole.SelectedIndex = 1;
+        }
+
+        private void tbSearchUser_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchUser.Text;
+            if (kw == "")
+                dgvUser.DataSource = BUS_User.GetUsers();
+            else
+            {
+                switch (cbUser.SelectedItem.ToString())
+                {
+                    case "Username":
+                        dgvUser.DataSource = BUS_User.FindUserByUsername(kw);
+                        break;
+                    case "Email":
+                        dgvUser.DataSource = BUS_User.FindUserByEmail(kw);
+                        break;
+                    case "Vai trò":
+                        dgvUser.DataSource = BUS_User.FindUserByRole(kw);
+                        break;
+                    default:
+                        dgvUser.DataSource = BUS_User.GetUsers();
+                        break;
+                }
+            }
+        }
+
+        private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchUser.Text = "";
+            dgvUser.DataSource = BUS_User.GetUsers();
+        }
+
+        #endregion
+
+
         public void ExportToPdf(DataGridView dgv, string title, string subtitle)
         {
             if (dgv.Rows.Count > 0)
@@ -1384,12 +1544,15 @@ namespace BusSystemManagement
                 MessageBox.Show("Không có bản ghi nào được Export!!!", "Thông báo");
             }
         }
+
+
         public static string convertToUnSign(string s)
         {
             Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
             string temp = s.Normalize(NormalizationForm.FormD);
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
+
 
     }
 }
