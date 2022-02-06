@@ -1,0 +1,18 @@
+C:\Users\PC\source\repos\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+C:\Users\PC\source\repos\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+C:\Users\PC\source\repos\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.dll
+C:\Users\PC\source\repos\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.pdb
+D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csprojAssemblyReference.cache
+D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.CoreCompileInputs.cache
+D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.dll
+D:\CSharp\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DTO_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.dll
+C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\DTO_BusSystemManagement\obj\Debug\DTO_BusSystemManagement.pdb

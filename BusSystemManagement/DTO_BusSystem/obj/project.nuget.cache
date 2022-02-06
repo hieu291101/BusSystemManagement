@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Uy2fYYt6TQHtp0dE5zAklhY04VFJsdBc8DF4db/FA91WuDx+7hCqoZCUMw8f++B9gRJQo8XZGtFhGRIH8G7mOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PC\\source\\repos\\BusSystemManagement\\DTO_BusSystem\\DTO_BusSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
