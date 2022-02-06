@@ -789,7 +789,7 @@ namespace BusSystemManagement
             }
         }
 
-        private void btnUpdateBusLine_Click(object sender, EventArgs e) 
+        private void btnUpdateBusLine_Click(object sender, EventArgs e)
         {
             if (dgvBusLine.SelectedRows.Count > 0)
             {
@@ -1384,7 +1384,6 @@ namespace BusSystemManagement
                 MessageBox.Show("Không có bản ghi nào được Export!!!", "Thông báo");
             }
         }
-
         public static string convertToUnSign(string s)
         {
             Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");

@@ -31,9 +31,9 @@ namespace BusSystemManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tcDriver = new System.Windows.Forms.TabControl();
             this.tabPageDriver = new System.Windows.Forms.TabPage();
             this.btnExportPdfDriver = new System.Windows.Forms.Button();
@@ -2335,16 +2335,16 @@ namespace BusSystemManagement
             // 
             // chartStatTicket
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartStatTicket.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartStatTicket.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chartStatTicket.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartStatTicket.Legends.Add(legend3);
             this.chartStatTicket.Location = new System.Drawing.Point(3, 140);
             this.chartStatTicket.Name = "chartStatTicket";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Revenue";
-            this.chartStatTicket.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Revenue";
+            this.chartStatTicket.Series.Add(series3);
             this.chartStatTicket.Size = new System.Drawing.Size(488, 419);
             this.chartStatTicket.TabIndex = 0;
             this.chartStatTicket.Text = "chart1";
@@ -2414,7 +2414,7 @@ namespace BusSystemManagement
             this.dgvStat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStat.Location = new System.Drawing.Point(3, 44);
             this.dgvStat.Name = "dgvStat";
-            this.dgvStat.Size = new System.Drawing.Size(449, 579);
+            this.dgvStat.Size = new System.Drawing.Size(449, 615);
             this.dgvStat.TabIndex = 0;
             // 
             // btnExportPdfStat
