@@ -18,7 +18,7 @@ namespace DTO_BusSystemManagement
                 case "Nam":
                     gender = DTO_Gender_Enum.NAM;
                     break;
-                case "Nu":
+                case "Nữ":
                     gender = DTO_Gender_Enum.NU;
                     break;
             }

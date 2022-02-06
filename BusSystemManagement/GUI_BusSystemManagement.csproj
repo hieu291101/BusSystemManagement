@@ -111,6 +111,10 @@
       <Project>{d235d54d-2f16-49c2-b15b-21bf7ccf2953}</Project>
       <Name>BUS_BusSystemManagement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL_BusSystemManagement\DAL_BusSystemManagement.csproj">
+      <Project>{6A473353-FE96-4320-BB40-E2E69D3AB429}</Project>
+      <Name>DAL_BusSystemManagement</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO_BusSystemManagement\DTO_BusSystemManagement.csproj">
       <Project>{99a5ddbc-053e-4567-a3f7-9389f9471b25}</Project>
       <Name>DTO_BusSystemManagement</Name>

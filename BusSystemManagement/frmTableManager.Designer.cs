@@ -39,6 +39,34 @@ namespace BusSystemManagement
             this.tabPageDriver = new System.Windows.Forms.TabPage();
             this.btnExportPdfDriver = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.cbLicense = new System.Windows.Forms.ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.nudExperienceDriver = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.dtpStartDayDriver = new System.Windows.Forms.DateTimePicker();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.tbIdCardDriver = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.tbPhoneDriver = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.tbAddressDriver = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.cbGenderDriver = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.dtpDayOfBirthDriver = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel63 = new System.Windows.Forms.Panel();
+            this.tbDriverName = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.btnAddMdriver = new System.Windows.Forms.Button();
             this.btnResetDriver = new System.Windows.Forms.Button();
             this.btnUpdateDriver = new System.Windows.Forms.Button();
@@ -52,6 +80,31 @@ namespace BusSystemManagement
             this.tabPageAsDriver = new System.Windows.Forms.TabPage();
             this.btnExportPdfAsDriver = new System.Windows.Forms.Button();
             this.panel26 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.nudExperienceAsDriver = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.dtpStartDay = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.tbIdCardAsDriver = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.tbPhoneAsDriver = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.tbAddressAsDriver = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.dtpDayOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel64 = new System.Windows.Forms.Panel();
+            this.tbAsDriverName = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.btnResetAsDriver = new System.Windows.Forms.Button();
             this.btnUpdateAsDriver = new System.Windows.Forms.Button();
             this.btnDeleteAsDriver = new System.Windows.Forms.Button();
@@ -65,6 +118,22 @@ namespace BusSystemManagement
             this.tabPageBus = new System.Windows.Forms.TabPage();
             this.btnExportPdfBus = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.nudCycle = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.nudChair = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.nudMyear = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.tbManufacturer = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel65 = new System.Windows.Forms.Panel();
+            this.tbLicensePlate = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.btnResetBus = new System.Windows.Forms.Button();
             this.btnUpdateBus = new System.Windows.Forms.Button();
             this.btnDeleteBus = new System.Windows.Forms.Button();
@@ -78,6 +147,28 @@ namespace BusSystemManagement
             this.tabPageBusLine = new System.Windows.Forms.TabPage();
             this.btnExportPdfBusLine = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.tbBusLineDetail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.tbEndLocation = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.tbStartLocation = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.nudEndTime = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.nudStartTime = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.nudFrequency = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel66 = new System.Windows.Forms.Panel();
+            this.tbBusLineName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnResetBusLine = new System.Windows.Forms.Button();
             this.btnUpdateBusLine = new System.Windows.Forms.Button();
             this.btnDeleteBusLine = new System.Windows.Forms.Button();
@@ -92,6 +183,26 @@ namespace BusSystemManagement
             this.tabPageBusRide = new System.Windows.Forms.TabPage();
             this.btnExportPdfBusRide = new System.Windows.Forms.Button();
             this.panel45 = new System.Windows.Forms.Panel();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.dtpStartTimeBusRide = new System.Windows.Forms.DateTimePicker();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.tbBusBR = new System.Windows.Forms.TextBox();
+            this.cbBusBR = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.tbAsDriverBR = new System.Windows.Forms.TextBox();
+            this.cbAsDriverBR = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.tbDriverBR = new System.Windows.Forms.TextBox();
+            this.cbDriverBR = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel67 = new System.Windows.Forms.Panel();
+            this.tbBusLineBR = new System.Windows.Forms.TextBox();
+            this.cbBusLineBR = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.btnResetBusRide = new System.Windows.Forms.Button();
             this.btnUpdateBusRide = new System.Windows.Forms.Button();
             this.btnDeleteBusRide = new System.Windows.Forms.Button();
@@ -106,6 +217,17 @@ namespace BusSystemManagement
             this.tabPageTicket = new System.Windows.Forms.TabPage();
             this.btnExportPdfTicket = new System.Windows.Forms.Button();
             this.panel55 = new System.Windows.Forms.Panel();
+            this.panel56 = new System.Windows.Forms.Panel();
+            this.panel57 = new System.Windows.Forms.Panel();
+            this.dtpTicket = new System.Windows.Forms.DateTimePicker();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel59 = new System.Windows.Forms.Panel();
+            this.tbTicketAsDriverName = new System.Windows.Forms.TextBox();
+            this.cbTicketAsDriverId = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel68 = new System.Windows.Forms.Panel();
+            this.nudTicket = new System.Windows.Forms.NumericUpDown();
+            this.label44 = new System.Windows.Forms.Label();
             this.btResetTicket = new System.Windows.Forms.Button();
             this.btnUpdateTicket = new System.Windows.Forms.Button();
             this.btnDeleteTicket = new System.Windows.Forms.Button();
@@ -136,172 +258,35 @@ namespace BusSystemManagement
             this.label47 = new System.Windows.Forms.Label();
             this.dgvStat = new System.Windows.Forms.DataGridView();
             this.btnExportPdfStat = new System.Windows.Forms.Button();
+            this.tabPageUser = new System.Windows.Forms.TabPage();
+            this.panel69 = new System.Windows.Forms.Panel();
+            this.panel70 = new System.Windows.Forms.Panel();
+            this.panel76 = new System.Windows.Forms.Panel();
+            this.tbUserEmail = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.panel71 = new System.Windows.Forms.Panel();
+            this.tbUserUsername = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.panel73 = new System.Windows.Forms.Panel();
+            this.tbUserPassword = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.btnUserReset = new System.Windows.Forms.Button();
+            this.btnUserUpdate = new System.Windows.Forms.Button();
+            this.btnUserDelete = new System.Windows.Forms.Button();
+            this.btnUserAdd = new System.Windows.Forms.Button();
+            this.panel74 = new System.Windows.Forms.Panel();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.panel75 = new System.Windows.Forms.Panel();
+            this.cbUser = new System.Windows.Forms.ComboBox();
+            this.tbSearchUser = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.cbLicense = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.nudExperienceDriver = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.dtpStartDayDriver = new System.Windows.Forms.DateTimePicker();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.tbIdCardDriver = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.tbPhoneDriver = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.tbAddressDriver = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.cbGenderDriver = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.dtpDayOfBirthDriver = new System.Windows.Forms.DateTimePicker();
-            this.label31 = new System.Windows.Forms.Label();
-            this.panel63 = new System.Windows.Forms.Panel();
-            this.tbDriverName = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.nudExperienceAsDriver = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.dtpStartDay = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.tbIdCardAsDriver = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.tbPhoneAsDriver = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.tbAddressAsDriver = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.cbGender = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.dtpDayOfBirth = new System.Windows.Forms.DateTimePicker();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel64 = new System.Windows.Forms.Panel();
-            this.tbAsDriverName = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.nudCycle = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.nudChair = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.nudMyear = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.tbManufacturer = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel65 = new System.Windows.Forms.Panel();
-            this.tbLicensePlate = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.tbBusLineDetail = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.tbEndLocation = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.tbStartLocation = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.nudEndTime = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.nudStartTime = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.nudFrequency = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel66 = new System.Windows.Forms.Panel();
-            this.tbBusLineName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel48 = new System.Windows.Forms.Panel();
-            this.panel49 = new System.Windows.Forms.Panel();
-            this.dtpStartTimeBusRide = new System.Windows.Forms.DateTimePicker();
-            this.label36 = new System.Windows.Forms.Label();
-            this.panel50 = new System.Windows.Forms.Panel();
-            this.tbBusBR = new System.Windows.Forms.TextBox();
-            this.cbBusBR = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.panel51 = new System.Windows.Forms.Panel();
-            this.tbAsDriverBR = new System.Windows.Forms.TextBox();
-            this.cbAsDriverBR = new System.Windows.Forms.ComboBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.panel52 = new System.Windows.Forms.Panel();
-            this.tbDriverBR = new System.Windows.Forms.TextBox();
-            this.cbDriverBR = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel67 = new System.Windows.Forms.Panel();
-            this.tbBusLineBR = new System.Windows.Forms.TextBox();
-            this.cbBusLineBR = new System.Windows.Forms.ComboBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.panel56 = new System.Windows.Forms.Panel();
-            this.panel57 = new System.Windows.Forms.Panel();
-            this.dtpTicket = new System.Windows.Forms.DateTimePicker();
-            this.label41 = new System.Windows.Forms.Label();
-            this.panel59 = new System.Windows.Forms.Panel();
-            this.tbTicketAsDriverName = new System.Windows.Forms.TextBox();
-            this.cbTicketAsDriverId = new System.Windows.Forms.ComboBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.panel68 = new System.Windows.Forms.Panel();
-            this.nudTicket = new System.Windows.Forms.NumericUpDown();
-            this.label44 = new System.Windows.Forms.Label();
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
-            this.panel34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.tabPageAsDriver.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsDriver)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.tabPageBus.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBus)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.tabPageBusLine.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusLine)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.tabPageBusRide.SuspendLayout();
-            this.panel45.SuspendLayout();
-            this.panel44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).BeginInit();
-            this.panel43.SuspendLayout();
-            this.tabPageTicket.SuspendLayout();
-            this.panel55.SuspendLayout();
-            this.panel61.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).BeginInit();
-            this.panel62.SuspendLayout();
-            this.tabPageStat.SuspendLayout();
-            this.panel60.SuspendLayout();
-            this.panel58.SuspendLayout();
-            this.panel53.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).BeginInit();
-            this.panel54.SuspendLayout();
-            this.panel47.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel46.SuspendLayout();
             this.panel36.SuspendLayout();
@@ -313,6 +298,11 @@ namespace BusSystemManagement
             this.panel41.SuspendLayout();
             this.panel42.SuspendLayout();
             this.panel63.SuspendLayout();
+            this.panel34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.tabPageAsDriver.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudExperienceAsDriver)).BeginInit();
@@ -323,6 +313,11 @@ namespace BusSystemManagement
             this.panel32.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panel64.SuspendLayout();
+            this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsDriver)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.tabPageBus.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCycle)).BeginInit();
@@ -332,6 +327,11 @@ namespace BusSystemManagement
             ((System.ComponentModel.ISupportInitialize)(this.nudMyear)).BeginInit();
             this.panel24.SuspendLayout();
             this.panel65.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBus)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.tabPageBusLine.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -343,17 +343,48 @@ namespace BusSystemManagement
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudFrequency)).BeginInit();
             this.panel66.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusLine)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.tabPageBusRide.SuspendLayout();
+            this.panel45.SuspendLayout();
             this.panel48.SuspendLayout();
             this.panel49.SuspendLayout();
             this.panel50.SuspendLayout();
             this.panel51.SuspendLayout();
             this.panel52.SuspendLayout();
             this.panel67.SuspendLayout();
+            this.panel44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).BeginInit();
+            this.panel43.SuspendLayout();
+            this.tabPageTicket.SuspendLayout();
+            this.panel55.SuspendLayout();
             this.panel56.SuspendLayout();
             this.panel57.SuspendLayout();
             this.panel59.SuspendLayout();
             this.panel68.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTicket)).BeginInit();
+            this.panel61.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).BeginInit();
+            this.panel62.SuspendLayout();
+            this.tabPageStat.SuspendLayout();
+            this.panel60.SuspendLayout();
+            this.panel58.SuspendLayout();
+            this.panel53.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).BeginInit();
+            this.panel54.SuspendLayout();
+            this.panel47.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).BeginInit();
+            this.tabPageUser.SuspendLayout();
+            this.panel69.SuspendLayout();
+            this.panel70.SuspendLayout();
+            this.panel76.SuspendLayout();
+            this.panel71.SuspendLayout();
+            this.panel73.SuspendLayout();
+            this.panel74.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            this.panel75.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcDriver
@@ -365,6 +396,7 @@ namespace BusSystemManagement
             this.tcDriver.Controls.Add(this.tabPageBusRide);
             this.tcDriver.Controls.Add(this.tabPageTicket);
             this.tcDriver.Controls.Add(this.tabPageStat);
+            this.tcDriver.Controls.Add(this.tabPageUser);
             this.tcDriver.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcDriver.Font = new System.Drawing.Font("Lexend Deca", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcDriver.Location = new System.Drawing.Point(0, 27);
@@ -412,6 +444,256 @@ namespace BusSystemManagement
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(976, 251);
             this.panel27.TabIndex = 8;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel35.Controls.Add(this.panel46);
+            this.panel35.Controls.Add(this.panel36);
+            this.panel35.Controls.Add(this.panel37);
+            this.panel35.Controls.Add(this.panel38);
+            this.panel35.Controls.Add(this.panel39);
+            this.panel35.Controls.Add(this.panel40);
+            this.panel35.Controls.Add(this.panel41);
+            this.panel35.Controls.Add(this.panel42);
+            this.panel35.Controls.Add(this.panel63);
+            this.panel35.Location = new System.Drawing.Point(3, 3);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(708, 242);
+            this.panel35.TabIndex = 12;
+            // 
+            // panel46
+            // 
+            this.panel46.Controls.Add(this.cbLicense);
+            this.panel46.Controls.Add(this.label34);
+            this.panel46.Location = new System.Drawing.Point(3, 175);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(339, 37);
+            this.panel46.TabIndex = 9;
+            // 
+            // cbLicense
+            // 
+            this.cbLicense.FormattingEnabled = true;
+            this.cbLicense.Location = new System.Drawing.Point(113, 8);
+            this.cbLicense.Name = "cbLicense";
+            this.cbLicense.Size = new System.Drawing.Size(223, 29);
+            this.cbLicense.TabIndex = 1;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(12, 11);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(62, 21);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Bằng lái";
+            // 
+            // panel36
+            // 
+            this.panel36.Controls.Add(this.nudExperienceDriver);
+            this.panel36.Controls.Add(this.label19);
+            this.panel36.Location = new System.Drawing.Point(348, 132);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(339, 37);
+            this.panel36.TabIndex = 12;
+            // 
+            // nudExperienceDriver
+            // 
+            this.nudExperienceDriver.Location = new System.Drawing.Point(133, 8);
+            this.nudExperienceDriver.Name = "nudExperienceDriver";
+            this.nudExperienceDriver.Size = new System.Drawing.Size(203, 24);
+            this.nudExperienceDriver.TabIndex = 4;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 11);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(115, 21);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Thâm niên(năm)";
+            // 
+            // panel37
+            // 
+            this.panel37.Controls.Add(this.dtpStartDayDriver);
+            this.panel37.Controls.Add(this.label26);
+            this.panel37.Location = new System.Drawing.Point(3, 132);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(339, 37);
+            this.panel37.TabIndex = 10;
+            // 
+            // dtpStartDayDriver
+            // 
+            this.dtpStartDayDriver.Location = new System.Drawing.Point(113, 6);
+            this.dtpStartDayDriver.Name = "dtpStartDayDriver";
+            this.dtpStartDayDriver.Size = new System.Drawing.Size(223, 24);
+            this.dtpStartDayDriver.TabIndex = 12;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(12, 8);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(101, 21);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Ngày bắt đầu ";
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.tbIdCardDriver);
+            this.panel38.Controls.Add(this.label27);
+            this.panel38.Location = new System.Drawing.Point(348, 89);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(339, 37);
+            this.panel38.TabIndex = 11;
+            // 
+            // tbIdCardDriver
+            // 
+            this.tbIdCardDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbIdCardDriver.Name = "tbIdCardDriver";
+            this.tbIdCardDriver.Size = new System.Drawing.Size(223, 24);
+            this.tbIdCardDriver.TabIndex = 1;
+            this.tbIdCardDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdCardDriver_KeyPress);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(12, 11);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(50, 21);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "CMND";
+            // 
+            // panel39
+            // 
+            this.panel39.Controls.Add(this.tbPhoneDriver);
+            this.panel39.Controls.Add(this.label28);
+            this.panel39.Location = new System.Drawing.Point(3, 89);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(339, 37);
+            this.panel39.TabIndex = 6;
+            // 
+            // tbPhoneDriver
+            // 
+            this.tbPhoneDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbPhoneDriver.MaxLength = 12;
+            this.tbPhoneDriver.Name = "tbPhoneDriver";
+            this.tbPhoneDriver.Size = new System.Drawing.Size(223, 24);
+            this.tbPhoneDriver.TabIndex = 1;
+            this.tbPhoneDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhoneDriver_KeyPress);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(12, 11);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(77, 21);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Điện thoại";
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.tbAddressDriver);
+            this.panel40.Controls.Add(this.label29);
+            this.panel40.Location = new System.Drawing.Point(348, 46);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(339, 37);
+            this.panel40.TabIndex = 13;
+            // 
+            // tbAddressDriver
+            // 
+            this.tbAddressDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbAddressDriver.Name = "tbAddressDriver";
+            this.tbAddressDriver.Size = new System.Drawing.Size(223, 24);
+            this.tbAddressDriver.TabIndex = 2;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(12, 11);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(54, 21);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Địa chỉ";
+            // 
+            // panel41
+            // 
+            this.panel41.Controls.Add(this.cbGenderDriver);
+            this.panel41.Controls.Add(this.label30);
+            this.panel41.Location = new System.Drawing.Point(3, 46);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(339, 37);
+            this.panel41.TabIndex = 7;
+            // 
+            // cbGenderDriver
+            // 
+            this.cbGenderDriver.FormattingEnabled = true;
+            this.cbGenderDriver.Location = new System.Drawing.Point(113, 5);
+            this.cbGenderDriver.Name = "cbGenderDriver";
+            this.cbGenderDriver.Size = new System.Drawing.Size(223, 29);
+            this.cbGenderDriver.TabIndex = 1;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(12, 11);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(64, 21);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Giới tính";
+            // 
+            // panel42
+            // 
+            this.panel42.Controls.Add(this.dtpDayOfBirthDriver);
+            this.panel42.Controls.Add(this.label31);
+            this.panel42.Location = new System.Drawing.Point(348, 3);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(339, 37);
+            this.panel42.TabIndex = 8;
+            // 
+            // dtpDayOfBirthDriver
+            // 
+            this.dtpDayOfBirthDriver.CustomFormat = "Short";
+            this.dtpDayOfBirthDriver.Location = new System.Drawing.Point(113, 8);
+            this.dtpDayOfBirthDriver.Name = "dtpDayOfBirthDriver";
+            this.dtpDayOfBirthDriver.Size = new System.Drawing.Size(223, 24);
+            this.dtpDayOfBirthDriver.TabIndex = 12;
+            this.dtpDayOfBirthDriver.Value = new System.DateTime(2022, 1, 28, 15, 17, 42, 0);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(12, 11);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(74, 21);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Ngày sinh";
+            // 
+            // panel63
+            // 
+            this.panel63.Controls.Add(this.tbDriverName);
+            this.panel63.Controls.Add(this.label32);
+            this.panel63.Location = new System.Drawing.Point(3, 3);
+            this.panel63.Name = "panel63";
+            this.panel63.Size = new System.Drawing.Size(339, 37);
+            this.panel63.TabIndex = 5;
+            // 
+            // tbDriverName
+            // 
+            this.tbDriverName.Location = new System.Drawing.Point(113, 8);
+            this.tbDriverName.Name = "tbDriverName";
+            this.tbDriverName.Size = new System.Drawing.Size(223, 24);
+            this.tbDriverName.TabIndex = 1;
+            this.tbDriverName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDriverName_KeyPress);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(12, 12);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(53, 21);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Họ tên";
             // 
             // btnAddMdriver
             // 
@@ -510,6 +792,7 @@ namespace BusSystemManagement
             this.tbSearchDriver.Size = new System.Drawing.Size(189, 24);
             this.tbSearchDriver.TabIndex = 1;
             this.tbSearchDriver.TextChanged += new System.EventHandler(this.tbSearchDriver_TextChanged);
+            this.tbSearchDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchDriver_KeyPress);
             // 
             // label5
             // 
@@ -557,6 +840,238 @@ namespace BusSystemManagement
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(976, 271);
             this.panel26.TabIndex = 7;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel18.Controls.Add(this.panel19);
+            this.panel18.Controls.Add(this.panel28);
+            this.panel18.Controls.Add(this.panel29);
+            this.panel18.Controls.Add(this.panel30);
+            this.panel18.Controls.Add(this.panel31);
+            this.panel18.Controls.Add(this.panel32);
+            this.panel18.Controls.Add(this.panel33);
+            this.panel18.Controls.Add(this.panel64);
+            this.panel18.Location = new System.Drawing.Point(3, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(708, 241);
+            this.panel18.TabIndex = 12;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.nudExperienceAsDriver);
+            this.panel19.Controls.Add(this.label12);
+            this.panel19.Location = new System.Drawing.Point(348, 132);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(339, 37);
+            this.panel19.TabIndex = 11;
+            // 
+            // nudExperienceAsDriver
+            // 
+            this.nudExperienceAsDriver.Location = new System.Drawing.Point(133, 8);
+            this.nudExperienceAsDriver.Maximum = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.nudExperienceAsDriver.Name = "nudExperienceAsDriver";
+            this.nudExperienceAsDriver.Size = new System.Drawing.Size(203, 24);
+            this.nudExperienceAsDriver.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(12, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 21);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Thâm niên(năm)";
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.dtpStartDay);
+            this.panel28.Controls.Add(this.label1);
+            this.panel28.Location = new System.Drawing.Point(3, 132);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(339, 37);
+            this.panel28.TabIndex = 9;
+            // 
+            // dtpStartDay
+            // 
+            this.dtpStartDay.Location = new System.Drawing.Point(113, 6);
+            this.dtpStartDay.Name = "dtpStartDay";
+            this.dtpStartDay.Size = new System.Drawing.Size(223, 24);
+            this.dtpStartDay.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ngày bắt đầu ";
+            // 
+            // panel29
+            // 
+            this.panel29.Controls.Add(this.tbIdCardAsDriver);
+            this.panel29.Controls.Add(this.label20);
+            this.panel29.Location = new System.Drawing.Point(348, 89);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(339, 37);
+            this.panel29.TabIndex = 10;
+            // 
+            // tbIdCardAsDriver
+            // 
+            this.tbIdCardAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbIdCardAsDriver.Name = "tbIdCardAsDriver";
+            this.tbIdCardAsDriver.Size = new System.Drawing.Size(223, 24);
+            this.tbIdCardAsDriver.TabIndex = 1;
+            this.tbIdCardAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdCardAsDriver_KeyPress);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 11);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(50, 21);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "CMND";
+            // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.tbPhoneAsDriver);
+            this.panel30.Controls.Add(this.label21);
+            this.panel30.Location = new System.Drawing.Point(3, 89);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(339, 37);
+            this.panel30.TabIndex = 6;
+            // 
+            // tbPhoneAsDriver
+            // 
+            this.tbPhoneAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbPhoneAsDriver.MaxLength = 12;
+            this.tbPhoneAsDriver.Name = "tbPhoneAsDriver";
+            this.tbPhoneAsDriver.Size = new System.Drawing.Size(223, 24);
+            this.tbPhoneAsDriver.TabIndex = 1;
+            this.tbPhoneAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhoneAsDriver_KeyPress);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(12, 11);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(77, 21);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Điện thoại";
+            // 
+            // panel31
+            // 
+            this.panel31.Controls.Add(this.tbAddressAsDriver);
+            this.panel31.Controls.Add(this.label22);
+            this.panel31.Location = new System.Drawing.Point(348, 46);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(339, 37);
+            this.panel31.TabIndex = 12;
+            // 
+            // tbAddressAsDriver
+            // 
+            this.tbAddressAsDriver.Location = new System.Drawing.Point(113, 8);
+            this.tbAddressAsDriver.Name = "tbAddressAsDriver";
+            this.tbAddressAsDriver.Size = new System.Drawing.Size(223, 24);
+            this.tbAddressAsDriver.TabIndex = 2;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(12, 11);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(54, 21);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Địa chỉ";
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.cbGender);
+            this.panel32.Controls.Add(this.label23);
+            this.panel32.Location = new System.Drawing.Point(3, 46);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(339, 37);
+            this.panel32.TabIndex = 7;
+            // 
+            // cbGender
+            // 
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nu",
+            "Khac"});
+            this.cbGender.Location = new System.Drawing.Point(113, 8);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(223, 29);
+            this.cbGender.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(64, 21);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Giới tính";
+            // 
+            // panel33
+            // 
+            this.panel33.Controls.Add(this.dtpDayOfBirth);
+            this.panel33.Controls.Add(this.label24);
+            this.panel33.Location = new System.Drawing.Point(348, 3);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(339, 37);
+            this.panel33.TabIndex = 8;
+            // 
+            // dtpDayOfBirth
+            // 
+            this.dtpDayOfBirth.CustomFormat = "Short";
+            this.dtpDayOfBirth.Location = new System.Drawing.Point(113, 8);
+            this.dtpDayOfBirth.Name = "dtpDayOfBirth";
+            this.dtpDayOfBirth.Size = new System.Drawing.Size(223, 24);
+            this.dtpDayOfBirth.TabIndex = 12;
+            this.dtpDayOfBirth.Value = new System.DateTime(2022, 1, 28, 15, 17, 42, 0);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(12, 11);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(74, 21);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Ngày sinh";
+            // 
+            // panel64
+            // 
+            this.panel64.Controls.Add(this.tbAsDriverName);
+            this.panel64.Controls.Add(this.label25);
+            this.panel64.Location = new System.Drawing.Point(3, 3);
+            this.panel64.Name = "panel64";
+            this.panel64.Size = new System.Drawing.Size(339, 37);
+            this.panel64.TabIndex = 5;
+            // 
+            // tbAsDriverName
+            // 
+            this.tbAsDriverName.Location = new System.Drawing.Point(113, 8);
+            this.tbAsDriverName.Name = "tbAsDriverName";
+            this.tbAsDriverName.Size = new System.Drawing.Size(223, 24);
+            this.tbAsDriverName.TabIndex = 1;
+            this.tbAsDriverName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAsDriverName_KeyPress);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(12, 11);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 21);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Họ tên";
             // 
             // btnResetAsDriver
             // 
@@ -655,6 +1170,7 @@ namespace BusSystemManagement
             this.tbSearchAsDriver.Size = new System.Drawing.Size(189, 24);
             this.tbSearchAsDriver.TabIndex = 1;
             this.tbSearchAsDriver.TextChanged += new System.EventHandler(this.tbSearchAsDriver_TextChanged);
+            this.tbSearchAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchAsDriver_KeyPress);
             // 
             // label4
             // 
@@ -701,6 +1217,171 @@ namespace BusSystemManagement
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(977, 271);
             this.panel16.TabIndex = 6;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Controls.Add(this.panel22);
+            this.panel20.Controls.Add(this.panel23);
+            this.panel20.Controls.Add(this.panel24);
+            this.panel20.Controls.Add(this.panel65);
+            this.panel20.Location = new System.Drawing.Point(3, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(708, 242);
+            this.panel20.TabIndex = 12;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.nudCycle);
+            this.panel21.Controls.Add(this.label14);
+            this.panel21.Location = new System.Drawing.Point(3, 89);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(339, 37);
+            this.panel21.TabIndex = 6;
+            // 
+            // nudCycle
+            // 
+            this.nudCycle.Location = new System.Drawing.Point(187, 9);
+            this.nudCycle.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudCycle.Name = "nudCycle";
+            this.nudCycle.Size = new System.Drawing.Size(149, 24);
+            this.nudCycle.TabIndex = 4;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(169, 21);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Chu kỳ bảo hành (tháng)";
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.nudChair);
+            this.panel22.Controls.Add(this.label15);
+            this.panel22.Location = new System.Drawing.Point(348, 46);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(339, 37);
+            this.panel22.TabIndex = 9;
+            // 
+            // nudChair
+            // 
+            this.nudChair.Location = new System.Drawing.Point(120, 8);
+            this.nudChair.Maximum = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
+            this.nudChair.Name = "nudChair";
+            this.nudChair.Size = new System.Drawing.Size(216, 24);
+            this.nudChair.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(12, 11);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 21);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Số ghế";
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.nudMyear);
+            this.panel23.Controls.Add(this.label16);
+            this.panel23.Location = new System.Drawing.Point(3, 46);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(339, 37);
+            this.panel23.TabIndex = 7;
+            // 
+            // nudMyear
+            // 
+            this.nudMyear.Location = new System.Drawing.Point(124, 8);
+            this.nudMyear.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.nudMyear.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
+            this.nudMyear.Name = "nudMyear";
+            this.nudMyear.Size = new System.Drawing.Size(212, 24);
+            this.nudMyear.TabIndex = 3;
+            this.nudMyear.Value = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(12, 11);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 21);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Năm sản xuất";
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.tbManufacturer);
+            this.panel24.Controls.Add(this.label17);
+            this.panel24.Location = new System.Drawing.Point(348, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(339, 37);
+            this.panel24.TabIndex = 8;
+            // 
+            // tbManufacturer
+            // 
+            this.tbManufacturer.Location = new System.Drawing.Point(120, 8);
+            this.tbManufacturer.Name = "tbManufacturer";
+            this.tbManufacturer.Size = new System.Drawing.Size(216, 24);
+            this.tbManufacturer.TabIndex = 2;
+            this.tbManufacturer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbManufacturer_KeyPress);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(12, 11);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Hãng sản xuất";
+            // 
+            // panel65
+            // 
+            this.panel65.Controls.Add(this.tbLicensePlate);
+            this.panel65.Controls.Add(this.label18);
+            this.panel65.Location = new System.Drawing.Point(3, 3);
+            this.panel65.Name = "panel65";
+            this.panel65.Size = new System.Drawing.Size(339, 37);
+            this.panel65.TabIndex = 5;
+            // 
+            // tbLicensePlate
+            // 
+            this.tbLicensePlate.Location = new System.Drawing.Point(123, 8);
+            this.tbLicensePlate.Name = "tbLicensePlate";
+            this.tbLicensePlate.Size = new System.Drawing.Size(213, 24);
+            this.tbLicensePlate.TabIndex = 1;
+            this.tbLicensePlate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLicensePlate_KeyPress);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(12, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 21);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Biển kiếm soát";
             // 
             // btnResetBus
             // 
@@ -799,6 +1480,7 @@ namespace BusSystemManagement
             this.tbSearchBus.Size = new System.Drawing.Size(189, 24);
             this.tbSearchBus.TabIndex = 1;
             this.tbSearchBus.TextChanged += new System.EventHandler(this.tbSearchBus_TextChanged);
+            this.tbSearchBus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchBus_KeyPress);
             // 
             // label3
             // 
@@ -846,6 +1528,217 @@ namespace BusSystemManagement
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(977, 271);
             this.panel9.TabIndex = 5;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel10.Controls.Add(this.panel15);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.panel13);
+            this.panel10.Controls.Add(this.panel17);
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Controls.Add(this.panel66);
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(708, 242);
+            this.panel10.TabIndex = 12;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.tbBusLineDetail);
+            this.panel15.Controls.Add(this.label11);
+            this.panel15.Location = new System.Drawing.Point(3, 132);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(684, 110);
+            this.panel15.TabIndex = 9;
+            // 
+            // tbBusLineDetail
+            // 
+            this.tbBusLineDetail.Location = new System.Drawing.Point(113, 8);
+            this.tbBusLineDetail.Multiline = true;
+            this.tbBusLineDetail.Name = "tbBusLineDetail";
+            this.tbBusLineDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbBusLineDetail.Size = new System.Drawing.Size(568, 91);
+            this.tbBusLineDetail.TabIndex = 1;
+            this.tbBusLineDetail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBusLineDetail_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(91, 21);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Chi tiết trạm";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.tbEndLocation);
+            this.panel14.Controls.Add(this.label10);
+            this.panel14.Location = new System.Drawing.Point(348, 89);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(339, 37);
+            this.panel14.TabIndex = 10;
+            // 
+            // tbEndLocation
+            // 
+            this.tbEndLocation.Location = new System.Drawing.Point(113, 8);
+            this.tbEndLocation.Name = "tbEndLocation";
+            this.tbEndLocation.Size = new System.Drawing.Size(223, 24);
+            this.tbEndLocation.TabIndex = 1;
+            this.tbEndLocation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEndLocation_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 21);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Điểm cuối";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.tbStartLocation);
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Location = new System.Drawing.Point(3, 89);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(339, 37);
+            this.panel11.TabIndex = 6;
+            // 
+            // tbStartLocation
+            // 
+            this.tbStartLocation.Location = new System.Drawing.Point(113, 8);
+            this.tbStartLocation.Name = "tbStartLocation";
+            this.tbStartLocation.Size = new System.Drawing.Size(223, 24);
+            this.tbStartLocation.TabIndex = 1;
+            this.tbStartLocation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbStartLocation_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 21);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Điểm đầu";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.nudEndTime);
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Location = new System.Drawing.Point(348, 46);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(339, 37);
+            this.panel13.TabIndex = 11;
+            // 
+            // nudEndTime
+            // 
+            this.nudEndTime.Location = new System.Drawing.Point(113, 8);
+            this.nudEndTime.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudEndTime.Name = "nudEndTime";
+            this.nudEndTime.Size = new System.Drawing.Size(223, 24);
+            this.nudEndTime.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 21);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Giờ kết thúc";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.nudStartTime);
+            this.panel17.Controls.Add(this.label13);
+            this.panel17.Location = new System.Drawing.Point(3, 46);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(339, 37);
+            this.panel17.TabIndex = 7;
+            // 
+            // nudStartTime
+            // 
+            this.nudStartTime.Location = new System.Drawing.Point(113, 8);
+            this.nudStartTime.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudStartTime.Name = "nudStartTime";
+            this.nudStartTime.Size = new System.Drawing.Size(223, 24);
+            this.nudStartTime.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 11);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(85, 21);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Giờ bắt đầu";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.nudFrequency);
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Location = new System.Drawing.Point(348, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(339, 37);
+            this.panel12.TabIndex = 8;
+            // 
+            // nudFrequency
+            // 
+            this.nudFrequency.Location = new System.Drawing.Point(113, 8);
+            this.nudFrequency.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudFrequency.Name = "nudFrequency";
+            this.nudFrequency.Size = new System.Drawing.Size(223, 24);
+            this.nudFrequency.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(102, 21);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Tần suất(phút)";
+            // 
+            // panel66
+            // 
+            this.panel66.Controls.Add(this.tbBusLineName);
+            this.panel66.Controls.Add(this.label6);
+            this.panel66.Location = new System.Drawing.Point(3, 3);
+            this.panel66.Name = "panel66";
+            this.panel66.Size = new System.Drawing.Size(339, 37);
+            this.panel66.TabIndex = 5;
+            // 
+            // tbBusLineName
+            // 
+            this.tbBusLineName.Location = new System.Drawing.Point(113, 8);
+            this.tbBusLineName.Name = "tbBusLineName";
+            this.tbBusLineName.Size = new System.Drawing.Size(223, 24);
+            this.tbBusLineName.TabIndex = 1;
+            this.tbBusLineName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBusLineName_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 21);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tên tuyến  xe";
             // 
             // btnResetBusLine
             // 
@@ -951,6 +1844,7 @@ namespace BusSystemManagement
             this.tbSearchBusLine.Size = new System.Drawing.Size(189, 24);
             this.tbSearchBusLine.TabIndex = 1;
             this.tbSearchBusLine.TextChanged += new System.EventHandler(this.tbSearchBusLine_TextChanged);
+            this.tbSearchBusLine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchBusLine_KeyPress);
             // 
             // label2
             // 
@@ -998,6 +1892,188 @@ namespace BusSystemManagement
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(977, 271);
             this.panel45.TabIndex = 6;
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel48.Controls.Add(this.panel49);
+            this.panel48.Controls.Add(this.panel50);
+            this.panel48.Controls.Add(this.panel51);
+            this.panel48.Controls.Add(this.panel52);
+            this.panel48.Controls.Add(this.panel67);
+            this.panel48.Location = new System.Drawing.Point(3, 3);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(708, 241);
+            this.panel48.TabIndex = 12;
+            // 
+            // panel49
+            // 
+            this.panel49.Controls.Add(this.dtpStartTimeBusRide);
+            this.panel49.Controls.Add(this.label36);
+            this.panel49.Location = new System.Drawing.Point(3, 89);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(339, 37);
+            this.panel49.TabIndex = 6;
+            // 
+            // dtpStartTimeBusRide
+            // 
+            this.dtpStartTimeBusRide.Location = new System.Drawing.Point(113, 6);
+            this.dtpStartTimeBusRide.Name = "dtpStartTimeBusRide";
+            this.dtpStartTimeBusRide.Size = new System.Drawing.Size(223, 24);
+            this.dtpStartTimeBusRide.TabIndex = 13;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(12, 11);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(73, 21);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Thời điểm";
+            // 
+            // panel50
+            // 
+            this.panel50.Controls.Add(this.tbBusBR);
+            this.panel50.Controls.Add(this.cbBusBR);
+            this.panel50.Controls.Add(this.label37);
+            this.panel50.Location = new System.Drawing.Point(348, 46);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(339, 37);
+            this.panel50.TabIndex = 9;
+            // 
+            // tbBusBR
+            // 
+            this.tbBusBR.Location = new System.Drawing.Point(190, 6);
+            this.tbBusBR.Name = "tbBusBR";
+            this.tbBusBR.ReadOnly = true;
+            this.tbBusBR.Size = new System.Drawing.Size(146, 24);
+            this.tbBusBR.TabIndex = 17;
+            // 
+            // cbBusBR
+            // 
+            this.cbBusBR.FormattingEnabled = true;
+            this.cbBusBR.Location = new System.Drawing.Point(113, 6);
+            this.cbBusBR.Name = "cbBusBR";
+            this.cbBusBR.Size = new System.Drawing.Size(71, 29);
+            this.cbBusBR.TabIndex = 16;
+            this.cbBusBR.SelectedIndexChanged += new System.EventHandler(this.cbBusBR_SelectedIndexChanged);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(12, 11);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(48, 21);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Mã xe";
+            // 
+            // panel51
+            // 
+            this.panel51.Controls.Add(this.tbAsDriverBR);
+            this.panel51.Controls.Add(this.cbAsDriverBR);
+            this.panel51.Controls.Add(this.label38);
+            this.panel51.Location = new System.Drawing.Point(3, 46);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(339, 37);
+            this.panel51.TabIndex = 7;
+            // 
+            // tbAsDriverBR
+            // 
+            this.tbAsDriverBR.Location = new System.Drawing.Point(190, 8);
+            this.tbAsDriverBR.Name = "tbAsDriverBR";
+            this.tbAsDriverBR.ReadOnly = true;
+            this.tbAsDriverBR.Size = new System.Drawing.Size(146, 24);
+            this.tbAsDriverBR.TabIndex = 15;
+            // 
+            // cbAsDriverBR
+            // 
+            this.cbAsDriverBR.FormattingEnabled = true;
+            this.cbAsDriverBR.Location = new System.Drawing.Point(113, 7);
+            this.cbAsDriverBR.Name = "cbAsDriverBR";
+            this.cbAsDriverBR.Size = new System.Drawing.Size(71, 29);
+            this.cbAsDriverBR.TabIndex = 14;
+            this.cbAsDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbAsDriverBR_SelectedIndexChanged);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(12, 11);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(76, 21);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Mã phụ xe";
+            // 
+            // panel52
+            // 
+            this.panel52.Controls.Add(this.tbDriverBR);
+            this.panel52.Controls.Add(this.cbDriverBR);
+            this.panel52.Controls.Add(this.label39);
+            this.panel52.Location = new System.Drawing.Point(348, 3);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(339, 37);
+            this.panel52.TabIndex = 8;
+            // 
+            // tbDriverBR
+            // 
+            this.tbDriverBR.Location = new System.Drawing.Point(190, 8);
+            this.tbDriverBR.Name = "tbDriverBR";
+            this.tbDriverBR.ReadOnly = true;
+            this.tbDriverBR.Size = new System.Drawing.Size(146, 24);
+            this.tbDriverBR.TabIndex = 14;
+            // 
+            // cbDriverBR
+            // 
+            this.cbDriverBR.FormattingEnabled = true;
+            this.cbDriverBR.Location = new System.Drawing.Point(113, 7);
+            this.cbDriverBR.Name = "cbDriverBR";
+            this.cbDriverBR.Size = new System.Drawing.Size(71, 29);
+            this.cbDriverBR.TabIndex = 14;
+            this.cbDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbDriverBR_SelectedIndexChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(12, 11);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(69, 21);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Mã tài xế";
+            // 
+            // panel67
+            // 
+            this.panel67.Controls.Add(this.tbBusLineBR);
+            this.panel67.Controls.Add(this.cbBusLineBR);
+            this.panel67.Controls.Add(this.label40);
+            this.panel67.Location = new System.Drawing.Point(3, 3);
+            this.panel67.Name = "panel67";
+            this.panel67.Size = new System.Drawing.Size(339, 37);
+            this.panel67.TabIndex = 5;
+            // 
+            // tbBusLineBR
+            // 
+            this.tbBusLineBR.Location = new System.Drawing.Point(190, 8);
+            this.tbBusLineBR.Name = "tbBusLineBR";
+            this.tbBusLineBR.ReadOnly = true;
+            this.tbBusLineBR.Size = new System.Drawing.Size(146, 24);
+            this.tbBusLineBR.TabIndex = 13;
+            // 
+            // cbBusLineBR
+            // 
+            this.cbBusLineBR.FormattingEnabled = true;
+            this.cbBusLineBR.Location = new System.Drawing.Point(113, 7);
+            this.cbBusLineBR.Name = "cbBusLineBR";
+            this.cbBusLineBR.Size = new System.Drawing.Size(71, 29);
+            this.cbBusLineBR.TabIndex = 12;
+            this.cbBusLineBR.SelectedIndexChanged += new System.EventHandler(this.cbBusLineBR_SelectedIndexChanged);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(12, 11);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(89, 21);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "Mã tuyến xe";
             // 
             // btnResetBusRide
             // 
@@ -1096,6 +2172,7 @@ namespace BusSystemManagement
             this.tbSearchBusRide.Size = new System.Drawing.Size(189, 24);
             this.tbSearchBusRide.TabIndex = 1;
             this.tbSearchBusRide.TextChanged += new System.EventHandler(this.tbSearchBusRide_TextChanged);
+            this.tbSearchBusRide.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchBusRide_KeyPress);
             // 
             // label33
             // 
@@ -1149,6 +2226,117 @@ namespace BusSystemManagement
             this.panel55.Name = "panel55";
             this.panel55.Size = new System.Drawing.Size(977, 271);
             this.panel55.TabIndex = 17;
+            // 
+            // panel56
+            // 
+            this.panel56.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel56.Controls.Add(this.panel57);
+            this.panel56.Controls.Add(this.panel59);
+            this.panel56.Controls.Add(this.panel68);
+            this.panel56.Location = new System.Drawing.Point(3, 3);
+            this.panel56.Name = "panel56";
+            this.panel56.Size = new System.Drawing.Size(708, 242);
+            this.panel56.TabIndex = 12;
+            // 
+            // panel57
+            // 
+            this.panel57.Controls.Add(this.dtpTicket);
+            this.panel57.Controls.Add(this.label41);
+            this.panel57.Location = new System.Drawing.Point(3, 3);
+            this.panel57.Name = "panel57";
+            this.panel57.Size = new System.Drawing.Size(339, 37);
+            this.panel57.TabIndex = 5;
+            // 
+            // dtpTicket
+            // 
+            this.dtpTicket.Location = new System.Drawing.Point(113, 6);
+            this.dtpTicket.Name = "dtpTicket";
+            this.dtpTicket.Size = new System.Drawing.Size(223, 24);
+            this.dtpTicket.TabIndex = 13;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(12, 11);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(73, 21);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Thời điểm";
+            // 
+            // panel59
+            // 
+            this.panel59.Controls.Add(this.tbTicketAsDriverName);
+            this.panel59.Controls.Add(this.cbTicketAsDriverId);
+            this.panel59.Controls.Add(this.label42);
+            this.panel59.Location = new System.Drawing.Point(3, 46);
+            this.panel59.Name = "panel59";
+            this.panel59.Size = new System.Drawing.Size(339, 37);
+            this.panel59.TabIndex = 7;
+            // 
+            // tbTicketAsDriverName
+            // 
+            this.tbTicketAsDriverName.Location = new System.Drawing.Point(190, 8);
+            this.tbTicketAsDriverName.Name = "tbTicketAsDriverName";
+            this.tbTicketAsDriverName.ReadOnly = true;
+            this.tbTicketAsDriverName.Size = new System.Drawing.Size(146, 24);
+            this.tbTicketAsDriverName.TabIndex = 17;
+            // 
+            // cbTicketAsDriverId
+            // 
+            this.cbTicketAsDriverId.FormattingEnabled = true;
+            this.cbTicketAsDriverId.Location = new System.Drawing.Point(113, 6);
+            this.cbTicketAsDriverId.Name = "cbTicketAsDriverId";
+            this.cbTicketAsDriverId.Size = new System.Drawing.Size(71, 29);
+            this.cbTicketAsDriverId.TabIndex = 16;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(12, 11);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(76, 21);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "Mã phụ xe";
+            // 
+            // panel68
+            // 
+            this.panel68.Controls.Add(this.nudTicket);
+            this.panel68.Controls.Add(this.label44);
+            this.panel68.Location = new System.Drawing.Point(348, 3);
+            this.panel68.Name = "panel68";
+            this.panel68.Size = new System.Drawing.Size(339, 37);
+            this.panel68.TabIndex = 6;
+            // 
+            // nudTicket
+            // 
+            this.nudTicket.Location = new System.Drawing.Point(113, 9);
+            this.nudTicket.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudTicket.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudTicket.Name = "nudTicket";
+            this.nudTicket.Size = new System.Drawing.Size(223, 24);
+            this.nudTicket.TabIndex = 15;
+            this.nudTicket.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(12, 11);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(94, 21);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "Giá vé (VNĐ)";
             // 
             // btResetTicket
             // 
@@ -1247,6 +2435,7 @@ namespace BusSystemManagement
             this.tbSearchTicket.Size = new System.Drawing.Size(189, 24);
             this.tbSearchTicket.TabIndex = 1;
             this.tbSearchTicket.TextChanged += new System.EventHandler(this.tbSearchTicket_TextChanged);
+            this.tbSearchTicket.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchTicket_KeyPress_1);
             // 
             // label46
             // 
@@ -1466,6 +2655,224 @@ namespace BusSystemManagement
             this.btnExportPdfStat.UseVisualStyleBackColor = false;
             this.btnExportPdfStat.Click += new System.EventHandler(this.btnExportPdfStat_Click);
             // 
+            // tabPageUser
+            // 
+            this.tabPageUser.Controls.Add(this.panel69);
+            this.tabPageUser.Controls.Add(this.panel74);
+            this.tabPageUser.Controls.Add(this.panel75);
+            this.tabPageUser.Location = new System.Drawing.Point(4, 30);
+            this.tabPageUser.Name = "tabPageUser";
+            this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUser.Size = new System.Drawing.Size(985, 678);
+            this.tabPageUser.TabIndex = 7;
+            this.tabPageUser.Text = "Tài khoản";
+            this.tabPageUser.UseVisualStyleBackColor = true;
+            // 
+            // panel69
+            // 
+            this.panel69.Controls.Add(this.panel70);
+            this.panel69.Controls.Add(this.btnUserReset);
+            this.panel69.Controls.Add(this.btnUserUpdate);
+            this.panel69.Controls.Add(this.btnUserDelete);
+            this.panel69.Controls.Add(this.btnUserAdd);
+            this.panel69.Location = new System.Drawing.Point(4, 398);
+            this.panel69.Name = "panel69";
+            this.panel69.Size = new System.Drawing.Size(977, 271);
+            this.panel69.TabIndex = 21;
+            // 
+            // panel70
+            // 
+            this.panel70.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel70.Controls.Add(this.panel76);
+            this.panel70.Controls.Add(this.panel71);
+            this.panel70.Controls.Add(this.panel73);
+            this.panel70.Location = new System.Drawing.Point(3, 3);
+            this.panel70.Name = "panel70";
+            this.panel70.Size = new System.Drawing.Size(708, 242);
+            this.panel70.TabIndex = 12;
+            // 
+            // panel76
+            // 
+            this.panel76.Controls.Add(this.tbUserEmail);
+            this.panel76.Controls.Add(this.label53);
+            this.panel76.Location = new System.Drawing.Point(3, 46);
+            this.panel76.Name = "panel76";
+            this.panel76.Size = new System.Drawing.Size(339, 37);
+            this.panel76.TabIndex = 9;
+            // 
+            // tbUserEmail
+            // 
+            this.tbUserEmail.Location = new System.Drawing.Point(113, 8);
+            this.tbUserEmail.Name = "tbUserEmail";
+            this.tbUserEmail.Size = new System.Drawing.Size(223, 24);
+            this.tbUserEmail.TabIndex = 8;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(12, 11);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(45, 21);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "Email";
+            // 
+            // panel71
+            // 
+            this.panel71.Controls.Add(this.tbUserUsername);
+            this.panel71.Controls.Add(this.label49);
+            this.panel71.Location = new System.Drawing.Point(3, 3);
+            this.panel71.Name = "panel71";
+            this.panel71.Size = new System.Drawing.Size(339, 37);
+            this.panel71.TabIndex = 5;
+            // 
+            // tbUserUsername
+            // 
+            this.tbUserUsername.Location = new System.Drawing.Point(113, 8);
+            this.tbUserUsername.Name = "tbUserUsername";
+            this.tbUserUsername.Size = new System.Drawing.Size(223, 24);
+            this.tbUserUsername.TabIndex = 8;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(12, 11);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(71, 21);
+            this.label49.TabIndex = 0;
+            this.label49.Text = "Tài khoản";
+            // 
+            // panel73
+            // 
+            this.panel73.Controls.Add(this.tbUserPassword);
+            this.panel73.Controls.Add(this.label51);
+            this.panel73.Location = new System.Drawing.Point(348, 3);
+            this.panel73.Name = "panel73";
+            this.panel73.Size = new System.Drawing.Size(339, 37);
+            this.panel73.TabIndex = 6;
+            // 
+            // tbUserPassword
+            // 
+            this.tbUserPassword.Location = new System.Drawing.Point(113, 8);
+            this.tbUserPassword.Name = "tbUserPassword";
+            this.tbUserPassword.Size = new System.Drawing.Size(223, 24);
+            this.tbUserPassword.TabIndex = 9;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(12, 11);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(69, 21);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "Mật khẩu";
+            // 
+            // btnUserReset
+            // 
+            this.btnUserReset.BackColor = System.Drawing.Color.DimGray;
+            this.btnUserReset.Font = new System.Drawing.Font("Lexend Deca SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserReset.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnUserReset.Location = new System.Drawing.Point(717, 189);
+            this.btnUserReset.Name = "btnUserReset";
+            this.btnUserReset.Size = new System.Drawing.Size(257, 56);
+            this.btnUserReset.TabIndex = 11;
+            this.btnUserReset.Text = "Nhập lại";
+            this.btnUserReset.UseVisualStyleBackColor = false;
+            this.btnUserReset.Click += new System.EventHandler(this.btnUserReset_Click);
+            // 
+            // btnUserUpdate
+            // 
+            this.btnUserUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnUserUpdate.Font = new System.Drawing.Font("Lexend Deca SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserUpdate.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnUserUpdate.Location = new System.Drawing.Point(717, 127);
+            this.btnUserUpdate.Name = "btnUserUpdate";
+            this.btnUserUpdate.Size = new System.Drawing.Size(257, 56);
+            this.btnUserUpdate.TabIndex = 10;
+            this.btnUserUpdate.Text = "Cập nhật";
+            this.btnUserUpdate.UseVisualStyleBackColor = false;
+            this.btnUserUpdate.Click += new System.EventHandler(this.btnUserUpdate_Click);
+            // 
+            // btnUserDelete
+            // 
+            this.btnUserDelete.BackColor = System.Drawing.Color.DimGray;
+            this.btnUserDelete.Font = new System.Drawing.Font("Lexend Deca SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserDelete.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnUserDelete.Location = new System.Drawing.Point(717, 65);
+            this.btnUserDelete.Name = "btnUserDelete";
+            this.btnUserDelete.Size = new System.Drawing.Size(257, 56);
+            this.btnUserDelete.TabIndex = 9;
+            this.btnUserDelete.Text = "Xóa";
+            this.btnUserDelete.UseVisualStyleBackColor = false;
+            this.btnUserDelete.Click += new System.EventHandler(this.btnUserDelete_Click);
+            // 
+            // btnUserAdd
+            // 
+            this.btnUserAdd.BackColor = System.Drawing.Color.DimGray;
+            this.btnUserAdd.Font = new System.Drawing.Font("Lexend Deca SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserAdd.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnUserAdd.Location = new System.Drawing.Point(717, 3);
+            this.btnUserAdd.Name = "btnUserAdd";
+            this.btnUserAdd.Size = new System.Drawing.Size(257, 56);
+            this.btnUserAdd.TabIndex = 8;
+            this.btnUserAdd.Text = "Thêm";
+            this.btnUserAdd.UseVisualStyleBackColor = false;
+            this.btnUserAdd.Click += new System.EventHandler(this.btnUserAdd_Click);
+            // 
+            // panel74
+            // 
+            this.panel74.Controls.Add(this.dgvUser);
+            this.panel74.Location = new System.Drawing.Point(4, 61);
+            this.panel74.Name = "panel74";
+            this.panel74.Size = new System.Drawing.Size(977, 334);
+            this.panel74.TabIndex = 20;
+            // 
+            // dgvUser
+            // 
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Location = new System.Drawing.Point(3, 3);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.Size = new System.Drawing.Size(971, 328);
+            this.dgvUser.TabIndex = 0;
+            // 
+            // panel75
+            // 
+            this.panel75.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel75.Controls.Add(this.cbUser);
+            this.panel75.Controls.Add(this.tbSearchUser);
+            this.panel75.Controls.Add(this.label52);
+            this.panel75.Location = new System.Drawing.Point(571, 10);
+            this.panel75.Name = "panel75";
+            this.panel75.Size = new System.Drawing.Size(407, 48);
+            this.panel75.TabIndex = 19;
+            // 
+            // cbUser
+            // 
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Location = new System.Drawing.Point(283, 10);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(121, 29);
+            this.cbUser.TabIndex = 2;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
+            // tbSearchUser
+            // 
+            this.tbSearchUser.Location = new System.Drawing.Point(88, 10);
+            this.tbSearchUser.Name = "tbSearchUser";
+            this.tbSearchUser.Size = new System.Drawing.Size(189, 24);
+            this.tbSearchUser.TabIndex = 1;
+            this.tbSearchUser.TextChanged += new System.EventHandler(this.tbSearchUser_TextChanged);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(3, 13);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(67, 21);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "Tìm kiếm";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Lexend Deca", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1500,1141 +2907,6 @@ namespace BusSystemManagement
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel35.Controls.Add(this.panel46);
-            this.panel35.Controls.Add(this.panel36);
-            this.panel35.Controls.Add(this.panel37);
-            this.panel35.Controls.Add(this.panel38);
-            this.panel35.Controls.Add(this.panel39);
-            this.panel35.Controls.Add(this.panel40);
-            this.panel35.Controls.Add(this.panel41);
-            this.panel35.Controls.Add(this.panel42);
-            this.panel35.Controls.Add(this.panel63);
-            this.panel35.Location = new System.Drawing.Point(3, 3);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(708, 242);
-            this.panel35.TabIndex = 12;
-            // 
-            // panel46
-            // 
-            this.panel46.Controls.Add(this.cbLicense);
-            this.panel46.Controls.Add(this.label34);
-            this.panel46.Location = new System.Drawing.Point(3, 175);
-            this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(339, 37);
-            this.panel46.TabIndex = 9;
-            // 
-            // cbLicense
-            // 
-            this.cbLicense.FormattingEnabled = true;
-            this.cbLicense.Location = new System.Drawing.Point(113, 8);
-            this.cbLicense.Name = "cbLicense";
-            this.cbLicense.Size = new System.Drawing.Size(223, 29);
-            this.cbLicense.TabIndex = 1;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(12, 11);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(62, 21);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Bằng lái";
-            // 
-            // panel36
-            // 
-            this.panel36.Controls.Add(this.nudExperienceDriver);
-            this.panel36.Controls.Add(this.label19);
-            this.panel36.Location = new System.Drawing.Point(348, 132);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(339, 37);
-            this.panel36.TabIndex = 12;
-            // 
-            // nudExperienceDriver
-            // 
-            this.nudExperienceDriver.Location = new System.Drawing.Point(133, 8);
-            this.nudExperienceDriver.Name = "nudExperienceDriver";
-            this.nudExperienceDriver.Size = new System.Drawing.Size(203, 24);
-            this.nudExperienceDriver.TabIndex = 4;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 11);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(115, 21);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Thâm niên(năm)";
-            // 
-            // panel37
-            // 
-            this.panel37.Controls.Add(this.dtpStartDayDriver);
-            this.panel37.Controls.Add(this.label26);
-            this.panel37.Location = new System.Drawing.Point(3, 132);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(339, 37);
-            this.panel37.TabIndex = 10;
-            // 
-            // dtpStartDayDriver
-            // 
-            this.dtpStartDayDriver.Location = new System.Drawing.Point(113, 6);
-            this.dtpStartDayDriver.Name = "dtpStartDayDriver";
-            this.dtpStartDayDriver.Size = new System.Drawing.Size(223, 24);
-            this.dtpStartDayDriver.TabIndex = 12;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(12, 8);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(101, 21);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Ngày bắt đầu ";
-            // 
-            // panel38
-            // 
-            this.panel38.Controls.Add(this.tbIdCardDriver);
-            this.panel38.Controls.Add(this.label27);
-            this.panel38.Location = new System.Drawing.Point(348, 89);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(339, 37);
-            this.panel38.TabIndex = 11;
-            // 
-            // tbIdCardDriver
-            // 
-            this.tbIdCardDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbIdCardDriver.Name = "tbIdCardDriver";
-            this.tbIdCardDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbIdCardDriver.TabIndex = 1;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(12, 11);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(50, 21);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "CMND";
-            // 
-            // panel39
-            // 
-            this.panel39.Controls.Add(this.tbPhoneDriver);
-            this.panel39.Controls.Add(this.label28);
-            this.panel39.Location = new System.Drawing.Point(3, 89);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(339, 37);
-            this.panel39.TabIndex = 6;
-            // 
-            // tbPhoneDriver
-            // 
-            this.tbPhoneDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbPhoneDriver.MaxLength = 12;
-            this.tbPhoneDriver.Name = "tbPhoneDriver";
-            this.tbPhoneDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbPhoneDriver.TabIndex = 1;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(12, 11);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(77, 21);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Điện thoại";
-            // 
-            // panel40
-            // 
-            this.panel40.Controls.Add(this.tbAddressDriver);
-            this.panel40.Controls.Add(this.label29);
-            this.panel40.Location = new System.Drawing.Point(348, 46);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(339, 37);
-            this.panel40.TabIndex = 13;
-            // 
-            // tbAddressDriver
-            // 
-            this.tbAddressDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbAddressDriver.Name = "tbAddressDriver";
-            this.tbAddressDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbAddressDriver.TabIndex = 2;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(12, 11);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(54, 21);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Địa chỉ";
-            // 
-            // panel41
-            // 
-            this.panel41.Controls.Add(this.cbGenderDriver);
-            this.panel41.Controls.Add(this.label30);
-            this.panel41.Location = new System.Drawing.Point(3, 46);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(339, 37);
-            this.panel41.TabIndex = 7;
-            // 
-            // cbGenderDriver
-            // 
-            this.cbGenderDriver.FormattingEnabled = true;
-            this.cbGenderDriver.Location = new System.Drawing.Point(113, 5);
-            this.cbGenderDriver.Name = "cbGenderDriver";
-            this.cbGenderDriver.Size = new System.Drawing.Size(223, 29);
-            this.cbGenderDriver.TabIndex = 1;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(12, 11);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(64, 21);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Giới tính";
-            // 
-            // panel42
-            // 
-            this.panel42.Controls.Add(this.dtpDayOfBirthDriver);
-            this.panel42.Controls.Add(this.label31);
-            this.panel42.Location = new System.Drawing.Point(348, 3);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(339, 37);
-            this.panel42.TabIndex = 8;
-            // 
-            // dtpDayOfBirthDriver
-            // 
-            this.dtpDayOfBirthDriver.CustomFormat = "Short";
-            this.dtpDayOfBirthDriver.Location = new System.Drawing.Point(113, 8);
-            this.dtpDayOfBirthDriver.Name = "dtpDayOfBirthDriver";
-            this.dtpDayOfBirthDriver.Size = new System.Drawing.Size(223, 24);
-            this.dtpDayOfBirthDriver.TabIndex = 12;
-            this.dtpDayOfBirthDriver.Value = new System.DateTime(2022, 1, 28, 15, 17, 42, 0);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(12, 11);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(74, 21);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Ngày sinh";
-            // 
-            // panel63
-            // 
-            this.panel63.Controls.Add(this.tbDriverName);
-            this.panel63.Controls.Add(this.label32);
-            this.panel63.Location = new System.Drawing.Point(3, 3);
-            this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(339, 37);
-            this.panel63.TabIndex = 5;
-            // 
-            // tbDriverName
-            // 
-            this.tbDriverName.Location = new System.Drawing.Point(113, 8);
-            this.tbDriverName.Name = "tbDriverName";
-            this.tbDriverName.Size = new System.Drawing.Size(223, 24);
-            this.tbDriverName.TabIndex = 1;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(12, 12);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(53, 21);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Họ tên";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel18.Controls.Add(this.panel19);
-            this.panel18.Controls.Add(this.panel28);
-            this.panel18.Controls.Add(this.panel29);
-            this.panel18.Controls.Add(this.panel30);
-            this.panel18.Controls.Add(this.panel31);
-            this.panel18.Controls.Add(this.panel32);
-            this.panel18.Controls.Add(this.panel33);
-            this.panel18.Controls.Add(this.panel64);
-            this.panel18.Location = new System.Drawing.Point(3, 3);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(708, 241);
-            this.panel18.TabIndex = 12;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.nudExperienceAsDriver);
-            this.panel19.Controls.Add(this.label12);
-            this.panel19.Location = new System.Drawing.Point(348, 132);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(339, 37);
-            this.panel19.TabIndex = 11;
-            // 
-            // nudExperienceAsDriver
-            // 
-            this.nudExperienceAsDriver.Location = new System.Drawing.Point(133, 8);
-            this.nudExperienceAsDriver.Maximum = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
-            this.nudExperienceAsDriver.Name = "nudExperienceAsDriver";
-            this.nudExperienceAsDriver.Size = new System.Drawing.Size(203, 24);
-            this.nudExperienceAsDriver.TabIndex = 4;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 11);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 21);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Thâm niên(năm)";
-            // 
-            // panel28
-            // 
-            this.panel28.Controls.Add(this.dtpStartDay);
-            this.panel28.Controls.Add(this.label1);
-            this.panel28.Location = new System.Drawing.Point(3, 132);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(339, 37);
-            this.panel28.TabIndex = 9;
-            // 
-            // dtpStartDay
-            // 
-            this.dtpStartDay.Location = new System.Drawing.Point(113, 6);
-            this.dtpStartDay.Name = "dtpStartDay";
-            this.dtpStartDay.Size = new System.Drawing.Size(223, 24);
-            this.dtpStartDay.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ngày bắt đầu ";
-            // 
-            // panel29
-            // 
-            this.panel29.Controls.Add(this.tbIdCardAsDriver);
-            this.panel29.Controls.Add(this.label20);
-            this.panel29.Location = new System.Drawing.Point(348, 89);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(339, 37);
-            this.panel29.TabIndex = 10;
-            // 
-            // tbIdCardAsDriver
-            // 
-            this.tbIdCardAsDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbIdCardAsDriver.Name = "tbIdCardAsDriver";
-            this.tbIdCardAsDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbIdCardAsDriver.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 11);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(50, 21);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "CMND";
-            // 
-            // panel30
-            // 
-            this.panel30.Controls.Add(this.tbPhoneAsDriver);
-            this.panel30.Controls.Add(this.label21);
-            this.panel30.Location = new System.Drawing.Point(3, 89);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(339, 37);
-            this.panel30.TabIndex = 6;
-            // 
-            // tbPhoneAsDriver
-            // 
-            this.tbPhoneAsDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbPhoneAsDriver.MaxLength = 12;
-            this.tbPhoneAsDriver.Name = "tbPhoneAsDriver";
-            this.tbPhoneAsDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbPhoneAsDriver.TabIndex = 1;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 11);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 21);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Điện thoại";
-            // 
-            // panel31
-            // 
-            this.panel31.Controls.Add(this.tbAddressAsDriver);
-            this.panel31.Controls.Add(this.label22);
-            this.panel31.Location = new System.Drawing.Point(348, 46);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(339, 37);
-            this.panel31.TabIndex = 12;
-            // 
-            // tbAddressAsDriver
-            // 
-            this.tbAddressAsDriver.Location = new System.Drawing.Point(113, 8);
-            this.tbAddressAsDriver.Name = "tbAddressAsDriver";
-            this.tbAddressAsDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbAddressAsDriver.TabIndex = 2;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 11);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(54, 21);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Địa chỉ";
-            // 
-            // panel32
-            // 
-            this.panel32.Controls.Add(this.cbGender);
-            this.panel32.Controls.Add(this.label23);
-            this.panel32.Location = new System.Drawing.Point(3, 46);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(339, 37);
-            this.panel32.TabIndex = 7;
-            // 
-            // cbGender
-            // 
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
-            "Nam",
-            "Nu",
-            "Khac"});
-            this.cbGender.Location = new System.Drawing.Point(113, 8);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(223, 29);
-            this.cbGender.TabIndex = 1;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 11);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(64, 21);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Giới tính";
-            // 
-            // panel33
-            // 
-            this.panel33.Controls.Add(this.dtpDayOfBirth);
-            this.panel33.Controls.Add(this.label24);
-            this.panel33.Location = new System.Drawing.Point(348, 3);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(339, 37);
-            this.panel33.TabIndex = 8;
-            // 
-            // dtpDayOfBirth
-            // 
-            this.dtpDayOfBirth.CustomFormat = "Short";
-            this.dtpDayOfBirth.Location = new System.Drawing.Point(113, 8);
-            this.dtpDayOfBirth.Name = "dtpDayOfBirth";
-            this.dtpDayOfBirth.Size = new System.Drawing.Size(223, 24);
-            this.dtpDayOfBirth.TabIndex = 12;
-            this.dtpDayOfBirth.Value = new System.DateTime(2022, 1, 28, 15, 17, 42, 0);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(12, 11);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(74, 21);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Ngày sinh";
-            // 
-            // panel64
-            // 
-            this.panel64.Controls.Add(this.tbAsDriverName);
-            this.panel64.Controls.Add(this.label25);
-            this.panel64.Location = new System.Drawing.Point(3, 3);
-            this.panel64.Name = "panel64";
-            this.panel64.Size = new System.Drawing.Size(339, 37);
-            this.panel64.TabIndex = 5;
-            // 
-            // tbAsDriverName
-            // 
-            this.tbAsDriverName.Location = new System.Drawing.Point(113, 8);
-            this.tbAsDriverName.Name = "tbAsDriverName";
-            this.tbAsDriverName.Size = new System.Drawing.Size(223, 24);
-            this.tbAsDriverName.TabIndex = 1;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 11);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 21);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Họ tên";
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel20.Controls.Add(this.panel21);
-            this.panel20.Controls.Add(this.panel22);
-            this.panel20.Controls.Add(this.panel23);
-            this.panel20.Controls.Add(this.panel24);
-            this.panel20.Controls.Add(this.panel65);
-            this.panel20.Location = new System.Drawing.Point(3, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(708, 242);
-            this.panel20.TabIndex = 12;
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.nudCycle);
-            this.panel21.Controls.Add(this.label14);
-            this.panel21.Location = new System.Drawing.Point(3, 89);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(339, 37);
-            this.panel21.TabIndex = 6;
-            // 
-            // nudCycle
-            // 
-            this.nudCycle.Location = new System.Drawing.Point(187, 9);
-            this.nudCycle.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.nudCycle.Name = "nudCycle";
-            this.nudCycle.Size = new System.Drawing.Size(149, 24);
-            this.nudCycle.TabIndex = 4;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(169, 21);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Chu kỳ bảo hành (tháng)";
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.nudChair);
-            this.panel22.Controls.Add(this.label15);
-            this.panel22.Location = new System.Drawing.Point(348, 46);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(339, 37);
-            this.panel22.TabIndex = 9;
-            // 
-            // nudChair
-            // 
-            this.nudChair.Location = new System.Drawing.Point(120, 8);
-            this.nudChair.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudChair.Name = "nudChair";
-            this.nudChair.Size = new System.Drawing.Size(216, 24);
-            this.nudChair.TabIndex = 3;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 11);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 21);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Số ghế";
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.nudMyear);
-            this.panel23.Controls.Add(this.label16);
-            this.panel23.Location = new System.Drawing.Point(3, 46);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(339, 37);
-            this.panel23.TabIndex = 7;
-            // 
-            // nudMyear
-            // 
-            this.nudMyear.Location = new System.Drawing.Point(124, 8);
-            this.nudMyear.Maximum = new decimal(new int[] {
-            2100,
-            0,
-            0,
-            0});
-            this.nudMyear.Minimum = new decimal(new int[] {
-            1900,
-            0,
-            0,
-            0});
-            this.nudMyear.Name = "nudMyear";
-            this.nudMyear.Size = new System.Drawing.Size(212, 24);
-            this.nudMyear.TabIndex = 3;
-            this.nudMyear.Value = new decimal(new int[] {
-            1900,
-            0,
-            0,
-            0});
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 11);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 21);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Năm sản xuất";
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.tbManufacturer);
-            this.panel24.Controls.Add(this.label17);
-            this.panel24.Location = new System.Drawing.Point(348, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(339, 37);
-            this.panel24.TabIndex = 8;
-            // 
-            // tbManufacturer
-            // 
-            this.tbManufacturer.Location = new System.Drawing.Point(120, 8);
-            this.tbManufacturer.Name = "tbManufacturer";
-            this.tbManufacturer.Size = new System.Drawing.Size(216, 24);
-            this.tbManufacturer.TabIndex = 2;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 11);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 21);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Hãng sản xuất";
-            // 
-            // panel65
-            // 
-            this.panel65.Controls.Add(this.tbLicensePlate);
-            this.panel65.Controls.Add(this.label18);
-            this.panel65.Location = new System.Drawing.Point(3, 3);
-            this.panel65.Name = "panel65";
-            this.panel65.Size = new System.Drawing.Size(339, 37);
-            this.panel65.TabIndex = 5;
-            // 
-            // tbLicensePlate
-            // 
-            this.tbLicensePlate.Location = new System.Drawing.Point(123, 8);
-            this.tbLicensePlate.Name = "tbLicensePlate";
-            this.tbLicensePlate.Size = new System.Drawing.Size(213, 24);
-            this.tbLicensePlate.TabIndex = 1;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(105, 21);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Biển kiếm soát";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel10.Controls.Add(this.panel15);
-            this.panel10.Controls.Add(this.panel14);
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Controls.Add(this.panel13);
-            this.panel10.Controls.Add(this.panel17);
-            this.panel10.Controls.Add(this.panel12);
-            this.panel10.Controls.Add(this.panel66);
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(708, 242);
-            this.panel10.TabIndex = 12;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.tbBusLineDetail);
-            this.panel15.Controls.Add(this.label11);
-            this.panel15.Location = new System.Drawing.Point(3, 132);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(684, 110);
-            this.panel15.TabIndex = 9;
-            // 
-            // tbBusLineDetail
-            // 
-            this.tbBusLineDetail.Location = new System.Drawing.Point(113, 8);
-            this.tbBusLineDetail.Multiline = true;
-            this.tbBusLineDetail.Name = "tbBusLineDetail";
-            this.tbBusLineDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbBusLineDetail.Size = new System.Drawing.Size(568, 91);
-            this.tbBusLineDetail.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 21);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Chi tiết trạm";
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.tbEndLocation);
-            this.panel14.Controls.Add(this.label10);
-            this.panel14.Location = new System.Drawing.Point(348, 89);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(339, 37);
-            this.panel14.TabIndex = 10;
-            // 
-            // tbEndLocation
-            // 
-            this.tbEndLocation.Location = new System.Drawing.Point(113, 8);
-            this.tbEndLocation.Name = "tbEndLocation";
-            this.tbEndLocation.Size = new System.Drawing.Size(223, 24);
-            this.tbEndLocation.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 21);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Điểm cuối";
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.tbStartLocation);
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Location = new System.Drawing.Point(3, 89);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(339, 37);
-            this.panel11.TabIndex = 6;
-            // 
-            // tbStartLocation
-            // 
-            this.tbStartLocation.Location = new System.Drawing.Point(113, 8);
-            this.tbStartLocation.Name = "tbStartLocation";
-            this.tbStartLocation.Size = new System.Drawing.Size(223, 24);
-            this.tbStartLocation.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 21);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Điểm đầu";
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.nudEndTime);
-            this.panel13.Controls.Add(this.label9);
-            this.panel13.Location = new System.Drawing.Point(348, 46);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(339, 37);
-            this.panel13.TabIndex = 11;
-            // 
-            // nudEndTime
-            // 
-            this.nudEndTime.Location = new System.Drawing.Point(113, 8);
-            this.nudEndTime.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nudEndTime.Name = "nudEndTime";
-            this.nudEndTime.Size = new System.Drawing.Size(223, 24);
-            this.nudEndTime.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 21);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Giờ kết thúc";
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.nudStartTime);
-            this.panel17.Controls.Add(this.label13);
-            this.panel17.Location = new System.Drawing.Point(3, 46);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(339, 37);
-            this.panel17.TabIndex = 7;
-            // 
-            // nudStartTime
-            // 
-            this.nudStartTime.Location = new System.Drawing.Point(113, 8);
-            this.nudStartTime.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nudStartTime.Name = "nudStartTime";
-            this.nudStartTime.Size = new System.Drawing.Size(223, 24);
-            this.nudStartTime.TabIndex = 3;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 11);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(85, 21);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Giờ bắt đầu";
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.nudFrequency);
-            this.panel12.Controls.Add(this.label8);
-            this.panel12.Location = new System.Drawing.Point(348, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(339, 37);
-            this.panel12.TabIndex = 8;
-            // 
-            // nudFrequency
-            // 
-            this.nudFrequency.Location = new System.Drawing.Point(113, 8);
-            this.nudFrequency.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudFrequency.Name = "nudFrequency";
-            this.nudFrequency.Size = new System.Drawing.Size(223, 24);
-            this.nudFrequency.TabIndex = 4;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Tần suất(phút)";
-            // 
-            // panel66
-            // 
-            this.panel66.Controls.Add(this.tbBusLineName);
-            this.panel66.Controls.Add(this.label6);
-            this.panel66.Location = new System.Drawing.Point(3, 3);
-            this.panel66.Name = "panel66";
-            this.panel66.Size = new System.Drawing.Size(339, 37);
-            this.panel66.TabIndex = 5;
-            // 
-            // tbBusLineName
-            // 
-            this.tbBusLineName.Location = new System.Drawing.Point(113, 8);
-            this.tbBusLineName.Name = "tbBusLineName";
-            this.tbBusLineName.Size = new System.Drawing.Size(223, 24);
-            this.tbBusLineName.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tên tuyến  xe";
-            // 
-            // panel48
-            // 
-            this.panel48.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel48.Controls.Add(this.panel49);
-            this.panel48.Controls.Add(this.panel50);
-            this.panel48.Controls.Add(this.panel51);
-            this.panel48.Controls.Add(this.panel52);
-            this.panel48.Controls.Add(this.panel67);
-            this.panel48.Location = new System.Drawing.Point(3, 3);
-            this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(708, 241);
-            this.panel48.TabIndex = 12;
-            // 
-            // panel49
-            // 
-            this.panel49.Controls.Add(this.dtpStartTimeBusRide);
-            this.panel49.Controls.Add(this.label36);
-            this.panel49.Location = new System.Drawing.Point(3, 89);
-            this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(339, 37);
-            this.panel49.TabIndex = 6;
-            // 
-            // dtpStartTimeBusRide
-            // 
-            this.dtpStartTimeBusRide.Location = new System.Drawing.Point(113, 6);
-            this.dtpStartTimeBusRide.Name = "dtpStartTimeBusRide";
-            this.dtpStartTimeBusRide.Size = new System.Drawing.Size(223, 24);
-            this.dtpStartTimeBusRide.TabIndex = 13;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(12, 11);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(73, 21);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Thời điểm";
-            // 
-            // panel50
-            // 
-            this.panel50.Controls.Add(this.tbBusBR);
-            this.panel50.Controls.Add(this.cbBusBR);
-            this.panel50.Controls.Add(this.label37);
-            this.panel50.Location = new System.Drawing.Point(348, 46);
-            this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(339, 37);
-            this.panel50.TabIndex = 9;
-            // 
-            // tbBusBR
-            // 
-            this.tbBusBR.Location = new System.Drawing.Point(190, 6);
-            this.tbBusBR.Name = "tbBusBR";
-            this.tbBusBR.ReadOnly = true;
-            this.tbBusBR.Size = new System.Drawing.Size(146, 24);
-            this.tbBusBR.TabIndex = 17;
-            // 
-            // cbBusBR
-            // 
-            this.cbBusBR.FormattingEnabled = true;
-            this.cbBusBR.Location = new System.Drawing.Point(113, 6);
-            this.cbBusBR.Name = "cbBusBR";
-            this.cbBusBR.Size = new System.Drawing.Size(71, 29);
-            this.cbBusBR.TabIndex = 16;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(12, 11);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(48, 21);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Mã xe";
-            // 
-            // panel51
-            // 
-            this.panel51.Controls.Add(this.tbAsDriverBR);
-            this.panel51.Controls.Add(this.cbAsDriverBR);
-            this.panel51.Controls.Add(this.label38);
-            this.panel51.Location = new System.Drawing.Point(3, 46);
-            this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(339, 37);
-            this.panel51.TabIndex = 7;
-            // 
-            // tbAsDriverBR
-            // 
-            this.tbAsDriverBR.Location = new System.Drawing.Point(190, 8);
-            this.tbAsDriverBR.Name = "tbAsDriverBR";
-            this.tbAsDriverBR.ReadOnly = true;
-            this.tbAsDriverBR.Size = new System.Drawing.Size(146, 24);
-            this.tbAsDriverBR.TabIndex = 15;
-            // 
-            // cbAsDriverBR
-            // 
-            this.cbAsDriverBR.FormattingEnabled = true;
-            this.cbAsDriverBR.Location = new System.Drawing.Point(113, 7);
-            this.cbAsDriverBR.Name = "cbAsDriverBR";
-            this.cbAsDriverBR.Size = new System.Drawing.Size(71, 29);
-            this.cbAsDriverBR.TabIndex = 14;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(12, 11);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(76, 21);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "Mã phụ xe";
-            // 
-            // panel52
-            // 
-            this.panel52.Controls.Add(this.tbDriverBR);
-            this.panel52.Controls.Add(this.cbDriverBR);
-            this.panel52.Controls.Add(this.label39);
-            this.panel52.Location = new System.Drawing.Point(348, 3);
-            this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(339, 37);
-            this.panel52.TabIndex = 8;
-            // 
-            // tbDriverBR
-            // 
-            this.tbDriverBR.Location = new System.Drawing.Point(190, 8);
-            this.tbDriverBR.Name = "tbDriverBR";
-            this.tbDriverBR.ReadOnly = true;
-            this.tbDriverBR.Size = new System.Drawing.Size(146, 24);
-            this.tbDriverBR.TabIndex = 14;
-            // 
-            // cbDriverBR
-            // 
-            this.cbDriverBR.FormattingEnabled = true;
-            this.cbDriverBR.Location = new System.Drawing.Point(113, 7);
-            this.cbDriverBR.Name = "cbDriverBR";
-            this.cbDriverBR.Size = new System.Drawing.Size(71, 29);
-            this.cbDriverBR.TabIndex = 14;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(12, 11);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(69, 21);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Mã tài xế";
-            // 
-            // panel67
-            // 
-            this.panel67.Controls.Add(this.tbBusLineBR);
-            this.panel67.Controls.Add(this.cbBusLineBR);
-            this.panel67.Controls.Add(this.label40);
-            this.panel67.Location = new System.Drawing.Point(3, 3);
-            this.panel67.Name = "panel67";
-            this.panel67.Size = new System.Drawing.Size(339, 37);
-            this.panel67.TabIndex = 5;
-            // 
-            // tbBusLineBR
-            // 
-            this.tbBusLineBR.Location = new System.Drawing.Point(190, 8);
-            this.tbBusLineBR.Name = "tbBusLineBR";
-            this.tbBusLineBR.ReadOnly = true;
-            this.tbBusLineBR.Size = new System.Drawing.Size(146, 24);
-            this.tbBusLineBR.TabIndex = 13;
-            // 
-            // cbBusLineBR
-            // 
-            this.cbBusLineBR.FormattingEnabled = true;
-            this.cbBusLineBR.Location = new System.Drawing.Point(113, 7);
-            this.cbBusLineBR.Name = "cbBusLineBR";
-            this.cbBusLineBR.Size = new System.Drawing.Size(71, 29);
-            this.cbBusLineBR.TabIndex = 12;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(12, 11);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(89, 21);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "Mã tuyến xe";
-            // 
-            // panel56
-            // 
-            this.panel56.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel56.Controls.Add(this.panel57);
-            this.panel56.Controls.Add(this.panel59);
-            this.panel56.Controls.Add(this.panel68);
-            this.panel56.Location = new System.Drawing.Point(3, 3);
-            this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(708, 242);
-            this.panel56.TabIndex = 12;
-            // 
-            // panel57
-            // 
-            this.panel57.Controls.Add(this.dtpTicket);
-            this.panel57.Controls.Add(this.label41);
-            this.panel57.Location = new System.Drawing.Point(3, 3);
-            this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(339, 37);
-            this.panel57.TabIndex = 5;
-            // 
-            // dtpTicket
-            // 
-            this.dtpTicket.Location = new System.Drawing.Point(113, 6);
-            this.dtpTicket.Name = "dtpTicket";
-            this.dtpTicket.Size = new System.Drawing.Size(223, 24);
-            this.dtpTicket.TabIndex = 13;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(12, 11);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(73, 21);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "Thời điểm";
-            // 
-            // panel59
-            // 
-            this.panel59.Controls.Add(this.tbTicketAsDriverName);
-            this.panel59.Controls.Add(this.cbTicketAsDriverId);
-            this.panel59.Controls.Add(this.label42);
-            this.panel59.Location = new System.Drawing.Point(3, 46);
-            this.panel59.Name = "panel59";
-            this.panel59.Size = new System.Drawing.Size(339, 37);
-            this.panel59.TabIndex = 7;
-            // 
-            // tbTicketAsDriverName
-            // 
-            this.tbTicketAsDriverName.Location = new System.Drawing.Point(190, 8);
-            this.tbTicketAsDriverName.Name = "tbTicketAsDriverName";
-            this.tbTicketAsDriverName.ReadOnly = true;
-            this.tbTicketAsDriverName.Size = new System.Drawing.Size(146, 24);
-            this.tbTicketAsDriverName.TabIndex = 17;
-            // 
-            // cbTicketAsDriverId
-            // 
-            this.cbTicketAsDriverId.FormattingEnabled = true;
-            this.cbTicketAsDriverId.Location = new System.Drawing.Point(113, 6);
-            this.cbTicketAsDriverId.Name = "cbTicketAsDriverId";
-            this.cbTicketAsDriverId.Size = new System.Drawing.Size(71, 29);
-            this.cbTicketAsDriverId.TabIndex = 16;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(12, 11);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(76, 21);
-            this.label42.TabIndex = 0;
-            this.label42.Text = "Mã phụ xe";
-            // 
-            // panel68
-            // 
-            this.panel68.Controls.Add(this.nudTicket);
-            this.panel68.Controls.Add(this.label44);
-            this.panel68.Location = new System.Drawing.Point(348, 3);
-            this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(339, 37);
-            this.panel68.TabIndex = 6;
-            // 
-            // nudTicket
-            // 
-            this.nudTicket.Location = new System.Drawing.Point(113, 9);
-            this.nudTicket.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudTicket.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudTicket.Name = "nudTicket";
-            this.nudTicket.Size = new System.Drawing.Size(223, 24);
-            this.nudTicket.TabIndex = 15;
-            this.nudTicket.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(12, 11);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(94, 21);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "Giá vé (VNĐ)";
-            // 
             // frmTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2646,6 +2918,8 @@ namespace BusSystemManagement
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1012, 746);
+            this.MinimumSize = new System.Drawing.Size(1012, 746);
             this.Name = "frmTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Chương trình quản lý các chuyến xe buýt";
@@ -2653,55 +2927,6 @@ namespace BusSystemManagement
             this.tcDriver.ResumeLayout(false);
             this.tabPageDriver.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.tabPageAsDriver.ResumeLayout(false);
-            this.panel26.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsDriver)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.tabPageBus.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBus)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.tabPageBusLine.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusLine)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.tabPageBusRide.ResumeLayout(false);
-            this.panel45.ResumeLayout(false);
-            this.panel44.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).EndInit();
-            this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
-            this.tabPageTicket.ResumeLayout(false);
-            this.panel55.ResumeLayout(false);
-            this.panel61.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).EndInit();
-            this.panel62.ResumeLayout(false);
-            this.panel62.PerformLayout();
-            this.tabPageStat.ResumeLayout(false);
-            this.panel60.ResumeLayout(false);
-            this.panel60.PerformLayout();
-            this.panel58.ResumeLayout(false);
-            this.panel58.PerformLayout();
-            this.panel53.ResumeLayout(false);
-            this.panel53.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).EndInit();
-            this.panel54.ResumeLayout(false);
-            this.panel54.PerformLayout();
-            this.panel47.ResumeLayout(false);
-            this.panel47.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel35.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
@@ -2722,6 +2947,12 @@ namespace BusSystemManagement
             this.panel42.PerformLayout();
             this.panel63.ResumeLayout(false);
             this.panel63.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.tabPageAsDriver.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -2740,6 +2971,12 @@ namespace BusSystemManagement
             this.panel33.PerformLayout();
             this.panel64.ResumeLayout(false);
             this.panel64.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsDriver)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.tabPageBus.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
@@ -2754,6 +2991,12 @@ namespace BusSystemManagement
             this.panel24.PerformLayout();
             this.panel65.ResumeLayout(false);
             this.panel65.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBus)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.tabPageBusLine.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
@@ -2772,6 +3015,12 @@ namespace BusSystemManagement
             ((System.ComponentModel.ISupportInitialize)(this.nudFrequency)).EndInit();
             this.panel66.ResumeLayout(false);
             this.panel66.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusLine)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.tabPageBusRide.ResumeLayout(false);
+            this.panel45.ResumeLayout(false);
             this.panel48.ResumeLayout(false);
             this.panel49.ResumeLayout(false);
             this.panel49.PerformLayout();
@@ -2783,6 +3032,12 @@ namespace BusSystemManagement
             this.panel52.PerformLayout();
             this.panel67.ResumeLayout(false);
             this.panel67.PerformLayout();
+            this.panel44.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusRide)).EndInit();
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
+            this.tabPageTicket.ResumeLayout(false);
+            this.panel55.ResumeLayout(false);
             this.panel56.ResumeLayout(false);
             this.panel57.ResumeLayout(false);
             this.panel57.PerformLayout();
@@ -2791,6 +3046,38 @@ namespace BusSystemManagement
             this.panel68.ResumeLayout(false);
             this.panel68.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTicket)).EndInit();
+            this.panel61.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).EndInit();
+            this.panel62.ResumeLayout(false);
+            this.panel62.PerformLayout();
+            this.tabPageStat.ResumeLayout(false);
+            this.panel60.ResumeLayout(false);
+            this.panel60.PerformLayout();
+            this.panel58.ResumeLayout(false);
+            this.panel58.PerformLayout();
+            this.panel53.ResumeLayout(false);
+            this.panel53.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).EndInit();
+            this.panel54.ResumeLayout(false);
+            this.panel54.PerformLayout();
+            this.panel47.ResumeLayout(false);
+            this.panel47.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStat)).EndInit();
+            this.tabPageUser.ResumeLayout(false);
+            this.panel69.ResumeLayout(false);
+            this.panel70.ResumeLayout(false);
+            this.panel76.ResumeLayout(false);
+            this.panel76.PerformLayout();
+            this.panel71.ResumeLayout(false);
+            this.panel71.PerformLayout();
+            this.panel73.ResumeLayout(false);
+            this.panel73.PerformLayout();
+            this.panel74.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            this.panel75.ResumeLayout(false);
+            this.panel75.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3025,5 +3312,27 @@ namespace BusSystemManagement
         private Panel panel68;
         private NumericUpDown nudTicket;
         private Label label44;
+        private TabPage tabPageUser;
+        private Panel panel69;
+        private Panel panel70;
+        private Panel panel76;
+        private TextBox tbUserEmail;
+        private Label label53;
+        private Panel panel71;
+        private TextBox tbUserUsername;
+        private Label label49;
+        private Panel panel73;
+        private TextBox tbUserPassword;
+        private Label label51;
+        private Button btnUserReset;
+        private Button btnUserUpdate;
+        private Button btnUserDelete;
+        private Button btnUserAdd;
+        private Panel panel74;
+        private DataGridView dgvUser;
+        private Panel panel75;
+        private ComboBox cbUser;
+        private TextBox tbSearchUser;
+        private Label label52;
     }
 }

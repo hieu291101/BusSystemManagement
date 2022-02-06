@@ -26,6 +26,7 @@ namespace BusSystemManagement
         BUS_BusLine BUS_BusLine = new BUS_BusLine();
         BUS_BusRide BUS_BusRide = new BUS_BusRide();
         BUS_Ticket BUS_Ticket = new BUS_Ticket();
+        BUS_User BUS_User = new BUS_User();
         private static DTO_User account;
 
         public frmTableManager()
@@ -33,157 +34,38 @@ namespace BusSystemManagement
             InitializeComponent();
         }
 
-        public frmTableManager(DTO_User user) : this()
-        {
-            account = user;
-            adminToolStripMenuItem.Text = account.USER_USERNAME;
-        }
-
-        //Nhấn chọn đăng xuất => quay về giao diện đăng nhập
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        //Nhấn chọn thông tin cá nhân => giao diện chỉnh sửa người dùng
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmUser frmUser = new frmUser(account);
-            this.Hide();
-            frmUser.ShowDialog();
-        }
 
         private void frmTableManager_Load(object sender, EventArgs e)
         {
             // load form for Driver, As_Driver
-            List<string> listGender = new List<string> { "Nam", "Nu", "Khac" };
-            List<string> listLicense = new List<string> { "B2", "C", "D", "E", "F" };
-            cbGender.DataSource = listGender;
-            cbGenderDriver.DataSource = listGender;
-            cbGender.SelectedIndex = 2;
-            cbGenderDriver.SelectedIndex = 2;
-
-            cbLicense.DataSource = listLicense;
-            cbLicense.DataSource = listLicense;
-            cbLicense.SelectedIndex = 0;
-            cbLicense.SelectedIndex = 0;
+            Driver_Load();
 
             // load form for Bus Ride
-            cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
-            cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
-            cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
-            cbBusBR.DataSource = BUS_Bus.GetListBusId();
+            BusRide_Load();
 
             // form load for As Driver
-            dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
-            setHeaderAsDriver(dgvAsDriver);
-            string[] cbAsDriverList = {
-                "Họ và tên",
-                "Giới tính",
-                "Địa chỉ",
-                "Số điện thoại",
-                "CMND",
-                "Thâm niên"
-            };
-            cbAsDriver.Items.AddRange(cbAsDriverList);
-            cbAsDriver.SelectedIndex = 0;
-
-            // form load for Driver
-            dgvDriver.DataSource = BUS_Driver.GetDriver();
-            setHeaderDriver(dgvDriver);
-            string[] cbDriverList = {
-                "Họ và tên",
-                "Giới tính",
-                "Địa chỉ",
-                "Số điện thoại",
-                "CMND",
-                "Thâm niên",
-                "Bằng lái"
-            };
-            cbDriver.Items.AddRange(cbDriverList);
-            cbDriver.SelectedIndex = 0;
+            AsDriver_Load();
 
             //form load for Bus
-            dgvBus.DataSource = BUS_Bus.GetBus();
-            setHeaderBus(dgvBus);
-            string[] cbBusList = {
-                "Biển kiểm soát",
-                "Hãng sản xuất",
-                "Năm sản xuất",
-                "Số ghế",
-                "Chu kỳ bảo hành"
-            };
-            cbBus.Items.AddRange(cbBusList);
-            cbBus.SelectedIndex = 1;
+            Bus_Load();
 
             // form load for Bus Line
-            dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
-            setHeaderBusLine(dgvBusLine);
-            string[] cbBusLineList = {
-                "Tên tuyến xe",
-                "Điểm bắt đầu",
-                "Điểm kết thúc",
-                "Giờ bắt đầu",
-                "Giờ kết thúc",
-                "Chi tiết trạm"
-            };
-            cbBusLine.Items.AddRange(cbBusLineList);
-            cbBusLine.SelectedIndex = 5;
-
-            // form load for Bus Ride
-            dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
-            dgvBusRide.Columns[1].Visible = false;
-            dgvBusRide.Columns[3].Visible = false;
-            dgvBusRide.Columns[5].Visible = false;
- 
-            setHeaderBusDriver(dgvBusRide);
-            string[] cbBusRideList = {
-                "Tên tuyến xe",
-                "Họ và tên",
-                "Loại",
-                "Biển kiểm soát"
-            };
-            cbBusRide.Items.AddRange(cbBusRideList);
-            cbBusRide.SelectedIndex = 0;
+            BusLine_Load();
 
             // form load for Ticket
-            dgvTicket.DataSource = BUS_Ticket.GetTicket();
-            setHeaderTicket(dgvTicket);
-            cbTicketAsDriverId.DataSource = BUS_AsDriver.GetListAsDriverId();
-            string[] cbTicketList = {
-                "Mã vé xe",
-                "Giá vé",
-                "Mã phụ xe",
-                "Tên phụ xe"
-            };
-            cbTicket.Items.AddRange(cbTicketList);
-            cbTicket.SelectedIndex = 0;
+            Ticket_Load();
 
             // form load for Stat
-            dgvStat.DataSource = BUS_Ticket.GetTicketStat();
-            setHeaderStat(dgvStat);
-            cbStatChart.DataSource = BUS_Ticket.GetListYear();
+            Stat_Load();
 
-            // draw stat
-            fillChart(DateTime.Now.Year);
+            // form load for User
+            User_Load();
         }
 
-        private void fillChart(int year)
-        {
-            //AddXY value in chart1 in series named as Salary  
-            List<DTO_Stat> lst = new List<DTO_Stat>();
-            lst = BUS_Ticket.GetTicketStatForMonth(year);
-            chartStatTicket.Titles.Clear();
+        
 
-            for(int i = 1; i <= lst.Count; i++)
-            {
-                chartStatTicket.Series["Revenue"].Points.AddXY(lst[i - 1].STAT_DATE.Month, lst[i - 1].STAT_REVENUE);
-            }
-
-            chartStatTicket.Titles.Add("Biểu đồ doanh thu trong năm " + year);
-        }
-
-
+        // AsDriver
+        #region AsDRiver
         //**************************************************************************
         //---------- AsDriver  ---------------------------------
         private static void setHeaderAsDriver(DataGridView dgvAsDriver)
@@ -370,8 +252,11 @@ namespace BusSystemManagement
         }
         //**************************************************************************
         //--XXX------------------AsDriver---------------XXX-------
+        #endregion
 
 
+        // Driver
+        #region Driver
         //**************************************************************************
         //----------  Driver  ---------------------------------
         private static void setHeaderDriver(DataGridView dgvDriver)
@@ -554,8 +439,11 @@ namespace BusSystemManagement
 
         //**************************************************************************
         //--XXX------------------Driver---------------XXX-------
+        #endregion
 
 
+        // Bus
+        #region Bus
         //**************************************************************************
         //----------  Bus  ---------------------------------
         private static void setHeaderBus(DataGridView dgvBus)
@@ -714,7 +602,11 @@ namespace BusSystemManagement
         }
         //**************************************************************************
         //--XXX------------------Bus---------------XXX-------
+        #endregion
 
+
+        // Busline
+        #region Busline
         //**************************************************************************
         //----------  BusLine  ---------------------------------
         private static void setHeaderBusLine(DataGridView dtvBusLine)
@@ -893,8 +785,11 @@ namespace BusSystemManagement
 
         //--XXX------------------BusLine---------------XXX-------
         //**************************************************************************
+        #endregion
 
 
+        // Busride
+        #region Busride
         //**************************************************************************
         //----------  Bus Ride  ---------------------------------
         private static void setHeaderBusDriver(DataGridView dgvBusRide)
@@ -1079,7 +974,11 @@ namespace BusSystemManagement
 
         //**************************************************************************
         //--XXX------------------Bus Ride---------------XXX-------
+        #endregion
 
+
+        // Ticket
+        #region Ticket
         //**************************************************************************
         //----------  Ticket  ---------------------------------
         private static void setHeaderTicket(DataGridView dgvTicket)
@@ -1243,9 +1142,28 @@ namespace BusSystemManagement
 
         //**************************************************************************
         //--XXX------------------Ticket---------------XXX-------
+        #endregion
 
+
+        // Stat
+        #region Stat
         //**************************************************************************
         //----------  Stat  ---------------------------------
+        private void fillChart(int year)
+        {
+            //AddXY value in chart1 in series named as Salary  
+            List<DTO_Stat> lst = new List<DTO_Stat>();
+            lst = BUS_Ticket.GetTicketStatForMonth(year);
+            chartStatTicket.Titles.Clear();
+
+            for (int i = 1; i <= lst.Count; i++)
+            {
+                chartStatTicket.Series["Revenue"].Points.AddXY(lst[i - 1].STAT_DATE.Month, lst[i - 1].STAT_REVENUE);
+            }
+
+            chartStatTicket.Titles.Add("Biểu đồ doanh thu trong năm " + year);
+        }
+
         private static void setHeaderStat(DataGridView dgvStat)
         {
             dgvStat.Columns[0].HeaderText = "Ngày";
@@ -1287,6 +1205,161 @@ namespace BusSystemManagement
 
         //**************************************************************************
         //--XXX------------------Stat---------------XXX-------
+
+        private static void setHeaderUser(DataGridView dgvDriver)
+        {
+            dgvDriver.Columns[0].HeaderText = "Mã tài khoản";
+            dgvDriver.Columns[1].HeaderText = "Tên tài khoản";
+            dgvDriver.Columns[2].HeaderText = "Mật khẩu";
+            dgvDriver.Columns[3].HeaderText = "Email";
+            dgvDriver.Columns[4].HeaderText = "Ngày tạo tài khoản";
+        }
+
+        private void btnUserAdd_Click(object sender, EventArgs e)
+        {
+            if (tbUserUsername.Text != "" && tbUserPassword.Text != "" && tbUserEmail.Text != "")
+            {
+                // Tạo DTO
+                DTO_User user = new DTO_User(0, tbUserUsername.Text, tbUserPassword.Text, tbUserEmail.Text, DateTime.Now);
+
+                // Thêm
+                if (BUS_User.AddUser(user))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvUser.DataSource = BUS_User.GetUsers(); // refresh datagridview
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công"); ;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xin hãy nhập đầy đủ");
+            }
+        }
+
+        private void btnUserDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvUser.SelectedRows.Count > 0)
+            {
+
+                // Lấy row hiện tại
+                DataGridViewRow row = dgvUser.SelectedRows[0];
+                int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
+
+                // Xóa
+                if (BUS_User.DeleteUser(ID))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dgvUser.DataSource = BUS_User.GetUsers(); // refresh datagridview
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn xóa");
+            }
+        }
+
+        private void btnUserUpdate_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu có chọn table rồi
+            if (dgvUser.SelectedRows.Count > 0)
+            {
+                if (tbUserUsername.Text != "" && tbUserPassword.Text != "" && tbUserEmail.Text != "")
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dgvUser.SelectedRows[0];
+                    int ID = Convert.ToInt16(row.Cells[0].Value.ToString());
+
+                    // Tạo DTO
+                    DTO_User user = new DTO_User(ID, tbUserUsername.Text, tbUserPassword.Text, tbUserEmail.Text, DateTime.Now);
+
+                    // Sửa
+                    if (BUS_User.UpdateUser(user))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        dgvUser.DataSource = BUS_User.GetUsers(); // refresh datagridview
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+            }
+        }
+
+        private void btnUserReset_Click(object sender, EventArgs e)
+        {
+            tbUserUsername.Text = "";
+            tbUserPassword.Text = "";
+            tbUserEmail.Text = "";
+        }
+
+        private void tbSearchUser_TextChanged(object sender, EventArgs e)
+        {
+            string kw = tbSearchUser.Text;
+            if (kw == "")
+                dgvUser.DataSource = BUS_User.GetUsers();
+            else
+            {
+                switch (cbUser.SelectedItem.ToString())
+                {
+                    case "Username":
+                        dgvUser.DataSource = BUS_User.FindUserByUsername(kw);
+                        break;
+                    case "Email":
+                        dgvUser.DataSource = BUS_User.FindUserByEmail(kw);
+                        break;
+                    default:
+                        dgvUser.DataSource = BUS_User.GetUsers();
+                        break;
+                }
+            }
+        }
+
+        private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSearchUser.Text = "";
+            dgvUser.DataSource = BUS_User.GetUsers();
+        }
+        #endregion
+
+
+        //Base
+        #region Base
+        public frmTableManager(DTO_User user) : this()
+        {
+            account = user;
+            adminToolStripMenuItem.Text = account.USER_USERNAME;
+        }
+
+        //Nhấn chọn đăng xuất => quay về giao diện đăng nhập
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //Nhấn chọn thông tin cá nhân => giao diện chỉnh sửa người dùng
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUser frmUser = new frmUser(account);
+            this.Hide();
+            frmUser.ShowDialog();
+        }
         public void ExportToPdf(DataGridView dgv, string title, string subtitle)
         {
             if (dgv.Rows.Count > 0)
@@ -1337,9 +1410,7 @@ namespace BusSystemManagement
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
                                 float marginLeft = 72;
-                                float marginRight = 36;
                                 float marginTop = 60;
-                                float marginBottom = 50;
 
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
                                 PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
@@ -1390,5 +1461,325 @@ namespace BusSystemManagement
             string temp = s.Normalize(NormalizationForm.FormD);
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
+        #endregion
+
+
+        //KeyPress Event
+        #region Keypress
+        private void tbDriverName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tên chỉ nhập kí tự chữ!!", "Notification");
+            }
+        }
+
+        private void tbPhoneDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Số điện thoại chỉ nhập kí tự số!!", "Notification");
+            }
+        }
+
+        private void tbIdCardDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Chứng minh nhân dân chỉ nhập kí tự số!!", "Notification");
+            }
+        }
+        private void tbSearchDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập không hợp lệ!!", "Notification");
+            }
+        }
+
+
+
+        //-----------------------------------------------------------------------------
+        //check asdriver
+        private void tbAsDriverName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tên chỉ nhập kí tự chữ!!", "Notification");
+            }
+        }
+
+        private void tbPhoneAsDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Số điện thoại chỉ nhập kí tự số!!", "Notification");
+            }
+        }
+
+        private void tbIdCardAsDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Chứng minh nhân dân chỉ nhập kí tự số!!", "Notification");
+            }
+        }
+        private void tbSearchAsDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập không hợp lệ", "Notification");
+            }
+        }
+
+        //------------------------------------------------------------------------------
+        //check bus
+        private void tbManufacturer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hãng sản xuất chỉ nhập kí tự chữ!!", "Notification");
+            }
+        }
+
+        private void tbLicensePlate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '-' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Biển kiểm soát nhập không hợp lệ!!", "Notification");
+            }
+        }
+        private void tbSearchBus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập không hợp lệ", "Notification");
+            }
+        }
+
+
+        //-------------------------------------------------------------
+        //check busline
+        private void tbBusLineName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tên tuyến xe chỉ nhập kí tự chữ!!", "Notification");
+            }
+        }
+
+        private void tbEndLocation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Điểm bắt đầu chỉ nhập kí tự chữ!!", "Notification");
+            }
+        }
+
+        private void tbStartLocation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Điểm kết thúc chỉ nhập kí tự chữ!!", "Notification");
+            }
+        }
+
+        private void tbBusLineDetail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Chi tiết trạm nhập không hợp lệ", "Notification");
+            }
+        }
+        private void tbSearchBusLine_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập không hợp lệ", "Notification");
+            }
+        }
+
+
+        //--------------------------------------------------------------------
+        //check busride
+        private void tbSearchBusRide_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập không hợp lệ", "Notification");
+            }
+        }
+
+
+        //-------------------------------------------------------------------
+        //check ticket
+        private void tbSearchTicket_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập không hợp lệ", "Notification");
+            }
+        }
+        #endregion
+
+
+        // Load Event
+        #region Load
+        private void Driver_Load()
+        {
+            // load form for Driver, As_Driver
+            List<string> listGender = new List<string> { "Nam", "Nữ", "Khác" };
+            List<string> listLicense = new List<string> { "B2", "C", "D", "E", "F" };
+            cbGender.DataSource = listGender;
+            cbGenderDriver.DataSource = listGender;
+            cbGender.SelectedIndex = 2;
+            cbGenderDriver.SelectedIndex = 2;
+
+            cbLicense.DataSource = listLicense;
+            cbLicense.DataSource = listLicense;
+            cbLicense.SelectedIndex = 0;
+            cbLicense.SelectedIndex = 0;
+
+            dgvDriver.DataSource = BUS_Driver.GetDriver();
+            setHeaderDriver(dgvDriver);
+            string[] cbDriverList = {
+                "Họ và tên",
+                "Giới tính",
+                "Địa chỉ",
+                "Số điện thoại",
+                "CMND",
+                "Thâm niên",
+                "Bằng lái"
+            };
+            cbDriver.Items.AddRange(cbDriverList);
+            cbDriver.SelectedIndex = 0;
+        }
+
+        private void BusRide_Load()
+        {
+            // load form for Bus Ride
+            cbBusLineBR.DataSource = BUS_BusLine.GetListBusLineId();
+            cbAsDriverBR.DataSource = BUS_AsDriver.GetListAsDriverId();
+            cbDriverBR.DataSource = BUS_Driver.GetListDriverId();
+            cbBusBR.DataSource = BUS_Bus.GetListBusId();
+
+            dgvBusRide.DataSource = BUS_BusRide.GetBusRide();
+            dgvBusRide.Columns[1].Visible = false;
+            dgvBusRide.Columns[3].Visible = false;
+            dgvBusRide.Columns[5].Visible = false;
+
+            setHeaderBusDriver(dgvBusRide);
+            string[] cbBusRideList = {
+                "Tên tuyến xe",
+                "Họ và tên",
+                "Loại",
+                "Biển kiểm soát"
+            };
+            cbBusRide.Items.AddRange(cbBusRideList);
+            cbBusRide.SelectedIndex = 0;
+
+        }
+
+        private void AsDriver_Load()
+        {
+            dgvAsDriver.DataSource = BUS_AsDriver.GetAsDriver();
+            setHeaderAsDriver(dgvAsDriver);
+            string[] cbAsDriverList = {
+                "Họ và tên",
+                "Giới tính",
+                "Địa chỉ",
+                "Số điện thoại",
+                "CMND",
+                "Thâm niên"
+            };
+            cbAsDriver.Items.AddRange(cbAsDriverList);
+            cbAsDriver.SelectedIndex = 0;
+        }
+
+        private void Bus_Load()
+        {
+            dgvBus.DataSource = BUS_Bus.GetBus();
+            setHeaderBus(dgvBus);
+            string[] cbBusList = {
+                "Biển kiểm soát",
+                "Hãng sản xuất",
+                "Năm sản xuất",
+                "Số ghế",
+                "Chu kỳ bảo hành"
+            };
+            cbBus.Items.AddRange(cbBusList);
+            cbBus.SelectedIndex = 1;
+        }
+
+        private void BusLine_Load()
+        {
+            dgvBusLine.DataSource = BUS_BusLine.GetBusLine();
+            setHeaderBusLine(dgvBusLine);
+            string[] cbBusLineList = {
+                "Tên tuyến xe",
+                "Điểm bắt đầu",
+                "Điểm kết thúc",
+                "Giờ bắt đầu",
+                "Giờ kết thúc",
+                "Chi tiết trạm"
+            };
+            cbBusLine.Items.AddRange(cbBusLineList);
+            cbBusLine.SelectedIndex = 5;
+        }
+
+        private void Ticket_Load()
+        {
+            dgvTicket.DataSource = BUS_Ticket.GetTicket();
+            setHeaderTicket(dgvTicket);
+            cbTicketAsDriverId.DataSource = BUS_AsDriver.GetListAsDriverId();
+            string[] cbTicketList = {
+                "Mã vé xe",
+                "Giá vé",
+                "Mã phụ xe",
+                "Tên phụ xe"
+            };
+            cbTicket.Items.AddRange(cbTicketList);
+            cbTicket.SelectedIndex = 0;
+        }
+
+        private void Stat_Load()
+        {
+            dgvStat.DataSource = BUS_Ticket.GetTicketStat();
+            setHeaderStat(dgvStat);
+            cbStatChart.DataSource = BUS_Ticket.GetListYear();
+            fillChart(DateTime.Now.Year);
+        }
+
+        private void User_Load()
+        {
+            dgvUser.DataSource = BUS_User.GetUsers();
+            setHeaderUser(dgvUser);
+            string[] cbUserList = {
+                "Username",
+                "Email",
+            };
+            cbUser.Items.AddRange(cbUserList);
+            cbUser.SelectedIndex = 0;
+        }
+        #endregion
+
     }
 }
