@@ -44,41 +44,6 @@ D:\CSharp\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemMan
 D:\CSharp\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.CopyComplete
 D:\CSharp\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.dll
 D:\CSharp\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.pdb
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll.config
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.pdb
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\MySql.Data.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\Google.Protobuf.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\ZstdNet.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Memory.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Buffers.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.pdb
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DAL_BusSystemManagement.dll.config
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\DTO_BusSystemManagement.pdb
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\MySql.Data.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\Google.Protobuf.pdb
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\Google.Protobuf.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\K4os.Compression.LZ4.Streams.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Memory.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Buffers.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\K4os.Compression.LZ4.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\K4os.Hash.xxHash.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.AssemblyReference.cache
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.CoreCompileInputs.cache
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.csproj.CopyComplete
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.dll
-C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BSM_Main\BusSystemManagement\BUS_BusSystemManagement\obj\Debug\BUS_BusSystemManagement.pdb
 C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll.config
 C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.dll
 C:\Users\Admin\OneDrive\Tai Lieu\OU\Nam [2]\HocKi [3]\LapTrinhGiaoDien_coVoThiHongTuyet\DoAn\BusSystemManagement\BUS_BusSystemManagement\bin\Debug\BUS_BusSystemManagement.pdb

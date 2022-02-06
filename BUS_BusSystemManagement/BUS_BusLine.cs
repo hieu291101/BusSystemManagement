@@ -12,10 +12,19 @@ namespace BUS_BusSystemManagement
     public class BUS_BusLine
     {
         DAL_BusLine dalBusLine = new DAL_BusLine();
-
         public DataTable GetBusLine()
         {
             return dalBusLine.GetBusLine();
+        }
+
+        public string GetBusLineById(int id)
+        {
+            return dalBusLine.GetBusLineById(id);
+        }
+
+        public List<string> GetListBusLineId()
+        {
+            return dalBusLine.GetListBusLineId();
         }
 
         public bool AddBusLine (DTO_BusLine bl)

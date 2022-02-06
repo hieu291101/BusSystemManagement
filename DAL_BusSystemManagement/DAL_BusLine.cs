@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO_BusSystemManagement;
+using System.Reflection;
 
 namespace DAL_BusSystemManagement
 {
@@ -17,6 +18,33 @@ namespace DAL_BusSystemManagement
             DataTable dtBusLine = new DataTable();
             msda.Fill(dtBusLine);
             return dtBusLine;
+        }
+
+        public string GetBusLineById(int id)
+        {
+            string SQL = string.Format("SELECT busline_name FROM busline WHERE idbusline = {0}", id);
+            MySqlDataAdapter msda = new MySqlDataAdapter( SQL, _conn);
+            DataTable dtBusLine = new DataTable();
+            msda.Fill(dtBusLine);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtBusLine.Rows)
+            {
+                list.Add(row["busline_name"].ToString());
+            }
+            return list[0];
+        }
+
+        public List<string> GetListBusLineId()
+        {
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idbusline FROM busline", _conn);
+            DataTable dtBusLine = new DataTable();
+            msda.Fill(dtBusLine);
+            List<string> list = new List<string>();
+            foreach(DataRow row in dtBusLine.Rows)
+            {
+                list.Add(row["idbusline"].ToString());
+            }
+            return list;
         }
 
         public bool AddBusLine(DTO_BusLine bl)
@@ -160,7 +188,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusLineByStartTime(string kw)
         {
-            string SQL = string.Format("SELECT * FROM busline WHERE start_time = {0}", kw);
+            string SQL = string.Format("SELECT * FROM busline WHERE start_time LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBusLine = new DataTable();
             msda.Fill(dtBusLine);
@@ -169,7 +197,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusLineByEndTime(string kw)
         {
-            string SQL = string.Format("SELECT * FROM busline WHERE end_time = {0}", kw);
+            string SQL = string.Format("SELECT * FROM busline WHERE end_time LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBusLine = new DataTable();
             msda.Fill(dtBusLine);
