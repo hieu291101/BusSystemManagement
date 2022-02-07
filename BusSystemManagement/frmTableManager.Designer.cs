@@ -552,6 +552,7 @@
             this.btnAddDriver.TabIndex = 8;
             this.btnAddDriver.Text = "Thêm";
             this.btnAddDriver.UseVisualStyleBackColor = true;
+            this.btnAddDriver.Click += new System.EventHandler(this.btnAddDriver_Click);
             // 
             // panel42
             // 

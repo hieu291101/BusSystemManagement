@@ -386,6 +386,11 @@ namespace BusSystemManagement
             nudMyear.Value = 0;
         }
 
+        private void btnAddDriver_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //**************************************************************************
         //--XXX------------------Driver---------------XXX-------
     }
