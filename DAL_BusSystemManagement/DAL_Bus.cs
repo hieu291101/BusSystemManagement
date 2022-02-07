@@ -13,10 +13,37 @@ namespace DAL_BusSystemManagement
     {
         public DataTable GetBus()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT bus FROM bus", _conn);
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM bus", _conn);
             DataTable dtBus = new DataTable();
             msda.Fill(dtBus);
             return dtBus;
+        }
+
+        public string GetBusById(int id)
+        {
+            string SQL = string.Format("SELECT license_plate FROM bus WHERE idbus = {0}", id);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtBus.Rows)
+            {
+                list.Add(row["license_plate"].ToString());
+            }
+            return list[0];
+        }
+
+        public List<string> GetListBusId()
+        {
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idbus FROM bus", _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtBus.Rows)
+            {
+                list.Add(row["idBus"].ToString());
+            }
+            return list;
         }
 
         public bool AddBus(DTO_Bus bus)
@@ -118,6 +145,51 @@ namespace DAL_BusSystemManagement
             }
 
             return false;
+        }
+
+        public DataTable FindBusByLicensePlate(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE license_plate LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusByManufacturer(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE manufacturer LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusByYearOfManufacture(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE year_of_manufacture = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusBySeats(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE seats = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
+        }
+
+        public DataTable FindBusByCurePeriod(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM bus WHERE cure_period = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBus = new DataTable();
+            msda.Fill(dtBus);
+            return dtBus;
         }
     }
 }

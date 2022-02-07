@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS_BusSystemManagement;
+using DTO_BusSystemManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace BusSystemManagement
 {
     public partial class frmLogin : Form
     {
+        private BUS_User bus_Login = new BUS_User();
         public frmLogin()
         {
             InitializeComponent();
@@ -19,15 +22,48 @@ namespace BusSystemManagement
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmTableManager frmTableManager = new frmTableManager();
-            this.Hide();
-            frmTableManager.ShowDialog();
-            this.Show();
+            string username = tbUsername.Text;
+            string password = tbPassword.Text;
+
+            if (username == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập!");
+                tbUsername.Focus();
+                return;
+            }
+
+            if (username.Contains(" "))
+            {
+                MessageBox.Show("Tên đăng nhập có chứa khoảng trắng. Vui lòng kiểm tra lại!");
+                tbUsername.Focus();
+                return;
+            }
+
+            if (password == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu!");
+                tbPassword.Focus();
+                return;
+            }
+
+            if (bus_Login.CheckLogin(username, password))
+            {
+                DTO_User user = bus_Login.GetUser(username);
+                frmTableManager frmTableManager = new frmTableManager(user);
+                this.Hide();
+                frmTableManager.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai. Vui lòng nhập lại!");
+                tbUsername.Focus();
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -42,6 +78,11 @@ namespace BusSystemManagement
             {
                 e.Cancel = true;
             }
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

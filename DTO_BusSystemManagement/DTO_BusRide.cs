@@ -11,26 +11,30 @@ namespace DTO_BusSystemManagement
         private int _BUSRIDE_BUSLINEID;
         private int _BUSRIDE_BUSID;
         private int _BUSRIDE_DRIVERID;
-        private int _BUSRIDE_ASDRIVERID;
         private int _BUSRIDE_ID;
         private DateTime _BUSRIDE_STARTTIME;
+        private string _BUSRIDE_TYPE;
 
-        public DTO_BusRide(int bUSRIDE_ID, int bUSRIDE_BUSLINEID, int bUSRIDE_BUSID, int bUSRIDE_DRIVERID,
-            int bUSRIDE_ASDRIVERID,  DateTime bUSRIDE_STARTTIME)
+        public DTO_BusRide()
         {
-            _BUSRIDE_ID = bUSRIDE_ID;
+
+        }
+
+        public DTO_BusRide(int bUSRIDE_BUSLINEID, int bUSRIDE_BUSID, int bUSRIDE_DRIVERID, int bUSRIDE_ID, DateTime bUSRIDE_STARTTIME, string bUSRIDE_TYPE)
+        {
             _BUSRIDE_BUSLINEID = bUSRIDE_BUSLINEID;
             _BUSRIDE_BUSID = bUSRIDE_BUSID;
             _BUSRIDE_DRIVERID = bUSRIDE_DRIVERID;
-            _BUSRIDE_ASDRIVERID = bUSRIDE_ASDRIVERID;
+            _BUSRIDE_ID = bUSRIDE_ID;
             _BUSRIDE_STARTTIME = bUSRIDE_STARTTIME;
+            _BUSRIDE_TYPE = bUSRIDE_TYPE;
         }
 
         public int BUSRIDE_BUSLINEID { get => _BUSRIDE_BUSLINEID; set => _BUSRIDE_BUSLINEID = value; }
         public int BUSRIDE_BUSID { get => _BUSRIDE_BUSID; set => _BUSRIDE_BUSID = value; }
         public int BUSRIDE_DRIVERID { get => _BUSRIDE_DRIVERID; set => _BUSRIDE_DRIVERID = value; }
-        public int BUSRIDE_ASDRIVERID { get => _BUSRIDE_ASDRIVERID; set => _BUSRIDE_ASDRIVERID = value; }
         public int BUSRIDE_ID { get => _BUSRIDE_ID; set => _BUSRIDE_ID = value; }
         public DateTime BUSRIDE_STARTTIME { get => _BUSRIDE_STARTTIME; set => _BUSRIDE_STARTTIME = value; }
+        public string BUSRIDE_TYPE { get => _BUSRIDE_TYPE; set => _BUSRIDE_TYPE = value; }
     }
 }

@@ -15,8 +15,11 @@ namespace DTO_BusSystemManagement
         private int _BUS_SEATS;
         private int _BUS_CUREPERIOD;
 
-        public DTO_Bus(int bUS_ID, string bUS_LICENSEPLATE, string bUS_MANUFACTURER, int bUS_YEAROFMANUFACTURE, 
-               int bUS_SEATS, int bUS_CUREPERIOD)
+        public DTO_Bus()
+        {
+
+        }
+        public DTO_Bus(int bUS_ID, string bUS_LICENSEPLATE, string bUS_MANUFACTURER, int bUS_YEAROFMANUFACTURE, int bUS_SEATS, int bUS_CUREPERIOD)
         {
             _BUS_ID = bUS_ID;
             _BUS_LICENSEPLATE = bUS_LICENSEPLATE;

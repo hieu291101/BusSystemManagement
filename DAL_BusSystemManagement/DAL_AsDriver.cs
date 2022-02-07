@@ -13,10 +13,37 @@ namespace DAL_BusSystemManagement
     {
         public DataTable GetAsDriver()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM as_driver", _conn);
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver)", _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);
             return dtAsDriver;
+        }
+
+        public string GetAsDriverById(int id)
+        {
+            string SQL = string.Format("SELECT asdriver_name FROM as_driver WHERE idas_driver = {0}", id);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtAsDriver.Rows)
+            {
+                list.Add(row["asdriver_name"].ToString());
+            }
+            return list[0];
+        }
+
+        public List<string> GetListAsDriverId()
+        {
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT idas_driver FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver)", _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            List<string> list = new List<string>();
+            foreach (DataRow row in dtAsDriver.Rows)
+            {
+                list.Add(row["idas_driver"].ToString());
+            }
+            return list;
         }
 
         public bool AddAsDriver(DTO_AsDriver asd)
@@ -72,15 +99,9 @@ namespace DAL_BusSystemManagement
 
                 // Query string
                 string SQL = string.Format("UPDATE as_driver SET asdriver_name = '{0}', day_of_birth = '{1}', gender = '{2}', address = '{3}', phone_number = '{4}', idcard = '{5}', start_date = '{6}', experience = {7} WHERE idas_driver = {8}",
-                                           asd.ASDRIVER_NAME, 
-                                           dayOfBirth, 
-                                           asd.ASDRIVER_GENDER, 
-                                           asd.ASDRIVER_ADDRESS,
-                                           asd.ASDRIVER_PHONENUMBER, 
-                                           asd.ASDRIVER_IDCARD, 
-                                           startDate,
-                                           asd.ASDRIVER_EXPERIENCE, 
-                                           asd.ASDRIVER_ID);
+                                           asd.ASDRIVER_NAME, dayOfBirth, asd.ASDRIVER_GENDER, asd.ASDRIVER_ADDRESS,
+                                           asd.ASDRIVER_PHONENUMBER, asd.ASDRIVER_IDCARD, startDate,
+                                           asd.ASDRIVER_EXPERIENCE, asd.ASDRIVER_ID);
 
                 // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
                 MySqlCommand cmd = new MySqlCommand(SQL, _conn);
@@ -133,6 +154,60 @@ namespace DAL_BusSystemManagement
             }
 
             return false;
+        }
+
+        public DataTable FindAsDriverByName(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and asdriver_name LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByGender(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and gender LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByAddress(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and address LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByPhoneNumber(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and phone_number LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByIdCard(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and idcard LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
+        }
+
+        public DataTable FindAsDriverByExperienceYear(string kw)
+        {
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and experience = {0}", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtAsDriver = new DataTable();
+            msda.Fill(dtAsDriver);
+            return dtAsDriver;
         }
     }
 }

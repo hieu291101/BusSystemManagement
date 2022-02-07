@@ -31,5 +31,25 @@ namespace BUS_BusSystemManagement
         {
             return dalBusRide.DeleteBusRide(BUSRIDE_ID);
         }
+
+        public DataTable FindBusRideByBusLineName(string kw)
+        {
+            return dalBusRide.FindBusRideByBusLineName(kw);
+        }
+
+        public DataTable FindBusRideByAsDriverName(string kw)
+        {
+            return dalBusRide.FindBusRideByAsDriverName(kw);
+        }
+
+        public DataTable FindBusRideByLicensePlate(string kw)
+        {
+            return dalBusRide.FindBusRideByLicensePlate(kw);
+        }
+
+        public DataTable FindBusRideByAsDriverType(string kw)
+        {
+            return dalBusRide.FindBusRideByAsDriverType(kw);
+        }
     }
 }

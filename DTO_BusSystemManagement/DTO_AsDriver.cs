@@ -18,6 +18,10 @@ namespace DTO_BusSystemManagement
         private DateTime _ASDRIVER_STARTDATE;
         private int _ASDRIVER_EXPERIENCE;
 
+        public DTO_AsDriver()
+        {
+
+        }
         public DTO_AsDriver(int aSDRIVER_ID, string aSDRIVER_NAME, DateTime aSDRIVER_DAYOFBIRTH,
             DTO_Gender_Enum aSDRIVER_GENDER, string aSDRIVER_ADDRESS, string aSDRIVER_PHONENUMBER,
             string aSDRIVER_IDCARD, DateTime aSDRIVER_STARTDATE, int aSDRIVER_EXPERIENCE)

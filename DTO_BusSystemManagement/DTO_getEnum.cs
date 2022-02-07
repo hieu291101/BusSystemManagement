@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,11 +18,32 @@ namespace DTO_BusSystemManagement
                 case "Nam":
                     gender = DTO_Gender_Enum.NAM;
                     break;
-                case "Nu":
+                case "Nữ":
                     gender = DTO_Gender_Enum.NU;
                     break;
             }
             return gender;
+        }
+
+        public static DTO_License_Enum GetLicenseEnum(string stringEnum)
+        {
+            DTO_License_Enum license = DTO_License_Enum.B2;
+            switch (stringEnum)
+            {
+                case "C":
+                    license = DTO_License_Enum.C;
+                    break;
+                case "D":
+                    license = DTO_License_Enum.D;
+                    break;
+                case "E":
+                    license = DTO_License_Enum.E;
+                    break;
+                case "F":
+                    license = DTO_License_Enum.F;
+                    break;
+            }
+            return license;
         }
     }
 }

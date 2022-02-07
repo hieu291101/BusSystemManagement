@@ -13,7 +13,9 @@ namespace DAL_BusSystemManagement
     {
         public DataTable GetBusDriver()
         {
-            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT * FROM busride", _conn);
+            MySqlDataAdapter msda = new MySqlDataAdapter("SELECT busride.idbusride, busride.idbusline, busline.busline_name, busride.iddriver, as_driver.asdriver_name, busride.idbus, bus.license_plate, busride.start_time, busride.type " +
+                "FROM busride, bus, as_driver, busline " +
+                "WHERE busride.idbusline = busline.idbusline and busride.idbus = bus.idbus and busride.iddriver = as_driver.idas_driver ", _conn);
             DataTable dtBusRide = new DataTable();
             msda.Fill(dtBusRide);
             return dtBusRide;
@@ -25,16 +27,14 @@ namespace DAL_BusSystemManagement
             {
                 //ket noi
                 _conn.Open();
-
                 string startTime = busr.BUSRIDE_STARTTIME.ToString("yyyy-MM-dd H:mm:ss");
-
-                //query
-                string SQL = string.Format("INSERT INTO busride(idbusline, iddriver, idas_driver, idbus,start_time) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')",
-                    busr.BUSRIDE_BUSLINEID,
+                //
+                string SQL = string.Format("INSERT INTO busride( iddriver, idbus, idbusline, start_time, type) VALUES ({0}, {1}, {2}, '{3}', '{4}')",
                     busr.BUSRIDE_DRIVERID,
-                    busr.BUSRIDE_ASDRIVERID,
                     busr.BUSRIDE_BUSID,
-                    startTime);
+                    busr.BUSRIDE_BUSLINEID,
+                    startTime,
+                    busr.BUSRIDE_TYPE);
 
                 MySqlCommand cmd = new MySqlCommand(SQL, _conn);
                 if(cmd.ExecuteNonQuery() > 0)
@@ -63,10 +63,9 @@ namespace DAL_BusSystemManagement
                 _conn.Open();
                 string startTime = busr.BUSRIDE_STARTTIME.ToString("yyyy-MM-dd H:mm:ss");
                 //
-                string SQL = string.Format("UPDATE busride SET idbusline = '{0}', iddriver = '{1}', idas_driver = '{2}', idbus = '{3}', start_time = '{4}' WHERE idbusride = {5})",
+                string SQL = string.Format("UPDATE busride SET idbusline = {0}, iddriver = {1}, idbus = {2}, start_time = '{3}' WHERE idbusride = {4}",
                                             busr.BUSRIDE_BUSLINEID,
                                             busr.BUSRIDE_DRIVERID,
-                                            busr.BUSRIDE_ASDRIVERID,
                                             busr.BUSRIDE_BUSID,
                                             startTime,
                                             busr.BUSRIDE_ID);
@@ -116,6 +115,58 @@ namespace DAL_BusSystemManagement
             }
 
             return false;
+        }
+
+        public DataTable FindBusRideByBusLineName(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT busride.idbusride, busride.idbusline, busline.busline_name, busride.iddriver, as_driver.asdriver_name, busride.idbus, bus.license_plate, busride.start_time, busride.type " +
+                "FROM busride, bus, as_driver, busline " +
+                "WHERE busride.idbusline = busline.idbusline and busride.idbus = bus.idbus and busride.iddriver = as_driver.idas_driver and " +
+                "busline.busline_name LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBusRide = new DataTable();
+            msda.Fill(dtBusRide);
+            return dtBusRide;
+        }
+
+        public DataTable FindBusRideByAsDriverName(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT busride.idbusride, busride.idbusline, busline.busline_name, busride.iddriver, as_driver.asdriver_name, busride.idbus, bus.license_plate, busride.start_time, busride.type " +
+                "FROM busride, bus, as_driver, busline " +
+                "WHERE busride.idbusline = busline.idbusline and busride.idbus = bus.idbus and busride.iddriver = as_driver.idas_driver and " +
+                "as_driver.asdriver_name LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBusRide = new DataTable();
+            msda.Fill(dtBusRide);
+            return dtBusRide;
+        }
+
+        public DataTable FindBusRideByLicensePlate(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT busride.idbusride, busride.idbusline, busline.busline_name, busride.iddriver, as_driver.asdriver_name, busride.idbus, bus.license_plate, busride.start_time, busride.type " +
+                "FROM busride, bus, as_driver, busline " +
+                "WHERE busride.idbusline = busline.idbusline and busride.idbus = bus.idbus and busride.iddriver = as_driver.idas_driver and " +
+                "bus.license_plate LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBusRide = new DataTable();
+            msda.Fill(dtBusRide);
+            return dtBusRide;
+        }
+
+        public DataTable FindBusRideByAsDriverType(string kw)
+        {
+            string SQL = string.Format(
+                "SELECT busride.idbusride, busride.idbusline, busline.busline_name, busride.iddriver, as_driver.asdriver_name, busride.idbus, bus.license_plate, busride.start_time, busride.type " +
+                "FROM busride, bus, as_driver, busline " +
+                "WHERE busride.idbusline = busline.idbusline and busride.idbus = bus.idbus and busride.iddriver = as_driver.idas_driver and " +
+                "busride.type LIKE N\'%{0}%\'", kw);
+            MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
+            DataTable dtBusRide = new DataTable();
+            msda.Fill(dtBusRide);
+            return dtBusRide;
         }
     }
 }
