@@ -167,7 +167,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusByYearOfManufacture(string kw)
         {
-            string SQL = string.Format("SELECT * FROM bus WHERE year_of_manufacture = {0}", kw);
+            string SQL = string.Format("SELECT * FROM bus WHERE year_of_manufacture LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBus = new DataTable();
             msda.Fill(dtBus);
@@ -176,7 +176,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusBySeats(string kw)
         {
-            string SQL = string.Format("SELECT * FROM bus WHERE seats = {0}", kw);
+            string SQL = string.Format("SELECT * FROM bus WHERE seats LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBus = new DataTable();
             msda.Fill(dtBus);
@@ -185,7 +185,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusByCurePeriod(string kw)
         {
-            string SQL = string.Format("SELECT * FROM bus WHERE cure_period = {0}", kw);
+            string SQL = string.Format("SELECT * FROM bus WHERE cure_period LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBus = new DataTable();
             msda.Fill(dtBus);

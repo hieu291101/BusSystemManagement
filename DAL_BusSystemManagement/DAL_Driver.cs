@@ -223,7 +223,7 @@ namespace DAL_BusSystemManagement
         public DataTable FindDriverByExperienceYear(string kw)
         {
             string SQL = string.Format("SELECT idas_driver, asdriver_name, day_of_birth, gender, address, phone_number, idcard, start_date, experience, driver_license " +
-                "FROM as_driver, driver WHERE idas_driver = iddriver and experience = {0}", kw);
+                "FROM as_driver, driver WHERE idas_driver = iddriver and experience LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtDriver = new DataTable();
             msda.Fill(dtDriver);

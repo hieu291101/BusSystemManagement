@@ -188,7 +188,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusLineByStartTime(string kw)
         {
-            string SQL = string.Format("SELECT * FROM busline WHERE start_time = {0}", kw);
+            string SQL = string.Format("SELECT * FROM busline WHERE start_time LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBusLine = new DataTable();
             msda.Fill(dtBusLine);
@@ -197,7 +197,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindBusLineByEndTime(string kw)
         {
-            string SQL = string.Format("SELECT * FROM busline WHERE end_time = {0}", kw);
+            string SQL = string.Format("SELECT * FROM busline WHERE end_time LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtBusLine = new DataTable();
             msda.Fill(dtBusLine);

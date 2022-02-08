@@ -1468,175 +1468,165 @@ namespace BusSystemManagement
         #region Keypress
         private void tbDriverName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
-                MessageBox.Show("Tên chỉ nhập kí tự chữ!!", "Notification");
             }
         }
 
         private void tbPhoneDriver_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Số điện thoại chỉ nhập kí tự số!!", "Notification");
             }
         }
 
         private void tbIdCardDriver_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Chứng minh nhân dân chỉ nhập kí tự số!!", "Notification");
-            }
-        }
-        private void tbSearchDriver_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
-            {
-                e.Handled = true;
-                MessageBox.Show("Nhập không hợp lệ!!", "Notification");
-            }
-        }
 
+            }
+        }
+        private void tbAddressDriver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '/' && e.KeyChar != ',' && e.KeyChar != '-' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
 
 
         //-----------------------------------------------------------------------------
         //check asdriver
         private void tbAsDriverName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
-                MessageBox.Show("Tên chỉ nhập kí tự chữ!!", "Notification");
+
             }
         }
 
         private void tbPhoneAsDriver_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Số điện thoại chỉ nhập kí tự số!!", "Notification");
+
             }
         }
 
         private void tbIdCardAsDriver_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Chứng minh nhân dân chỉ nhập kí tự số!!", "Notification");
+
             }
         }
-        private void tbSearchAsDriver_KeyPress(object sender, KeyPressEventArgs e)
+        private void tbAddressAsDriver_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '/' && e.KeyChar != ',' && e.KeyChar != '-' && e.KeyChar != '.')
             {
                 e.Handled = true;
-                MessageBox.Show("Nhập không hợp lệ", "Notification");
             }
         }
+
 
         //------------------------------------------------------------------------------
         //check bus
         private void tbManufacturer_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '-')
             {
                 e.Handled = true;
-                MessageBox.Show("Hãng sản xuất chỉ nhập kí tự chữ!!", "Notification");
             }
         }
 
         private void tbLicensePlate_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '-' || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '-')
             {
                 e.Handled = true;
-                MessageBox.Show("Biển kiểm soát nhập không hợp lệ!!", "Notification");
+
             }
         }
-        private void tbSearchBus_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
-            {
-                e.Handled = true;
-                MessageBox.Show("Nhập không hợp lệ", "Notification");
-            }
-        }
+
 
 
         //-------------------------------------------------------------
         //check busline
         private void tbBusLineName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '-')
             {
                 e.Handled = true;
-                MessageBox.Show("Tên tuyến xe chỉ nhập kí tự chữ!!", "Notification");
+
             }
         }
 
         private void tbEndLocation_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
-                MessageBox.Show("Điểm bắt đầu chỉ nhập kí tự chữ!!", "Notification");
+
             }
         }
 
         private void tbStartLocation_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
-                MessageBox.Show("Điểm kết thúc chỉ nhập kí tự chữ!!", "Notification");
+
             }
         }
 
         private void tbBusLineDetail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '-')
             {
                 e.Handled = true;
-                MessageBox.Show("Chi tiết trạm nhập không hợp lệ", "Notification");
+
             }
         }
-        private void tbSearchBusLine_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
-            {
-                e.Handled = true;
-                MessageBox.Show("Nhập không hợp lệ", "Notification");
-            }
-        }
+
 
 
         //--------------------------------------------------------------------
-        //check busride
-        private void tbSearchBusRide_KeyPress(object sender, KeyPressEventArgs e)
+        //check account
+        private void tbUserUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Nhập không hợp lệ", "Notification");
+            }
+        }
+        private void tbUserEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '@' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+
             }
         }
 
-
-        //-------------------------------------------------------------------
-        //check ticket
-        private void tbSearchTicket_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void tbUserEmail_Leave(object sender, EventArgs e)
         {
-            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            string str = "^\\w+[a-z0-9]*@\\w+mail.com$";
+            if (Regex.IsMatch(tbUserEmail.Text, str))
             {
-                e.Handled = true;
-                MessageBox.Show("Nhập không hợp lệ", "Notification");
+                errorProvider1.Clear();
             }
+            else
+            {
+                errorProvider1.SetError(this.tbUserEmail, "hãy nhập đúng định dạng!!!");
+            }
+
         }
         #endregion
 
@@ -1780,6 +1770,5 @@ namespace BusSystemManagement
             cbUser.SelectedIndex = 0;
         }
         #endregion
-
     }
 }

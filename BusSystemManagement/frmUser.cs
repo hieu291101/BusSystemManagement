@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,7 +52,7 @@ namespace BusSystemManagement
 					 else
 					 {
 						  //Mật khẩu cũ đúng
-						  if (old_password.Equals(account.USER_PASSWORD) == true)
+						  if (_User.CheckLogin(account.USER_USERNAME,old_password) == true)
 						  {
 								//Mật khẩu mới trùng mật khẩu cũ => báo lỗi, nhập lại
 								if (new_password.Equals(account.USER_PASSWORD))
@@ -114,5 +115,33 @@ namespace BusSystemManagement
 				frmTableManager.ShowDialog();
 		  }
 
-	 }
+		private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsLetter(e.KeyChar))
+			{
+				e.Handled = true;
+			}
+		}
+
+		private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '@' && e.KeyChar != '.')
+			{
+				e.Handled = true;
+			}
+		}
+
+		private void txtEmail_Leave(object sender, EventArgs e)
+		{
+			string str = "^\\w+[a-z0-9]*@\\w+mail.com$";
+			if (Regex.IsMatch(txtEmail.Text, str))
+			{
+				errorProvider1.Clear();
+			}
+			else
+			{
+				errorProvider1.SetError(this.txtEmail, "hãy nhập đúng định dạng!!!");
+			}
+		}
+	}
 }

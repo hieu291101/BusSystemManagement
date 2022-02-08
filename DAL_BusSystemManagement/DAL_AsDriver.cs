@@ -203,7 +203,7 @@ namespace DAL_BusSystemManagement
 
         public DataTable FindAsDriverByExperienceYear(string kw)
         {
-            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and experience = {0}", kw);
+            string SQL = string.Format("SELECT * FROM as_driver WHERE idas_driver NOT IN (SELECT iddriver FROM driver) and experience LIKE N\'%{0}%\'", kw);
             MySqlDataAdapter msda = new MySqlDataAdapter(SQL, _conn);
             DataTable dtAsDriver = new DataTable();
             msda.Fill(dtAsDriver);

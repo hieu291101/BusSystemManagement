@@ -31,6 +31,7 @@ namespace BusSystemManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -239,12 +240,13 @@ namespace BusSystemManagement
             this.tbSearchTicket = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.tabPageStat = new System.Windows.Forms.TabPage();
+            this.panel58 = new System.Windows.Forms.Panel();
             this.btnSumary = new System.Windows.Forms.Button();
             this.btnDatStat = new System.Windows.Forms.Button();
             this.panel60 = new System.Windows.Forms.Panel();
             this.dtpEndDayStat = new System.Windows.Forms.DateTimePicker();
             this.label45 = new System.Windows.Forms.Label();
-            this.panel58 = new System.Windows.Forms.Panel();
+            this.panel72 = new System.Windows.Forms.Panel();
             this.dtpStartDayStat = new System.Windows.Forms.DateTimePicker();
             this.label43 = new System.Windows.Forms.Label();
             this.panel53 = new System.Windows.Forms.Panel();
@@ -284,6 +286,7 @@ namespace BusSystemManagement
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tcDriver.SuspendLayout();
             this.tabPageDriver.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -368,8 +371,9 @@ namespace BusSystemManagement
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).BeginInit();
             this.panel62.SuspendLayout();
             this.tabPageStat.SuspendLayout();
-            this.panel60.SuspendLayout();
             this.panel58.SuspendLayout();
+            this.panel60.SuspendLayout();
+            this.panel72.SuspendLayout();
             this.panel53.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).BeginInit();
             this.panel54.SuspendLayout();
@@ -385,6 +389,7 @@ namespace BusSystemManagement
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.panel75.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDriver
@@ -428,7 +433,8 @@ namespace BusSystemManagement
             this.btnExportPdfDriver.Location = new System.Drawing.Point(6, 16);
             this.btnExportPdfDriver.Name = "btnExportPdfDriver";
             this.btnExportPdfDriver.Size = new System.Drawing.Size(129, 35);
-            this.btnExportPdfDriver.TabIndex = 10;
+            this.btnExportPdfDriver.TabIndex = 2;
+            this.btnExportPdfDriver.TabStop = false;
             this.btnExportPdfDriver.Text = "EXPORT TO PDF";
             this.btnExportPdfDriver.UseVisualStyleBackColor = false;
             this.btnExportPdfDriver.Click += new System.EventHandler(this.btnExportPdfDriver_Click);
@@ -443,7 +449,7 @@ namespace BusSystemManagement
             this.panel27.Location = new System.Drawing.Point(3, 394);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(976, 251);
-            this.panel27.TabIndex = 8;
+            this.panel27.TabIndex = 0;
             // 
             // panel35
             // 
@@ -460,7 +466,7 @@ namespace BusSystemManagement
             this.panel35.Location = new System.Drawing.Point(3, 3);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(708, 242);
-            this.panel35.TabIndex = 12;
+            this.panel35.TabIndex = 1;
             // 
             // panel46
             // 
@@ -469,15 +475,16 @@ namespace BusSystemManagement
             this.panel46.Location = new System.Drawing.Point(3, 175);
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(339, 37);
-            this.panel46.TabIndex = 9;
+            this.panel46.TabIndex = 8;
             // 
             // cbLicense
             // 
+            this.cbLicense.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLicense.FormattingEnabled = true;
             this.cbLicense.Location = new System.Drawing.Point(113, 8);
             this.cbLicense.Name = "cbLicense";
             this.cbLicense.Size = new System.Drawing.Size(223, 29);
-            this.cbLicense.TabIndex = 1;
+            this.cbLicense.TabIndex = 0;
             // 
             // label34
             // 
@@ -485,7 +492,7 @@ namespace BusSystemManagement
             this.label34.Location = new System.Drawing.Point(12, 11);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(62, 21);
-            this.label34.TabIndex = 0;
+            this.label34.TabIndex = 1;
             this.label34.Text = "Bằng lái";
             // 
             // panel36
@@ -495,14 +502,14 @@ namespace BusSystemManagement
             this.panel36.Location = new System.Drawing.Point(348, 132);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(339, 37);
-            this.panel36.TabIndex = 12;
+            this.panel36.TabIndex = 7;
             // 
             // nudExperienceDriver
             // 
             this.nudExperienceDriver.Location = new System.Drawing.Point(133, 8);
             this.nudExperienceDriver.Name = "nudExperienceDriver";
             this.nudExperienceDriver.Size = new System.Drawing.Size(203, 24);
-            this.nudExperienceDriver.TabIndex = 4;
+            this.nudExperienceDriver.TabIndex = 0;
             // 
             // label19
             // 
@@ -510,7 +517,7 @@ namespace BusSystemManagement
             this.label19.Location = new System.Drawing.Point(12, 11);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(115, 21);
-            this.label19.TabIndex = 0;
+            this.label19.TabIndex = 1;
             this.label19.Text = "Thâm niên(năm)";
             // 
             // panel37
@@ -520,14 +527,14 @@ namespace BusSystemManagement
             this.panel37.Location = new System.Drawing.Point(3, 132);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(339, 37);
-            this.panel37.TabIndex = 10;
+            this.panel37.TabIndex = 6;
             // 
             // dtpStartDayDriver
             // 
             this.dtpStartDayDriver.Location = new System.Drawing.Point(113, 6);
             this.dtpStartDayDriver.Name = "dtpStartDayDriver";
             this.dtpStartDayDriver.Size = new System.Drawing.Size(223, 24);
-            this.dtpStartDayDriver.TabIndex = 12;
+            this.dtpStartDayDriver.TabIndex = 0;
             // 
             // label26
             // 
@@ -535,7 +542,7 @@ namespace BusSystemManagement
             this.label26.Location = new System.Drawing.Point(12, 8);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(101, 21);
-            this.label26.TabIndex = 0;
+            this.label26.TabIndex = 1;
             this.label26.Text = "Ngày bắt đầu ";
             // 
             // panel38
@@ -545,14 +552,14 @@ namespace BusSystemManagement
             this.panel38.Location = new System.Drawing.Point(348, 89);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(339, 37);
-            this.panel38.TabIndex = 11;
+            this.panel38.TabIndex = 5;
             // 
             // tbIdCardDriver
             // 
             this.tbIdCardDriver.Location = new System.Drawing.Point(113, 8);
             this.tbIdCardDriver.Name = "tbIdCardDriver";
             this.tbIdCardDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbIdCardDriver.TabIndex = 1;
+            this.tbIdCardDriver.TabIndex = 0;
             this.tbIdCardDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdCardDriver_KeyPress);
             // 
             // label27
@@ -561,7 +568,7 @@ namespace BusSystemManagement
             this.label27.Location = new System.Drawing.Point(12, 11);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(50, 21);
-            this.label27.TabIndex = 0;
+            this.label27.TabIndex = 1;
             this.label27.Text = "CMND";
             // 
             // panel39
@@ -571,7 +578,7 @@ namespace BusSystemManagement
             this.panel39.Location = new System.Drawing.Point(3, 89);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(339, 37);
-            this.panel39.TabIndex = 6;
+            this.panel39.TabIndex = 4;
             // 
             // tbPhoneDriver
             // 
@@ -579,7 +586,7 @@ namespace BusSystemManagement
             this.tbPhoneDriver.MaxLength = 12;
             this.tbPhoneDriver.Name = "tbPhoneDriver";
             this.tbPhoneDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbPhoneDriver.TabIndex = 1;
+            this.tbPhoneDriver.TabIndex = 0;
             this.tbPhoneDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhoneDriver_KeyPress);
             // 
             // label28
@@ -588,7 +595,7 @@ namespace BusSystemManagement
             this.label28.Location = new System.Drawing.Point(12, 11);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(77, 21);
-            this.label28.TabIndex = 0;
+            this.label28.TabIndex = 1;
             this.label28.Text = "Điện thoại";
             // 
             // panel40
@@ -598,14 +605,15 @@ namespace BusSystemManagement
             this.panel40.Location = new System.Drawing.Point(348, 46);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(339, 37);
-            this.panel40.TabIndex = 13;
+            this.panel40.TabIndex = 3;
             // 
             // tbAddressDriver
             // 
             this.tbAddressDriver.Location = new System.Drawing.Point(113, 8);
             this.tbAddressDriver.Name = "tbAddressDriver";
             this.tbAddressDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbAddressDriver.TabIndex = 2;
+            this.tbAddressDriver.TabIndex = 0;
+            this.tbAddressDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressDriver_KeyPress);
             // 
             // label29
             // 
@@ -613,7 +621,7 @@ namespace BusSystemManagement
             this.label29.Location = new System.Drawing.Point(12, 11);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(54, 21);
-            this.label29.TabIndex = 0;
+            this.label29.TabIndex = 1;
             this.label29.Text = "Địa chỉ";
             // 
             // panel41
@@ -623,15 +631,16 @@ namespace BusSystemManagement
             this.panel41.Location = new System.Drawing.Point(3, 46);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(339, 37);
-            this.panel41.TabIndex = 7;
+            this.panel41.TabIndex = 2;
             // 
             // cbGenderDriver
             // 
+            this.cbGenderDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenderDriver.FormattingEnabled = true;
             this.cbGenderDriver.Location = new System.Drawing.Point(113, 5);
             this.cbGenderDriver.Name = "cbGenderDriver";
             this.cbGenderDriver.Size = new System.Drawing.Size(223, 29);
-            this.cbGenderDriver.TabIndex = 1;
+            this.cbGenderDriver.TabIndex = 0;
             // 
             // label30
             // 
@@ -639,7 +648,7 @@ namespace BusSystemManagement
             this.label30.Location = new System.Drawing.Point(12, 11);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(64, 21);
-            this.label30.TabIndex = 0;
+            this.label30.TabIndex = 1;
             this.label30.Text = "Giới tính";
             // 
             // panel42
@@ -649,7 +658,7 @@ namespace BusSystemManagement
             this.panel42.Location = new System.Drawing.Point(348, 3);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(339, 37);
-            this.panel42.TabIndex = 8;
+            this.panel42.TabIndex = 1;
             // 
             // dtpDayOfBirthDriver
             // 
@@ -657,7 +666,7 @@ namespace BusSystemManagement
             this.dtpDayOfBirthDriver.Location = new System.Drawing.Point(113, 8);
             this.dtpDayOfBirthDriver.Name = "dtpDayOfBirthDriver";
             this.dtpDayOfBirthDriver.Size = new System.Drawing.Size(223, 24);
-            this.dtpDayOfBirthDriver.TabIndex = 12;
+            this.dtpDayOfBirthDriver.TabIndex = 0;
             this.dtpDayOfBirthDriver.Value = new System.DateTime(2022, 1, 28, 15, 17, 42, 0);
             // 
             // label31
@@ -666,7 +675,7 @@ namespace BusSystemManagement
             this.label31.Location = new System.Drawing.Point(12, 11);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(74, 21);
-            this.label31.TabIndex = 0;
+            this.label31.TabIndex = 1;
             this.label31.Text = "Ngày sinh";
             // 
             // panel63
@@ -676,14 +685,14 @@ namespace BusSystemManagement
             this.panel63.Location = new System.Drawing.Point(3, 3);
             this.panel63.Name = "panel63";
             this.panel63.Size = new System.Drawing.Size(339, 37);
-            this.panel63.TabIndex = 5;
+            this.panel63.TabIndex = 0;
             // 
             // tbDriverName
             // 
             this.tbDriverName.Location = new System.Drawing.Point(113, 8);
             this.tbDriverName.Name = "tbDriverName";
             this.tbDriverName.Size = new System.Drawing.Size(223, 24);
-            this.tbDriverName.TabIndex = 1;
+            this.tbDriverName.TabIndex = 0;
             this.tbDriverName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDriverName_KeyPress);
             // 
             // label32
@@ -692,7 +701,7 @@ namespace BusSystemManagement
             this.label32.Location = new System.Drawing.Point(12, 12);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(53, 21);
-            this.label32.TabIndex = 0;
+            this.label32.TabIndex = 1;
             this.label32.Text = "Họ tên";
             // 
             // btnAddMdriver
@@ -703,7 +712,7 @@ namespace BusSystemManagement
             this.btnAddMdriver.Location = new System.Drawing.Point(717, 3);
             this.btnAddMdriver.Name = "btnAddMdriver";
             this.btnAddMdriver.Size = new System.Drawing.Size(256, 56);
-            this.btnAddMdriver.TabIndex = 9;
+            this.btnAddMdriver.TabIndex = 1;
             this.btnAddMdriver.Text = "Thêm";
             this.btnAddMdriver.UseVisualStyleBackColor = false;
             this.btnAddMdriver.Click += new System.EventHandler(this.btnAddMdriver_Click);
@@ -716,7 +725,7 @@ namespace BusSystemManagement
             this.btnResetDriver.Location = new System.Drawing.Point(717, 189);
             this.btnResetDriver.Name = "btnResetDriver";
             this.btnResetDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnResetDriver.TabIndex = 11;
+            this.btnResetDriver.TabIndex = 4;
             this.btnResetDriver.Text = "Nhập lại";
             this.btnResetDriver.UseVisualStyleBackColor = false;
             this.btnResetDriver.Click += new System.EventHandler(this.btnResetDriver_Click);
@@ -729,7 +738,7 @@ namespace BusSystemManagement
             this.btnUpdateDriver.Location = new System.Drawing.Point(717, 127);
             this.btnUpdateDriver.Name = "btnUpdateDriver";
             this.btnUpdateDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnUpdateDriver.TabIndex = 10;
+            this.btnUpdateDriver.TabIndex = 3;
             this.btnUpdateDriver.Text = "Cập nhật";
             this.btnUpdateDriver.UseVisualStyleBackColor = false;
             this.btnUpdateDriver.Click += new System.EventHandler(this.btnUpdateDriver_Click);
@@ -742,7 +751,7 @@ namespace BusSystemManagement
             this.btnDeleteDriver.Location = new System.Drawing.Point(717, 65);
             this.btnDeleteDriver.Name = "btnDeleteDriver";
             this.btnDeleteDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnDeleteDriver.TabIndex = 9;
+            this.btnDeleteDriver.TabIndex = 2;
             this.btnDeleteDriver.Text = "Xóa";
             this.btnDeleteDriver.UseVisualStyleBackColor = false;
             this.btnDeleteDriver.Click += new System.EventHandler(this.btnDeleteDriver_Click);
@@ -759,11 +768,14 @@ namespace BusSystemManagement
             // 
             this.dgvDriver.AllowUserToAddRows = false;
             this.dgvDriver.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDriver.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDriver.Location = new System.Drawing.Point(3, 3);
             this.dgvDriver.Name = "dgvDriver";
+            this.dgvDriver.ReadOnly = true;
             this.dgvDriver.Size = new System.Drawing.Size(970, 328);
             this.dgvDriver.TabIndex = 0;
+            this.dgvDriver.TabStop = false;
             // 
             // panel6
             // 
@@ -778,11 +790,14 @@ namespace BusSystemManagement
             // 
             // cbDriver
             // 
+            this.cbDriver.BackColor = System.Drawing.SystemColors.Window;
+            this.cbDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDriver.FormattingEnabled = true;
             this.cbDriver.Location = new System.Drawing.Point(283, 10);
             this.cbDriver.Name = "cbDriver";
             this.cbDriver.Size = new System.Drawing.Size(121, 29);
             this.cbDriver.TabIndex = 2;
+            this.cbDriver.TabStop = false;
             this.cbDriver.SelectedIndexChanged += new System.EventHandler(this.cbDriver_SelectedIndexChanged);
             // 
             // tbSearchDriver
@@ -791,8 +806,8 @@ namespace BusSystemManagement
             this.tbSearchDriver.Name = "tbSearchDriver";
             this.tbSearchDriver.Size = new System.Drawing.Size(189, 24);
             this.tbSearchDriver.TabIndex = 1;
+            this.tbSearchDriver.TabStop = false;
             this.tbSearchDriver.TextChanged += new System.EventHandler(this.tbSearchDriver_TextChanged);
-            this.tbSearchDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchDriver_KeyPress);
             // 
             // label5
             // 
@@ -824,7 +839,8 @@ namespace BusSystemManagement
             this.btnExportPdfAsDriver.Location = new System.Drawing.Point(6, 16);
             this.btnExportPdfAsDriver.Name = "btnExportPdfAsDriver";
             this.btnExportPdfAsDriver.Size = new System.Drawing.Size(129, 35);
-            this.btnExportPdfAsDriver.TabIndex = 11;
+            this.btnExportPdfAsDriver.TabIndex = 0;
+            this.btnExportPdfAsDriver.TabStop = false;
             this.btnExportPdfAsDriver.Text = "EXPORT TO PDF";
             this.btnExportPdfAsDriver.UseVisualStyleBackColor = false;
             this.btnExportPdfAsDriver.Click += new System.EventHandler(this.btnExportPdfAsDriver_Click);
@@ -839,7 +855,7 @@ namespace BusSystemManagement
             this.panel26.Location = new System.Drawing.Point(3, 394);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(976, 271);
-            this.panel26.TabIndex = 7;
+            this.panel26.TabIndex = 0;
             // 
             // panel18
             // 
@@ -855,7 +871,7 @@ namespace BusSystemManagement
             this.panel18.Location = new System.Drawing.Point(3, 3);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(708, 241);
-            this.panel18.TabIndex = 12;
+            this.panel18.TabIndex = 0;
             // 
             // panel19
             // 
@@ -864,7 +880,7 @@ namespace BusSystemManagement
             this.panel19.Location = new System.Drawing.Point(348, 132);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(339, 37);
-            this.panel19.TabIndex = 11;
+            this.panel19.TabIndex = 7;
             // 
             // nudExperienceAsDriver
             // 
@@ -876,7 +892,7 @@ namespace BusSystemManagement
             0});
             this.nudExperienceAsDriver.Name = "nudExperienceAsDriver";
             this.nudExperienceAsDriver.Size = new System.Drawing.Size(203, 24);
-            this.nudExperienceAsDriver.TabIndex = 4;
+            this.nudExperienceAsDriver.TabIndex = 0;
             // 
             // label12
             // 
@@ -894,14 +910,14 @@ namespace BusSystemManagement
             this.panel28.Location = new System.Drawing.Point(3, 132);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(339, 37);
-            this.panel28.TabIndex = 9;
+            this.panel28.TabIndex = 6;
             // 
             // dtpStartDay
             // 
             this.dtpStartDay.Location = new System.Drawing.Point(113, 6);
             this.dtpStartDay.Name = "dtpStartDay";
             this.dtpStartDay.Size = new System.Drawing.Size(223, 24);
-            this.dtpStartDay.TabIndex = 12;
+            this.dtpStartDay.TabIndex = 0;
             // 
             // label1
             // 
@@ -919,14 +935,14 @@ namespace BusSystemManagement
             this.panel29.Location = new System.Drawing.Point(348, 89);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(339, 37);
-            this.panel29.TabIndex = 10;
+            this.panel29.TabIndex = 5;
             // 
             // tbIdCardAsDriver
             // 
             this.tbIdCardAsDriver.Location = new System.Drawing.Point(113, 8);
             this.tbIdCardAsDriver.Name = "tbIdCardAsDriver";
             this.tbIdCardAsDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbIdCardAsDriver.TabIndex = 1;
+            this.tbIdCardAsDriver.TabIndex = 0;
             this.tbIdCardAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdCardAsDriver_KeyPress);
             // 
             // label20
@@ -945,7 +961,7 @@ namespace BusSystemManagement
             this.panel30.Location = new System.Drawing.Point(3, 89);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(339, 37);
-            this.panel30.TabIndex = 6;
+            this.panel30.TabIndex = 4;
             // 
             // tbPhoneAsDriver
             // 
@@ -953,7 +969,7 @@ namespace BusSystemManagement
             this.tbPhoneAsDriver.MaxLength = 12;
             this.tbPhoneAsDriver.Name = "tbPhoneAsDriver";
             this.tbPhoneAsDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbPhoneAsDriver.TabIndex = 1;
+            this.tbPhoneAsDriver.TabIndex = 0;
             this.tbPhoneAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhoneAsDriver_KeyPress);
             // 
             // label21
@@ -972,14 +988,15 @@ namespace BusSystemManagement
             this.panel31.Location = new System.Drawing.Point(348, 46);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(339, 37);
-            this.panel31.TabIndex = 12;
+            this.panel31.TabIndex = 3;
             // 
             // tbAddressAsDriver
             // 
             this.tbAddressAsDriver.Location = new System.Drawing.Point(113, 8);
             this.tbAddressAsDriver.Name = "tbAddressAsDriver";
             this.tbAddressAsDriver.Size = new System.Drawing.Size(223, 24);
-            this.tbAddressAsDriver.TabIndex = 2;
+            this.tbAddressAsDriver.TabIndex = 0;
+            this.tbAddressAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressAsDriver_KeyPress);
             // 
             // label22
             // 
@@ -997,10 +1014,11 @@ namespace BusSystemManagement
             this.panel32.Location = new System.Drawing.Point(3, 46);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(339, 37);
-            this.panel32.TabIndex = 7;
+            this.panel32.TabIndex = 2;
             // 
             // cbGender
             // 
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Nam",
@@ -1009,7 +1027,7 @@ namespace BusSystemManagement
             this.cbGender.Location = new System.Drawing.Point(113, 8);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(223, 29);
-            this.cbGender.TabIndex = 1;
+            this.cbGender.TabIndex = 0;
             // 
             // label23
             // 
@@ -1027,7 +1045,7 @@ namespace BusSystemManagement
             this.panel33.Location = new System.Drawing.Point(348, 3);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(339, 37);
-            this.panel33.TabIndex = 8;
+            this.panel33.TabIndex = 1;
             // 
             // dtpDayOfBirth
             // 
@@ -1035,7 +1053,7 @@ namespace BusSystemManagement
             this.dtpDayOfBirth.Location = new System.Drawing.Point(113, 8);
             this.dtpDayOfBirth.Name = "dtpDayOfBirth";
             this.dtpDayOfBirth.Size = new System.Drawing.Size(223, 24);
-            this.dtpDayOfBirth.TabIndex = 12;
+            this.dtpDayOfBirth.TabIndex = 0;
             this.dtpDayOfBirth.Value = new System.DateTime(2022, 1, 28, 15, 17, 42, 0);
             // 
             // label24
@@ -1054,14 +1072,14 @@ namespace BusSystemManagement
             this.panel64.Location = new System.Drawing.Point(3, 3);
             this.panel64.Name = "panel64";
             this.panel64.Size = new System.Drawing.Size(339, 37);
-            this.panel64.TabIndex = 5;
+            this.panel64.TabIndex = 0;
             // 
             // tbAsDriverName
             // 
             this.tbAsDriverName.Location = new System.Drawing.Point(113, 8);
             this.tbAsDriverName.Name = "tbAsDriverName";
             this.tbAsDriverName.Size = new System.Drawing.Size(223, 24);
-            this.tbAsDriverName.TabIndex = 1;
+            this.tbAsDriverName.TabIndex = 0;
             this.tbAsDriverName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAsDriverName_KeyPress);
             // 
             // label25
@@ -1070,7 +1088,7 @@ namespace BusSystemManagement
             this.label25.Location = new System.Drawing.Point(12, 11);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(53, 21);
-            this.label25.TabIndex = 0;
+            this.label25.TabIndex = 1;
             this.label25.Text = "Họ tên";
             // 
             // btnResetAsDriver
@@ -1081,7 +1099,7 @@ namespace BusSystemManagement
             this.btnResetAsDriver.Location = new System.Drawing.Point(717, 189);
             this.btnResetAsDriver.Name = "btnResetAsDriver";
             this.btnResetAsDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnResetAsDriver.TabIndex = 11;
+            this.btnResetAsDriver.TabIndex = 3;
             this.btnResetAsDriver.Text = "Nhập lại";
             this.btnResetAsDriver.UseVisualStyleBackColor = false;
             this.btnResetAsDriver.Click += new System.EventHandler(this.btnResetAsDriver_Click);
@@ -1094,7 +1112,7 @@ namespace BusSystemManagement
             this.btnUpdateAsDriver.Location = new System.Drawing.Point(717, 127);
             this.btnUpdateAsDriver.Name = "btnUpdateAsDriver";
             this.btnUpdateAsDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnUpdateAsDriver.TabIndex = 10;
+            this.btnUpdateAsDriver.TabIndex = 2;
             this.btnUpdateAsDriver.Text = "Cập nhật";
             this.btnUpdateAsDriver.UseVisualStyleBackColor = false;
             this.btnUpdateAsDriver.Click += new System.EventHandler(this.btnUpdateAsDriver_Click);
@@ -1107,7 +1125,7 @@ namespace BusSystemManagement
             this.btnDeleteAsDriver.Location = new System.Drawing.Point(717, 65);
             this.btnDeleteAsDriver.Name = "btnDeleteAsDriver";
             this.btnDeleteAsDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnDeleteAsDriver.TabIndex = 9;
+            this.btnDeleteAsDriver.TabIndex = 1;
             this.btnDeleteAsDriver.Text = "Xóa";
             this.btnDeleteAsDriver.UseVisualStyleBackColor = false;
             this.btnDeleteAsDriver.Click += new System.EventHandler(this.btnDeleteAsDriver_Click);
@@ -1120,7 +1138,7 @@ namespace BusSystemManagement
             this.btnAddAsDriver.Location = new System.Drawing.Point(717, 3);
             this.btnAddAsDriver.Name = "btnAddAsDriver";
             this.btnAddAsDriver.Size = new System.Drawing.Size(256, 56);
-            this.btnAddAsDriver.TabIndex = 8;
+            this.btnAddAsDriver.TabIndex = 0;
             this.btnAddAsDriver.Text = "Thêm";
             this.btnAddAsDriver.UseVisualStyleBackColor = false;
             this.btnAddAsDriver.Click += new System.EventHandler(this.btnAddAsDriver_Click);
@@ -1137,11 +1155,14 @@ namespace BusSystemManagement
             // 
             this.dgvAsDriver.AllowUserToAddRows = false;
             this.dgvAsDriver.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAsDriver.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAsDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsDriver.Location = new System.Drawing.Point(3, 3);
             this.dgvAsDriver.Name = "dgvAsDriver";
+            this.dgvAsDriver.ReadOnly = true;
             this.dgvAsDriver.Size = new System.Drawing.Size(970, 328);
             this.dgvAsDriver.TabIndex = 0;
+            this.dgvAsDriver.TabStop = false;
             // 
             // panel5
             // 
@@ -1156,11 +1177,13 @@ namespace BusSystemManagement
             // 
             // cbAsDriver
             // 
+            this.cbAsDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAsDriver.FormattingEnabled = true;
             this.cbAsDriver.Location = new System.Drawing.Point(283, 10);
             this.cbAsDriver.Name = "cbAsDriver";
             this.cbAsDriver.Size = new System.Drawing.Size(121, 29);
             this.cbAsDriver.TabIndex = 2;
+            this.cbAsDriver.TabStop = false;
             this.cbAsDriver.SelectedIndexChanged += new System.EventHandler(this.cbAsDriver_SelectedIndexChanged);
             // 
             // tbSearchAsDriver
@@ -1169,8 +1192,8 @@ namespace BusSystemManagement
             this.tbSearchAsDriver.Name = "tbSearchAsDriver";
             this.tbSearchAsDriver.Size = new System.Drawing.Size(189, 24);
             this.tbSearchAsDriver.TabIndex = 1;
+            this.tbSearchAsDriver.TabStop = false;
             this.tbSearchAsDriver.TextChanged += new System.EventHandler(this.tbSearchAsDriver_TextChanged);
-            this.tbSearchAsDriver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchAsDriver_KeyPress);
             // 
             // label4
             // 
@@ -1202,6 +1225,7 @@ namespace BusSystemManagement
             this.btnExportPdfBus.Name = "btnExportPdfBus";
             this.btnExportPdfBus.Size = new System.Drawing.Size(129, 35);
             this.btnExportPdfBus.TabIndex = 12;
+            this.btnExportPdfBus.TabStop = false;
             this.btnExportPdfBus.Text = "EXPORT TO PDF";
             this.btnExportPdfBus.UseVisualStyleBackColor = false;
             this.btnExportPdfBus.Click += new System.EventHandler(this.btnExportPdfBus_Click);
@@ -1216,7 +1240,7 @@ namespace BusSystemManagement
             this.panel16.Location = new System.Drawing.Point(3, 394);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(977, 271);
-            this.panel16.TabIndex = 6;
+            this.panel16.TabIndex = 0;
             // 
             // panel20
             // 
@@ -1229,7 +1253,7 @@ namespace BusSystemManagement
             this.panel20.Location = new System.Drawing.Point(3, 3);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(708, 242);
-            this.panel20.TabIndex = 12;
+            this.panel20.TabIndex = 0;
             // 
             // panel21
             // 
@@ -1238,7 +1262,7 @@ namespace BusSystemManagement
             this.panel21.Location = new System.Drawing.Point(3, 89);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(339, 37);
-            this.panel21.TabIndex = 6;
+            this.panel21.TabIndex = 4;
             // 
             // nudCycle
             // 
@@ -1250,7 +1274,7 @@ namespace BusSystemManagement
             0});
             this.nudCycle.Name = "nudCycle";
             this.nudCycle.Size = new System.Drawing.Size(149, 24);
-            this.nudCycle.TabIndex = 4;
+            this.nudCycle.TabIndex = 0;
             // 
             // label14
             // 
@@ -1268,7 +1292,7 @@ namespace BusSystemManagement
             this.panel22.Location = new System.Drawing.Point(348, 46);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(339, 37);
-            this.panel22.TabIndex = 9;
+            this.panel22.TabIndex = 3;
             // 
             // nudChair
             // 
@@ -1280,7 +1304,7 @@ namespace BusSystemManagement
             0});
             this.nudChair.Name = "nudChair";
             this.nudChair.Size = new System.Drawing.Size(216, 24);
-            this.nudChair.TabIndex = 3;
+            this.nudChair.TabIndex = 0;
             // 
             // label15
             // 
@@ -1298,7 +1322,7 @@ namespace BusSystemManagement
             this.panel23.Location = new System.Drawing.Point(3, 46);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(339, 37);
-            this.panel23.TabIndex = 7;
+            this.panel23.TabIndex = 2;
             // 
             // nudMyear
             // 
@@ -1315,7 +1339,7 @@ namespace BusSystemManagement
             0});
             this.nudMyear.Name = "nudMyear";
             this.nudMyear.Size = new System.Drawing.Size(212, 24);
-            this.nudMyear.TabIndex = 3;
+            this.nudMyear.TabIndex = 0;
             this.nudMyear.Value = new decimal(new int[] {
             1900,
             0,
@@ -1338,14 +1362,14 @@ namespace BusSystemManagement
             this.panel24.Location = new System.Drawing.Point(348, 3);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(339, 37);
-            this.panel24.TabIndex = 8;
+            this.panel24.TabIndex = 1;
             // 
             // tbManufacturer
             // 
             this.tbManufacturer.Location = new System.Drawing.Point(120, 8);
             this.tbManufacturer.Name = "tbManufacturer";
             this.tbManufacturer.Size = new System.Drawing.Size(216, 24);
-            this.tbManufacturer.TabIndex = 2;
+            this.tbManufacturer.TabIndex = 0;
             this.tbManufacturer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbManufacturer_KeyPress);
             // 
             // label17
@@ -1364,14 +1388,14 @@ namespace BusSystemManagement
             this.panel65.Location = new System.Drawing.Point(3, 3);
             this.panel65.Name = "panel65";
             this.panel65.Size = new System.Drawing.Size(339, 37);
-            this.panel65.TabIndex = 5;
+            this.panel65.TabIndex = 0;
             // 
             // tbLicensePlate
             // 
             this.tbLicensePlate.Location = new System.Drawing.Point(123, 8);
             this.tbLicensePlate.Name = "tbLicensePlate";
             this.tbLicensePlate.Size = new System.Drawing.Size(213, 24);
-            this.tbLicensePlate.TabIndex = 1;
+            this.tbLicensePlate.TabIndex = 0;
             this.tbLicensePlate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLicensePlate_KeyPress);
             // 
             // label18
@@ -1391,7 +1415,7 @@ namespace BusSystemManagement
             this.btnResetBus.Location = new System.Drawing.Point(717, 189);
             this.btnResetBus.Name = "btnResetBus";
             this.btnResetBus.Size = new System.Drawing.Size(257, 56);
-            this.btnResetBus.TabIndex = 11;
+            this.btnResetBus.TabIndex = 3;
             this.btnResetBus.Text = "Nhập lại";
             this.btnResetBus.UseVisualStyleBackColor = false;
             this.btnResetBus.Click += new System.EventHandler(this.btnResetBus_Click);
@@ -1404,7 +1428,7 @@ namespace BusSystemManagement
             this.btnUpdateBus.Location = new System.Drawing.Point(717, 127);
             this.btnUpdateBus.Name = "btnUpdateBus";
             this.btnUpdateBus.Size = new System.Drawing.Size(257, 56);
-            this.btnUpdateBus.TabIndex = 10;
+            this.btnUpdateBus.TabIndex = 2;
             this.btnUpdateBus.Text = "Cập nhật";
             this.btnUpdateBus.UseVisualStyleBackColor = false;
             this.btnUpdateBus.Click += new System.EventHandler(this.btnUpdateBus_Click);
@@ -1417,7 +1441,7 @@ namespace BusSystemManagement
             this.btnDeleteBus.Location = new System.Drawing.Point(717, 65);
             this.btnDeleteBus.Name = "btnDeleteBus";
             this.btnDeleteBus.Size = new System.Drawing.Size(257, 56);
-            this.btnDeleteBus.TabIndex = 9;
+            this.btnDeleteBus.TabIndex = 1;
             this.btnDeleteBus.Text = "Xóa";
             this.btnDeleteBus.UseVisualStyleBackColor = false;
             this.btnDeleteBus.Click += new System.EventHandler(this.btnDeleteBus_Click);
@@ -1430,7 +1454,7 @@ namespace BusSystemManagement
             this.btnAddBus.Location = new System.Drawing.Point(717, 3);
             this.btnAddBus.Name = "btnAddBus";
             this.btnAddBus.Size = new System.Drawing.Size(257, 56);
-            this.btnAddBus.TabIndex = 8;
+            this.btnAddBus.TabIndex = 0;
             this.btnAddBus.Text = "Thêm";
             this.btnAddBus.UseVisualStyleBackColor = false;
             this.btnAddBus.Click += new System.EventHandler(this.btnAddBus_Click);
@@ -1447,11 +1471,14 @@ namespace BusSystemManagement
             // 
             this.dgvBus.AllowUserToAddRows = false;
             this.dgvBus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBus.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBus.Location = new System.Drawing.Point(3, 3);
             this.dgvBus.Name = "dgvBus";
+            this.dgvBus.ReadOnly = true;
             this.dgvBus.Size = new System.Drawing.Size(971, 328);
             this.dgvBus.TabIndex = 0;
+            this.dgvBus.TabStop = false;
             // 
             // panel4
             // 
@@ -1466,11 +1493,13 @@ namespace BusSystemManagement
             // 
             // cbBus
             // 
+            this.cbBus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBus.FormattingEnabled = true;
             this.cbBus.Location = new System.Drawing.Point(283, 10);
             this.cbBus.Name = "cbBus";
             this.cbBus.Size = new System.Drawing.Size(121, 29);
             this.cbBus.TabIndex = 2;
+            this.cbBus.TabStop = false;
             this.cbBus.SelectedIndexChanged += new System.EventHandler(this.cbBus_SelectedIndexChanged);
             // 
             // tbSearchBus
@@ -1479,8 +1508,8 @@ namespace BusSystemManagement
             this.tbSearchBus.Name = "tbSearchBus";
             this.tbSearchBus.Size = new System.Drawing.Size(189, 24);
             this.tbSearchBus.TabIndex = 1;
+            this.tbSearchBus.TabStop = false;
             this.tbSearchBus.TextChanged += new System.EventHandler(this.tbSearchBus_TextChanged);
-            this.tbSearchBus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchBus_KeyPress);
             // 
             // label3
             // 
@@ -1513,6 +1542,7 @@ namespace BusSystemManagement
             this.btnExportPdfBusLine.Name = "btnExportPdfBusLine";
             this.btnExportPdfBusLine.Size = new System.Drawing.Size(129, 35);
             this.btnExportPdfBusLine.TabIndex = 13;
+            this.btnExportPdfBusLine.TabStop = false;
             this.btnExportPdfBusLine.Text = "EXPORT TO PDF";
             this.btnExportPdfBusLine.UseVisualStyleBackColor = false;
             this.btnExportPdfBusLine.Click += new System.EventHandler(this.btnExportPdfBusLine_Click);
@@ -1527,7 +1557,7 @@ namespace BusSystemManagement
             this.panel9.Location = new System.Drawing.Point(3, 394);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(977, 271);
-            this.panel9.TabIndex = 5;
+            this.panel9.TabIndex = 0;
             // 
             // panel10
             // 
@@ -1542,7 +1572,7 @@ namespace BusSystemManagement
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(708, 242);
-            this.panel10.TabIndex = 12;
+            this.panel10.TabIndex = 0;
             // 
             // panel15
             // 
@@ -1551,7 +1581,7 @@ namespace BusSystemManagement
             this.panel15.Location = new System.Drawing.Point(3, 132);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(684, 110);
-            this.panel15.TabIndex = 9;
+            this.panel15.TabIndex = 6;
             // 
             // tbBusLineDetail
             // 
@@ -1560,7 +1590,7 @@ namespace BusSystemManagement
             this.tbBusLineDetail.Name = "tbBusLineDetail";
             this.tbBusLineDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbBusLineDetail.Size = new System.Drawing.Size(568, 91);
-            this.tbBusLineDetail.TabIndex = 1;
+            this.tbBusLineDetail.TabIndex = 0;
             this.tbBusLineDetail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBusLineDetail_KeyPress);
             // 
             // label11
@@ -1579,14 +1609,14 @@ namespace BusSystemManagement
             this.panel14.Location = new System.Drawing.Point(348, 89);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(339, 37);
-            this.panel14.TabIndex = 10;
+            this.panel14.TabIndex = 5;
             // 
             // tbEndLocation
             // 
             this.tbEndLocation.Location = new System.Drawing.Point(113, 8);
             this.tbEndLocation.Name = "tbEndLocation";
             this.tbEndLocation.Size = new System.Drawing.Size(223, 24);
-            this.tbEndLocation.TabIndex = 1;
+            this.tbEndLocation.TabIndex = 0;
             this.tbEndLocation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEndLocation_KeyPress);
             // 
             // label10
@@ -1605,14 +1635,14 @@ namespace BusSystemManagement
             this.panel11.Location = new System.Drawing.Point(3, 89);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(339, 37);
-            this.panel11.TabIndex = 6;
+            this.panel11.TabIndex = 4;
             // 
             // tbStartLocation
             // 
             this.tbStartLocation.Location = new System.Drawing.Point(113, 8);
             this.tbStartLocation.Name = "tbStartLocation";
             this.tbStartLocation.Size = new System.Drawing.Size(223, 24);
-            this.tbStartLocation.TabIndex = 1;
+            this.tbStartLocation.TabIndex = 0;
             this.tbStartLocation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbStartLocation_KeyPress);
             // 
             // label7
@@ -1631,7 +1661,7 @@ namespace BusSystemManagement
             this.panel13.Location = new System.Drawing.Point(348, 46);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(339, 37);
-            this.panel13.TabIndex = 11;
+            this.panel13.TabIndex = 3;
             // 
             // nudEndTime
             // 
@@ -1643,7 +1673,7 @@ namespace BusSystemManagement
             0});
             this.nudEndTime.Name = "nudEndTime";
             this.nudEndTime.Size = new System.Drawing.Size(223, 24);
-            this.nudEndTime.TabIndex = 3;
+            this.nudEndTime.TabIndex = 0;
             // 
             // label9
             // 
@@ -1661,7 +1691,7 @@ namespace BusSystemManagement
             this.panel17.Location = new System.Drawing.Point(3, 46);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(339, 37);
-            this.panel17.TabIndex = 7;
+            this.panel17.TabIndex = 2;
             // 
             // nudStartTime
             // 
@@ -1673,7 +1703,7 @@ namespace BusSystemManagement
             0});
             this.nudStartTime.Name = "nudStartTime";
             this.nudStartTime.Size = new System.Drawing.Size(223, 24);
-            this.nudStartTime.TabIndex = 3;
+            this.nudStartTime.TabIndex = 0;
             // 
             // label13
             // 
@@ -1691,7 +1721,7 @@ namespace BusSystemManagement
             this.panel12.Location = new System.Drawing.Point(348, 3);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(339, 37);
-            this.panel12.TabIndex = 8;
+            this.panel12.TabIndex = 1;
             // 
             // nudFrequency
             // 
@@ -1703,7 +1733,7 @@ namespace BusSystemManagement
             0});
             this.nudFrequency.Name = "nudFrequency";
             this.nudFrequency.Size = new System.Drawing.Size(223, 24);
-            this.nudFrequency.TabIndex = 4;
+            this.nudFrequency.TabIndex = 0;
             // 
             // label8
             // 
@@ -1721,14 +1751,14 @@ namespace BusSystemManagement
             this.panel66.Location = new System.Drawing.Point(3, 3);
             this.panel66.Name = "panel66";
             this.panel66.Size = new System.Drawing.Size(339, 37);
-            this.panel66.TabIndex = 5;
+            this.panel66.TabIndex = 0;
             // 
             // tbBusLineName
             // 
             this.tbBusLineName.Location = new System.Drawing.Point(113, 8);
             this.tbBusLineName.Name = "tbBusLineName";
             this.tbBusLineName.Size = new System.Drawing.Size(223, 24);
-            this.tbBusLineName.TabIndex = 1;
+            this.tbBusLineName.TabIndex = 0;
             this.tbBusLineName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBusLineName_KeyPress);
             // 
             // label6
@@ -1748,7 +1778,7 @@ namespace BusSystemManagement
             this.btnResetBusLine.Location = new System.Drawing.Point(717, 189);
             this.btnResetBusLine.Name = "btnResetBusLine";
             this.btnResetBusLine.Size = new System.Drawing.Size(257, 56);
-            this.btnResetBusLine.TabIndex = 11;
+            this.btnResetBusLine.TabIndex = 4;
             this.btnResetBusLine.Text = "Nhập lại";
             this.btnResetBusLine.UseVisualStyleBackColor = false;
             this.btnResetBusLine.Click += new System.EventHandler(this.btnResetBusLine_Click);
@@ -1761,7 +1791,7 @@ namespace BusSystemManagement
             this.btnUpdateBusLine.Location = new System.Drawing.Point(717, 127);
             this.btnUpdateBusLine.Name = "btnUpdateBusLine";
             this.btnUpdateBusLine.Size = new System.Drawing.Size(257, 56);
-            this.btnUpdateBusLine.TabIndex = 10;
+            this.btnUpdateBusLine.TabIndex = 3;
             this.btnUpdateBusLine.Text = "Cập nhật";
             this.btnUpdateBusLine.UseVisualStyleBackColor = false;
             this.btnUpdateBusLine.Click += new System.EventHandler(this.btnUpdateBusLine_Click);
@@ -1774,7 +1804,7 @@ namespace BusSystemManagement
             this.btnDeleteBusLine.Location = new System.Drawing.Point(717, 65);
             this.btnDeleteBusLine.Name = "btnDeleteBusLine";
             this.btnDeleteBusLine.Size = new System.Drawing.Size(257, 56);
-            this.btnDeleteBusLine.TabIndex = 9;
+            this.btnDeleteBusLine.TabIndex = 2;
             this.btnDeleteBusLine.Text = "Xóa";
             this.btnDeleteBusLine.UseVisualStyleBackColor = false;
             this.btnDeleteBusLine.Click += new System.EventHandler(this.btnDeleteBusLine_Click);
@@ -1787,7 +1817,7 @@ namespace BusSystemManagement
             this.btnAddBusLine.Location = new System.Drawing.Point(717, 3);
             this.btnAddBusLine.Name = "btnAddBusLine";
             this.btnAddBusLine.Size = new System.Drawing.Size(257, 56);
-            this.btnAddBusLine.TabIndex = 8;
+            this.btnAddBusLine.TabIndex = 1;
             this.btnAddBusLine.Text = "Thêm";
             this.btnAddBusLine.UseVisualStyleBackColor = false;
             this.btnAddBusLine.Click += new System.EventHandler(this.btnAddBusLine_Click);
@@ -1804,11 +1834,14 @@ namespace BusSystemManagement
             // 
             this.dgvBusLine.AllowUserToAddRows = false;
             this.dgvBusLine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBusLine.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBusLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBusLine.Location = new System.Drawing.Point(3, 3);
             this.dgvBusLine.Name = "dgvBusLine";
+            this.dgvBusLine.ReadOnly = true;
             this.dgvBusLine.Size = new System.Drawing.Size(971, 328);
             this.dgvBusLine.TabIndex = 0;
+            this.dgvBusLine.TabStop = false;
             // 
             // panel7
             // 
@@ -1830,11 +1863,13 @@ namespace BusSystemManagement
             // 
             // cbBusLine
             // 
+            this.cbBusLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusLine.FormattingEnabled = true;
             this.cbBusLine.Location = new System.Drawing.Point(283, 10);
             this.cbBusLine.Name = "cbBusLine";
             this.cbBusLine.Size = new System.Drawing.Size(121, 29);
             this.cbBusLine.TabIndex = 2;
+            this.cbBusLine.TabStop = false;
             this.cbBusLine.SelectedIndexChanged += new System.EventHandler(this.cbBusLine_SelectedIndexChanged);
             // 
             // tbSearchBusLine
@@ -1843,8 +1878,8 @@ namespace BusSystemManagement
             this.tbSearchBusLine.Name = "tbSearchBusLine";
             this.tbSearchBusLine.Size = new System.Drawing.Size(189, 24);
             this.tbSearchBusLine.TabIndex = 1;
+            this.tbSearchBusLine.TabStop = false;
             this.tbSearchBusLine.TextChanged += new System.EventHandler(this.tbSearchBusLine_TextChanged);
-            this.tbSearchBusLine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchBusLine_KeyPress);
             // 
             // label2
             // 
@@ -1877,6 +1912,7 @@ namespace BusSystemManagement
             this.btnExportPdfBusRide.Name = "btnExportPdfBusRide";
             this.btnExportPdfBusRide.Size = new System.Drawing.Size(129, 35);
             this.btnExportPdfBusRide.TabIndex = 14;
+            this.btnExportPdfBusRide.TabStop = false;
             this.btnExportPdfBusRide.Text = "EXPORT TO PDF";
             this.btnExportPdfBusRide.UseVisualStyleBackColor = false;
             this.btnExportPdfBusRide.Click += new System.EventHandler(this.btnExportPdfBusRide_Click);
@@ -1891,7 +1927,7 @@ namespace BusSystemManagement
             this.panel45.Location = new System.Drawing.Point(3, 394);
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(977, 271);
-            this.panel45.TabIndex = 6;
+            this.panel45.TabIndex = 0;
             // 
             // panel48
             // 
@@ -1904,23 +1940,23 @@ namespace BusSystemManagement
             this.panel48.Location = new System.Drawing.Point(3, 3);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(708, 241);
-            this.panel48.TabIndex = 12;
+            this.panel48.TabIndex = 0;
             // 
             // panel49
             // 
             this.panel49.Controls.Add(this.dtpStartTimeBusRide);
             this.panel49.Controls.Add(this.label36);
-            this.panel49.Location = new System.Drawing.Point(3, 89);
+            this.panel49.Location = new System.Drawing.Point(3, 171);
             this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(339, 37);
-            this.panel49.TabIndex = 6;
+            this.panel49.Size = new System.Drawing.Size(578, 37);
+            this.panel49.TabIndex = 4;
             // 
             // dtpStartTimeBusRide
             // 
             this.dtpStartTimeBusRide.Location = new System.Drawing.Point(113, 6);
             this.dtpStartTimeBusRide.Name = "dtpStartTimeBusRide";
-            this.dtpStartTimeBusRide.Size = new System.Drawing.Size(223, 24);
-            this.dtpStartTimeBusRide.TabIndex = 13;
+            this.dtpStartTimeBusRide.Size = new System.Drawing.Size(235, 24);
+            this.dtpStartTimeBusRide.TabIndex = 0;
             // 
             // label36
             // 
@@ -1936,26 +1972,29 @@ namespace BusSystemManagement
             this.panel50.Controls.Add(this.tbBusBR);
             this.panel50.Controls.Add(this.cbBusBR);
             this.panel50.Controls.Add(this.label37);
-            this.panel50.Location = new System.Drawing.Point(348, 46);
+            this.panel50.Location = new System.Drawing.Point(3, 130);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(339, 37);
-            this.panel50.TabIndex = 9;
+            this.panel50.Size = new System.Drawing.Size(578, 37);
+            this.panel50.TabIndex = 3;
             // 
             // tbBusBR
             // 
-            this.tbBusBR.Location = new System.Drawing.Point(190, 6);
+            this.tbBusBR.Location = new System.Drawing.Point(214, 8);
             this.tbBusBR.Name = "tbBusBR";
             this.tbBusBR.ReadOnly = true;
-            this.tbBusBR.Size = new System.Drawing.Size(146, 24);
+            this.tbBusBR.Size = new System.Drawing.Size(361, 24);
             this.tbBusBR.TabIndex = 17;
+            this.tbBusBR.TabStop = false;
             // 
             // cbBusBR
             // 
+            this.cbBusBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusBR.FormattingEnabled = true;
             this.cbBusBR.Location = new System.Drawing.Point(113, 6);
+            this.cbBusBR.MaxDropDownItems = 5;
             this.cbBusBR.Name = "cbBusBR";
-            this.cbBusBR.Size = new System.Drawing.Size(71, 29);
-            this.cbBusBR.TabIndex = 16;
+            this.cbBusBR.Size = new System.Drawing.Size(95, 29);
+            this.cbBusBR.TabIndex = 0;
             this.cbBusBR.SelectedIndexChanged += new System.EventHandler(this.cbBusBR_SelectedIndexChanged);
             // 
             // label37
@@ -1972,26 +2011,29 @@ namespace BusSystemManagement
             this.panel51.Controls.Add(this.tbAsDriverBR);
             this.panel51.Controls.Add(this.cbAsDriverBR);
             this.panel51.Controls.Add(this.label38);
-            this.panel51.Location = new System.Drawing.Point(3, 46);
+            this.panel51.Location = new System.Drawing.Point(3, 88);
             this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(339, 37);
-            this.panel51.TabIndex = 7;
+            this.panel51.Size = new System.Drawing.Size(578, 37);
+            this.panel51.TabIndex = 2;
             // 
             // tbAsDriverBR
             // 
-            this.tbAsDriverBR.Location = new System.Drawing.Point(190, 8);
+            this.tbAsDriverBR.Location = new System.Drawing.Point(214, 8);
             this.tbAsDriverBR.Name = "tbAsDriverBR";
             this.tbAsDriverBR.ReadOnly = true;
-            this.tbAsDriverBR.Size = new System.Drawing.Size(146, 24);
+            this.tbAsDriverBR.Size = new System.Drawing.Size(361, 24);
             this.tbAsDriverBR.TabIndex = 15;
+            this.tbAsDriverBR.TabStop = false;
             // 
             // cbAsDriverBR
             // 
+            this.cbAsDriverBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAsDriverBR.FormattingEnabled = true;
             this.cbAsDriverBR.Location = new System.Drawing.Point(113, 7);
+            this.cbAsDriverBR.MaxDropDownItems = 5;
             this.cbAsDriverBR.Name = "cbAsDriverBR";
-            this.cbAsDriverBR.Size = new System.Drawing.Size(71, 29);
-            this.cbAsDriverBR.TabIndex = 14;
+            this.cbAsDriverBR.Size = new System.Drawing.Size(95, 29);
+            this.cbAsDriverBR.TabIndex = 0;
             this.cbAsDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbAsDriverBR_SelectedIndexChanged);
             // 
             // label38
@@ -2008,26 +2050,31 @@ namespace BusSystemManagement
             this.panel52.Controls.Add(this.tbDriverBR);
             this.panel52.Controls.Add(this.cbDriverBR);
             this.panel52.Controls.Add(this.label39);
-            this.panel52.Location = new System.Drawing.Point(348, 3);
+            this.panel52.Location = new System.Drawing.Point(3, 46);
             this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(339, 37);
-            this.panel52.TabIndex = 8;
+            this.panel52.Size = new System.Drawing.Size(578, 37);
+            this.panel52.TabIndex = 1;
             // 
             // tbDriverBR
             // 
-            this.tbDriverBR.Location = new System.Drawing.Point(190, 8);
+            this.tbDriverBR.Location = new System.Drawing.Point(214, 8);
             this.tbDriverBR.Name = "tbDriverBR";
             this.tbDriverBR.ReadOnly = true;
-            this.tbDriverBR.Size = new System.Drawing.Size(146, 24);
+            this.tbDriverBR.Size = new System.Drawing.Size(361, 24);
             this.tbDriverBR.TabIndex = 14;
+            this.tbDriverBR.TabStop = false;
             // 
             // cbDriverBR
             // 
+            this.cbDriverBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDriverBR.FormattingEnabled = true;
+            this.cbDriverBR.IntegralHeight = false;
+            this.cbDriverBR.ItemHeight = 21;
             this.cbDriverBR.Location = new System.Drawing.Point(113, 7);
+            this.cbDriverBR.MaxDropDownItems = 5;
             this.cbDriverBR.Name = "cbDriverBR";
-            this.cbDriverBR.Size = new System.Drawing.Size(71, 29);
-            this.cbDriverBR.TabIndex = 14;
+            this.cbDriverBR.Size = new System.Drawing.Size(95, 29);
+            this.cbDriverBR.TabIndex = 0;
             this.cbDriverBR.SelectedIndexChanged += new System.EventHandler(this.cbDriverBR_SelectedIndexChanged);
             // 
             // label39
@@ -2046,24 +2093,27 @@ namespace BusSystemManagement
             this.panel67.Controls.Add(this.label40);
             this.panel67.Location = new System.Drawing.Point(3, 3);
             this.panel67.Name = "panel67";
-            this.panel67.Size = new System.Drawing.Size(339, 37);
-            this.panel67.TabIndex = 5;
+            this.panel67.Size = new System.Drawing.Size(578, 37);
+            this.panel67.TabIndex = 0;
             // 
             // tbBusLineBR
             // 
-            this.tbBusLineBR.Location = new System.Drawing.Point(190, 8);
+            this.tbBusLineBR.Location = new System.Drawing.Point(214, 8);
             this.tbBusLineBR.Name = "tbBusLineBR";
             this.tbBusLineBR.ReadOnly = true;
-            this.tbBusLineBR.Size = new System.Drawing.Size(146, 24);
+            this.tbBusLineBR.Size = new System.Drawing.Size(361, 24);
             this.tbBusLineBR.TabIndex = 13;
+            this.tbBusLineBR.TabStop = false;
             // 
             // cbBusLineBR
             // 
+            this.cbBusLineBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusLineBR.FormattingEnabled = true;
             this.cbBusLineBR.Location = new System.Drawing.Point(113, 7);
+            this.cbBusLineBR.MaxDropDownItems = 5;
             this.cbBusLineBR.Name = "cbBusLineBR";
-            this.cbBusLineBR.Size = new System.Drawing.Size(71, 29);
-            this.cbBusLineBR.TabIndex = 12;
+            this.cbBusLineBR.Size = new System.Drawing.Size(95, 29);
+            this.cbBusLineBR.TabIndex = 0;
             this.cbBusLineBR.SelectedIndexChanged += new System.EventHandler(this.cbBusLineBR_SelectedIndexChanged);
             // 
             // label40
@@ -2083,7 +2133,7 @@ namespace BusSystemManagement
             this.btnResetBusRide.Location = new System.Drawing.Point(717, 189);
             this.btnResetBusRide.Name = "btnResetBusRide";
             this.btnResetBusRide.Size = new System.Drawing.Size(257, 56);
-            this.btnResetBusRide.TabIndex = 11;
+            this.btnResetBusRide.TabIndex = 4;
             this.btnResetBusRide.Text = "Nhập lại";
             this.btnResetBusRide.UseVisualStyleBackColor = false;
             this.btnResetBusRide.Click += new System.EventHandler(this.btnResetBusRide_Click);
@@ -2096,7 +2146,7 @@ namespace BusSystemManagement
             this.btnUpdateBusRide.Location = new System.Drawing.Point(717, 127);
             this.btnUpdateBusRide.Name = "btnUpdateBusRide";
             this.btnUpdateBusRide.Size = new System.Drawing.Size(257, 56);
-            this.btnUpdateBusRide.TabIndex = 10;
+            this.btnUpdateBusRide.TabIndex = 3;
             this.btnUpdateBusRide.Text = "Cập nhật";
             this.btnUpdateBusRide.UseVisualStyleBackColor = false;
             this.btnUpdateBusRide.Click += new System.EventHandler(this.btnUpdateBusRide_Click);
@@ -2109,7 +2159,7 @@ namespace BusSystemManagement
             this.btnDeleteBusRide.Location = new System.Drawing.Point(717, 65);
             this.btnDeleteBusRide.Name = "btnDeleteBusRide";
             this.btnDeleteBusRide.Size = new System.Drawing.Size(257, 56);
-            this.btnDeleteBusRide.TabIndex = 9;
+            this.btnDeleteBusRide.TabIndex = 2;
             this.btnDeleteBusRide.Text = "Xóa";
             this.btnDeleteBusRide.UseVisualStyleBackColor = false;
             this.btnDeleteBusRide.Click += new System.EventHandler(this.btnDeleteBusRide_Click);
@@ -2122,7 +2172,7 @@ namespace BusSystemManagement
             this.btnAddBusRide.Location = new System.Drawing.Point(717, 3);
             this.btnAddBusRide.Name = "btnAddBusRide";
             this.btnAddBusRide.Size = new System.Drawing.Size(257, 56);
-            this.btnAddBusRide.TabIndex = 8;
+            this.btnAddBusRide.TabIndex = 1;
             this.btnAddBusRide.Text = "Thêm";
             this.btnAddBusRide.UseVisualStyleBackColor = false;
             this.btnAddBusRide.Click += new System.EventHandler(this.btnAddBusRide_Click);
@@ -2139,11 +2189,14 @@ namespace BusSystemManagement
             // 
             this.dgvBusRide.AllowUserToAddRows = false;
             this.dgvBusRide.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBusRide.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBusRide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBusRide.Location = new System.Drawing.Point(3, 3);
             this.dgvBusRide.Name = "dgvBusRide";
+            this.dgvBusRide.ReadOnly = true;
             this.dgvBusRide.Size = new System.Drawing.Size(971, 328);
             this.dgvBusRide.TabIndex = 0;
+            this.dgvBusRide.TabStop = false;
             // 
             // panel43
             // 
@@ -2158,11 +2211,13 @@ namespace BusSystemManagement
             // 
             // cbBusRide
             // 
+            this.cbBusRide.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusRide.FormattingEnabled = true;
             this.cbBusRide.Location = new System.Drawing.Point(283, 10);
             this.cbBusRide.Name = "cbBusRide";
             this.cbBusRide.Size = new System.Drawing.Size(121, 29);
             this.cbBusRide.TabIndex = 2;
+            this.cbBusRide.TabStop = false;
             this.cbBusRide.SelectedIndexChanged += new System.EventHandler(this.cbBusRide_SelectedIndexChanged);
             // 
             // tbSearchBusRide
@@ -2171,8 +2226,8 @@ namespace BusSystemManagement
             this.tbSearchBusRide.Name = "tbSearchBusRide";
             this.tbSearchBusRide.Size = new System.Drawing.Size(189, 24);
             this.tbSearchBusRide.TabIndex = 1;
+            this.tbSearchBusRide.TabStop = false;
             this.tbSearchBusRide.TextChanged += new System.EventHandler(this.tbSearchBusRide_TextChanged);
-            this.tbSearchBusRide.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchBusRide_KeyPress);
             // 
             // label33
             // 
@@ -2211,6 +2266,7 @@ namespace BusSystemManagement
             this.btnExportPdfTicket.Name = "btnExportPdfTicket";
             this.btnExportPdfTicket.Size = new System.Drawing.Size(129, 35);
             this.btnExportPdfTicket.TabIndex = 18;
+            this.btnExportPdfTicket.TabStop = false;
             this.btnExportPdfTicket.Text = "EXPORT TO PDF";
             this.btnExportPdfTicket.UseVisualStyleBackColor = false;
             this.btnExportPdfTicket.Click += new System.EventHandler(this.btnExportPdfTicket_Click);
@@ -2225,7 +2281,7 @@ namespace BusSystemManagement
             this.panel55.Location = new System.Drawing.Point(3, 394);
             this.panel55.Name = "panel55";
             this.panel55.Size = new System.Drawing.Size(977, 271);
-            this.panel55.TabIndex = 17;
+            this.panel55.TabIndex = 0;
             // 
             // panel56
             // 
@@ -2236,7 +2292,7 @@ namespace BusSystemManagement
             this.panel56.Location = new System.Drawing.Point(3, 3);
             this.panel56.Name = "panel56";
             this.panel56.Size = new System.Drawing.Size(708, 242);
-            this.panel56.TabIndex = 12;
+            this.panel56.TabIndex = 0;
             // 
             // panel57
             // 
@@ -2245,14 +2301,14 @@ namespace BusSystemManagement
             this.panel57.Location = new System.Drawing.Point(3, 3);
             this.panel57.Name = "panel57";
             this.panel57.Size = new System.Drawing.Size(339, 37);
-            this.panel57.TabIndex = 5;
+            this.panel57.TabIndex = 0;
             // 
             // dtpTicket
             // 
-            this.dtpTicket.Location = new System.Drawing.Point(113, 6);
+            this.dtpTicket.Location = new System.Drawing.Point(113, 7);
             this.dtpTicket.Name = "dtpTicket";
             this.dtpTicket.Size = new System.Drawing.Size(223, 24);
-            this.dtpTicket.TabIndex = 13;
+            this.dtpTicket.TabIndex = 0;
             // 
             // label41
             // 
@@ -2270,24 +2326,28 @@ namespace BusSystemManagement
             this.panel59.Controls.Add(this.label42);
             this.panel59.Location = new System.Drawing.Point(3, 46);
             this.panel59.Name = "panel59";
-            this.panel59.Size = new System.Drawing.Size(339, 37);
-            this.panel59.TabIndex = 7;
+            this.panel59.Size = new System.Drawing.Size(578, 37);
+            this.panel59.TabIndex = 2;
             // 
             // tbTicketAsDriverName
             // 
-            this.tbTicketAsDriverName.Location = new System.Drawing.Point(190, 8);
+            this.tbTicketAsDriverName.Location = new System.Drawing.Point(214, 8);
             this.tbTicketAsDriverName.Name = "tbTicketAsDriverName";
             this.tbTicketAsDriverName.ReadOnly = true;
-            this.tbTicketAsDriverName.Size = new System.Drawing.Size(146, 24);
+            this.tbTicketAsDriverName.Size = new System.Drawing.Size(361, 24);
             this.tbTicketAsDriverName.TabIndex = 17;
+            this.tbTicketAsDriverName.TabStop = false;
             // 
             // cbTicketAsDriverId
             // 
+            this.cbTicketAsDriverId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTicketAsDriverId.FormattingEnabled = true;
             this.cbTicketAsDriverId.Location = new System.Drawing.Point(113, 6);
+            this.cbTicketAsDriverId.MaxDropDownItems = 5;
             this.cbTicketAsDriverId.Name = "cbTicketAsDriverId";
-            this.cbTicketAsDriverId.Size = new System.Drawing.Size(71, 29);
-            this.cbTicketAsDriverId.TabIndex = 16;
+            this.cbTicketAsDriverId.Size = new System.Drawing.Size(95, 29);
+            this.cbTicketAsDriverId.TabIndex = 0;
+            this.cbTicketAsDriverId.SelectedIndexChanged += new System.EventHandler(this.cbTicketAsDriverId_SelectedIndexChanged);
             // 
             // label42
             // 
@@ -2305,7 +2365,7 @@ namespace BusSystemManagement
             this.panel68.Location = new System.Drawing.Point(348, 3);
             this.panel68.Name = "panel68";
             this.panel68.Size = new System.Drawing.Size(339, 37);
-            this.panel68.TabIndex = 6;
+            this.panel68.TabIndex = 1;
             // 
             // nudTicket
             // 
@@ -2321,8 +2381,8 @@ namespace BusSystemManagement
             0,
             0});
             this.nudTicket.Name = "nudTicket";
-            this.nudTicket.Size = new System.Drawing.Size(223, 24);
-            this.nudTicket.TabIndex = 15;
+            this.nudTicket.Size = new System.Drawing.Size(117, 24);
+            this.nudTicket.TabIndex = 0;
             this.nudTicket.Value = new decimal(new int[] {
             1000,
             0,
@@ -2332,7 +2392,7 @@ namespace BusSystemManagement
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(12, 11);
+            this.label44.Location = new System.Drawing.Point(13, 11);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(94, 21);
             this.label44.TabIndex = 0;
@@ -2346,7 +2406,7 @@ namespace BusSystemManagement
             this.btResetTicket.Location = new System.Drawing.Point(717, 189);
             this.btResetTicket.Name = "btResetTicket";
             this.btResetTicket.Size = new System.Drawing.Size(257, 56);
-            this.btResetTicket.TabIndex = 11;
+            this.btResetTicket.TabIndex = 4;
             this.btResetTicket.Text = "Nhập lại";
             this.btResetTicket.UseVisualStyleBackColor = false;
             this.btResetTicket.Click += new System.EventHandler(this.btResetTicket_Click);
@@ -2359,7 +2419,7 @@ namespace BusSystemManagement
             this.btnUpdateTicket.Location = new System.Drawing.Point(717, 127);
             this.btnUpdateTicket.Name = "btnUpdateTicket";
             this.btnUpdateTicket.Size = new System.Drawing.Size(257, 56);
-            this.btnUpdateTicket.TabIndex = 10;
+            this.btnUpdateTicket.TabIndex = 3;
             this.btnUpdateTicket.Text = "Cập nhật";
             this.btnUpdateTicket.UseVisualStyleBackColor = false;
             this.btnUpdateTicket.Click += new System.EventHandler(this.btnUpdateTicket_Click);
@@ -2372,7 +2432,7 @@ namespace BusSystemManagement
             this.btnDeleteTicket.Location = new System.Drawing.Point(717, 65);
             this.btnDeleteTicket.Name = "btnDeleteTicket";
             this.btnDeleteTicket.Size = new System.Drawing.Size(257, 56);
-            this.btnDeleteTicket.TabIndex = 9;
+            this.btnDeleteTicket.TabIndex = 2;
             this.btnDeleteTicket.Text = "Xóa";
             this.btnDeleteTicket.UseVisualStyleBackColor = false;
             this.btnDeleteTicket.Click += new System.EventHandler(this.btnDeleteTicket_Click);
@@ -2385,7 +2445,7 @@ namespace BusSystemManagement
             this.btnAddTicket.Location = new System.Drawing.Point(717, 3);
             this.btnAddTicket.Name = "btnAddTicket";
             this.btnAddTicket.Size = new System.Drawing.Size(257, 56);
-            this.btnAddTicket.TabIndex = 8;
+            this.btnAddTicket.TabIndex = 1;
             this.btnAddTicket.Text = "Thêm";
             this.btnAddTicket.UseVisualStyleBackColor = false;
             this.btnAddTicket.Click += new System.EventHandler(this.btnAddTicket_Click);
@@ -2402,11 +2462,14 @@ namespace BusSystemManagement
             // 
             this.dgvTicket.AllowUserToAddRows = false;
             this.dgvTicket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTicket.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTicket.Location = new System.Drawing.Point(3, 3);
             this.dgvTicket.Name = "dgvTicket";
+            this.dgvTicket.ReadOnly = true;
             this.dgvTicket.Size = new System.Drawing.Size(971, 328);
             this.dgvTicket.TabIndex = 0;
+            this.dgvTicket.TabStop = false;
             // 
             // panel62
             // 
@@ -2421,11 +2484,13 @@ namespace BusSystemManagement
             // 
             // cbTicket
             // 
+            this.cbTicket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTicket.FormattingEnabled = true;
             this.cbTicket.Location = new System.Drawing.Point(283, 10);
             this.cbTicket.Name = "cbTicket";
             this.cbTicket.Size = new System.Drawing.Size(121, 29);
             this.cbTicket.TabIndex = 2;
+            this.cbTicket.TabStop = false;
             this.cbTicket.SelectedIndexChanged += new System.EventHandler(this.cbTicket_SelectedIndexChanged);
             // 
             // tbSearchTicket
@@ -2434,8 +2499,8 @@ namespace BusSystemManagement
             this.tbSearchTicket.Name = "tbSearchTicket";
             this.tbSearchTicket.Size = new System.Drawing.Size(189, 24);
             this.tbSearchTicket.TabIndex = 1;
+            this.tbSearchTicket.TabStop = false;
             this.tbSearchTicket.TextChanged += new System.EventHandler(this.tbSearchTicket_TextChanged);
-            this.tbSearchTicket.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchTicket_KeyPress_1);
             // 
             // label46
             // 
@@ -2448,9 +2513,6 @@ namespace BusSystemManagement
             // 
             // tabPageStat
             // 
-            this.tabPageStat.Controls.Add(this.btnSumary);
-            this.tabPageStat.Controls.Add(this.btnDatStat);
-            this.tabPageStat.Controls.Add(this.panel60);
             this.tabPageStat.Controls.Add(this.panel58);
             this.tabPageStat.Controls.Add(this.panel53);
             this.tabPageStat.Controls.Add(this.panel47);
@@ -2461,45 +2523,55 @@ namespace BusSystemManagement
             this.tabPageStat.Text = "Thống kê";
             this.tabPageStat.UseVisualStyleBackColor = true;
             // 
+            // panel58
+            // 
+            this.panel58.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel58.Controls.Add(this.btnSumary);
+            this.panel58.Controls.Add(this.btnDatStat);
+            this.panel58.Controls.Add(this.panel60);
+            this.panel58.Controls.Add(this.panel72);
+            this.panel58.Location = new System.Drawing.Point(3, 9);
+            this.panel58.Name = "panel58";
+            this.panel58.Size = new System.Drawing.Size(860, 47);
+            this.panel58.TabIndex = 0;
+            // 
             // btnSumary
             // 
             this.btnSumary.BackColor = System.Drawing.Color.DimGray;
             this.btnSumary.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btnSumary.Location = new System.Drawing.Point(757, 6);
+            this.btnSumary.Location = new System.Drawing.Point(756, 3);
             this.btnSumary.Name = "btnSumary";
             this.btnSumary.Size = new System.Drawing.Size(99, 40);
-            this.btnSumary.TabIndex = 18;
+            this.btnSumary.TabIndex = 3;
             this.btnSumary.Text = "Reset";
             this.btnSumary.UseVisualStyleBackColor = false;
-            this.btnSumary.Click += new System.EventHandler(this.btnSumary_Click);
             // 
             // btnDatStat
             // 
             this.btnDatStat.BackColor = System.Drawing.Color.DimGray;
             this.btnDatStat.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btnDatStat.Location = new System.Drawing.Point(652, 6);
+            this.btnDatStat.Location = new System.Drawing.Point(651, 3);
             this.btnDatStat.Name = "btnDatStat";
             this.btnDatStat.Size = new System.Drawing.Size(99, 40);
-            this.btnDatStat.TabIndex = 3;
+            this.btnDatStat.TabIndex = 2;
             this.btnDatStat.Text = "Xem kết quả";
             this.btnDatStat.UseVisualStyleBackColor = false;
-            this.btnDatStat.Click += new System.EventHandler(this.btnDatStat_Click);
             // 
             // panel60
             // 
             this.panel60.Controls.Add(this.dtpEndDayStat);
             this.panel60.Controls.Add(this.label45);
-            this.panel60.Location = new System.Drawing.Point(329, 6);
+            this.panel60.Location = new System.Drawing.Point(328, 3);
             this.panel60.Name = "panel60";
             this.panel60.Size = new System.Drawing.Size(317, 37);
-            this.panel60.TabIndex = 17;
+            this.panel60.TabIndex = 1;
             // 
             // dtpEndDayStat
             // 
             this.dtpEndDayStat.Location = new System.Drawing.Point(113, 6);
             this.dtpEndDayStat.Name = "dtpEndDayStat";
             this.dtpEndDayStat.Size = new System.Drawing.Size(200, 24);
-            this.dtpEndDayStat.TabIndex = 2;
+            this.dtpEndDayStat.TabIndex = 0;
             // 
             // label45
             // 
@@ -2510,21 +2582,21 @@ namespace BusSystemManagement
             this.label45.TabIndex = 0;
             this.label45.Text = "Ngày kết thúc";
             // 
-            // panel58
+            // panel72
             // 
-            this.panel58.Controls.Add(this.dtpStartDayStat);
-            this.panel58.Controls.Add(this.label43);
-            this.panel58.Location = new System.Drawing.Point(6, 6);
-            this.panel58.Name = "panel58";
-            this.panel58.Size = new System.Drawing.Size(317, 37);
-            this.panel58.TabIndex = 16;
+            this.panel72.Controls.Add(this.dtpStartDayStat);
+            this.panel72.Controls.Add(this.label43);
+            this.panel72.Location = new System.Drawing.Point(5, 3);
+            this.panel72.Name = "panel72";
+            this.panel72.Size = new System.Drawing.Size(317, 37);
+            this.panel72.TabIndex = 0;
             // 
             // dtpStartDayStat
             // 
             this.dtpStartDayStat.Location = new System.Drawing.Point(113, 6);
             this.dtpStartDayStat.Name = "dtpStartDayStat";
             this.dtpStartDayStat.Size = new System.Drawing.Size(200, 24);
-            this.dtpStartDayStat.TabIndex = 1;
+            this.dtpStartDayStat.TabIndex = 0;
             // 
             // label43
             // 
@@ -2541,9 +2613,9 @@ namespace BusSystemManagement
             this.panel53.Controls.Add(this.label48);
             this.panel53.Controls.Add(this.chartStatTicket);
             this.panel53.Controls.Add(this.panel54);
-            this.panel53.Location = new System.Drawing.Point(464, 49);
+            this.panel53.Location = new System.Drawing.Point(464, 63);
             this.panel53.Name = "panel53";
-            this.panel53.Size = new System.Drawing.Size(494, 589);
+            this.panel53.Size = new System.Drawing.Size(494, 575);
             this.panel53.TabIndex = 1;
             // 
             // label48
@@ -2581,15 +2653,17 @@ namespace BusSystemManagement
             this.panel54.Location = new System.Drawing.Point(3, 96);
             this.panel54.Name = "panel54";
             this.panel54.Size = new System.Drawing.Size(488, 48);
-            this.panel54.TabIndex = 4;
+            this.panel54.TabIndex = 0;
             // 
             // cbStatChart
             // 
+            this.cbStatChart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatChart.FormattingEnabled = true;
             this.cbStatChart.Location = new System.Drawing.Point(253, 10);
+            this.cbStatChart.MaxDropDownItems = 5;
             this.cbStatChart.Name = "cbStatChart";
             this.cbStatChart.Size = new System.Drawing.Size(121, 29);
-            this.cbStatChart.TabIndex = 4;
+            this.cbStatChart.TabIndex = 0;
             // 
             // btnStatChart
             // 
@@ -2598,7 +2672,7 @@ namespace BusSystemManagement
             this.btnStatChart.Location = new System.Drawing.Point(380, 6);
             this.btnStatChart.Name = "btnStatChart";
             this.btnStatChart.Size = new System.Drawing.Size(102, 35);
-            this.btnStatChart.TabIndex = 2;
+            this.btnStatChart.TabIndex = 1;
             this.btnStatChart.Text = "THỐNG KÊ";
             this.btnStatChart.UseVisualStyleBackColor = false;
             this.btnStatChart.Click += new System.EventHandler(this.btnStatChart_Click);
@@ -2618,9 +2692,9 @@ namespace BusSystemManagement
             this.panel47.Controls.Add(this.label47);
             this.panel47.Controls.Add(this.dgvStat);
             this.panel47.Controls.Add(this.btnExportPdfStat);
-            this.panel47.Location = new System.Drawing.Point(3, 49);
+            this.panel47.Location = new System.Drawing.Point(3, 63);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(455, 589);
+            this.panel47.Size = new System.Drawing.Size(455, 575);
             this.panel47.TabIndex = 0;
             // 
             // label47
@@ -2637,11 +2711,14 @@ namespace BusSystemManagement
             // 
             this.dgvStat.AllowUserToAddRows = false;
             this.dgvStat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStat.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvStat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStat.Location = new System.Drawing.Point(3, 44);
             this.dgvStat.Name = "dgvStat";
-            this.dgvStat.Size = new System.Drawing.Size(449, 542);
+            this.dgvStat.ReadOnly = true;
+            this.dgvStat.Size = new System.Drawing.Size(449, 528);
             this.dgvStat.TabIndex = 0;
+            this.dgvStat.TabStop = false;
             // 
             // btnExportPdfStat
             // 
@@ -2651,6 +2728,7 @@ namespace BusSystemManagement
             this.btnExportPdfStat.Name = "btnExportPdfStat";
             this.btnExportPdfStat.Size = new System.Drawing.Size(129, 35);
             this.btnExportPdfStat.TabIndex = 15;
+            this.btnExportPdfStat.TabStop = false;
             this.btnExportPdfStat.Text = "EXPORT TO PDF";
             this.btnExportPdfStat.UseVisualStyleBackColor = false;
             this.btnExportPdfStat.Click += new System.EventHandler(this.btnExportPdfStat_Click);
@@ -2678,7 +2756,7 @@ namespace BusSystemManagement
             this.panel69.Location = new System.Drawing.Point(4, 398);
             this.panel69.Name = "panel69";
             this.panel69.Size = new System.Drawing.Size(977, 271);
-            this.panel69.TabIndex = 21;
+            this.panel69.TabIndex = 0;
             // 
             // panel70
             // 
@@ -2689,7 +2767,7 @@ namespace BusSystemManagement
             this.panel70.Location = new System.Drawing.Point(3, 3);
             this.panel70.Name = "panel70";
             this.panel70.Size = new System.Drawing.Size(708, 242);
-            this.panel70.TabIndex = 12;
+            this.panel70.TabIndex = 0;
             // 
             // panel76
             // 
@@ -2697,15 +2775,17 @@ namespace BusSystemManagement
             this.panel76.Controls.Add(this.label53);
             this.panel76.Location = new System.Drawing.Point(3, 46);
             this.panel76.Name = "panel76";
-            this.panel76.Size = new System.Drawing.Size(339, 37);
-            this.panel76.TabIndex = 9;
+            this.panel76.Size = new System.Drawing.Size(378, 37);
+            this.panel76.TabIndex = 2;
             // 
             // tbUserEmail
             // 
             this.tbUserEmail.Location = new System.Drawing.Point(113, 8);
             this.tbUserEmail.Name = "tbUserEmail";
             this.tbUserEmail.Size = new System.Drawing.Size(223, 24);
-            this.tbUserEmail.TabIndex = 8;
+            this.tbUserEmail.TabIndex = 0;
+            this.tbUserEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUserEmail_KeyPress);
+            this.tbUserEmail.Leave += new System.EventHandler(this.tbUserEmail_Leave);
             // 
             // label53
             // 
@@ -2723,14 +2803,15 @@ namespace BusSystemManagement
             this.panel71.Location = new System.Drawing.Point(3, 3);
             this.panel71.Name = "panel71";
             this.panel71.Size = new System.Drawing.Size(339, 37);
-            this.panel71.TabIndex = 5;
+            this.panel71.TabIndex = 0;
             // 
             // tbUserUsername
             // 
             this.tbUserUsername.Location = new System.Drawing.Point(113, 8);
             this.tbUserUsername.Name = "tbUserUsername";
             this.tbUserUsername.Size = new System.Drawing.Size(223, 24);
-            this.tbUserUsername.TabIndex = 8;
+            this.tbUserUsername.TabIndex = 0;
+            this.tbUserUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUserUsername_KeyPress);
             // 
             // label49
             // 
@@ -2748,14 +2829,14 @@ namespace BusSystemManagement
             this.panel73.Location = new System.Drawing.Point(348, 3);
             this.panel73.Name = "panel73";
             this.panel73.Size = new System.Drawing.Size(339, 37);
-            this.panel73.TabIndex = 6;
+            this.panel73.TabIndex = 1;
             // 
             // tbUserPassword
             // 
             this.tbUserPassword.Location = new System.Drawing.Point(113, 8);
             this.tbUserPassword.Name = "tbUserPassword";
             this.tbUserPassword.Size = new System.Drawing.Size(223, 24);
-            this.tbUserPassword.TabIndex = 9;
+            this.tbUserPassword.TabIndex = 0;
             // 
             // label51
             // 
@@ -2774,7 +2855,7 @@ namespace BusSystemManagement
             this.btnUserReset.Location = new System.Drawing.Point(717, 189);
             this.btnUserReset.Name = "btnUserReset";
             this.btnUserReset.Size = new System.Drawing.Size(257, 56);
-            this.btnUserReset.TabIndex = 11;
+            this.btnUserReset.TabIndex = 4;
             this.btnUserReset.Text = "Nhập lại";
             this.btnUserReset.UseVisualStyleBackColor = false;
             this.btnUserReset.Click += new System.EventHandler(this.btnUserReset_Click);
@@ -2787,7 +2868,7 @@ namespace BusSystemManagement
             this.btnUserUpdate.Location = new System.Drawing.Point(717, 127);
             this.btnUserUpdate.Name = "btnUserUpdate";
             this.btnUserUpdate.Size = new System.Drawing.Size(257, 56);
-            this.btnUserUpdate.TabIndex = 10;
+            this.btnUserUpdate.TabIndex = 3;
             this.btnUserUpdate.Text = "Cập nhật";
             this.btnUserUpdate.UseVisualStyleBackColor = false;
             this.btnUserUpdate.Click += new System.EventHandler(this.btnUserUpdate_Click);
@@ -2800,7 +2881,7 @@ namespace BusSystemManagement
             this.btnUserDelete.Location = new System.Drawing.Point(717, 65);
             this.btnUserDelete.Name = "btnUserDelete";
             this.btnUserDelete.Size = new System.Drawing.Size(257, 56);
-            this.btnUserDelete.TabIndex = 9;
+            this.btnUserDelete.TabIndex = 2;
             this.btnUserDelete.Text = "Xóa";
             this.btnUserDelete.UseVisualStyleBackColor = false;
             this.btnUserDelete.Click += new System.EventHandler(this.btnUserDelete_Click);
@@ -2813,7 +2894,7 @@ namespace BusSystemManagement
             this.btnUserAdd.Location = new System.Drawing.Point(717, 3);
             this.btnUserAdd.Name = "btnUserAdd";
             this.btnUserAdd.Size = new System.Drawing.Size(257, 56);
-            this.btnUserAdd.TabIndex = 8;
+            this.btnUserAdd.TabIndex = 1;
             this.btnUserAdd.Text = "Thêm";
             this.btnUserAdd.UseVisualStyleBackColor = false;
             this.btnUserAdd.Click += new System.EventHandler(this.btnUserAdd_Click);
@@ -2830,11 +2911,14 @@ namespace BusSystemManagement
             // 
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Location = new System.Drawing.Point(3, 3);
             this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
             this.dgvUser.Size = new System.Drawing.Size(971, 328);
             this.dgvUser.TabIndex = 0;
+            this.dgvUser.TabStop = false;
             // 
             // panel75
             // 
@@ -2849,11 +2933,14 @@ namespace BusSystemManagement
             // 
             // cbUser
             // 
+            this.cbUser.BackColor = System.Drawing.SystemColors.Window;
+            this.cbUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUser.FormattingEnabled = true;
             this.cbUser.Location = new System.Drawing.Point(283, 10);
             this.cbUser.Name = "cbUser";
             this.cbUser.Size = new System.Drawing.Size(121, 29);
             this.cbUser.TabIndex = 2;
+            this.cbUser.TabStop = false;
             this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
             // 
             // tbSearchUser
@@ -2862,6 +2949,7 @@ namespace BusSystemManagement
             this.tbSearchUser.Name = "tbSearchUser";
             this.tbSearchUser.Size = new System.Drawing.Size(189, 24);
             this.tbSearchUser.TabIndex = 1;
+            this.tbSearchUser.TabStop = false;
             this.tbSearchUser.TextChanged += new System.EventHandler(this.tbSearchUser_TextChanged);
             // 
             // label52
@@ -2906,6 +2994,10 @@ namespace BusSystemManagement
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmTableManager
             // 
@@ -3051,10 +3143,11 @@ namespace BusSystemManagement
             this.panel62.ResumeLayout(false);
             this.panel62.PerformLayout();
             this.tabPageStat.ResumeLayout(false);
+            this.panel58.ResumeLayout(false);
             this.panel60.ResumeLayout(false);
             this.panel60.PerformLayout();
-            this.panel58.ResumeLayout(false);
-            this.panel58.PerformLayout();
+            this.panel72.ResumeLayout(false);
+            this.panel72.PerformLayout();
             this.panel53.ResumeLayout(false);
             this.panel53.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStatTicket)).EndInit();
@@ -3078,6 +3171,7 @@ namespace BusSystemManagement
             this.panel75.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3180,16 +3274,8 @@ namespace BusSystemManagement
         private ComboBox cbTicket;
         private TextBox tbSearchTicket;
         private Label label46;
-        private Panel panel60;
-        private DateTimePicker dtpEndDayStat;
-        private Label label45;
-        private Panel panel58;
-        private DateTimePicker dtpStartDayStat;
-        private Label label43;
         private Label label47;
-        private Button btnDatStat;
         private Label label48;
-        private Button btnSumary;
         private Panel panel35;
         private Panel panel46;
         private ComboBox cbLicense;
@@ -3334,5 +3420,15 @@ namespace BusSystemManagement
         private ComboBox cbUser;
         private TextBox tbSearchUser;
         private Label label52;
+        private Panel panel58;
+        private Button btnSumary;
+        private Button btnDatStat;
+        private Panel panel60;
+        private DateTimePicker dtpEndDayStat;
+        private Label label45;
+        private Panel panel72;
+        private DateTimePicker dtpStartDayStat;
+        private Label label43;
+        private ErrorProvider errorProvider1;
     }
 }
