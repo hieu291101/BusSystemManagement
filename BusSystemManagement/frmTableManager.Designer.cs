@@ -1990,6 +1990,7 @@ namespace BusSystemManagement
             // 
             this.cbBusBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusBR.FormattingEnabled = true;
+            this.cbBusBR.IntegralHeight = false;
             this.cbBusBR.Location = new System.Drawing.Point(113, 6);
             this.cbBusBR.MaxDropDownItems = 5;
             this.cbBusBR.Name = "cbBusBR";
@@ -2029,6 +2030,7 @@ namespace BusSystemManagement
             // 
             this.cbAsDriverBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAsDriverBR.FormattingEnabled = true;
+            this.cbAsDriverBR.IntegralHeight = false;
             this.cbAsDriverBR.Location = new System.Drawing.Point(113, 7);
             this.cbAsDriverBR.MaxDropDownItems = 5;
             this.cbAsDriverBR.Name = "cbAsDriverBR";
@@ -2109,6 +2111,7 @@ namespace BusSystemManagement
             // 
             this.cbBusLineBR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBusLineBR.FormattingEnabled = true;
+            this.cbBusLineBR.IntegralHeight = false;
             this.cbBusLineBR.Location = new System.Drawing.Point(113, 7);
             this.cbBusLineBR.MaxDropDownItems = 5;
             this.cbBusLineBR.Name = "cbBusLineBR";
@@ -2342,6 +2345,7 @@ namespace BusSystemManagement
             // 
             this.cbTicketAsDriverId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTicketAsDriverId.FormattingEnabled = true;
+            this.cbTicketAsDriverId.IntegralHeight = false;
             this.cbTicketAsDriverId.Location = new System.Drawing.Point(113, 6);
             this.cbTicketAsDriverId.MaxDropDownItems = 5;
             this.cbTicketAsDriverId.Name = "cbTicketAsDriverId";
